@@ -334,16 +334,6 @@
             <style name="me106_btn_flat_gray47"/>
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
-            <bind_flag_if_eq subject="meter_settings_selected_index" flag="hidden" ref_value="10"/>
-            <lv_image src="meter_arrow_down" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <subject_increment_event subject="meter_settings_selected_index" step="1" min_value="0" max_value="10" rollover="false" trigger="clicked"/>
-        </lv_button>
-
-        <lv_button name="settings_btn_down_wrap" x="80" y="207" width="79" height="32">
-            <style name="me106_btn_flat_gray47"/>
-            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
-            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
-            <bind_flag_if_not_eq subject="meter_settings_selected_index" flag="hidden" ref_value="10"/>
             <lv_image src="meter_arrow_down" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
             <subject_increment_event subject="meter_settings_selected_index" step="1" min_value="0" max_value="10" rollover="true" trigger="clicked"/>
         </lv_button>
@@ -352,16 +342,6 @@
             <style name="me106_btn_flat_gray47"/>
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
-            <bind_flag_if_eq subject="meter_settings_selected_index" flag="hidden" ref_value="0"/>
-            <lv_image src="meter_arrow_up" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <subject_increment_event subject="meter_settings_selected_index" step="-1" min_value="0" max_value="10" rollover="false" trigger="clicked"/>
-        </lv_button>
-
-        <lv_button name="settings_btn_up_wrap" x="160" y="207" width="79" height="32">
-            <style name="me106_btn_flat_gray47"/>
-            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
-            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
-            <bind_flag_if_not_eq subject="meter_settings_selected_index" flag="hidden" ref_value="0"/>
             <lv_image src="meter_arrow_up" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
             <subject_increment_event subject="meter_settings_selected_index" step="-1" min_value="0" max_value="10" rollover="true" trigger="clicked"/>
         </lv_button>
