@@ -17,8 +17,8 @@
         <!-- UI分组：串口内容区。页面只保存选项状态，硬件应用留在 XML 外部。 -->
         <lv_obj name="uart_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
 
-            <lv_label text="&#x4E32;&#x53E3;&#x8BBE;&#x7F6E;" align="top_mid" x="0" y="17" width="160">
-                <style name="me106_text_16_white_center"/>
+            <lv_label text="&#x4E32;&#x53E3;&#x8BBE;&#x7F6E;" x="152" y="17" width="144">
+                <style name="me106_text_16_white_right"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             </lv_label>

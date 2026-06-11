@@ -1,0 +1,234 @@
+<screen>
+    <animations>
+        <timeline name="content_open">
+            <animation target="screen_timeout_content" prop="opa" start="0" end="255" duration="110" early_apply="true"/>
+            <animation target="screen_timeout_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true"/>
+        </timeline>
+    </animations>
+
+    <view width="320" height="240">
+        <style name="me106_fill_gray1f"/>
+        <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+        <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+        <play_timeline_event target="self" timeline="content_open" trigger="screen_loaded"/>
+
+        <!-- UI 只选择无操作息屏档位；计时、唤醒和背光关闭由逻辑层/执行层处理。 -->
+        <lv_obj name="screen_timeout_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+            <lv_label text="&#x606F;&#x5C4F;&#x65F6;&#x95F4;" x="152" y="17" width="144">
+                <style name="me106_text_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+
+            <lv_label text="&#x65E0;&#x64CD;&#x4F5C;&#x540E;&#x606F;&#x5C4F;" x="24" y="22" width="150">
+                <style name="me106_text_14_gray_ba"/>
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+
+            <lv_obj name="screen_timeout_list" x="24" y="52" width="272" height="146" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollbar_mode="off" scrollable="false">
+                <lv_obj name="screen_timeout_items" x="0" y="0" width="272" height="266" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                    <bind_style name="me106_move_y_n38" subject="meter_screen_timeout_index" ref_value="4"/>
+                    <bind_style name="me106_move_y_n76" subject="meter_screen_timeout_index" ref_value="5"/>
+                    <bind_style name="me106_move_y_n114" subject="meter_screen_timeout_index" ref_value="6"/>
+
+                    <lv_button name="screen_timeout_item_1m" x="0" y="0" width="272" height="34" style_pad_all="0">
+                        <style name="me106_panel_gray24_r8"/>
+                        <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                        <lv_obj name="screen_timeout_item_1m_selected_bg" x="0" y="0" width="272" height="34" style_pad_all="0" style_border_width="0" scrollable="false">
+                            <style name="me106_panel_blue_r8"/>
+                            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="0"/>
+                        </lv_obj>
+                        <lv_label text="1 &#x5206;&#x949F;" align="left_mid" x="18" y="0" width="96">
+                            <style name="me106_text_16_gray_d8"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_style name="me106_text_16_white" subject="meter_screen_timeout_index" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="60 s" align="right_mid" x="-18" y="0" width="72">
+                            <style name="me106_text_14_gray_ba_right"/>
+                            <bind_style name="me106_text_14_white_right" subject="meter_screen_timeout_index" ref_value="0"/>
+                        </lv_label>
+                        <subject_set_int_event subject="meter_screen_timeout_index" value="0" trigger="clicked"/>
+                    </lv_button>
+
+                    <lv_button name="screen_timeout_item_5m" x="0" y="38" width="272" height="34" style_pad_all="0">
+                        <style name="me106_panel_gray24_r8"/>
+                        <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                        <lv_obj name="screen_timeout_item_5m_selected_bg" x="0" y="0" width="272" height="34" style_pad_all="0" style_border_width="0" scrollable="false">
+                            <style name="me106_panel_blue_r8"/>
+                            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="1"/>
+                        </lv_obj>
+                        <lv_label text="5 &#x5206;&#x949F;" align="left_mid" x="18" y="0" width="96">
+                            <style name="me106_text_16_gray_d8"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_style name="me106_text_16_white" subject="meter_screen_timeout_index" ref_value="1"/>
+                        </lv_label>
+                        <lv_label text="300 s" align="right_mid" x="-18" y="0" width="72">
+                            <style name="me106_text_14_gray_ba_right"/>
+                            <bind_style name="me106_text_14_white_right" subject="meter_screen_timeout_index" ref_value="1"/>
+                        </lv_label>
+                        <subject_set_int_event subject="meter_screen_timeout_index" value="1" trigger="clicked"/>
+                    </lv_button>
+
+                    <lv_button name="screen_timeout_item_15m" x="0" y="76" width="272" height="34" style_pad_all="0">
+                        <style name="me106_panel_gray24_r8"/>
+                        <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                        <lv_obj name="screen_timeout_item_15m_selected_bg" x="0" y="0" width="272" height="34" style_pad_all="0" style_border_width="0" scrollable="false">
+                            <style name="me106_panel_blue_r8"/>
+                            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="2"/>
+                        </lv_obj>
+                        <lv_label text="15 &#x5206;&#x949F;" align="left_mid" x="18" y="0" width="96">
+                            <style name="me106_text_16_gray_d8"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_style name="me106_text_16_white" subject="meter_screen_timeout_index" ref_value="2"/>
+                        </lv_label>
+                        <lv_label text="900 s" align="right_mid" x="-18" y="0" width="72">
+                            <style name="me106_text_14_gray_ba_right"/>
+                            <bind_style name="me106_text_14_white_right" subject="meter_screen_timeout_index" ref_value="2"/>
+                        </lv_label>
+                        <subject_set_int_event subject="meter_screen_timeout_index" value="2" trigger="clicked"/>
+                    </lv_button>
+
+                    <lv_button name="screen_timeout_item_30m" x="0" y="114" width="272" height="34" style_pad_all="0">
+                        <style name="me106_panel_gray24_r8"/>
+                        <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                        <lv_obj name="screen_timeout_item_30m_selected_bg" x="0" y="0" width="272" height="34" style_pad_all="0" style_border_width="0" scrollable="false">
+                            <style name="me106_panel_blue_r8"/>
+                            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="3"/>
+                        </lv_obj>
+                        <lv_label text="30 &#x5206;&#x949F;" align="left_mid" x="18" y="0" width="96">
+                            <style name="me106_text_16_gray_d8"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_style name="me106_text_16_white" subject="meter_screen_timeout_index" ref_value="3"/>
+                        </lv_label>
+                        <lv_label text="1800 s" align="right_mid" x="-18" y="0" width="72">
+                            <style name="me106_text_14_gray_ba_right"/>
+                            <bind_style name="me106_text_14_white_right" subject="meter_screen_timeout_index" ref_value="3"/>
+                        </lv_label>
+                        <subject_set_int_event subject="meter_screen_timeout_index" value="3" trigger="clicked"/>
+                    </lv_button>
+
+                    <lv_button name="screen_timeout_item_1h" x="0" y="152" width="272" height="34" style_pad_all="0">
+                        <style name="me106_panel_gray24_r8"/>
+                        <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                        <lv_obj name="screen_timeout_item_1h_selected_bg" x="0" y="0" width="272" height="34" style_pad_all="0" style_border_width="0" scrollable="false">
+                            <style name="me106_panel_blue_r8"/>
+                            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="4"/>
+                        </lv_obj>
+                        <lv_label text="1 &#x5C0F;&#x65F6;" align="left_mid" x="18" y="0" width="96">
+                            <style name="me106_text_16_gray_d8"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_style name="me106_text_16_white" subject="meter_screen_timeout_index" ref_value="4"/>
+                        </lv_label>
+                        <lv_label text="3600 s" align="right_mid" x="-18" y="0" width="72">
+                            <style name="me106_text_14_gray_ba_right"/>
+                            <bind_style name="me106_text_14_white_right" subject="meter_screen_timeout_index" ref_value="4"/>
+                        </lv_label>
+                        <subject_set_int_event subject="meter_screen_timeout_index" value="4" trigger="clicked"/>
+                    </lv_button>
+
+                    <lv_button name="screen_timeout_item_2h" x="0" y="190" width="272" height="34" style_pad_all="0">
+                        <style name="me106_panel_gray24_r8"/>
+                        <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                        <lv_obj name="screen_timeout_item_2h_selected_bg" x="0" y="0" width="272" height="34" style_pad_all="0" style_border_width="0" scrollable="false">
+                            <style name="me106_panel_blue_r8"/>
+                            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="5"/>
+                        </lv_obj>
+                        <lv_label text="2 &#x5C0F;&#x65F6;" align="left_mid" x="18" y="0" width="96">
+                            <style name="me106_text_16_gray_d8"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_style name="me106_text_16_white" subject="meter_screen_timeout_index" ref_value="5"/>
+                        </lv_label>
+                        <lv_label text="7200 s" align="right_mid" x="-18" y="0" width="72">
+                            <style name="me106_text_14_gray_ba_right"/>
+                            <bind_style name="me106_text_14_white_right" subject="meter_screen_timeout_index" ref_value="5"/>
+                        </lv_label>
+                        <subject_set_int_event subject="meter_screen_timeout_index" value="5" trigger="clicked"/>
+                    </lv_button>
+
+                    <lv_button name="screen_timeout_item_never" x="0" y="228" width="272" height="34" style_pad_all="0">
+                        <style name="me106_panel_gray24_r8"/>
+                        <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                        <lv_obj name="screen_timeout_item_never_selected_bg" x="0" y="0" width="272" height="34" style_pad_all="0" style_border_width="0" scrollable="false">
+                            <style name="me106_panel_blue_r8"/>
+                            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="6"/>
+                        </lv_obj>
+                        <lv_label text="&#x6C38;&#x4E0D;" align="left_mid" x="18" y="0" width="96">
+                            <style name="me106_text_16_gray_d8"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_style name="me106_text_16_white" subject="meter_screen_timeout_index" ref_value="6"/>
+                        </lv_label>
+                        <lv_label text="OFF" align="right_mid" x="-18" y="0" width="72">
+                            <style name="me106_text_14_gray_ba_right"/>
+                            <bind_style name="me106_text_14_white_right" subject="meter_screen_timeout_index" ref_value="6"/>
+                        </lv_label>
+                        <subject_set_int_event subject="meter_screen_timeout_index" value="6" trigger="clicked"/>
+                    </lv_button>
+                </lv_obj>
+            </lv_obj>
+        </lv_obj>
+
+        <!-- 底部硬按键只表达返回、上一档、下一档和确认意图，不直接写背光硬件。 -->
+        <lv_obj name="screen_settings_timeout_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+        <lv_button name="screen_timeout_btn_return" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        </lv_button>
+        <lv_button name="screen_timeout_btn_left" x="80" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_arrow_left" align="center" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="120" style_transform_scale_y="120"/>
+            <subject_increment_event subject="meter_screen_timeout_index" step="-1" min_value="0" max_value="6" rollover="false" trigger="clicked"/>
+        </lv_button>
+        <lv_button name="screen_timeout_btn_right" x="160" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_arrow_right" align="center" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="120" style_transform_scale_y="120"/>
+            <subject_increment_event subject="meter_screen_timeout_index" step="1" min_value="0" max_value="6" rollover="false" trigger="clicked"/>
+        </lv_button>
+        <lv_button name="screen_timeout_btn_yes" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_blue"/>
+            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        </lv_button>
+    </view>
+</screen>
