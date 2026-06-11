@@ -27,7 +27,7 @@
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         <!-- UI告警点：功率越限由逻辑层置位，页面只显示红点提示。 -->
-        <lv_image name="active_a_power_issue" src="meter_icon_warning" x="56" y="55" width="10" height="10"><bind_flag_if_not_eq subject="meter_active_a_power_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="active_a_power_issue" src="meter_icon_warning" x="56" y="55" style_transform_pivot_x="0" style_transform_pivot_y="0" style_transform_scale_x="160" style_transform_scale_y="160"><bind_flag_if_not_eq subject="meter_active_a_power_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="4534.554" x="32" y="77">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
@@ -40,7 +40,7 @@
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="active_b_power_issue" src="meter_icon_warning" x="219" y="55" width="10" height="10"><bind_flag_if_not_eq subject="meter_active_b_power_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="active_b_power_issue" src="meter_icon_warning" x="219" y="55" style_transform_pivot_x="0" style_transform_pivot_y="0" style_transform_scale_x="160" style_transform_scale_y="160"><bind_flag_if_not_eq subject="meter_active_b_power_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="4534.554" x="195" y="77">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
@@ -53,7 +53,7 @@
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="active_c_power_issue" src="meter_icon_warning" x="56" y="122" width="10" height="10"><bind_flag_if_not_eq subject="meter_active_c_power_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="active_c_power_issue" src="meter_icon_warning" x="56" y="122" style_transform_pivot_x="0" style_transform_pivot_y="0" style_transform_scale_x="160" style_transform_scale_y="160"><bind_flag_if_not_eq subject="meter_active_c_power_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="4534.554" x="32" y="144">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
@@ -66,7 +66,7 @@
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="active_total_power_issue" src="meter_icon_warning" x="234" y="122" width="10" height="10"><bind_flag_if_not_eq subject="meter_active_total_power_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="active_total_power_issue" src="meter_icon_warning" x="234" y="122" style_transform_pivot_x="0" style_transform_pivot_y="0" style_transform_scale_x="160" style_transform_scale_y="160"><bind_flag_if_not_eq subject="meter_active_total_power_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="4534.554" x="195" y="144">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>

@@ -23,7 +23,7 @@
                 <bind_style name="me106_move_y_n254" subject="meter_settings_selected_index" ref_value="7"/>
                 <bind_style name="me106_move_y_n300" subject="meter_settings_selected_index" ref_value="8"/>
                 <bind_style name="me106_move_y_n346" subject="meter_settings_selected_index" ref_value="9"/>
-                <bind_style name="me106_move_y_n346" subject="meter_settings_selected_index" ref_value="10"/>
+                <bind_style name="me106_move_y_n346_tail" subject="meter_settings_selected_index" ref_value="10"/>
 
             <lv_button name="settings_item_wifi" x="0" y="0" width="270" height="40" style_pad_all="0">
                 <style name="me106_panel_gray24_r8"/>
