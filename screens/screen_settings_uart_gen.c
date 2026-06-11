@@ -66,11 +66,10 @@ lv_obj_t * screen_settings_uart_create(void)
     lv_obj_set_flag(uart_content, LV_OBJ_FLAG_SCROLLABLE, false);
     lv_obj_t * lv_label_0 = lv_label_create(uart_content);
     lv_label_set_text(lv_label_0, "串口设置");
-    lv_obj_set_align(lv_label_0, LV_ALIGN_TOP_MID);
-    lv_obj_set_x(lv_label_0, 0);
+    lv_obj_set_x(lv_label_0, 152);
     lv_obj_set_y(lv_label_0, 17);
-    lv_obj_set_width(lv_label_0, 160);
-    lv_obj_add_style(lv_label_0, &me106_text_16_white_center, 0);
+    lv_obj_set_width(lv_label_0, 144);
+    lv_obj_add_style(lv_label_0, &me106_text_16_white_right, 0);
     lv_obj_bind_style(lv_label_0, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     

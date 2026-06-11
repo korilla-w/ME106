@@ -204,6 +204,14 @@ extern lv_style_t me106_theme_alarm_phase_b;
 extern lv_style_t me106_theme_alarm_phase_c;
 extern lv_style_t me106_theme_alarm_phase_b_line;
 extern lv_style_t me106_theme_alarm_phase_c_line;
+extern lv_style_t me106_theme_light_energy_forward_active;
+extern lv_style_t me106_theme_light_energy_reverse_active;
+extern lv_style_t me106_theme_light_energy_inductive_reactive;
+extern lv_style_t me106_theme_light_energy_capacitive_reactive;
+extern lv_style_t me106_theme_alarm_energy_forward_active;
+extern lv_style_t me106_theme_alarm_energy_reverse_active;
+extern lv_style_t me106_theme_alarm_energy_inductive_reactive;
+extern lv_style_t me106_theme_alarm_energy_capacitive_reactive;
 extern lv_style_t me106_theme_alarm_status_warning;
 extern lv_style_t me106_theme_alarm_status_ok;
 extern lv_style_t me106_theme_alarm_status_danger;
@@ -235,6 +243,7 @@ extern lv_style_t me106_text_16_gray_ba_center;
 extern lv_style_t me106_text_16_yellow;
 extern lv_style_t me106_text_16_green;
 extern lv_style_t me106_text_16_red;
+extern lv_style_t me106_text_16_purple;
 extern lv_style_t me106_text_16_cyan;
 extern lv_style_t me106_text_16_teal;
 extern lv_style_t me106_text_16_indigo;
@@ -289,6 +298,7 @@ extern lv_style_t me106_move_y_n162;
 extern lv_style_t me106_move_y_n208;
 extern lv_style_t me106_move_y_n254;
 extern lv_style_t me106_move_y_n300;
+extern lv_style_t me106_move_y_n346;
 extern lv_style_t me106_move_y_n416;
 
 /*----------------
@@ -357,6 +367,7 @@ extern lv_subject_t meter_wifi_sta_status_text;
 extern lv_subject_t meter_wifi_sta_connect_request;
 extern lv_subject_t meter_theme_index;
 extern lv_subject_t meter_screen_brightness;
+extern lv_subject_t meter_screen_timeout_index;
 extern lv_subject_t meter_uart_selected_index;
 extern lv_subject_t meter_uart_baud_index;
 extern lv_subject_t meter_uart_data_bits_index;
@@ -522,6 +533,7 @@ void power_meter_ui_init_gen(const char * asset_path);
 #include "screens/screen_settings_ratio_ct_gen.h"
 #include "screens/screen_settings_ratio_gen.h"
 #include "screens/screen_settings_ratio_pt_gen.h"
+#include "screens/screen_settings_screen_timeout_gen.h"
 #include "screens/screen_settings_system_gen.h"
 #include "screens/screen_settings_theme_gen.h"
 #include "screens/screen_settings_uart_gen.h"

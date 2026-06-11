@@ -374,8 +374,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_13 = lv_label_create(quality_tag_u_step);
     lv_label_set_text(lv_label_13, "电压");
+    lv_obj_set_align(lv_label_13, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_13, 34);
-    lv_obj_set_y(lv_label_13, 4);
+    lv_obj_set_y(lv_label_13, 0);
     lv_obj_set_width(lv_label_13, 42);
     lv_obj_add_style(lv_label_13, &me106_text_14_white, 0);
     lv_obj_bind_style(lv_label_13, &me106_theme_light_text, 0, &meter_theme_index, 1);
@@ -383,8 +384,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_14 = lv_label_create(quality_tag_u_step);
     lv_label_set_text(lv_label_14, "正常");
+    lv_obj_set_align(lv_label_14, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_14, 78);
-    lv_obj_set_y(lv_label_14, 4);
+    lv_obj_set_y(lv_label_14, 0);
     lv_obj_set_width(lv_label_14, 42);
     lv_obj_add_style(lv_label_14, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_14, &me106_theme_light_muted, 0, &meter_theme_index, 1);
@@ -393,8 +395,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_15 = lv_label_create(quality_tag_u_step);
     lv_label_set_text(lv_label_15, "越限");
-    lv_obj_set_x(lv_label_15, 76);
-    lv_obj_set_y(lv_label_15, 4);
+    lv_obj_set_align(lv_label_15, LV_ALIGN_LEFT_MID);
+    lv_obj_set_x(lv_label_15, 78);
+    lv_obj_set_y(lv_label_15, 0);
     lv_obj_set_width(lv_label_15, 46);
     lv_obj_add_style(lv_label_15, &me106_text_14_orange, 0);
     lv_obj_bind_style(lv_label_15, &me106_theme_light_status_warning, 0, &meter_theme_index, 1);
@@ -426,8 +429,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_16 = lv_label_create(quality_tag_i_step);
     lv_label_set_text(lv_label_16, "电流");
+    lv_obj_set_align(lv_label_16, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_16, 34);
-    lv_obj_set_y(lv_label_16, 4);
+    lv_obj_set_y(lv_label_16, 0);
     lv_obj_set_width(lv_label_16, 42);
     lv_obj_add_style(lv_label_16, &me106_text_14_white, 0);
     lv_obj_bind_style(lv_label_16, &me106_theme_light_text, 0, &meter_theme_index, 1);
@@ -435,8 +439,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_17 = lv_label_create(quality_tag_i_step);
     lv_label_set_text(lv_label_17, "正常");
+    lv_obj_set_align(lv_label_17, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_17, 78);
-    lv_obj_set_y(lv_label_17, 4);
+    lv_obj_set_y(lv_label_17, 0);
     lv_obj_set_width(lv_label_17, 42);
     lv_obj_add_style(lv_label_17, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_17, &me106_theme_light_muted, 0, &meter_theme_index, 1);
@@ -445,8 +450,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_18 = lv_label_create(quality_tag_i_step);
     lv_label_set_text(lv_label_18, "越限");
-    lv_obj_set_x(lv_label_18, 76);
-    lv_obj_set_y(lv_label_18, 4);
+    lv_obj_set_align(lv_label_18, LV_ALIGN_LEFT_MID);
+    lv_obj_set_x(lv_label_18, 78);
+    lv_obj_set_y(lv_label_18, 0);
     lv_obj_set_width(lv_label_18, 46);
     lv_obj_add_style(lv_label_18, &me106_text_14_orange, 0);
     lv_obj_bind_style(lv_label_18, &me106_theme_light_status_warning, 0, &meter_theme_index, 1);
@@ -478,8 +484,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_19 = lv_label_create(quality_tag_p_step);
     lv_label_set_text(lv_label_19, "功率");
+    lv_obj_set_align(lv_label_19, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_19, 34);
-    lv_obj_set_y(lv_label_19, 4);
+    lv_obj_set_y(lv_label_19, 0);
     lv_obj_set_width(lv_label_19, 42);
     lv_obj_add_style(lv_label_19, &me106_text_14_white, 0);
     lv_obj_bind_style(lv_label_19, &me106_theme_light_text, 0, &meter_theme_index, 1);
@@ -487,8 +494,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_20 = lv_label_create(quality_tag_p_step);
     lv_label_set_text(lv_label_20, "正常");
+    lv_obj_set_align(lv_label_20, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_20, 78);
-    lv_obj_set_y(lv_label_20, 4);
+    lv_obj_set_y(lv_label_20, 0);
     lv_obj_set_width(lv_label_20, 42);
     lv_obj_add_style(lv_label_20, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_20, &me106_theme_light_muted, 0, &meter_theme_index, 1);
@@ -497,8 +505,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_21 = lv_label_create(quality_tag_p_step);
     lv_label_set_text(lv_label_21, "越限");
-    lv_obj_set_x(lv_label_21, 76);
-    lv_obj_set_y(lv_label_21, 4);
+    lv_obj_set_align(lv_label_21, LV_ALIGN_LEFT_MID);
+    lv_obj_set_x(lv_label_21, 78);
+    lv_obj_set_y(lv_label_21, 0);
     lv_obj_set_width(lv_label_21, 46);
     lv_obj_add_style(lv_label_21, &me106_text_14_orange, 0);
     lv_obj_bind_style(lv_label_21, &me106_theme_light_status_warning, 0, &meter_theme_index, 1);
@@ -530,8 +539,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_22 = lv_label_create(quality_tag_e_inc);
     lv_label_set_text(lv_label_22, "电能");
+    lv_obj_set_align(lv_label_22, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_22, 34);
-    lv_obj_set_y(lv_label_22, 4);
+    lv_obj_set_y(lv_label_22, 0);
     lv_obj_set_width(lv_label_22, 42);
     lv_obj_add_style(lv_label_22, &me106_text_14_white, 0);
     lv_obj_bind_style(lv_label_22, &me106_theme_light_text, 0, &meter_theme_index, 1);
@@ -539,8 +549,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_23 = lv_label_create(quality_tag_e_inc);
     lv_label_set_text(lv_label_23, "正常");
+    lv_obj_set_align(lv_label_23, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_23, 78);
-    lv_obj_set_y(lv_label_23, 4);
+    lv_obj_set_y(lv_label_23, 0);
     lv_obj_set_width(lv_label_23, 42);
     lv_obj_add_style(lv_label_23, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_23, &me106_theme_light_muted, 0, &meter_theme_index, 1);
@@ -549,8 +560,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_24 = lv_label_create(quality_tag_e_inc);
     lv_label_set_text(lv_label_24, "越限");
-    lv_obj_set_x(lv_label_24, 76);
-    lv_obj_set_y(lv_label_24, 4);
+    lv_obj_set_align(lv_label_24, LV_ALIGN_LEFT_MID);
+    lv_obj_set_x(lv_label_24, 78);
+    lv_obj_set_y(lv_label_24, 0);
     lv_obj_set_width(lv_label_24, 46);
     lv_obj_add_style(lv_label_24, &me106_text_14_orange, 0);
     lv_obj_bind_style(lv_label_24, &me106_theme_light_status_warning, 0, &meter_theme_index, 1);
@@ -583,8 +595,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_25 = lv_label_create(quality_alarm_strip);
     lv_label_set_text(lv_label_25, "失压");
+    lv_obj_set_align(lv_label_25, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_25, 46);
-    lv_obj_set_y(lv_label_25, 11);
+    lv_obj_set_y(lv_label_25, 0);
     lv_obj_set_width(lv_label_25, 48);
     lv_obj_add_style(lv_label_25, &me106_text_14_gray_ba, 0);
     lv_obj_bind_style(lv_label_25, &me106_theme_light_muted, 0, &meter_theme_index, 1);
@@ -592,8 +605,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_26 = lv_label_create(quality_alarm_strip);
     lv_label_set_text(lv_label_26, "跌落");
+    lv_obj_set_align(lv_label_26, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_26, 100);
-    lv_obj_set_y(lv_label_26, 11);
+    lv_obj_set_y(lv_label_26, 0);
     lv_obj_set_width(lv_label_26, 48);
     lv_obj_add_style(lv_label_26, &me106_text_14_gray_ba, 0);
     lv_obj_bind_style(lv_label_26, &me106_theme_light_muted, 0, &meter_theme_index, 1);
@@ -601,8 +615,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_27 = lv_label_create(quality_alarm_strip);
     lv_label_set_text(lv_label_27, "过压");
+    lv_obj_set_align(lv_label_27, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_27, 154);
-    lv_obj_set_y(lv_label_27, 11);
+    lv_obj_set_y(lv_label_27, 0);
     lv_obj_set_width(lv_label_27, 48);
     lv_obj_add_style(lv_label_27, &me106_text_14_gray_ba, 0);
     lv_obj_bind_style(lv_label_27, &me106_theme_light_muted, 0, &meter_theme_index, 1);
@@ -610,8 +625,9 @@ lv_obj_t * screen_power_quality_analysis_create(void)
     
     lv_obj_t * lv_label_28 = lv_label_create(quality_alarm_strip);
     lv_label_set_text(lv_label_28, "过流");
+    lv_obj_set_align(lv_label_28, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_28, 208);
-    lv_obj_set_y(lv_label_28, 11);
+    lv_obj_set_y(lv_label_28, 0);
     lv_obj_set_width(lv_label_28, 48);
     lv_obj_add_style(lv_label_28, &me106_text_14_gray_ba, 0);
     lv_obj_bind_style(lv_label_28, &me106_theme_light_muted, 0, &meter_theme_index, 1);

@@ -85,8 +85,8 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_image_set_src(apparent_a_power_issue, meter_icon_warning);
     lv_obj_set_x(apparent_a_power_issue, 56);
     lv_obj_set_y(apparent_a_power_issue, 55);
-    lv_obj_set_width(apparent_a_power_issue, 12);
-    lv_obj_set_height(apparent_a_power_issue, 12);
+    lv_obj_set_width(apparent_a_power_issue, 10);
+    lv_obj_set_height(apparent_a_power_issue, 10);
     lv_obj_bind_flag_if_not_eq(apparent_a_power_issue, &meter_apparent_a_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_2 = lv_label_create(page_content);
@@ -110,8 +110,8 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_image_set_src(apparent_b_power_issue, meter_icon_warning);
     lv_obj_set_x(apparent_b_power_issue, 219);
     lv_obj_set_y(apparent_b_power_issue, 55);
-    lv_obj_set_width(apparent_b_power_issue, 12);
-    lv_obj_set_height(apparent_b_power_issue, 12);
+    lv_obj_set_width(apparent_b_power_issue, 10);
+    lv_obj_set_height(apparent_b_power_issue, 10);
     lv_obj_bind_flag_if_not_eq(apparent_b_power_issue, &meter_apparent_b_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_4 = lv_label_create(page_content);
@@ -135,8 +135,8 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_image_set_src(apparent_c_power_issue, meter_icon_warning);
     lv_obj_set_x(apparent_c_power_issue, 56);
     lv_obj_set_y(apparent_c_power_issue, 122);
-    lv_obj_set_width(apparent_c_power_issue, 12);
-    lv_obj_set_height(apparent_c_power_issue, 12);
+    lv_obj_set_width(apparent_c_power_issue, 10);
+    lv_obj_set_height(apparent_c_power_issue, 10);
     lv_obj_bind_flag_if_not_eq(apparent_c_power_issue, &meter_apparent_c_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_6 = lv_label_create(page_content);
@@ -160,8 +160,8 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_image_set_src(apparent_total_power_issue, meter_icon_warning);
     lv_obj_set_x(apparent_total_power_issue, 234);
     lv_obj_set_y(apparent_total_power_issue, 122);
-    lv_obj_set_width(apparent_total_power_issue, 12);
-    lv_obj_set_height(apparent_total_power_issue, 12);
+    lv_obj_set_width(apparent_total_power_issue, 10);
+    lv_obj_set_height(apparent_total_power_issue, 10);
     lv_obj_bind_flag_if_not_eq(apparent_total_power_issue, &meter_apparent_total_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_8 = lv_label_create(page_content);

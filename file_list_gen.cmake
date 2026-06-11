@@ -44,6 +44,7 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_ratio_ct_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_ratio_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_ratio_pt_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_screen_timeout_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_system_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_theme_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_uart_gen.c

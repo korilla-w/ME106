@@ -365,24 +365,15 @@ lv_obj_t * screen_settings_system_create(void)
     lv_obj_bind_style(system_btn_placeholder_2, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(system_btn_placeholder_2, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
     
-    lv_obj_t * system_btn_yes = lv_button_create(lv_obj_0);
-    lv_obj_set_name(system_btn_yes, "system_btn_yes");
-    lv_obj_set_x(system_btn_yes, 240);
-    lv_obj_set_y(system_btn_yes, 207);
-    lv_obj_set_width(system_btn_yes, 80);
-    lv_obj_set_height(system_btn_yes, 32);
-    lv_obj_add_style(system_btn_yes, &me106_btn_flat_blue, 0);
-    lv_obj_bind_style(system_btn_yes, &me106_theme_light_accent, 0, &meter_theme_index, 1);
-    lv_obj_bind_style(system_btn_yes, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
-    lv_obj_t * lv_image_2 = lv_image_create(system_btn_yes);
-    lv_image_set_src(lv_image_2, meter_yes);
-    lv_obj_set_align(lv_image_2, LV_ALIGN_CENTER);
-    lv_obj_set_style_transform_pivot_x(lv_image_2, 9, 0);
-    lv_obj_set_style_transform_pivot_y(lv_image_2, 6, 0);
-    lv_obj_set_style_transform_scale_x(lv_image_2, 230, 0);
-    lv_obj_set_style_transform_scale_y(lv_image_2, 230, 0);
-    
-    lv_obj_add_screen_create_event(system_btn_yes, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
+    lv_obj_t * system_btn_placeholder_3 = lv_button_create(lv_obj_0);
+    lv_obj_set_name(system_btn_placeholder_3, "system_btn_placeholder_3");
+    lv_obj_set_x(system_btn_placeholder_3, 240);
+    lv_obj_set_y(system_btn_placeholder_3, 207);
+    lv_obj_set_width(system_btn_placeholder_3, 80);
+    lv_obj_set_height(system_btn_placeholder_3, 32);
+    lv_obj_add_style(system_btn_placeholder_3, &me106_btn_flat_gray47, 0);
+    lv_obj_bind_style(system_btn_placeholder_3, &me106_theme_light_nav, 0, &meter_theme_index, 1);
+    lv_obj_bind_style(system_btn_placeholder_3, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
     
     
     /* create animation timeline(s) */

@@ -83,10 +83,10 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_t * phase_a_current_angle_issue = lv_image_create(page_content);
     lv_obj_set_name(phase_a_current_angle_issue, "phase_a_current_angle_issue");
     lv_image_set_src(phase_a_current_angle_issue, meter_icon_warning);
-    lv_obj_set_x(phase_a_current_angle_issue, 98);
-    lv_obj_set_y(phase_a_current_angle_issue, 54);
-    lv_obj_set_width(phase_a_current_angle_issue, 12);
-    lv_obj_set_height(phase_a_current_angle_issue, 12);
+    lv_obj_set_x(phase_a_current_angle_issue, 104);
+    lv_obj_set_y(phase_a_current_angle_issue, 80);
+    lv_obj_set_width(phase_a_current_angle_issue, 10);
+    lv_obj_set_height(phase_a_current_angle_issue, 10);
     lv_obj_bind_flag_if_not_eq(phase_a_current_angle_issue, &meter_phase_a_current_angle_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_2 = lv_label_create(page_content);
@@ -108,10 +108,10 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_t * phase_b_current_angle_issue = lv_image_create(page_content);
     lv_obj_set_name(phase_b_current_angle_issue, "phase_b_current_angle_issue");
     lv_image_set_src(phase_b_current_angle_issue, meter_icon_warning);
-    lv_obj_set_x(phase_b_current_angle_issue, 197);
-    lv_obj_set_y(phase_b_current_angle_issue, 54);
-    lv_obj_set_width(phase_b_current_angle_issue, 12);
-    lv_obj_set_height(phase_b_current_angle_issue, 12);
+    lv_obj_set_x(phase_b_current_angle_issue, 203);
+    lv_obj_set_y(phase_b_current_angle_issue, 80);
+    lv_obj_set_width(phase_b_current_angle_issue, 10);
+    lv_obj_set_height(phase_b_current_angle_issue, 10);
     lv_obj_bind_flag_if_not_eq(phase_b_current_angle_issue, &meter_phase_b_current_angle_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_4 = lv_label_create(page_content);
@@ -133,10 +133,10 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_t * phase_c_current_angle_issue = lv_image_create(page_content);
     lv_obj_set_name(phase_c_current_angle_issue, "phase_c_current_angle_issue");
     lv_image_set_src(phase_c_current_angle_issue, meter_icon_warning);
-    lv_obj_set_x(phase_c_current_angle_issue, 295);
-    lv_obj_set_y(phase_c_current_angle_issue, 54);
-    lv_obj_set_width(phase_c_current_angle_issue, 12);
-    lv_obj_set_height(phase_c_current_angle_issue, 12);
+    lv_obj_set_x(phase_c_current_angle_issue, 302);
+    lv_obj_set_y(phase_c_current_angle_issue, 80);
+    lv_obj_set_width(phase_c_current_angle_issue, 10);
+    lv_obj_set_height(phase_c_current_angle_issue, 10);
     lv_obj_bind_flag_if_not_eq(phase_c_current_angle_issue, &meter_phase_c_current_angle_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_6 = lv_label_create(page_content);
@@ -158,10 +158,10 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_t * phase_frequency_issue = lv_image_create(page_content);
     lv_obj_set_name(phase_frequency_issue, "phase_frequency_issue");
     lv_image_set_src(phase_frequency_issue, meter_icon_warning);
-    lv_obj_set_x(phase_frequency_issue, 119);
-    lv_obj_set_y(phase_frequency_issue, 119);
-    lv_obj_set_width(phase_frequency_issue, 12);
-    lv_obj_set_height(phase_frequency_issue, 12);
+    lv_obj_set_x(phase_frequency_issue, 104);
+    lv_obj_set_y(phase_frequency_issue, 145);
+    lv_obj_set_width(phase_frequency_issue, 10);
+    lv_obj_set_height(phase_frequency_issue, 10);
     lv_obj_bind_flag_if_not_eq(phase_frequency_issue, &meter_phase_frequency_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_8 = lv_label_create(page_content);
@@ -183,10 +183,10 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_t * phase_b_voltage_angle_issue = lv_image_create(page_content);
     lv_obj_set_name(phase_b_voltage_angle_issue, "phase_b_voltage_angle_issue");
     lv_image_set_src(phase_b_voltage_angle_issue, meter_icon_warning);
-    lv_obj_set_x(phase_b_voltage_angle_issue, 197);
-    lv_obj_set_y(phase_b_voltage_angle_issue, 119);
-    lv_obj_set_width(phase_b_voltage_angle_issue, 12);
-    lv_obj_set_height(phase_b_voltage_angle_issue, 12);
+    lv_obj_set_x(phase_b_voltage_angle_issue, 203);
+    lv_obj_set_y(phase_b_voltage_angle_issue, 145);
+    lv_obj_set_width(phase_b_voltage_angle_issue, 10);
+    lv_obj_set_height(phase_b_voltage_angle_issue, 10);
     lv_obj_bind_flag_if_not_eq(phase_b_voltage_angle_issue, &meter_phase_b_voltage_angle_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_10 = lv_label_create(page_content);
@@ -208,10 +208,10 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_t * phase_c_voltage_angle_issue = lv_image_create(page_content);
     lv_obj_set_name(phase_c_voltage_angle_issue, "phase_c_voltage_angle_issue");
     lv_image_set_src(phase_c_voltage_angle_issue, meter_icon_warning);
-    lv_obj_set_x(phase_c_voltage_angle_issue, 295);
-    lv_obj_set_y(phase_c_voltage_angle_issue, 119);
-    lv_obj_set_width(phase_c_voltage_angle_issue, 12);
-    lv_obj_set_height(phase_c_voltage_angle_issue, 12);
+    lv_obj_set_x(phase_c_voltage_angle_issue, 302);
+    lv_obj_set_y(phase_c_voltage_angle_issue, 145);
+    lv_obj_set_width(phase_c_voltage_angle_issue, 10);
+    lv_obj_set_height(phase_c_voltage_angle_issue, 10);
     lv_obj_bind_flag_if_not_eq(phase_c_voltage_angle_issue, &meter_phase_c_voltage_angle_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_12 = lv_label_create(page_content);
