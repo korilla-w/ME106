@@ -1,4 +1,4 @@
-<project name="power_meter_ui">
+<project name="power_meter_ui" lvgl_version="9.5.0">
     <targets>
         <target name="target1">
             <!-- 显示目标：UI 层只声明屏幕尺寸，硬件驱动参数由执行层维护。 -->
