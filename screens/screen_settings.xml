@@ -225,7 +225,7 @@
                     <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
                     <bind_flag_if_not_eq subject="meter_settings_selected_index" flag="hidden" ref_value="7"/>
                 </lv_obj>
-                <lv_image src="meter_icon_screen" align="left_mid" x="15" y="0">
+                <lv_image src="meter_icon_select" align="left_mid" x="13" y="0">
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>

@@ -142,14 +142,14 @@
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_arrow_down" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <subject_increment_event subject="meter_screen_timeout_index" step="1" min_value="0" max_value="4" rollover="false" trigger="clicked"/>
+            <subject_increment_event subject="meter_screen_timeout_index" step="1" min_value="0" max_value="4" rollover="true" trigger="clicked"/>
         </lv_button>
         <lv_button name="screen_timeout_btn_up" x="160" y="207" width="79" height="32">
             <style name="me106_btn_flat_gray47"/>
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_arrow_up" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <subject_increment_event subject="meter_screen_timeout_index" step="-1" min_value="0" max_value="4" rollover="false" trigger="clicked"/>
+            <subject_increment_event subject="meter_screen_timeout_index" step="-1" min_value="0" max_value="4" rollover="true" trigger="clicked"/>
         </lv_button>
         <lv_button name="screen_timeout_btn_yes" x="240" y="207" width="80" height="32">
             <style name="me106_btn_flat_blue"/>
