@@ -112,19 +112,15 @@
         <style name="me106_theme_alarm_phase_b_line" bg_color="#meter_theme_alarm_color_phase_b" bg_opa="255"/>
         <style name="me106_theme_alarm_phase_c_line" bg_color="#meter_theme_alarm_color_phase_c" bg_opa="255"/>
 
-        <!-- 电能数据颜色样式：复用已有相位色与辅助色，为四个电能类型提供视觉区分。 -->
-        <style name="me106_text_18_energy_forward_active" text_color="#meter_yellow"/>
-        <style name="me106_text_18_energy_reverse_active" text_color="#meter_green"/>
-        <style name="me106_text_18_energy_inductive_reactive" text_color="#meter_cyan"/>
-        <style name="me106_text_18_energy_capacitive_reactive" text_color="#meter_purple"/>
-        <style name="me106_theme_light_energy_forward_active" text_color="#meter_theme_light_color_phase_a"/>
-        <style name="me106_theme_light_energy_reverse_active" text_color="#meter_theme_light_color_phase_b"/>
-        <style name="me106_theme_light_energy_inductive_reactive" text_color="#meter_indigo"/>
-        <style name="me106_theme_light_energy_capacitive_reactive" text_color="#meter_teal"/>
-        <style name="me106_theme_alarm_energy_forward_active" text_color="#meter_theme_alarm_color_phase_a"/>
-        <style name="me106_theme_alarm_energy_reverse_active" text_color="#meter_theme_alarm_color_phase_b"/>
+        <!-- 电能数据颜色样式：靛蓝/青绿/橙/红，避免与ABC三相重复。 -->
+        <style name="me106_theme_light_energy_forward_active" text_color="#meter_indigo"/>
+        <style name="me106_theme_light_energy_reverse_active" text_color="#meter_teal"/>
+        <style name="me106_theme_light_energy_inductive_reactive" text_color="#meter_orange"/>
+        <style name="me106_theme_light_energy_capacitive_reactive" text_color="#meter_red"/>
+        <style name="me106_theme_alarm_energy_forward_active" text_color="#meter_indigo"/>
+        <style name="me106_theme_alarm_energy_reverse_active" text_color="#meter_teal"/>
         <style name="me106_theme_alarm_energy_inductive_reactive" text_color="#meter_orange"/>
-        <style name="me106_theme_alarm_energy_capacitive_reactive" text_color="#meter_theme_alarm_color_phase_c"/>
+        <style name="me106_theme_alarm_energy_capacitive_reactive" text_color="#meter_red"/>
         <style name="me106_theme_alarm_status_warning" text_color="#meter_theme_alarm_color_warning"/>
         <style name="me106_theme_alarm_status_ok" text_color="#meter_theme_alarm_color_ok"/>
         <style name="me106_theme_alarm_status_danger" text_color="#meter_theme_alarm_color_danger"/>

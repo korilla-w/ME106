@@ -20,9 +20,9 @@
         </lv_label>
 
         <lv_label text="&#x6B63;&#x5411;&#x6709;&#x529F;&#xFF08;&#x6B;&#x57;&#x68;&#xFF09;" x="22" y="55">
-            <style name="me106_text_16_yellow"/>
-            <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
-            <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
+            <style name="me106_text_16_indigo"/>
+            <bind_style name="me106_theme_light_energy_forward_active" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_energy_forward_active" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         <!-- UI告警点：电能增量越限由逻辑层置位，XML 只显示角标。 -->
         <lv_image name="energy_forward_active_issue" src="meter_icon_warning" x="144" y="55" width="12" height="12"><bind_flag_if_not_eq subject="meter_energy_forward_active_issue" flag="hidden" ref_value="1"/></lv_image>
@@ -33,9 +33,9 @@
         </lv_label>
 
         <lv_label text="&#x53CD;&#x5411;&#x6709;&#x529F;&#xFF08;&#x6B;&#x57;&#x68;&#xFF09;" x="174" y="55">
-            <style name="me106_text_16_green"/>
-            <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
-            <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
+            <style name="me106_text_16_teal"/>
+            <bind_style name="me106_theme_light_energy_reverse_active" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_energy_reverse_active" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         <lv_image name="energy_reverse_active_issue" src="meter_icon_warning" x="296" y="55" width="12" height="12"><bind_flag_if_not_eq subject="meter_energy_reverse_active_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="4534.554" x="174" y="77">
@@ -45,9 +45,9 @@
         </lv_label>
 
         <lv_label text="&#x611F;&#x6027;&#x65E0;&#x529F;&#xFF08;&#x6B;&#x76;&#x61;&#x72;&#x68;&#xFF09;" x="22" y="120">
-            <style name="me106_text_16_cyan"/>
-            <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
-            <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
+            <style name="me106_text_16_orange"/>
+            <bind_style name="me106_theme_light_energy_inductive_reactive" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_energy_inductive_reactive" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         <lv_image name="energy_inductive_reactive_issue" src="meter_icon_warning" x="144" y="120" width="12" height="12"><bind_flag_if_not_eq subject="meter_energy_inductive_reactive_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="4534.554" x="22" y="142">
@@ -57,9 +57,9 @@
         </lv_label>
 
         <lv_label text="&#x5BB9;&#x6027;&#x65E0;&#x529F;&#xFF08;&#x6B;&#x76;&#x61;&#x72;&#x68;&#xFF09;" x="173" y="120">
-            <style name="me106_text_16_indigo"/>
-            <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
-            <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
+            <style name="me106_text_16_red"/>
+            <bind_style name="me106_theme_light_energy_capacitive_reactive" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_energy_capacitive_reactive" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         <lv_image name="energy_capacitive_reactive_issue" src="meter_icon_warning" x="296" y="120" width="12" height="12"><bind_flag_if_not_eq subject="meter_energy_capacitive_reactive_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="4534.554" x="173" y="142">
