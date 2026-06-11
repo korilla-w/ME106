@@ -15,13 +15,14 @@
 
         <lv_obj name="settings_list" x="24" y="48" width="270" height="154" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollbar_mode="off" scrollable="false">
             <lv_obj name="settings_items" x="0" y="0" width="270" height="500" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
-                <bind_style name="me106_move_y_n24" subject="meter_settings_selected_index" ref_value="3"/>
-                <bind_style name="me106_move_y_n70" subject="meter_settings_selected_index" ref_value="4"/>
-                <bind_style name="me106_move_y_n116" subject="meter_settings_selected_index" ref_value="5"/>
-                <bind_style name="me106_move_y_n162" subject="meter_settings_selected_index" ref_value="6"/>
-                <bind_style name="me106_move_y_n208" subject="meter_settings_selected_index" ref_value="7"/>
-                <bind_style name="me106_move_y_n254" subject="meter_settings_selected_index" ref_value="8"/>
-                <bind_style name="me106_move_y_n300" subject="meter_settings_selected_index" ref_value="9"/>
+                <bind_style name="me106_move_y_n24" subject="meter_settings_selected_index" ref_value="2"/>
+                <bind_style name="me106_move_y_n70" subject="meter_settings_selected_index" ref_value="3"/>
+                <bind_style name="me106_move_y_n116" subject="meter_settings_selected_index" ref_value="4"/>
+                <bind_style name="me106_move_y_n162" subject="meter_settings_selected_index" ref_value="5"/>
+                <bind_style name="me106_move_y_n208" subject="meter_settings_selected_index" ref_value="6"/>
+                <bind_style name="me106_move_y_n254" subject="meter_settings_selected_index" ref_value="7"/>
+                <bind_style name="me106_move_y_n300" subject="meter_settings_selected_index" ref_value="8"/>
+                <bind_style name="me106_move_y_n346" subject="meter_settings_selected_index" ref_value="9"/>
                 <bind_style name="me106_move_y_n346" subject="meter_settings_selected_index" ref_value="10"/>
 
             <lv_button name="settings_item_wifi" x="0" y="0" width="270" height="40" style_pad_all="0">
