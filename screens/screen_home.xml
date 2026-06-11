@@ -40,9 +40,9 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         <!-- UI告警点：首页每个电参只保留一个独立图标位，异常聚合交给逻辑层。 -->
-        <lv_image name="home_a_voltage_issue" src="meter_icon_warning" x="123" y="55" width="12" height="12"><bind_flag_if_not_eq subject="meter_home_a_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
-        <lv_image name="home_a_current_issue" src="meter_icon_warning" x="206" y="55" width="12" height="12"><bind_flag_if_not_eq subject="meter_home_a_current_issue" flag="hidden" ref_value="1"/></lv_image>
-        <lv_image name="home_a_pf_issue" src="meter_icon_warning" x="285" y="55" width="12" height="12"><bind_flag_if_not_eq subject="meter_home_a_pf_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="home_a_voltage_issue" src="meter_icon_warning" x="141" y="78" width="10" height="10"><bind_flag_if_not_eq subject="meter_home_a_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="home_a_current_issue" src="meter_icon_warning" x="224" y="78" width="10" height="10"><bind_flag_if_not_eq subject="meter_home_a_current_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="home_a_pf_issue" src="meter_icon_warning" x="304" y="78" width="10" height="10"><bind_flag_if_not_eq subject="meter_home_a_pf_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="232.884" x="73" y="75">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
@@ -79,9 +79,9 @@
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="home_b_voltage_issue" src="meter_icon_warning" x="123" y="105" width="12" height="12"><bind_flag_if_not_eq subject="meter_home_b_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
-        <lv_image name="home_b_current_issue" src="meter_icon_warning" x="206" y="105" width="12" height="12"><bind_flag_if_not_eq subject="meter_home_b_current_issue" flag="hidden" ref_value="1"/></lv_image>
-        <lv_image name="home_b_pf_issue" src="meter_icon_warning" x="285" y="105" width="12" height="12"><bind_flag_if_not_eq subject="meter_home_b_pf_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="home_b_voltage_issue" src="meter_icon_warning" x="141" y="128" width="10" height="10"><bind_flag_if_not_eq subject="meter_home_b_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="home_b_current_issue" src="meter_icon_warning" x="224" y="128" width="10" height="10"><bind_flag_if_not_eq subject="meter_home_b_current_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="home_b_pf_issue" src="meter_icon_warning" x="304" y="128" width="10" height="10"><bind_flag_if_not_eq subject="meter_home_b_pf_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="232.884" x="73" y="125">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
@@ -118,9 +118,9 @@
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="home_c_voltage_issue" src="meter_icon_warning" x="123" y="155" width="12" height="12"><bind_flag_if_not_eq subject="meter_home_c_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
-        <lv_image name="home_c_current_issue" src="meter_icon_warning" x="206" y="155" width="12" height="12"><bind_flag_if_not_eq subject="meter_home_c_current_issue" flag="hidden" ref_value="1"/></lv_image>
-        <lv_image name="home_c_pf_issue" src="meter_icon_warning" x="285" y="155" width="12" height="12"><bind_flag_if_not_eq subject="meter_home_c_pf_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="home_c_voltage_issue" src="meter_icon_warning" x="141" y="178" width="10" height="10"><bind_flag_if_not_eq subject="meter_home_c_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="home_c_current_issue" src="meter_icon_warning" x="224" y="178" width="10" height="10"><bind_flag_if_not_eq subject="meter_home_c_current_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="home_c_pf_issue" src="meter_icon_warning" x="304" y="178" width="10" height="10"><bind_flag_if_not_eq subject="meter_home_c_pf_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="232.884" x="73" y="175">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>

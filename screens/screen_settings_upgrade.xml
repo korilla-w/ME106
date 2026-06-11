@@ -78,27 +78,14 @@
                 <style name="me106_text_18_cyan"/>
             </lv_label>
 
-            <lv_label text="&#x8FDE;&#x63A5;&#x70ED;&#x70B9;&#x540E;&#x786E;&#x8BA4;&#x5347;&#x7EA7;" x="24" y="176" width="184">
+            <lv_label text="&#x8FDE;&#x63A5;&#x70ED;&#x70B9;&#x540E;&#x53EF;&#x6267;&#x884C;&#x5347;&#x7EA7;" x="24" y="176" width="184">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
-
-            <lv_button name="upgrade_action_btn" x="216" y="170" width="80" height="30" style_pad_all="0">
-                <style name="me106_panel_blue_r6"/>
-                <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
-                <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
-                <lv_label text="&#x5347;&#x7EA7;" align="center" width="80">
-                    <style name="me106_text_16_white_center"/>
-                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
-                </lv_label>
-                <subject_set_int_event subject="meter_upgrade_request" value="1" trigger="clicked"/>
-                <subject_set_string_event subject="meter_upgrade_status_text" value="&#x8BF7;&#x6C42;&#x5DF2;&#x53D1;&#x9001;" trigger="clicked"/>
-            </lv_button>
         </lv_obj>
 
-        <!-- 底部硬按键只表达返回、联网入口和确认意图，不直接执行 OTA。 -->
+        <!-- 底部硬按键只表达返回、联网入口和升级意图，不直接执行 OTA。 -->
         <lv_obj name="screen_settings_upgrade_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
             <style name="me106_btn_flat_gray47"/>
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
@@ -126,11 +113,13 @@
             <subject_set_int_event subject="meter_wifi_sta_connect_request" value="1" trigger="clicked"/>
             <subject_set_string_event subject="meter_upgrade_status_text" value="&#x6B63;&#x5728;&#x8FDE;&#x63A5;&#x70ED;&#x70B9;" trigger="clicked"/>
         </lv_button>
-        <lv_button name="upgrade_btn_yes" x="240" y="207" width="80" height="32">
+        <lv_button name="upgrade_btn_update" x="240" y="207" width="80" height="32">
             <style name="me106_btn_flat_blue"/>
             <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
-            <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_image src="meter_icon_update" align="center" style_transform_pivot_x="8" style_transform_pivot_y="8" style_transform_scale_x="220" style_transform_scale_y="220">
+                <style name="me106_icon_white"/>
+            </lv_image>
             <subject_set_int_event subject="meter_upgrade_request" value="1" trigger="clicked"/>
             <subject_set_string_event subject="meter_upgrade_status_text" value="&#x8BF7;&#x6C42;&#x5DF2;&#x53D1;&#x9001;" trigger="clicked"/>
         </lv_button>

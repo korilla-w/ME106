@@ -134,12 +134,10 @@
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
         </lv_button>
-        <lv_button name="system_btn_yes" x="240" y="207" width="80" height="32">
-            <style name="me106_btn_flat_blue"/>
-            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
-            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
-            <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        <lv_button name="system_btn_placeholder_3" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
         </lv_button>
     </view>
 </screen>
