@@ -25,60 +25,60 @@
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         <!-- UI告警点：线电压和需量各自对应一个独立告警位，避免同坐标叠图标。 -->
-        <lv_image name="line_ab_voltage_issue" src="meter_icon_warning" x="104" y="80" style_transform_pivot_x="0" style_transform_pivot_y="0" style_transform_scale_x="160" style_transform_scale_y="160"><bind_flag_if_not_eq subject="meter_line_ab_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="391.05" x="24" y="77">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
+        <lv_image name="line_ab_voltage_issue" src="meter_icon_warning" x="104" y="80"><bind_flag_if_not_eq subject="meter_line_ab_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
 
         <lv_label text="&#x42;&#x43;&#x7EBF;" x="123" y="55">
             <style name="me106_text_18_green"/>
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="line_bc_voltage_issue" src="meter_icon_warning" x="203" y="80" style_transform_pivot_x="0" style_transform_pivot_y="0" style_transform_scale_x="160" style_transform_scale_y="160"><bind_flag_if_not_eq subject="meter_line_bc_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="381.55" x="123" y="77">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
+        <lv_image name="line_bc_voltage_issue" src="meter_icon_warning" x="203" y="80"><bind_flag_if_not_eq subject="meter_line_bc_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
 
         <lv_label text="&#x43;&#x41;&#x7EBF;" x="222" y="55">
             <style name="me106_text_18_red"/>
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="line_ca_voltage_issue" src="meter_icon_warning" x="302" y="80" style_transform_pivot_x="0" style_transform_pivot_y="0" style_transform_scale_x="160" style_transform_scale_y="160"><bind_flag_if_not_eq subject="meter_line_ca_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="389.84" x="222" y="77">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
+        <lv_image name="line_ca_voltage_issue" src="meter_icon_warning" x="302" y="80"><bind_flag_if_not_eq subject="meter_line_ca_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
 
         <lv_label text="&#x5F53;&#x524D;&#x9700;&#x91CF;&#xFF08;&#x6B;&#x57;&#xFF09;" x="23" y="120">
             <style name="me106_text_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="line_current_demand_issue" src="meter_icon_warning" x="145" y="145" style_transform_pivot_x="0" style_transform_pivot_y="0" style_transform_scale_x="160" style_transform_scale_y="160"><bind_flag_if_not_eq subject="meter_line_current_demand_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="4851.2" x="23" y="142">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
+        <lv_image name="line_current_demand_issue" src="meter_icon_warning" x="145" y="145"><bind_flag_if_not_eq subject="meter_line_current_demand_issue" flag="hidden" ref_value="1"/></lv_image>
 
         <lv_label text="&#x6700;&#x5927;&#x9700;&#x91CF;&#xFF08;&#x6B;&#x57;&#xFF09;" x="157" y="120">
             <style name="me106_text_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="line_max_demand_issue" src="meter_icon_warning" x="279" y="145" style_transform_pivot_x="0" style_transform_pivot_y="0" style_transform_scale_x="160" style_transform_scale_y="160"><bind_flag_if_not_eq subject="meter_line_max_demand_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_label text="5482.54" x="157" y="142">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
+        <lv_image name="line_max_demand_issue" src="meter_icon_warning" x="279" y="145"><bind_flag_if_not_eq subject="meter_line_max_demand_issue" flag="hidden" ref_value="1"/></lv_image>
 
         </lv_obj>
 
