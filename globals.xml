@@ -155,6 +155,7 @@
         <style name="me106_text_16_yellow" text_color="#meter_yellow" text_font="meter_Harmony_Sans_SC_Medium_16"/>
         <style name="me106_text_16_green" text_color="#meter_green" text_font="meter_Harmony_Sans_SC_Medium_16"/>
         <style name="me106_text_16_red" text_color="#meter_red" text_font="meter_Harmony_Sans_SC_Medium_16"/>
+        <style name="me106_text_16_purple" text_color="#meter_purple" text_font="meter_Harmony_Sans_SC_Medium_16"/>
         <style name="me106_text_16_cyan" text_color="#meter_cyan" text_font="meter_Harmony_Sans_SC_Medium_16"/>
         <style name="me106_text_16_teal" text_color="#meter_teal" text_font="meter_Harmony_Sans_SC_Medium_16"/>
         <style name="me106_text_16_indigo" text_color="#meter_indigo" text_font="meter_Harmony_Sans_SC_Medium_16"/>
