@@ -775,6 +775,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_add_style(settings_btn_down, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(settings_btn_down, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_btn_down, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
+    lv_obj_bind_flag_if_eq(settings_btn_down, &meter_settings_selected_index, LV_OBJ_FLAG_HIDDEN, 10);
     lv_obj_t * lv_image_23 = lv_image_create(settings_btn_down);
     lv_image_set_src(lv_image_23, meter_arrow_down);
     lv_obj_set_align(lv_image_23, LV_ALIGN_CENTER);
@@ -786,7 +787,30 @@ lv_obj_t * screen_settings_create(void)
     lv_subject_increment_dsc_t * subject_increment_event_0 = lv_obj_add_subject_increment_event(settings_btn_down, &meter_settings_selected_index, LV_EVENT_CLICKED, 1);
     lv_obj_set_subject_increment_event_min_value(settings_btn_down, subject_increment_event_0, 0);
     lv_obj_set_subject_increment_event_max_value(settings_btn_down, subject_increment_event_0, 10);
-    lv_obj_set_subject_increment_event_rollover(settings_btn_down, subject_increment_event_0, true);
+    lv_obj_set_subject_increment_event_rollover(settings_btn_down, subject_increment_event_0, false);
+    
+    lv_obj_t * settings_btn_down_wrap = lv_button_create(lv_obj_0);
+    lv_obj_set_name(settings_btn_down_wrap, "settings_btn_down_wrap");
+    lv_obj_set_x(settings_btn_down_wrap, 80);
+    lv_obj_set_y(settings_btn_down_wrap, 207);
+    lv_obj_set_width(settings_btn_down_wrap, 79);
+    lv_obj_set_height(settings_btn_down_wrap, 32);
+    lv_obj_add_style(settings_btn_down_wrap, &me106_btn_flat_gray47, 0);
+    lv_obj_bind_style(settings_btn_down_wrap, &me106_theme_light_nav, 0, &meter_theme_index, 1);
+    lv_obj_bind_style(settings_btn_down_wrap, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
+    lv_obj_bind_flag_if_not_eq(settings_btn_down_wrap, &meter_settings_selected_index, LV_OBJ_FLAG_HIDDEN, 10);
+    lv_obj_t * lv_image_24 = lv_image_create(settings_btn_down_wrap);
+    lv_image_set_src(lv_image_24, meter_arrow_down);
+    lv_obj_set_align(lv_image_24, LV_ALIGN_CENTER);
+    lv_obj_set_style_transform_pivot_x(lv_image_24, 7, 0);
+    lv_obj_set_style_transform_pivot_y(lv_image_24, 5, 0);
+    lv_obj_set_style_transform_scale_x(lv_image_24, 230, 0);
+    lv_obj_set_style_transform_scale_y(lv_image_24, 230, 0);
+    
+    lv_subject_increment_dsc_t * subject_increment_event_1 = lv_obj_add_subject_increment_event(settings_btn_down_wrap, &meter_settings_selected_index, LV_EVENT_CLICKED, 1);
+    lv_obj_set_subject_increment_event_min_value(settings_btn_down_wrap, subject_increment_event_1, 0);
+    lv_obj_set_subject_increment_event_max_value(settings_btn_down_wrap, subject_increment_event_1, 10);
+    lv_obj_set_subject_increment_event_rollover(settings_btn_down_wrap, subject_increment_event_1, true);
     
     lv_obj_t * settings_btn_up = lv_button_create(lv_obj_0);
     lv_obj_set_name(settings_btn_up, "settings_btn_up");
@@ -797,18 +821,42 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_add_style(settings_btn_up, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(settings_btn_up, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_btn_up, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-    lv_obj_t * lv_image_24 = lv_image_create(settings_btn_up);
-    lv_image_set_src(lv_image_24, meter_arrow_up);
-    lv_obj_set_align(lv_image_24, LV_ALIGN_CENTER);
-    lv_obj_set_style_transform_pivot_x(lv_image_24, 7, 0);
-    lv_obj_set_style_transform_pivot_y(lv_image_24, 5, 0);
-    lv_obj_set_style_transform_scale_x(lv_image_24, 230, 0);
-    lv_obj_set_style_transform_scale_y(lv_image_24, 230, 0);
+    lv_obj_bind_flag_if_eq(settings_btn_up, &meter_settings_selected_index, LV_OBJ_FLAG_HIDDEN, 0);
+    lv_obj_t * lv_image_25 = lv_image_create(settings_btn_up);
+    lv_image_set_src(lv_image_25, meter_arrow_up);
+    lv_obj_set_align(lv_image_25, LV_ALIGN_CENTER);
+    lv_obj_set_style_transform_pivot_x(lv_image_25, 7, 0);
+    lv_obj_set_style_transform_pivot_y(lv_image_25, 5, 0);
+    lv_obj_set_style_transform_scale_x(lv_image_25, 230, 0);
+    lv_obj_set_style_transform_scale_y(lv_image_25, 230, 0);
     
-    lv_subject_increment_dsc_t * subject_increment_event_1 = lv_obj_add_subject_increment_event(settings_btn_up, &meter_settings_selected_index, LV_EVENT_CLICKED, -1);
-    lv_obj_set_subject_increment_event_min_value(settings_btn_up, subject_increment_event_1, 0);
-    lv_obj_set_subject_increment_event_max_value(settings_btn_up, subject_increment_event_1, 10);
-    lv_obj_set_subject_increment_event_rollover(settings_btn_up, subject_increment_event_1, true);
+    lv_subject_increment_dsc_t * subject_increment_event_2 = lv_obj_add_subject_increment_event(settings_btn_up, &meter_settings_selected_index, LV_EVENT_CLICKED, -1);
+    lv_obj_set_subject_increment_event_min_value(settings_btn_up, subject_increment_event_2, 0);
+    lv_obj_set_subject_increment_event_max_value(settings_btn_up, subject_increment_event_2, 10);
+    lv_obj_set_subject_increment_event_rollover(settings_btn_up, subject_increment_event_2, false);
+    
+    lv_obj_t * settings_btn_up_wrap = lv_button_create(lv_obj_0);
+    lv_obj_set_name(settings_btn_up_wrap, "settings_btn_up_wrap");
+    lv_obj_set_x(settings_btn_up_wrap, 160);
+    lv_obj_set_y(settings_btn_up_wrap, 207);
+    lv_obj_set_width(settings_btn_up_wrap, 79);
+    lv_obj_set_height(settings_btn_up_wrap, 32);
+    lv_obj_add_style(settings_btn_up_wrap, &me106_btn_flat_gray47, 0);
+    lv_obj_bind_style(settings_btn_up_wrap, &me106_theme_light_nav, 0, &meter_theme_index, 1);
+    lv_obj_bind_style(settings_btn_up_wrap, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
+    lv_obj_bind_flag_if_not_eq(settings_btn_up_wrap, &meter_settings_selected_index, LV_OBJ_FLAG_HIDDEN, 0);
+    lv_obj_t * lv_image_26 = lv_image_create(settings_btn_up_wrap);
+    lv_image_set_src(lv_image_26, meter_arrow_up);
+    lv_obj_set_align(lv_image_26, LV_ALIGN_CENTER);
+    lv_obj_set_style_transform_pivot_x(lv_image_26, 7, 0);
+    lv_obj_set_style_transform_pivot_y(lv_image_26, 5, 0);
+    lv_obj_set_style_transform_scale_x(lv_image_26, 230, 0);
+    lv_obj_set_style_transform_scale_y(lv_image_26, 230, 0);
+    
+    lv_subject_increment_dsc_t * subject_increment_event_3 = lv_obj_add_subject_increment_event(settings_btn_up_wrap, &meter_settings_selected_index, LV_EVENT_CLICKED, -1);
+    lv_obj_set_subject_increment_event_min_value(settings_btn_up_wrap, subject_increment_event_3, 0);
+    lv_obj_set_subject_increment_event_max_value(settings_btn_up_wrap, subject_increment_event_3, 10);
+    lv_obj_set_subject_increment_event_rollover(settings_btn_up_wrap, subject_increment_event_3, true);
     
     lv_obj_t * settings_btn_yes = lv_button_create(lv_obj_0);
     lv_obj_set_name(settings_btn_yes, "settings_btn_yes");
@@ -819,13 +867,13 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_add_style(settings_btn_yes, &me106_btn_flat_blue, 0);
     lv_obj_bind_style(settings_btn_yes, &me106_theme_light_accent, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_btn_yes, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
-    lv_obj_t * lv_image_25 = lv_image_create(settings_btn_yes);
-    lv_image_set_src(lv_image_25, meter_yes);
-    lv_obj_set_align(lv_image_25, LV_ALIGN_CENTER);
-    lv_obj_set_style_transform_pivot_x(lv_image_25, 9, 0);
-    lv_obj_set_style_transform_pivot_y(lv_image_25, 6, 0);
-    lv_obj_set_style_transform_scale_x(lv_image_25, 230, 0);
-    lv_obj_set_style_transform_scale_y(lv_image_25, 230, 0);
+    lv_obj_t * lv_image_27 = lv_image_create(settings_btn_yes);
+    lv_image_set_src(lv_image_27, meter_yes);
+    lv_obj_set_align(lv_image_27, LV_ALIGN_CENTER);
+    lv_obj_set_style_transform_pivot_x(lv_image_27, 9, 0);
+    lv_obj_set_style_transform_pivot_y(lv_image_27, 6, 0);
+    lv_obj_set_style_transform_scale_x(lv_image_27, 230, 0);
+    lv_obj_set_style_transform_scale_y(lv_image_27, 230, 0);
     
     lv_obj_t * settings_btn_yes_wifi = lv_button_create(lv_obj_0);
     lv_obj_set_name(settings_btn_yes_wifi, "settings_btn_yes_wifi");

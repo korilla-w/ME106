@@ -80,17 +80,6 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_bind_style(lv_label_1, &me106_theme_light_energy_forward_active, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_1, &me106_theme_alarm_energy_forward_active, 0, &meter_theme_index, 2);
     
-    lv_obj_t * energy_forward_active_issue = lv_image_create(page_content);
-    lv_obj_set_name(energy_forward_active_issue, "energy_forward_active_issue");
-    lv_image_set_src(energy_forward_active_issue, meter_icon_warning);
-    lv_obj_set_x(energy_forward_active_issue, 144);
-    lv_obj_set_y(energy_forward_active_issue, 80);
-    lv_obj_set_style_transform_pivot_x(energy_forward_active_issue, 0, 0);
-    lv_obj_set_style_transform_pivot_y(energy_forward_active_issue, 0, 0);
-    lv_obj_set_style_transform_scale_x(energy_forward_active_issue, 160, 0);
-    lv_obj_set_style_transform_scale_y(energy_forward_active_issue, 160, 0);
-    lv_obj_bind_flag_if_not_eq(energy_forward_active_issue, &meter_energy_forward_active_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
     lv_obj_t * lv_label_2 = lv_label_create(page_content);
     lv_label_set_text(lv_label_2, "4534.554");
     lv_obj_set_x(lv_label_2, 22);
@@ -98,6 +87,13 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_add_style(lv_label_2, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_2, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_2, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+    
+    lv_obj_t * energy_forward_active_issue = lv_image_create(page_content);
+    lv_obj_set_name(energy_forward_active_issue, "energy_forward_active_issue");
+    lv_image_set_src(energy_forward_active_issue, meter_icon_warning);
+    lv_obj_set_x(energy_forward_active_issue, 144);
+    lv_obj_set_y(energy_forward_active_issue, 80);
+    lv_obj_bind_flag_if_not_eq(energy_forward_active_issue, &meter_energy_forward_active_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_3 = lv_label_create(page_content);
     lv_label_set_text(lv_label_3, "反向有功（kWh）");
@@ -107,17 +103,6 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_bind_style(lv_label_3, &me106_theme_light_energy_reverse_active, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_3, &me106_theme_alarm_energy_reverse_active, 0, &meter_theme_index, 2);
     
-    lv_obj_t * energy_reverse_active_issue = lv_image_create(page_content);
-    lv_obj_set_name(energy_reverse_active_issue, "energy_reverse_active_issue");
-    lv_image_set_src(energy_reverse_active_issue, meter_icon_warning);
-    lv_obj_set_x(energy_reverse_active_issue, 296);
-    lv_obj_set_y(energy_reverse_active_issue, 80);
-    lv_obj_set_style_transform_pivot_x(energy_reverse_active_issue, 0, 0);
-    lv_obj_set_style_transform_pivot_y(energy_reverse_active_issue, 0, 0);
-    lv_obj_set_style_transform_scale_x(energy_reverse_active_issue, 160, 0);
-    lv_obj_set_style_transform_scale_y(energy_reverse_active_issue, 160, 0);
-    lv_obj_bind_flag_if_not_eq(energy_reverse_active_issue, &meter_energy_reverse_active_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
     lv_obj_t * lv_label_4 = lv_label_create(page_content);
     lv_label_set_text(lv_label_4, "4534.554");
     lv_obj_set_x(lv_label_4, 174);
@@ -125,6 +110,13 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_add_style(lv_label_4, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+    
+    lv_obj_t * energy_reverse_active_issue = lv_image_create(page_content);
+    lv_obj_set_name(energy_reverse_active_issue, "energy_reverse_active_issue");
+    lv_image_set_src(energy_reverse_active_issue, meter_icon_warning);
+    lv_obj_set_x(energy_reverse_active_issue, 296);
+    lv_obj_set_y(energy_reverse_active_issue, 80);
+    lv_obj_bind_flag_if_not_eq(energy_reverse_active_issue, &meter_energy_reverse_active_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_5 = lv_label_create(page_content);
     lv_label_set_text(lv_label_5, "感性无功（kvarh）");
@@ -134,17 +126,6 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_bind_style(lv_label_5, &me106_theme_light_energy_inductive_reactive, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_5, &me106_theme_alarm_energy_inductive_reactive, 0, &meter_theme_index, 2);
     
-    lv_obj_t * energy_inductive_reactive_issue = lv_image_create(page_content);
-    lv_obj_set_name(energy_inductive_reactive_issue, "energy_inductive_reactive_issue");
-    lv_image_set_src(energy_inductive_reactive_issue, meter_icon_warning);
-    lv_obj_set_x(energy_inductive_reactive_issue, 144);
-    lv_obj_set_y(energy_inductive_reactive_issue, 145);
-    lv_obj_set_style_transform_pivot_x(energy_inductive_reactive_issue, 0, 0);
-    lv_obj_set_style_transform_pivot_y(energy_inductive_reactive_issue, 0, 0);
-    lv_obj_set_style_transform_scale_x(energy_inductive_reactive_issue, 160, 0);
-    lv_obj_set_style_transform_scale_y(energy_inductive_reactive_issue, 160, 0);
-    lv_obj_bind_flag_if_not_eq(energy_inductive_reactive_issue, &meter_energy_inductive_reactive_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
     lv_obj_t * lv_label_6 = lv_label_create(page_content);
     lv_label_set_text(lv_label_6, "4534.554");
     lv_obj_set_x(lv_label_6, 22);
@@ -152,6 +133,13 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_add_style(lv_label_6, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_6, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_6, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+    
+    lv_obj_t * energy_inductive_reactive_issue = lv_image_create(page_content);
+    lv_obj_set_name(energy_inductive_reactive_issue, "energy_inductive_reactive_issue");
+    lv_image_set_src(energy_inductive_reactive_issue, meter_icon_warning);
+    lv_obj_set_x(energy_inductive_reactive_issue, 144);
+    lv_obj_set_y(energy_inductive_reactive_issue, 145);
+    lv_obj_bind_flag_if_not_eq(energy_inductive_reactive_issue, &meter_energy_inductive_reactive_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_7 = lv_label_create(page_content);
     lv_label_set_text(lv_label_7, "容性无功（kvarh）");
@@ -161,17 +149,6 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_bind_style(lv_label_7, &me106_theme_light_energy_capacitive_reactive, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_7, &me106_theme_alarm_energy_capacitive_reactive, 0, &meter_theme_index, 2);
     
-    lv_obj_t * energy_capacitive_reactive_issue = lv_image_create(page_content);
-    lv_obj_set_name(energy_capacitive_reactive_issue, "energy_capacitive_reactive_issue");
-    lv_image_set_src(energy_capacitive_reactive_issue, meter_icon_warning);
-    lv_obj_set_x(energy_capacitive_reactive_issue, 296);
-    lv_obj_set_y(energy_capacitive_reactive_issue, 145);
-    lv_obj_set_style_transform_pivot_x(energy_capacitive_reactive_issue, 0, 0);
-    lv_obj_set_style_transform_pivot_y(energy_capacitive_reactive_issue, 0, 0);
-    lv_obj_set_style_transform_scale_x(energy_capacitive_reactive_issue, 160, 0);
-    lv_obj_set_style_transform_scale_y(energy_capacitive_reactive_issue, 160, 0);
-    lv_obj_bind_flag_if_not_eq(energy_capacitive_reactive_issue, &meter_energy_capacitive_reactive_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
     lv_obj_t * lv_label_8 = lv_label_create(page_content);
     lv_label_set_text(lv_label_8, "4534.554");
     lv_obj_set_x(lv_label_8, 173);
@@ -179,6 +156,13 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_add_style(lv_label_8, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_8, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_8, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+    
+    lv_obj_t * energy_capacitive_reactive_issue = lv_image_create(page_content);
+    lv_obj_set_name(energy_capacitive_reactive_issue, "energy_capacitive_reactive_issue");
+    lv_image_set_src(energy_capacitive_reactive_issue, meter_icon_warning);
+    lv_obj_set_x(energy_capacitive_reactive_issue, 296);
+    lv_obj_set_y(energy_capacitive_reactive_issue, 145);
+    lv_obj_bind_flag_if_not_eq(energy_capacitive_reactive_issue, &meter_energy_capacitive_reactive_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * screen_energy_data_bottom_bar = lv_obj_create(lv_obj_0);
     lv_obj_set_name(screen_energy_data_bottom_bar, "screen_energy_data_bottom_bar");

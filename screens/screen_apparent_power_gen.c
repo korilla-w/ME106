@@ -80,17 +80,6 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_obj_bind_style(lv_label_1, &me106_theme_light_phase_a, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_1, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
     
-    lv_obj_t * apparent_a_power_issue = lv_image_create(page_content);
-    lv_obj_set_name(apparent_a_power_issue, "apparent_a_power_issue");
-    lv_image_set_src(apparent_a_power_issue, meter_icon_warning);
-    lv_obj_set_x(apparent_a_power_issue, 56);
-    lv_obj_set_y(apparent_a_power_issue, 55);
-    lv_obj_set_style_transform_pivot_x(apparent_a_power_issue, 0, 0);
-    lv_obj_set_style_transform_pivot_y(apparent_a_power_issue, 0, 0);
-    lv_obj_set_style_transform_scale_x(apparent_a_power_issue, 160, 0);
-    lv_obj_set_style_transform_scale_y(apparent_a_power_issue, 160, 0);
-    lv_obj_bind_flag_if_not_eq(apparent_a_power_issue, &meter_apparent_a_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
     lv_obj_t * lv_label_2 = lv_label_create(page_content);
     lv_label_set_text(lv_label_2, "4534.554");
     lv_obj_set_x(lv_label_2, 32);
@@ -98,6 +87,13 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_obj_add_style(lv_label_2, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_2, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_2, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+    
+    lv_obj_t * apparent_a_power_issue = lv_image_create(page_content);
+    lv_obj_set_name(apparent_a_power_issue, "apparent_a_power_issue");
+    lv_image_set_src(apparent_a_power_issue, meter_icon_warning);
+    lv_obj_set_x(apparent_a_power_issue, 56);
+    lv_obj_set_y(apparent_a_power_issue, 55);
+    lv_obj_bind_flag_if_not_eq(apparent_a_power_issue, &meter_apparent_a_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_3 = lv_label_create(page_content);
     lv_label_set_text(lv_label_3, "B相");
@@ -107,17 +103,6 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_obj_bind_style(lv_label_3, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_3, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
     
-    lv_obj_t * apparent_b_power_issue = lv_image_create(page_content);
-    lv_obj_set_name(apparent_b_power_issue, "apparent_b_power_issue");
-    lv_image_set_src(apparent_b_power_issue, meter_icon_warning);
-    lv_obj_set_x(apparent_b_power_issue, 219);
-    lv_obj_set_y(apparent_b_power_issue, 55);
-    lv_obj_set_style_transform_pivot_x(apparent_b_power_issue, 0, 0);
-    lv_obj_set_style_transform_pivot_y(apparent_b_power_issue, 0, 0);
-    lv_obj_set_style_transform_scale_x(apparent_b_power_issue, 160, 0);
-    lv_obj_set_style_transform_scale_y(apparent_b_power_issue, 160, 0);
-    lv_obj_bind_flag_if_not_eq(apparent_b_power_issue, &meter_apparent_b_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
     lv_obj_t * lv_label_4 = lv_label_create(page_content);
     lv_label_set_text(lv_label_4, "4534.554");
     lv_obj_set_x(lv_label_4, 195);
@@ -125,6 +110,13 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_obj_add_style(lv_label_4, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+    
+    lv_obj_t * apparent_b_power_issue = lv_image_create(page_content);
+    lv_obj_set_name(apparent_b_power_issue, "apparent_b_power_issue");
+    lv_image_set_src(apparent_b_power_issue, meter_icon_warning);
+    lv_obj_set_x(apparent_b_power_issue, 219);
+    lv_obj_set_y(apparent_b_power_issue, 55);
+    lv_obj_bind_flag_if_not_eq(apparent_b_power_issue, &meter_apparent_b_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_5 = lv_label_create(page_content);
     lv_label_set_text(lv_label_5, "C相");
@@ -134,17 +126,6 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_obj_bind_style(lv_label_5, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_5, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
     
-    lv_obj_t * apparent_c_power_issue = lv_image_create(page_content);
-    lv_obj_set_name(apparent_c_power_issue, "apparent_c_power_issue");
-    lv_image_set_src(apparent_c_power_issue, meter_icon_warning);
-    lv_obj_set_x(apparent_c_power_issue, 56);
-    lv_obj_set_y(apparent_c_power_issue, 122);
-    lv_obj_set_style_transform_pivot_x(apparent_c_power_issue, 0, 0);
-    lv_obj_set_style_transform_pivot_y(apparent_c_power_issue, 0, 0);
-    lv_obj_set_style_transform_scale_x(apparent_c_power_issue, 160, 0);
-    lv_obj_set_style_transform_scale_y(apparent_c_power_issue, 160, 0);
-    lv_obj_bind_flag_if_not_eq(apparent_c_power_issue, &meter_apparent_c_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
     lv_obj_t * lv_label_6 = lv_label_create(page_content);
     lv_label_set_text(lv_label_6, "4534.554");
     lv_obj_set_x(lv_label_6, 32);
@@ -152,6 +133,13 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_obj_add_style(lv_label_6, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_6, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_6, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+    
+    lv_obj_t * apparent_c_power_issue = lv_image_create(page_content);
+    lv_obj_set_name(apparent_c_power_issue, "apparent_c_power_issue");
+    lv_image_set_src(apparent_c_power_issue, meter_icon_warning);
+    lv_obj_set_x(apparent_c_power_issue, 56);
+    lv_obj_set_y(apparent_c_power_issue, 122);
+    lv_obj_bind_flag_if_not_eq(apparent_c_power_issue, &meter_apparent_c_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_7 = lv_label_create(page_content);
     lv_label_set_text(lv_label_7, "合相");
@@ -161,17 +149,6 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_obj_bind_style(lv_label_7, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_7, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     
-    lv_obj_t * apparent_total_power_issue = lv_image_create(page_content);
-    lv_obj_set_name(apparent_total_power_issue, "apparent_total_power_issue");
-    lv_image_set_src(apparent_total_power_issue, meter_icon_warning);
-    lv_obj_set_x(apparent_total_power_issue, 234);
-    lv_obj_set_y(apparent_total_power_issue, 122);
-    lv_obj_set_style_transform_pivot_x(apparent_total_power_issue, 0, 0);
-    lv_obj_set_style_transform_pivot_y(apparent_total_power_issue, 0, 0);
-    lv_obj_set_style_transform_scale_x(apparent_total_power_issue, 160, 0);
-    lv_obj_set_style_transform_scale_y(apparent_total_power_issue, 160, 0);
-    lv_obj_bind_flag_if_not_eq(apparent_total_power_issue, &meter_apparent_total_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
     lv_obj_t * lv_label_8 = lv_label_create(page_content);
     lv_label_set_text(lv_label_8, "4534.554");
     lv_obj_set_x(lv_label_8, 195);
@@ -179,6 +156,13 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_obj_add_style(lv_label_8, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_8, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_8, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+    
+    lv_obj_t * apparent_total_power_issue = lv_image_create(page_content);
+    lv_obj_set_name(apparent_total_power_issue, "apparent_total_power_issue");
+    lv_image_set_src(apparent_total_power_issue, meter_icon_warning);
+    lv_obj_set_x(apparent_total_power_issue, 234);
+    lv_obj_set_y(apparent_total_power_issue, 122);
+    lv_obj_bind_flag_if_not_eq(apparent_total_power_issue, &meter_apparent_total_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * screen_apparent_power_bottom_bar = lv_obj_create(lv_obj_0);
     lv_obj_set_name(screen_apparent_power_bottom_bar, "screen_apparent_power_bottom_bar");
