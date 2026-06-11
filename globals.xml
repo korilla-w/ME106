@@ -1,0 +1,399 @@
+<globals>
+    <consts>
+        <!-- 主题常量：深色默认主题，保留原有蓝色选中态与暗色电表界面。 -->
+        <color name="meter_theme_dark_color_bg" value="0x000000"/>
+        <color name="meter_theme_dark_color_surface" value="0x242424"/>
+        <color name="meter_theme_dark_color_surface_alt" value="0x1F1F1F"/>
+        <color name="meter_theme_dark_color_nav" value="0x474747"/>
+        <color name="meter_theme_dark_color_text" value="0xFFFFFF"/>
+        <color name="meter_theme_dark_color_muted" value="0xBABABA"/>
+        <color name="meter_theme_dark_color_accent" value="0x52A3FF"/>
+        <color name="meter_theme_dark_color_line" value="0x303030"/>
+        <color name="meter_theme_dark_color_phase_a" value="0xFFEB3B"/>
+        <color name="meter_theme_dark_color_phase_b" value="0x32E67A"/>
+        <color name="meter_theme_dark_color_phase_c" value="0xE33C64"/>
+
+        <!-- 主题常量：浅色科技主题，用更轻的工业底色和清晰相位色。 -->
+        <color name="meter_theme_light_color_bg" value="0xF8FAFF"/>
+        <color name="meter_theme_light_color_surface" value="0xFFFFFF"/>
+        <color name="meter_theme_light_color_surface_soft" value="0xEEF2FF"/>
+        <color name="meter_theme_light_color_nav" value="0x243044"/>
+        <color name="meter_theme_light_color_text" value="0x111827"/>
+        <color name="meter_theme_light_color_muted" value="0x64748B"/>
+        <color name="meter_theme_light_color_accent" value="0x6366F1"/>
+        <color name="meter_theme_light_color_line" value="0xDAE2F1"/>
+        <color name="meter_theme_light_color_phase_a" value="0x7C3AED"/>
+        <color name="meter_theme_light_color_phase_b" value="0x0EA5E9"/>
+        <color name="meter_theme_light_color_phase_c" value="0x10B981"/>
+        <color name="meter_theme_light_color_warning" value="0xB7791F"/>
+        <color name="meter_theme_light_color_ok" value="0x0F766E"/>
+        <color name="meter_theme_light_color_danger" value="0xBE123C"/>
+
+        <!-- 主题常量：告警工业主题，提高识别度，但避免过度霓虹化。 -->
+        <color name="meter_theme_alarm_color_bg" value="0x101010"/>
+        <color name="meter_theme_alarm_color_surface" value="0x1C1D1B"/>
+        <color name="meter_theme_alarm_color_nav" value="0x282521"/>
+        <color name="meter_theme_alarm_color_text" value="0xF8F7F2"/>
+        <color name="meter_theme_alarm_color_muted" value="0xC8C1B7"/>
+        <color name="meter_theme_alarm_color_accent" value="0xD94A4A"/>
+        <color name="meter_theme_alarm_color_line" value="0x3B332E"/>
+        <color name="meter_theme_alarm_color_phase_a" value="0xEB5757"/>
+        <color name="meter_theme_alarm_color_phase_b" value="0xF2C94C"/>
+        <color name="meter_theme_alarm_color_phase_c" value="0x6FCF97"/>
+        <color name="meter_theme_alarm_color_danger" value="0xEB5757"/>
+        <color name="meter_theme_alarm_color_warning" value="0xF2C94C"/>
+        <color name="meter_theme_alarm_color_ok" value="0x6FCF97"/>
+
+        <!-- 兼容常量：供现有基础样式复用，取值与深色默认主题保持一致。 -->
+        <color name="meter_black" value="0x000000"/>
+        <color name="meter_gray_1f" value="0x1F1F1F"/>
+        <color name="meter_gray_24" value="0x242424"/>
+        <color name="meter_gray_47" value="0x474747"/>
+        <color name="meter_blue" value="0x52A3FF"/>
+        <color name="meter_gray_2c" value="0x2C2C2C"/>
+        <color name="meter_gray_30" value="0x303030"/>
+        <color name="meter_white" value="0xFFFFFF"/>
+        <color name="meter_gray_d8" value="0xD8D8D8"/>
+        <color name="meter_gray_ba" value="0xBABABA"/>
+        <color name="meter_gray_8f" value="0x8F8F8F"/>
+        <color name="meter_gray_7f" value="0x7F7F7F"/>
+        <color name="meter_blue_ea" value="0xEAF4FF"/>
+        <color name="meter_yellow" value="0xFFEB3B"/>
+        <color name="meter_green" value="0x32E67A"/>
+        <color name="meter_red" value="0xE33C64"/>
+        <color name="meter_cyan" value="0x20D3D5"/>
+        <color name="meter_purple" value="0x8D5CFF"/>
+        <color name="meter_indigo" value="0x6366F1"/>
+        <color name="meter_teal" value="0x14B8A6"/>
+        <color name="meter_orange" value="0xF59E0B"/>
+        <int name="meter_r8" value="8"/>
+        <int name="meter_r6" value="6"/>
+    </consts>
+
+    <styles>
+        <!-- 主题样式：深色默认主题。未启用主题覆盖时保持当前暗色 UI。 -->
+        <style name="me106_fill_black" bg_color="#meter_black" bg_opa="255"/>
+        <style name="me106_fill_gray1f" bg_color="#meter_gray_1f" bg_opa="255"/>
+        <style name="me106_btn_flat_blue" bg_color="#meter_blue" bg_opa="255" radius="0" shadow_width="0"/>
+        <style name="me106_btn_flat_gray1f" bg_color="#meter_gray_1f" bg_opa="255" radius="0" shadow_width="0"/>
+        <style name="me106_btn_flat_gray47" bg_color="#meter_gray_47" bg_opa="255" radius="0" shadow_width="0"/>
+
+        <!-- 主题样式：浅色科技主题。 -->
+        <style name="me106_theme_light_screen_bg" bg_color="#meter_theme_light_color_bg" bg_opa="255"/>
+        <style name="me106_theme_light_panel" bg_color="#meter_theme_light_color_surface" bg_opa="255" border_width="1" border_color="#meter_theme_light_color_line" border_opa="255"/>
+        <style name="me106_theme_light_nav" bg_color="#meter_theme_light_color_nav" bg_opa="255"/>
+        <style name="me106_theme_light_accent" bg_color="#meter_theme_light_color_accent" bg_opa="255"/>
+        <style name="me106_theme_light_text" text_color="#meter_theme_light_color_text"/>
+        <style name="me106_theme_light_muted" text_color="#meter_theme_light_color_muted"/>
+        <style name="me106_theme_light_icon" image_recolor="#meter_theme_light_color_text" image_recolor_opa="255"/>
+        <style name="me106_theme_light_line" bg_color="#meter_theme_light_color_line" bg_opa="255" border_color="#meter_theme_light_color_line"/>
+        <style name="me106_theme_light_phase_a" text_color="#meter_theme_light_color_phase_a"/>
+        <style name="me106_theme_light_phase_b" text_color="#meter_theme_light_color_phase_b"/>
+        <style name="me106_theme_light_phase_c" text_color="#meter_theme_light_color_phase_c"/>
+        <style name="me106_theme_light_phase_b_line" bg_color="#meter_theme_light_color_phase_b" bg_opa="255"/>
+        <style name="me106_theme_light_phase_c_line" bg_color="#meter_theme_light_color_phase_c" bg_opa="255"/>
+        <style name="me106_theme_light_status_warning" text_color="#meter_theme_light_color_warning"/>
+        <style name="me106_theme_light_status_ok" text_color="#meter_theme_light_color_ok"/>
+        <style name="me106_theme_light_status_danger" text_color="#meter_theme_light_color_danger"/>
+
+        <!-- 主题样式：告警工业主题。 -->
+        <style name="me106_theme_alarm_screen_bg" bg_color="#meter_theme_alarm_color_bg" bg_opa="255"/>
+        <style name="me106_theme_alarm_panel" bg_color="#meter_theme_alarm_color_surface" bg_opa="255" border_width="1" border_color="#meter_theme_alarm_color_line" border_opa="255"/>
+        <style name="me106_theme_alarm_nav" bg_color="#meter_theme_alarm_color_nav" bg_opa="255"/>
+        <style name="me106_theme_alarm_accent" bg_color="#meter_theme_alarm_color_accent" bg_opa="255"/>
+        <style name="me106_theme_alarm_on_accent" text_color="#meter_white"/>
+        <style name="me106_theme_alarm_text" text_color="#meter_theme_alarm_color_text"/>
+        <style name="me106_theme_alarm_muted" text_color="#meter_theme_alarm_color_muted"/>
+        <style name="me106_theme_alarm_icon" image_recolor="#meter_theme_alarm_color_text" image_recolor_opa="255"/>
+        <style name="me106_theme_alarm_line" bg_color="#meter_theme_alarm_color_line" bg_opa="255" border_color="#meter_theme_alarm_color_line"/>
+        <style name="me106_theme_alarm_phase_a" text_color="#meter_theme_alarm_color_phase_a"/>
+        <style name="me106_theme_alarm_phase_b" text_color="#meter_theme_alarm_color_phase_b"/>
+        <style name="me106_theme_alarm_phase_c" text_color="#meter_theme_alarm_color_phase_c"/>
+        <style name="me106_theme_alarm_phase_b_line" bg_color="#meter_theme_alarm_color_phase_b" bg_opa="255"/>
+        <style name="me106_theme_alarm_phase_c_line" bg_color="#meter_theme_alarm_color_phase_c" bg_opa="255"/>
+
+        <!-- 电能数据颜色样式：复用已有相位色与辅助色，为四个电能类型提供视觉区分。 -->
+        <style name="me106_text_18_energy_forward_active" text_color="#meter_yellow"/>
+        <style name="me106_text_18_energy_reverse_active" text_color="#meter_green"/>
+        <style name="me106_text_18_energy_inductive_reactive" text_color="#meter_cyan"/>
+        <style name="me106_text_18_energy_capacitive_reactive" text_color="#meter_purple"/>
+        <style name="me106_theme_light_energy_forward_active" text_color="#meter_theme_light_color_phase_a"/>
+        <style name="me106_theme_light_energy_reverse_active" text_color="#meter_theme_light_color_phase_b"/>
+        <style name="me106_theme_light_energy_inductive_reactive" text_color="#meter_indigo"/>
+        <style name="me106_theme_light_energy_capacitive_reactive" text_color="#meter_teal"/>
+        <style name="me106_theme_alarm_energy_forward_active" text_color="#meter_theme_alarm_color_phase_a"/>
+        <style name="me106_theme_alarm_energy_reverse_active" text_color="#meter_theme_alarm_color_phase_b"/>
+        <style name="me106_theme_alarm_energy_inductive_reactive" text_color="#meter_orange"/>
+        <style name="me106_theme_alarm_energy_capacitive_reactive" text_color="#meter_theme_alarm_color_phase_c"/>
+        <style name="me106_theme_alarm_status_warning" text_color="#meter_theme_alarm_color_warning"/>
+        <style name="me106_theme_alarm_status_ok" text_color="#meter_theme_alarm_color_ok"/>
+        <style name="me106_theme_alarm_status_danger" text_color="#meter_theme_alarm_color_danger"/>
+
+        <!-- 文本样式组：页面只引用语义化字号/颜色，避免每个控件重复写字体细节。 -->
+        <style name="me106_text_14_gray_ba" text_color="#meter_gray_ba" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_gray_ba_center" text_color="#meter_gray_ba" text_font="meter_Harmony_Sans_SC_Medium_14" text_align="center"/>
+        <style name="me106_text_14_gray_8f" text_color="#meter_gray_8f" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_gray_7f" text_color="#meter_gray_7f" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_blue" text_color="#meter_blue" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_blue_ea" text_color="#meter_blue_ea" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_white" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_yellow" text_color="#meter_yellow" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_green" text_color="#meter_green" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_red" text_color="#meter_red" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_cyan" text_color="#meter_cyan" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_purple" text_color="#meter_purple" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_indigo" text_color="#meter_indigo" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_teal" text_color="#meter_teal" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_orange" text_color="#meter_orange" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_white_center" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_14" text_align="center"/>
+        <style name="me106_text_14_gray_ba_right" text_color="#meter_gray_ba" text_font="meter_Harmony_Sans_SC_Medium_14" text_align="right"/>
+        <style name="me106_text_14_white_right" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_14" text_align="right"/>
+
+        <style name="me106_text_16_white" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_16"/>
+        <style name="me106_text_16_white_center" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_16" text_align="center"/>
+        <style name="me106_text_16_white_right" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_16" text_align="right"/>
+        <style name="me106_text_16_gray_d8" text_color="#meter_gray_d8" text_font="meter_Harmony_Sans_SC_Medium_16"/>
+        <style name="me106_text_16_gray_ba" text_color="#meter_gray_ba" text_font="meter_Harmony_Sans_SC_Medium_16"/>
+        <style name="me106_text_16_gray_ba_right" text_color="#meter_gray_ba" text_font="meter_Harmony_Sans_SC_Medium_16" text_align="right"/>
+        <style name="me106_text_16_gray_ba_center" text_color="#meter_gray_ba" text_font="meter_Harmony_Sans_SC_Medium_16" text_align="center"/>
+        <style name="me106_text_16_yellow" text_color="#meter_yellow" text_font="meter_Harmony_Sans_SC_Medium_16"/>
+        <style name="me106_text_16_green" text_color="#meter_green" text_font="meter_Harmony_Sans_SC_Medium_16"/>
+        <style name="me106_text_16_red" text_color="#meter_red" text_font="meter_Harmony_Sans_SC_Medium_16"/>
+        <style name="me106_text_16_cyan" text_color="#meter_cyan" text_font="meter_Harmony_Sans_SC_Medium_16"/>
+        <style name="me106_text_16_teal" text_color="#meter_teal" text_font="meter_Harmony_Sans_SC_Medium_16"/>
+        <style name="me106_text_16_indigo" text_color="#meter_indigo" text_font="meter_Harmony_Sans_SC_Medium_16"/>
+        <style name="me106_text_16_orange" text_color="#meter_orange" text_font="meter_Harmony_Sans_SC_Medium_16"/>
+
+        <style name="me106_text_18_white" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_18"/>
+        <style name="me106_text_18_white_center" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_18" text_align="center"/>
+        <style name="me106_text_18_gray_ba" text_color="#meter_gray_ba" text_font="meter_Harmony_Sans_SC_Medium_18"/>
+        <style name="me106_text_18_yellow" text_color="#meter_yellow" text_font="meter_Harmony_Sans_SC_Medium_18"/>
+        <style name="me106_text_18_green" text_color="#meter_green" text_font="meter_Harmony_Sans_SC_Medium_18"/>
+        <style name="me106_text_18_red" text_color="#meter_red" text_font="meter_Harmony_Sans_SC_Medium_18"/>
+        <style name="me106_text_18_cyan" text_color="#meter_cyan" text_font="meter_Harmony_Sans_SC_Medium_18"/>
+        <style name="me106_text_18_indigo" text_color="#meter_indigo" text_font="meter_Harmony_Sans_SC_Medium_18"/>
+        <style name="me106_text_36_white_center" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_36" text_align="center"/>
+
+        <!-- 面板/图标/线条样式组：复用统一视觉皮肤，降低页面间耦合。 -->
+        <style name="me106_panel_gray1f_r8" bg_color="#meter_gray_1f" bg_opa="255" radius="#meter_r8" shadow_width="0"/>
+        <style name="me106_panel_gray24_r8" bg_color="#meter_gray_24" bg_opa="255" radius="#meter_r8" shadow_width="0"/>
+        <style name="me106_panel_soft_r8" bg_color="#meter_gray_24" bg_opa="150" radius="#meter_r8" border_width="0" shadow_width="0"/>
+        <style name="me106_panel_blue_r8" bg_color="#meter_blue" bg_opa="255" radius="#meter_r8" shadow_width="0"/>
+        <style name="me106_panel_blue_r6" bg_color="#meter_blue" bg_opa="255" radius="#meter_r6" shadow_width="0"/>
+        <style name="me106_theme_light_soft_panel" bg_color="#meter_theme_light_color_surface_soft" bg_opa="255" border_width="0"/>
+        <style name="me106_theme_alarm_soft_panel" bg_color="#meter_theme_alarm_color_surface" bg_opa="220" border_width="0"/>
+        <style name="me106_icon_white" image_recolor="#meter_white" image_recolor_opa="255"/>
+        <style name="me106_icon_cyan" image_recolor="#meter_cyan" image_recolor_opa="255"/>
+        <style name="me106_icon_indigo" image_recolor="#meter_indigo" image_recolor_opa="255"/>
+        <style name="me106_line_gray2c" bg_color="#meter_gray_2c" bg_opa="255"/>
+        <style name="me106_line_gray30" bg_color="#meter_gray_30" bg_opa="255"/>
+        <style name="me106_line_cyan" bg_color="#meter_cyan" bg_opa="255"/>
+        <style name="me106_line_orange" bg_color="#meter_orange" bg_opa="255"/>
+        <style name="me106_slider_track" bg_color="#meter_gray_30" bg_opa="255" radius="5" border_width="0"/>
+        <style name="me106_slider_indicator" bg_color="#meter_blue" bg_opa="255" radius="5" border_width="0"/>
+        <style name="me106_slider_knob" bg_color="#meter_white" bg_opa="255" radius="8" border_width="2" border_color="#meter_blue" border_opa="255" shadow_width="0" width="18" height="18"/>
+        <!-- 图表样式组：频谱/波形页面共享，数据来源仍由逻辑层负责。 -->
+        <style name="me106_chart_bar_gap" pad_column="1"/>
+        <style name="me106_chart_bar_thin" pad_column="3"/>
+        <style name="me106_chart_bar_inner_gap" pad_column="2"/>
+        <style name="me106_chart_bar_spectrum_items" pad_column="0"/>
+        <style name="me106_chart_frame" border_width="1" border_color="#meter_gray_30" border_opa="255"/>
+        <style name="me106_chart_point_hidden" width="0" height="0" bg_opa="0"/>
+        <style name="me106_chart_wave_line" line_width="2" line_rounded="true"/>
+
+        <!-- 列表位移样式组：只描述选中态滚动表现，不改变业务选择值。 -->
+        <style name="me106_move_y_n20" translate_y="-20"/>
+        <style name="me106_move_y_n24" translate_y="-24"/>
+        <style name="me106_move_y_n38" translate_y="-38"/>
+        <style name="me106_move_y_n46" translate_y="-46"/>
+        <style name="me106_move_y_n62" translate_y="-62"/>
+        <style name="me106_move_y_n70" translate_y="-70"/>
+        <style name="me106_move_y_n76" translate_y="-76"/>
+        <style name="me106_move_y_n92" translate_y="-92"/>
+        <style name="me106_move_y_n104" translate_y="-104"/>
+        <style name="me106_move_y_n114" translate_y="-114"/>
+        <style name="me106_move_y_n116" translate_y="-116"/>
+        <style name="me106_move_y_n138" translate_y="-138"/>
+        <style name="me106_move_y_n152" translate_y="-152"/>
+        <style name="me106_move_y_n162" translate_y="-162"/>
+        <style name="me106_move_y_n208" translate_y="-208"/>
+        <style name="me106_move_y_n254" translate_y="-254"/>
+        <style name="me106_move_y_n300" translate_y="-300"/>
+        <style name="me106_move_y_n416" translate_y="-416"/>
+    </styles>
+
+    <subjects>
+        <int name="meter_settings_selected_index" value="0" min_value="0" max_value="9"/>
+        <int name="meter_function_menu_selected_index" value="0" min_value="0" max_value="2"/>
+        <int name="meter_harmonic_spectrum_mode" value="0" min_value="0" max_value="1"/>
+        <int name="meter_harmonic_data_state" value="1" min_value="0" max_value="3"/>
+        <int name="meter_wifi_ap_selected_index" value="0" min_value="0" max_value="5"/>
+        <int name="meter_wifi_page_index" value="0" min_value="0" max_value="1"/>
+        <!-- 旧 AP 配网页仅回显热点信息；真实 SSID/密码生成和保存由逻辑/配置层处理。 -->
+        <string name="meter_wifi_ap_ssid_text" value="ME106_A1B2C3"/>
+        <string name="meter_wifi_ap_password_text" value="MEA1B2C3"/>
+        <string name="meter_wifi_ap_entry_text" value="192.168.4.1"/>
+        <!-- STA 热点配置状态页：无用户配置时提示使用上位机配置；现场热点明文由逻辑层决定是否隐藏。 -->
+        <string name="meter_wifi_sta_code_text" value=""/>
+        <string name="meter_wifi_sta_ssid_text" value=""/>
+        <string name="meter_wifi_sta_password_text" value=""/>
+        <string name="meter_wifi_sta_source_text" value="&#x51FA;&#x5382;&#x9ED8;&#x8BA4;"/>
+        <string name="meter_wifi_sta_hotspot_state_text" value="ME106_A1B2C3"/>
+        <string name="meter_wifi_sta_password_state_text" value="MEA1B2C3"/>
+        <string name="meter_wifi_sta_status_text" value="&#x8BF7;&#x7528;&#x4E0A;&#x4F4D;&#x673A;&#x914D;&#x7F6E;"/>
+        <int name="meter_wifi_sta_connect_request" value="0" min_value="0" max_value="1"/>
+        <!-- 主题 subject 只保存外观选择；持久化属于逻辑/配置层。 -->
+        <int name="meter_theme_index" value="0" min_value="0" max_value="2"/>
+        <!-- 屏幕亮度 subject 只保存 UI 调节意图；背光 PWM 应由逻辑层转交执行层应用。 -->
+        <int name="meter_screen_brightness" value="70" min_value="10" max_value="100"/>
+        <!-- 串口 subject 只保存 UI 选项；真正应用硬件参数留在执行层。 -->
+        <int name="meter_uart_selected_index" value="0" min_value="0" max_value="3"/>
+        <int name="meter_uart_baud_index" value="5" min_value="0" max_value="7"/>
+        <int name="meter_uart_data_bits_index" value="3" min_value="0" max_value="3"/>
+        <int name="meter_uart_parity_index" value="0" min_value="0" max_value="2"/>
+        <int name="meter_uart_stop_bits_index" value="0" min_value="0" max_value="2"/>
+        <!-- 变比 subject 只保存 UI 选项；CT/PT 参数应用属于逻辑/配置层。 -->
+        <int name="meter_ratio_selected_kind" value="0" min_value="0" max_value="1"/>
+        <int name="meter_ratio_digit_selected_index" value="0" min_value="0" max_value="3"/>
+        <int name="meter_ct_ratio_current_digit_0" value="0" min_value="0" max_value="9"/>
+        <int name="meter_ct_ratio_current_digit_1" value="0" min_value="0" max_value="9"/>
+        <int name="meter_ct_ratio_current_digit_2" value="0" min_value="0" max_value="9"/>
+        <int name="meter_ct_ratio_current_digit_3" value="0" min_value="0" max_value="9"/>
+        <int name="meter_ct_ratio_digit_0" value="0" min_value="0" max_value="9"/>
+        <int name="meter_ct_ratio_digit_1" value="0" min_value="0" max_value="9"/>
+        <int name="meter_ct_ratio_digit_2" value="0" min_value="0" max_value="9"/>
+        <int name="meter_ct_ratio_digit_3" value="0" min_value="0" max_value="9"/>
+        <int name="meter_pt_ratio_current_digit_0" value="0" min_value="0" max_value="9"/>
+        <int name="meter_pt_ratio_current_digit_1" value="0" min_value="0" max_value="9"/>
+        <int name="meter_pt_ratio_current_digit_2" value="0" min_value="0" max_value="9"/>
+        <int name="meter_pt_ratio_current_digit_3" value="0" min_value="0" max_value="9"/>
+        <int name="meter_pt_ratio_digit_0" value="0" min_value="0" max_value="9"/>
+        <int name="meter_pt_ratio_digit_1" value="0" min_value="0" max_value="9"/>
+        <int name="meter_pt_ratio_digit_2" value="0" min_value="0" max_value="9"/>
+        <int name="meter_pt_ratio_digit_3" value="0" min_value="0" max_value="9"/>
+        <!-- 电表地址 subject 只保存 UI 显示和编辑意图；Modbus485 参数落库/下发留给逻辑与执行层处理。 -->
+        <int name="meter_address_current_value" value="1" min_value="1" max_value="247"/>
+        <int name="meter_address_digit_selected_index" value="0" min_value="0" max_value="2"/>
+        <int name="meter_address_digit_0" value="0" min_value="0" max_value="2"/>
+        <int name="meter_address_digit_1" value="0" min_value="0" max_value="9"/>
+        <int name="meter_address_digit_2" value="1" min_value="0" max_value="9"/>
+        <string name="meter_address_edit_hex_text" value="0x01"/>
+        <int name="meter_address_invalid_popup" value="0" min_value="0" max_value="1"/>
+        <!-- 告警阈值 subject 只保存 UI 编辑态和待提交数值；真正落库/下发仍由逻辑层与执行层处理。 -->
+        <int name="meter_alarm_threshold_selected_index" value="0" min_value="0" max_value="7"/>
+        <int name="meter_alarm_threshold_popup_visible" value="0" min_value="0" max_value="1"/>
+        <int name="meter_alarm_threshold_edit_index" value="0" min_value="0" max_value="7"/>
+        <int name="meter_alarm_threshold_u_step_value" value="100" min_value="0" max_value="500"/>
+        <int name="meter_alarm_threshold_i_step_value" value="100" min_value="0" max_value="500"/>
+        <int name="meter_alarm_threshold_p_step_value" value="1000" min_value="0" max_value="5000"/>
+        <int name="meter_alarm_threshold_e_inc_value" value="1000" min_value="0" max_value="5000"/>
+        <int name="meter_alarm_threshold_lost_volt_value" value="1024" min_value="0" max_value="65535"/>
+        <int name="meter_alarm_threshold_sagcfg_value" value="0" min_value="0" max_value="16777215"/>
+        <int name="meter_alarm_threshold_ovlvl_value" value="0" min_value="0" max_value="65535"/>
+        <int name="meter_alarm_threshold_oilvl_value" value="0" min_value="0" max_value="65535"/>
+        <!-- 电能质量分析只展示逻辑层给出的越限摘要；阈值比较和深度分析不在 UI 层完成。 -->
+        <int name="meter_power_quality_page_index" value="0" min_value="0" max_value="2"/>
+        <int name="meter_power_quality_issue_count" value="0" min_value="0" max_value="8"/>
+        <int name="meter_power_quality_u_step_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_power_quality_i_step_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_power_quality_p_step_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_power_quality_e_inc_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_power_quality_lost_volt_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_power_quality_sag_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_power_quality_ov_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_power_quality_oi_issue" value="0" min_value="0" max_value="1"/>
+        <!-- 普通测量页每个数值参数各自持有一个告警显示位；真正异常判定仍由逻辑层负责。 -->
+        <int name="meter_home_a_voltage_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_home_a_current_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_home_a_pf_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_home_b_voltage_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_home_b_current_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_home_b_pf_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_home_c_voltage_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_home_c_current_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_home_c_pf_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_line_ab_voltage_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_line_bc_voltage_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_line_ca_voltage_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_line_current_demand_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_line_max_demand_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_active_a_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_active_b_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_active_c_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_active_total_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_reactive_a_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_reactive_b_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_reactive_c_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_reactive_total_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_apparent_a_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_apparent_b_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_apparent_c_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_apparent_total_power_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_energy_forward_active_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_energy_reverse_active_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_energy_inductive_reactive_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_energy_capacitive_reactive_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_phase_a_current_angle_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_phase_b_current_angle_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_phase_c_current_angle_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_phase_frequency_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_phase_b_voltage_angle_issue" value="0" min_value="0" max_value="1"/>
+        <int name="meter_phase_c_voltage_angle_issue" value="0" min_value="0" max_value="1"/>
+        <!-- 恢复出厂只在 UI 层发出确认意图；真正擦除配置/重启由逻辑层与执行层处理。 -->
+        <int name="meter_factory_confirm_index" value="0" min_value="0" max_value="1"/>
+        <int name="meter_factory_reset_request" value="0" min_value="0" max_value="1"/>
+        <!-- 系统信息 subject 由逻辑层后续刷新；XML 只负责展示。默认值参考 rn8302 原电表版本字段。 -->
+        <string name="meter_system_product_name" value="ME106"/>
+        <string name="meter_system_chip_name" value="ESP32-C6"/>
+        <string name="meter_system_hw_version" value="4.1"/>
+        <string name="meter_system_fw_version" value="04.21"/>
+        <string name="meter_system_feature_version" value="A"/>
+        <string name="meter_system_build_date" value="260421"/>
+        <string name="meter_system_runtime_text" value="0h 00m"/>
+        <!-- 固件升级 subject 只表达 UI 状态和升级意图；真正 OTA 下载/写 Flash 属于逻辑/执行层。 -->
+        <string name="meter_upgrade_current_version" value="04.21"/>
+        <string name="meter_upgrade_new_version" value="--"/>
+        <string name="meter_upgrade_status_text" value="&#x8BF7;&#x5148;&#x8FDE;&#x63A5;&#x70ED;&#x70B9;"/>
+        <int name="meter_upgrade_request" value="0" min_value="0" max_value="1"/>
+        <!-- 付费功能联系方式弹窗只保存 UI 展开状态；授权校验和购买流程由逻辑层处理。 -->
+        <int name="meter_paid_contact_popup" value="0" min_value="0" max_value="1"/>
+    </subjects>
+
+    <fonts>
+        <!-- 保持现有 XML 字体名稳定，只把字体文件来源切到 HarmonyOS Sans SC。 -->
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_14" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="14" as_file="true"/>
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_16" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="16" as_file="true"/>
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_18" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="18" as_file="true"/>
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_36" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="36" as_file="true"/>
+    </fonts>
+
+    <images>
+        <!-- 图片资源组：统一在 globals 注册，页面只按语义名称引用图标。 -->
+        <file name="meter_setting" src_path="images/setting.png"/>
+        <file name="meter_menu" src_path="images/menu-line.png"/>
+        <file name="meter_arrow_left" src_path="images/arrow_left.png"/>
+        <file name="meter_arrow_right" src_path="images/arrow_right.png"/>
+        <file name="meter_icon_return" src_path="images/return.png"/>
+        <file name="meter_arrow_down" src_path="images/arrow_down.png"/>
+        <file name="meter_arrow_up" src_path="images/arrow_up.png"/>
+        <file name="meter_yes" src_path="images/yes.png"/>
+        <file name="meter_icon_table" src_path="images/table.png"/>
+        <file name="meter_icon_select" src_path="images/select.png"/>
+        <file name="meter_icon_harmonic" src_path="images/Harmonic.png"/>
+        <file name="meter_icon_waveform" src_path="images/Waveform.png"/>
+        <file name="meter_icon_electric_energy" src_path="images/Electric energy.png"/>
+        <file name="meter_icon_wifi" src_path="images/wifi.png"/>
+        <file name="meter_icon_modbus" src_path="images/modbus.png"/>
+        <file name="meter_icon_serial" src_path="images/serial.png"/>
+        <file name="meter_icon_ratio" src_path="images/ratio.png"/>
+        <file name="meter_icon_address" src_path="images/address.png"/>
+        <file name="meter_icon_theme" src_path="images/theme.png"/>
+        <file name="meter_icon_alarm" src_path="images/alarm.png"/>
+        <file name="meter_icon_warning" src_path="images/warning.png"/>
+        <file name="meter_icon_screen" src_path="images/screen.png"/>
+        <file name="meter_icon_restart" src_path="images/restart.png"/>
+        <file name="meter_icon_update" src_path="images/update.png"/>
+        <file name="meter_icon_information" src_path="images/information.png"/>
+        <file name="meter_power_quality_qr" src_path="images/power_quality_qr.png"/>
+    </images>
+</globals>

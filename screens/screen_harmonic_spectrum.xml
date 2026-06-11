@@ -1,0 +1,407 @@
+<screen>
+	<animations>
+		<timeline name="content_open">
+			<animation target="page_content" prop="opa" start="0" end="255" duration="110" early_apply="true" />
+			<animation target="page_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true" />
+		</timeline>
+	</animations>
+
+	<view width="320" height="240">
+		<style name="me106_fill_black"/>
+		<bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+		<bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+		<play_timeline_event target="self" timeline="content_open" trigger="screen_loaded" />
+
+		<!-- UI分组：页面内容区。视觉布局与底部固定硬按键导航分离。 -->
+		<lv_obj
+			name="page_content"
+			x="0"
+			y="0"
+			width="320"
+			height="207"
+			style_bg_opa="0"
+			style_border_width="0"
+			style_pad_all="0"
+			scrollable="false"
+		>
+			<lv_label text="&#x8C10;&#x6CE2;&#x9891;&#x8C31;" x="170" y="17" width="126">
+				<style name="me106_text_16_white_right"/>
+				<bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+
+			<lv_button name="harmonic_mode_voltage" x="24" y="39" width="58" height="28" style_pad_all="0">
+				<style name="me106_panel_gray24_r8"/>
+				<bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+								<lv_obj name="harmonic_mode_voltage_selected_bg" x="0" y="0" width="58" height="28" style_pad_all="0" style_border_width="0" scrollable="false">
+				    <style name="me106_panel_blue_r8"/>
+				    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+				    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+				    <bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="0"/>
+				</lv_obj>
+				<subject_set_int_event subject="meter_harmonic_spectrum_mode" value="0" trigger="clicked" />
+				<lv_label text="&#x7535;&#x538B;" align="center" width="58" height="18">
+					<style name="me106_text_14_gray_ba_center"/>
+					<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+					<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+					<bind_style name="me106_text_14_white_center" subject="meter_harmonic_spectrum_mode" ref_value="0"/>
+
+				</lv_label>
+			</lv_button>
+
+			<lv_button name="harmonic_mode_current" x="86" y="39" width="58" height="28" style_pad_all="0">
+				<style name="me106_panel_gray24_r8"/>
+				<bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+								<lv_obj name="harmonic_mode_current_selected_bg" x="0" y="0" width="58" height="28" style_pad_all="0" style_border_width="0" scrollable="false">
+				    <style name="me106_panel_blue_r8"/>
+				    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+				    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+				    <bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="1"/>
+				</lv_obj>
+				<subject_set_int_event subject="meter_harmonic_spectrum_mode" value="1" trigger="clicked" />
+				<lv_label text="&#x7535;&#x6D41;" align="center" width="58" height="18">
+					<style name="me106_text_14_gray_ba_center"/>
+					<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+					<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+					<bind_style name="me106_text_14_white_center" subject="meter_harmonic_spectrum_mode" ref_value="1"/>
+
+				</lv_label>
+			</lv_button>
+
+			<lv_obj
+				name="harmonic_voltage_legend"
+				x="155"
+				y="46"
+				width="140"
+				height="18"
+				style_bg_opa="0"
+				style_border_width="0"
+				style_pad_all="0"
+				scrollable="false"
+			>
+				<bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="0" />
+				<lv_label text="A&#x76F8;" x="0" y="0" width="38">
+					<style name="me106_text_14_blue"/>
+				</lv_label>
+				<lv_label text="B&#x76F8;" x="47" y="0" width="38">
+					<style name="me106_text_14_cyan"/>
+				</lv_label>
+				<lv_label text="C&#x76F8;" x="94" y="0" width="38">
+					<style name="me106_text_14_orange"/>
+					<bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/>
+					<bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/>
+				</lv_label>
+			</lv_obj>
+
+			<lv_obj
+				name="harmonic_current_legend"
+				x="155"
+				y="46"
+				width="140"
+				height="18"
+				style_bg_opa="0"
+				style_border_width="0"
+				style_pad_all="0"
+				scrollable="false"
+			>
+				<bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="1" />
+				<lv_label text="A&#x76F8;" x="0" y="0" width="38">
+					<style name="me106_text_14_blue"/>
+				</lv_label>
+				<lv_label text="B&#x76F8;" x="47" y="0" width="38">
+					<style name="me106_text_14_cyan"/>
+				</lv_label>
+				<lv_label text="C&#x76F8;" x="94" y="0" width="38">
+					<style name="me106_text_14_orange"/>
+					<bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/>
+					<bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/>
+				</lv_label>
+			</lv_obj>
+
+			<lv_label text="&#x542B;&#x6709;&#x7387;(%)" x="42" y="66" width="92">
+				<style name="me106_text_14_gray_ba"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+
+			<lv_label text="1" x="21" y="82" width="18">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="0" />
+			</lv_label>
+			<lv_label text="0.5" x="8" y="128" width="30">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="0" />
+			</lv_label>
+			<lv_label text="25" x="15" y="82" width="24">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="1" />
+			</lv_label>
+			<lv_label text="12.5" x="2" y="128" width="36">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="1" />
+			</lv_label>
+			<lv_label text="0" x="24" y="174" width="16">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+
+			<!-- 图表点位只能用整数，所以这里的百分比数据统一放大 100 倍。 -->
+			<lv_chart
+				name="harmonic_voltage_chart"
+				x="42"
+				y="82"
+				width="250"
+				height="103"
+				type="bar"
+				point_count="62"
+				hor_div_line_count="5"
+				ver_div_line_count="7"
+				style_bg_opa="0"
+				style_border_width="0"
+				style_pad_all="0"
+				style_pad_column="1"
+				style_line_color="0x303030"
+				style_line_opa="180"
+			>
+				<style name="me106_chart_frame"/>
+				<style name="me106_chart_bar_spectrum_items" selector="items" />
+				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="1" />
+				<bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="0" />
+				<lv_chart-axis axis="primary_y" min_value="0" max_value="100" />
+				<lv_chart-series
+					color="0x52A3FF"
+					axis="primary_y"
+					values="16 48 2 76 3 77 2 15 3 19 6 15 8 9 4 14 0 7 1 5 0 6 0 2 0 5 0 1 0 1 0 3 0 2 0 0 0 2 0 1 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0"
+				/>
+				<lv_chart-series
+					color="0x20D3D5"
+					axis="primary_y"
+					values="14 52 3 89 2 96 2 33 2 20 4 10 6 20 3 13 1 2 2 9 1 3 1 2 0 4 1 6 0 3 0 1 0 2 0 2 0 1 0 1 0 1 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0"
+				/>
+				<lv_chart-series
+					color="0xF59E0B"
+					axis="primary_y"
+					values="15 68 1 96 1 93 2 16 2 25 2 5 2 20 2 14 0 8 1 8 1 8 1 7 0 5 1 2 0 4 0 3 0 3 0 1 0 2 0 2 0 2 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+				/>
+			</lv_chart>
+
+			<lv_chart
+				name="harmonic_current_chart"
+				x="42"
+				y="82"
+				width="250"
+				height="103"
+				type="bar"
+				point_count="62"
+				hor_div_line_count="5"
+				ver_div_line_count="7"
+				style_bg_opa="0"
+				style_border_width="0"
+				style_pad_all="0"
+				style_pad_column="1"
+				style_line_color="0x303030"
+				style_line_opa="180"
+			>
+				<style name="me106_chart_frame"/>
+				<style name="me106_chart_bar_spectrum_items" selector="items" />
+				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="1" />
+				<bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="1" />
+				<lv_chart-axis axis="primary_y" min_value="0" max_value="2500" />
+				<lv_chart-series
+					color="0x52A3FF"
+					axis="primary_y"
+					values="15 744 6 1177 9 550 7 143 2 59 11 53 18 18 19 38 6 36 7 6 5 20 3 15 1 12 2 15 3 3 2 6 1 3 0 1 2 4 1 1 1 1 0 2 1 3 1 1 0 1 0 2 1 0 1 0 1 1 0 1 0 1"
+				/>
+				<lv_chart-series
+					color="0x20D3D5"
+					axis="primary_y"
+					values="16 581 15 1172 5 633 13 90 5 64 14 54 34 78 20 27 20 37 10 28 1 8 2 10 4 11 1 16 2 7 1 4 3 4 2 3 2 2 0 3 0 1 0 1 2 4 0 1 1 1 1 0 0 1 2 1 1 1 0 0 0 0"
+				/>
+				<lv_chart-series
+					color="0xF59E0B"
+					axis="primary_y"
+					values="35 1257 17 2464 25 1060 5 412 13 221 18 317 51 410 29 113 53 147 31 174 14 149 9 78 2 111 3 82 1 56 4 52 7 30 5 14 1 21 3 14 1 14 4 16 2 2 1 16 1 3 1 5 1 3 1 4 0 2 1 2 1 1"
+				/>
+			</lv_chart>
+
+			<lv_label text="2" x="42" y="187" width="18">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="9" x="70" y="187" width="18">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="16" x="97" y="187" width="24">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="23" x="126" y="187" width="24">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="30" x="154" y="187" width="24">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="37" x="183" y="187" width="24">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="44" x="212" y="187" width="24">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="51" x="240" y="187" width="24">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="58" x="269" y="187" width="24">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+
+			<lv_label text="&#x52A0;&#x8F7D;&#x4E2D;" x="70" y="121" width="180">
+				<style name="me106_text_16_gray_ba_center"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="0" />
+			</lv_label>
+			<lv_label text="&#x6682;&#x65E0;&#x8C10;&#x6CE2;&#x6570;&#x636E;" x="70" y="121" width="180">
+				<style name="me106_text_16_gray_ba_center"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="2" />
+			</lv_label>
+			<lv_label text="&#x6570;&#x636E;&#x5F02;&#x5E38;" x="70" y="121" width="180">
+				<style name="me106_text_16_gray_ba_center"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="3" />
+			</lv_label>
+		</lv_obj>
+
+        <!-- UI分组：底部硬按键区。按钮只发出导航/选择意图，不直接处理硬件。 -->
+        <lv_obj name="screen_harmonic_spectrum_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+		<lv_button name="harmonic_btn_return" x="0" y="207" width="79" height="32">
+			<style name="me106_btn_flat_gray47"/>
+			<bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+			<bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+			<lv_image
+				src="meter_icon_return"
+				align="center"
+				style_transform_pivot_x="8"
+				style_transform_pivot_y="7"
+				style_transform_scale_x="230"
+				style_transform_scale_y="230"
+			/>
+			<lv_obj-screen_create_event screen="screen_function_menu" trigger="clicked" anim_type="none" />
+		</lv_button>
+
+		<lv_button name="harmonic_btn_left" x="80" y="207" width="79" height="32">
+			<style name="me106_btn_flat_gray47"/>
+			<bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+			<bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+			<lv_image
+				src="meter_arrow_left"
+				align="center"
+				y="0"
+				style_transform_pivot_x="10"
+				style_transform_pivot_y="14"
+				style_transform_scale_x="120"
+				style_transform_scale_y="120"
+			/>
+			<subject_increment_event
+				subject="meter_harmonic_spectrum_mode"
+				step="-1"
+				min_value="0"
+				max_value="1"
+				rollover="true"
+				trigger="clicked"
+			/>
+		</lv_button>
+
+		<lv_button name="harmonic_btn_right" x="160" y="207" width="79" height="32">
+			<style name="me106_btn_flat_gray47"/>
+			<bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+			<bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+			<lv_image
+				src="meter_arrow_right"
+				align="center"
+				y="0"
+				style_transform_pivot_x="10"
+				style_transform_pivot_y="14"
+				style_transform_scale_x="120"
+				style_transform_scale_y="120"
+			/>
+			<subject_increment_event
+				subject="meter_harmonic_spectrum_mode"
+				step="1"
+				min_value="0"
+				max_value="1"
+				rollover="true"
+				trigger="clicked"
+			/>
+		</lv_button>
+
+		<lv_button name="harmonic_btn_table_voltage" x="240" y="207" width="80" height="32">
+			<style name="me106_btn_flat_gray47"/>
+			<bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+			<bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+			<bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="0" />
+			<lv_image
+				src="meter_icon_table"
+				align="center"
+				style_transform_pivot_x="12"
+				style_transform_pivot_y="12"
+				style_transform_scale_x="150"
+				style_transform_scale_y="150"
+			/>
+			<lv_obj-screen_create_event screen="screen_harmonic_spectrum_table" trigger="clicked" anim_type="none" />
+		</lv_button>
+
+		<lv_button name="harmonic_btn_table_current" x="240" y="207" width="80" height="32">
+			<style name="me106_btn_flat_gray47"/>
+			<bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+			<bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+			<bind_flag_if_not_eq subject="meter_harmonic_spectrum_mode" flag="hidden" ref_value="1" />
+			<lv_image
+				src="meter_icon_table"
+				align="center"
+				style_transform_pivot_x="12"
+				style_transform_pivot_y="12"
+				style_transform_scale_x="150"
+				style_transform_scale_y="150"
+			/>
+			<lv_obj-screen_create_event
+				screen="screen_harmonic_spectrum_table_current_0"
+				trigger="clicked"
+				anim_type="none"
+			/>
+		</lv_button>
+	</view>
+</screen>

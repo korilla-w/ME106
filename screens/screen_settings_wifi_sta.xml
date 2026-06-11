@@ -1,0 +1,127 @@
+<screen>
+    <animations>
+        <timeline name="content_open">
+            <animation target="page_content" prop="opa" start="0" end="255" duration="110" early_apply="true"/>
+            <animation target="page_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true"/>
+        </timeline>
+    </animations>
+
+    <view width="320" height="240">
+        <style name="me106_fill_gray1f"/>
+        <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+        <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+        <play_timeline_event target="self" timeline="content_open" trigger="screen_loaded"/>
+        <subject_set_int_event subject="meter_wifi_sta_connect_request" value="0" trigger="screen_loaded"/>
+
+        <!-- 热点配置状态页：无用户配置时提示使用上位机配置；现场热点明文由逻辑层决定是否隐藏。 -->
+        <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+            <lv_label text="WiFi&#x914D;&#x7F6E;" x="152" y="17" width="144">
+                <style name="me106_text_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+
+            <lv_obj name="wifi_sta_icon_halo" x="24" y="42" width="42" height="42" style_bg_color="0x20D3D5" style_bg_opa="48" style_radius="12" style_border_width="0" style_pad_all="0" scrollable="false">
+            </lv_obj>
+            <lv_image src="meter_icon_wifi" x="35" y="53" style_transform_pivot_x="8" style_transform_pivot_y="8" style_transform_scale_x="220" style_transform_scale_y="220">
+                <style name="me106_icon_cyan"/>
+            </lv_image>
+            <lv_label text="&#x70ED;&#x70B9;&#x914D;&#x7F6E;" x="82" y="46" width="92">
+                <style name="me106_text_18_cyan"/>
+            </lv_label>
+            <lv_label bind_text="meter_wifi_sta_status_text" x="82" y="71" width="170">
+                <style name="me106_text_14_gray_ba"/>
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+
+            <lv_obj name="wifi_sta_info_band" x="24" y="96" width="272" height="74" style_pad_all="0" scrollable="false">
+                <style name="me106_panel_soft_r8"/>
+                <bind_style name="me106_theme_light_soft_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_soft_panel" subject="meter_theme_index" ref_value="2"/>
+            </lv_obj>
+
+            <lv_obj name="wifi_sta_code_dot" x="40" y="111" width="7" height="7" style_radius="4" style_bg_color="0x20D3D5" style_bg_opa="255" style_border_width="0" scrollable="false">
+            </lv_obj>
+            <lv_obj name="wifi_sta_code_panel" x="56" y="102" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <lv_label text="&#x6765;&#x6E90;" align="left_mid" x="0" y="0" width="82">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_wifi_sta_source_text" align="right_mid" x="0" y="0" width="224">
+                    <style name="me106_text_16_white_right"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+            </lv_obj>
+
+            <lv_obj name="wifi_sta_ssid_dot" x="40" y="135" width="7" height="7" style_radius="4" style_bg_color="0x6366F1" style_bg_opa="255" style_border_width="0" scrollable="false">
+            </lv_obj>
+            <lv_obj name="wifi_sta_ssid_panel" x="56" y="126" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <lv_label text="&#x70ED;&#x70B9;" align="left_mid" x="0" y="0" width="82">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_wifi_sta_hotspot_state_text" align="right_mid" x="0" y="0" width="224">
+                    <style name="me106_text_16_white_right"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+            </lv_obj>
+
+            <lv_obj name="wifi_sta_pass_dot" x="40" y="159" width="7" height="7" style_radius="4" style_bg_color="0x14B8A6" style_bg_opa="255" style_border_width="0" scrollable="false">
+            </lv_obj>
+            <lv_obj name="wifi_sta_pass_panel" x="56" y="150" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <lv_label text="&#x5BC6;&#x7801;" align="left_mid" x="0" y="0" width="82">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_wifi_sta_password_state_text" align="right_mid" x="0" y="0" width="224">
+                    <style name="me106_text_16_white_right"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+            </lv_obj>
+
+            <lv_label text="&#x4E32;&#x53E3;&#x4E0A;&#x4F4D;&#x673A;&#x4E0B;&#x53D1; &#x6309;&#x4E0A;&#x65B9;&#x5EFA;&#x70ED;&#x70B9;" x="24" y="184" width="272">
+                <style name="me106_text_14_gray_ba"/>
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+        </lv_obj>
+
+        <!-- 底部硬按键只负责返回，本页不直接启动 WiFi 驱动。 -->
+        <lv_obj name="screen_settings_wifi_sta_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+        <lv_button name="wifi_sta_btn_return" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        </lv_button>
+        <lv_button name="wifi_sta_btn_placeholder_1" x="80" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_button>
+        <lv_button name="wifi_sta_btn_placeholder_2" x="160" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_button>
+        <lv_button name="wifi_sta_btn_yes" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_blue"/>
+            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        </lv_button>
+    </view>
+</screen>

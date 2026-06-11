@@ -1,0 +1,278 @@
+<screen>
+	<animations>
+		<timeline name="content_open">
+			<animation target="page_content" prop="opa" start="0" end="255" duration="110" early_apply="true" />
+			<animation target="page_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true" />
+		</timeline>
+	</animations>
+	<view width="320" height="240">
+		<style name="me106_fill_black"/>
+		<bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+		<bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+		<play_timeline_event target="self" timeline="content_open" trigger="screen_loaded" />
+		<!-- UI分组：页面内容区。视觉布局与底部固定硬按键导航分离。 -->
+		<lv_obj
+			name="page_content"
+			x="0"
+			y="0"
+			width="320"
+			height="207"
+			style_bg_opa="0"
+			style_border_width="0"
+			style_pad_all="0"
+			scrollable="false"
+		>
+			<lv_label text="&#x603B;" x="24" y="17" width="60">
+				<style name="me106_text_16_white"/>
+				<bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="&#x6CE2;&#x5F62;&#x66F2;&#x7EBF;" x="170" y="17" width="126">
+				<style name="me106_text_16_white_right"/>
+				<bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="&#x5E45;&#x503C;(V/A)" x="24" y="58" width="90">
+				<style name="me106_text_14_gray_ba"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="&#x25CF;" x="43" y="43" width="12">
+				<style name="me106_text_14_yellow"/>
+				<bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="A&#x538B;" x="56" y="43" width="38">
+				<style name="me106_text_14_yellow"/>
+				<bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="&#x25CF;" x="87" y="43" width="12">
+				<style name="me106_text_14_green"/>
+				<bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="B&#x538B;" x="100" y="43" width="38">
+				<style name="me106_text_14_green"/>
+				<bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="&#x25CF;" x="131" y="43" width="12">
+				<style name="me106_text_14_red"/>
+				<bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="C&#x538B;" x="144" y="43" width="38">
+				<style name="me106_text_14_red"/>
+				<bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="&#x25CF;" x="175" y="43" width="12">
+				<style name="me106_text_14_blue"/>
+			</lv_label>
+			<lv_label text="A&#x6D41;" x="188" y="43" width="38">
+				<style name="me106_text_14_blue"/>
+			</lv_label>
+			<lv_label text="&#x25CF;" x="219" y="43" width="12">
+				<style name="me106_text_14_cyan"/>
+			</lv_label>
+			<lv_label text="B&#x6D41;" x="232" y="43" width="38">
+				<style name="me106_text_14_cyan"/>
+			</lv_label>
+			<lv_label text="&#x25CF;" x="263" y="43" width="12">
+				<style name="me106_text_14_purple" />
+			</lv_label>
+			<lv_label text="C&#x6D41;" x="276" y="43" width="38">
+				<style name="me106_text_14_purple" />
+			</lv_label>
+			<lv_label text="V" x="18" y="70" width="18">
+				<style name="me106_text_14_gray_ba"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="320" x="8" y="86" width="30">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="0" x="24" y="128" width="16">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="-320" x="3" y="170" width="36">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="A" x="296" y="70" width="18">
+				<style name="me106_text_14_gray_ba"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="1.0" x="286" y="86" width="30">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="0" x="300" y="128" width="16">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="-1.0" x="282" y="170" width="34">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_chart
+				name="waveform_total_chart"
+				x="40"
+				y="78"
+				width="240"
+				height="108"
+				type="line"
+				point_count="256"
+				hor_div_line_count="5"
+				ver_div_line_count="8"
+				style_bg_opa="0"
+				style_border_width="0"
+				style_pad_all="0"
+				style_line_color="0x303030"
+				style_line_opa="180"
+			>
+				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="1" />
+				<style name="me106_chart_point_hidden" selector="indicator" />
+				<style name="me106_chart_wave_line" selector="items" />
+				<lv_chart-axis axis="primary_y" min_value="-360" max_value="360" />
+				<lv_chart-axis axis="secondary_y" min_value="-120" max_value="120" />
+				<lv_chart-series
+					color="0xFFEB3B"
+					axis="primary_y"
+					values="299 290 282 273 265 256 247 237 227 217 207 197 184 170 156 140 125 109 94 80 66 50 34 18 3 -11 -26 -41 -57 -73 -90 -105 -120 -134 -148 -163 -178 -191 -203 -214 -224 -234 -243 -252 -260 -268 -275 -281 -288 -294 -300 -307 -312 -316 -319 -321 -322 -322 -322 -322 -321 -317 -312 -306 -299 -291 -282 -274 -265 -256 -247 -237 -227 -217 -207 -197 -184 -171 -156 -140 -125 -109 -94 -80 -67 -51 -35 -19 -4 11 26 41 57 73 89 105 120 134 148 163 177 191 203 214 224 234 243 252 260 268 275 281 288 294 300 306 312 316 319 321 322 323 323 322 321 317 312 306 299 291 282 273 265 257 247 237 227 217 207 196 184 170 155 141 125 111 96 81 67 51 34 18 3 -11 -25 -40 -56 -72 -89 -105 -120 -135 -149 -164 -178 -191 -202 -213 -223 -233 -243 -252 -260 -268 -275 -281 -288 -294 -300 -306 -312 -316 -319 -321 -322 -322 -322 -322 -321 -317 -312 -306 -299 -291 -282 -273 -265 -257 -247 -238 -228 -218 -207 -196 -184 -170 -155 -141 -126 -111 -96 -81 -67 -51 -34 -18 -3 11 26 41 56 73 89 105 121 135 149 164 178 191 202 213 223 233 243 252 260 268 274 281 287 294 300 306 312 316 319 321 322 322 322 322 321 317 312 306"
+				/>
+				<lv_chart-series
+					color="0x32E67A"
+					axis="primary_y"
+					values="-44 -27 -11 4 18 33 49 64 80 96 111 125 139 153 168 182 196 207 217 227 237 246 254 262 269 276 282 288 295 302 308 314 319 322 323 323 324 323 322 320 317 310 302 294 286 278 269 261 253 244 234 224 214 204 192 180 166 151 136 120 104 89 74 60 44 28 12 -2 -17 -33 -48 -64 -80 -95 -110 -125 -139 -154 -168 -183 -196 -207 -217 -227 -237 -246 -254 -262 -269 -276 -282 -289 -295 -302 -308 -314 -319 -322 -323 -323 -324 -324 -323 -321 -317 -310 -302 -294 -286 -278 -270 -261 -253 -244 -235 -225 -214 -204 -193 -180 -166 -152 -136 -120 -104 -88 -74 -60 -44 -28 -12 3 18 33 48 64 80 95 110 126 140 155 169 182 195 206 216 226 236 246 254 263 270 276 282 288 295 301 308 314 319 322 323 323 324 324 323 320 317 310 302 294 286 278 269 261 253 244 235 225 215 204 193 180 166 151 136 120 104 89 75 60 44 28 12 -3 -17 -33 -48 -63 -79 -94 -110 -126 -140 -155 -169 -182 -195 -206 -216 -226 -237 -246 -255 -263 -269 -276 -282 -288 -295 -302 -308 -314 -319 -322 -323 -323 -324 -324 -323 -320 -317 -310 -302 -294 -286 -278 -270 -262 -253 -244 -235 -225 -215 -204 -193 -180 -166 -151 -136 -120 -104 -89 -75 -60"
+				/>
+				<lv_chart-series
+					color="0xE33C64"
+					axis="primary_y"
+					values="-249 -257 -265 -273 -280 -287 -294 -300 -307 -313 -318 -321 -324 -324 -325 -325 -325 -323 -321 -316 -310 -302 -294 -285 -277 -269 -261 -253 -243 -232 -222 -212 -201 -190 -176 -162 -147 -131 -115 -100 -85 -72 -57 -41 -24 -7 9 24 39 54 70 86 101 116 130 144 158 172 186 199 210 220 230 240 249 257 264 272 279 286 293 300 307 313 318 321 323 324 325 325 324 323 321 316 309 302 294 285 277 270 261 253 243 232 222 212 202 190 176 162 147 131 116 100 85 72 57 41 24 8 -8 -23 -38 -54 -70 -86 -101 -116 -130 -144 -158 -172 -186 -199 -210 -220 -230 -240 -249 -257 -265 -272 -279 -286 -293 -300 -306 -312 -318 -322 -324 -325 -325 -325 -324 -323 -321 -317 -310 -302 -294 -284 -277 -269 -262 -253 -244 -233 -222 -212 -201 -190 -176 -162 -147 -132 -116 -101 -86 -72 -57 -40 -24 -8 8 23 38 54 70 86 101 115 130 144 158 172 186 199 210 220 230 240 249 257 265 272 279 286 293 300 306 312 318 322 324 324 325 325 325 323 321 317 310 302 293 284 277 270 262 253 243 233 222 212 201 190 176 162 147 132 116 101 86 72 57 41 24 8 -7 -22 -38 -54 -70 -86 -101 -116 -130 -144 -158 -172 -186 -198 -210 -220 -230 -240"
+				/>
+				<lv_chart-series
+					color="0x52A3FF"
+					axis="secondary_y"
+					values="-22 -19 -16 -14 -11 -8 -5 -2 1 3 5 8 12 15 19 23 28 35 42 50 58 65 72 78 83 87 90 92 93 93 93 91 89 87 85 83 80 78 78 79 82 84 87 89 90 91 91 90 88 86 82 76 70 63 56 50 45 40 35 32 29 27 25 23 22 19 17 14 11 8 4 1 -1 -3 -6 -9 -12 -16 -19 -23 -28 -35 -43 -51 -58 -66 -72 -78 -82 -86 -90 -92 -93 -93 -93 -91 -89 -87 -85 -83 -80 -78 -77 -79 -81 -84 -86 -88 -90 -91 -90 -89 -88 -85 -81 -76 -69 -63 -56 -50 -44 -39 -35 -32 -30 -27 -25 -24 -21 -19 -17 -15 -11 -8 -5 -2 1 3 5 7 11 15 19 23 28 35 42 50 58 66 72 77 82 86 89 91 92 93 92 90 88 87 85 83 81 78 78 79 81 83 86 89 91 92 92 90 87 84 80 76 71 64 57 51 45 38 34 31 30 28 26 24 22 20 17 14 11 8 5 2 -1 -3 -5 -8 -12 -15 -19 -23 -28 -35 -42 -50 -57 -65 -72 -77 -82 -86 -89 -92 -93 -93 -92 -91 -89 -87 -86 -83 -81 -78 -78 -78 -81 -83 -86 -89 -91 -92 -91 -90 -87 -84 -80 -76 -70 -64 -57 -51 -44 -38 -34 -31 -30 -28 -26 -24"
+				/>
+				<lv_chart-series
+					color="0x20D3D5"
+					axis="secondary_y"
+					values="-65 -72 -77 -82 -86 -89 -92 -93 -93 -91 -89 -87 -85 -83 -81 -78 -77 -77 -78 -82 -86 -90 -93 -95 -96 -95 -93 -90 -86 -81 -76 -71 -64 -58 -52 -45 -40 -36 -35 -34 -32 -30 -27 -23 -20 -17 -15 -13 -10 -7 -4 0 4 7 10 13 16 19 24 30 37 44 52 59 66 72 77 82 87 90 93 94 93 92 89 87 85 83 81 78 77 77 78 81 86 90 93 95 95 95 93 90 86 82 77 71 64 58 52 45 40 36 35 34 32 29 26 23 20 17 15 13 10 7 3 0 -4 -7 -10 -13 -16 -19 -23 -29 -36 -43 -51 -58 -97 -95 -92 -89 -84 -79 -73 -67 -60 -53 -47 -42 -38 -35 -34 -32 -29 -26 -23 -21 -18 -15 -12 -9 -6 -2 1 4 7 10 14 17 20 24 30 37 44 52 60 67 74 79 84 88 91 94 96 96 95 93 90 87 85 83 81 80 79 80 83 87 92 95 96 97 97 96 93 89 85 79 74 67 61 54 48 42 38 36 34 32 29 26 24 21 18 15 12 9 6 2 -1 -4 -7 -11 -14 -18 -21 -25 -31 -38 -44 -52 -60 -67 -74 -79 -84 -88 -91 -94 -96 -97 -96 -93 -91 -89 -87 -85 -82 -80 -80 -80 -83 -87 -91 -95 -97 -98"
+				/>
+				<lv_chart-series
+					color="0x8D5CFF"
+					axis="secondary_y"
+					values="-2 -3 -5 -6 -7 -8 -10 -12 -15 -18 -22 -26 -35 -48 -60 -66 -69 -74 -78 -78 -78 -78 -77 -74 -70 -66 -61 -55 -50 -46 -44 -41 -37 -34 -33 -39 -48 -55 -59 -63 -64 -61 -58 -55 -52 -49 -46 -42 -36 -29 -23 -19 -15 -12 -11 -12 -16 -17 -12 -6 -4 -2 -1 0 2 2 4 5 7 9 10 12 15 18 21 25 34 47 59 65 68 73 77 78 78 78 77 75 71 65 60 55 50 46 44 42 38 34 33 38 47 54 59 62 63 62 59 56 52 49 47 43 38 31 24 19 15 12 11 12 16 17 12 7 4 2 0 -1 -2 -3 -4 -5 -6 -8 -10 -13 -16 -19 -22 -25 -33 -46 -58 -65 -69 -74 -78 -79 -78 -78 -77 -75 -71 -66 -61 -55 -50 -46 -44 -41 -38 -34 -33 -37 -46 -52 -57 -62 -65 -64 -61 -57 -51 -46 -44 -41 -38 -32 -25 -18 -13 -11 -11 -13 -17 -18 -12 -5 -3 -1 -1 -1 1 2 5 7 7 8 9 12 15 19 22 25 33 45 58 65 69 73 77 79 78 78 77 74 71 67 61 55 50 47 44 42 38 34 33 38 47 53 57 62 65 64 61 57 52 48 45 42 38 32 25 20 16 12 10 12 16 17 12 6 4 3 1 -1"
+				/>
+			</lv_chart>
+			<lv_label text="1" x="40" y="188" width="18">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="64" x="95" y="188" width="24">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="128" x="151" y="188" width="32">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="192" x="210" y="188" width="32">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="256&#x70B9;" x="257" y="188" width="48">
+				<style name="me106_text_14_gray_8f"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			</lv_label>
+			<lv_label text="&#x52A0;&#x8F7D;&#x4E2D;" x="70" y="121" width="180">
+				<style name="me106_text_16_gray_ba_center"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="0" />
+			</lv_label>
+			<lv_label text="&#x6682;&#x65E0;&#x8C10;&#x6CE2;&#x6570;&#x636E;" x="70" y="121" width="180">
+				<style name="me106_text_16_gray_ba_center"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="2" />
+			</lv_label>
+			<lv_label text="&#x6570;&#x636E;&#x5F02;&#x5E38;" x="70" y="121" width="180">
+				<style name="me106_text_16_gray_ba_center"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="3" />
+			</lv_label>
+		</lv_obj>
+        <!-- UI分组：底部硬按键区。按钮只发出导航/选择意图，不直接处理硬件。 -->
+        <lv_obj name="screen_harmonic_waveform_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+		<lv_button name="waveform_total_btn_return" x="0" y="207" width="79" height="32">
+			<style name="me106_btn_flat_gray47"/>
+			<bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+			<bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+			<lv_image
+				src="meter_icon_return"
+				align="center"
+				style_transform_pivot_x="8"
+				style_transform_pivot_y="7"
+				style_transform_scale_x="230"
+				style_transform_scale_y="230"
+			/>
+			<lv_obj-screen_create_event screen="screen_function_menu" trigger="clicked" anim_type="none" />
+		</lv_button>
+		<lv_button name="waveform_total_btn_next_page" x="80" y="207" width="79" height="32">
+			<style name="me106_btn_flat_gray47"/>
+			<bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+			<bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+			<lv_image
+				src="meter_arrow_down"
+				align="center"
+				style_transform_pivot_x="7"
+				style_transform_pivot_y="5"
+				style_transform_scale_x="230"
+				style_transform_scale_y="230"
+			/>
+			<lv_obj-screen_create_event screen="screen_harmonic_waveform_voltage" trigger="clicked" anim_type="none" />
+		</lv_button>
+		<lv_button name="waveform_total_btn_prev_page" x="160" y="207" width="79" height="32">
+			<style name="me106_btn_flat_gray47"/>
+			<bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+			<bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+			<lv_image
+				src="meter_arrow_up"
+				align="center"
+				style_transform_pivot_x="7"
+				style_transform_pivot_y="5"
+				style_transform_scale_x="230"
+				style_transform_scale_y="230"
+			/>
+			<lv_obj-screen_create_event screen="screen_harmonic_waveform_current" trigger="clicked" anim_type="none" />
+		</lv_button>
+		<lv_button name="waveform_total_btn_idle" x="240" y="207" width="80" height="32">
+			<style name="me106_btn_flat_gray47"/>
+			<bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+			<bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+		</lv_button>
+	</view>
+</screen>

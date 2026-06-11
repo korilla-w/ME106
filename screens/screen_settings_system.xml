@@ -1,0 +1,145 @@
+<screen>
+    <animations>
+        <timeline name="content_open">
+            <animation target="page_content" prop="opa" start="0" end="255" duration="110" early_apply="true"/>
+            <animation target="page_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true"/>
+        </timeline>
+    </animations>
+
+    <view width="320" height="240">
+        <style name="me106_fill_gray1f"/>
+        <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+        <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+        <play_timeline_event target="self" timeline="content_open" trigger="screen_loaded"/>
+
+        <!-- UI 只展示逻辑层同步过来的版本 subject，不跨层读取芯片或寄存器。 -->
+        <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+            <lv_label text="&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;" x="152" y="17" width="144">
+                <style name="me106_text_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+
+            <lv_obj name="system_icon_halo" x="24" y="44" width="46" height="46" style_bg_color="0x6366F1" style_bg_opa="54" style_radius="12" style_border_width="0" style_pad_all="0" scrollable="false">
+            </lv_obj>
+            <lv_image src="meter_icon_information" x="35" y="55" style_transform_pivot_x="8" style_transform_pivot_y="8" style_transform_scale_x="245" style_transform_scale_y="245">
+                <style name="me106_icon_indigo"/>
+            </lv_image>
+            <lv_label bind_text="meter_system_product_name" x="82" y="57" width="94">
+                <style name="me106_text_18_white"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+            <lv_obj name="system_fw_pill" x="188" y="50" width="108" height="34" style_pad_all="0" scrollable="false">
+                <style name="me106_panel_soft_r8"/>
+                <bind_style name="me106_theme_light_soft_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_soft_panel" subject="meter_theme_index" ref_value="2"/>
+                <lv_label text="FW" align="left_mid" x="12" y="0" width="28">
+                    <style name="me106_text_14_gray_ba"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_system_fw_version" align="right_mid" x="-12" y="0" width="56">
+                    <style name="me106_text_16_cyan"/>
+                </lv_label>
+            </lv_obj>
+
+            <lv_obj name="system_info_band" x="24" y="102" width="272" height="98" style_pad_all="0" scrollable="false">
+                <style name="me106_panel_soft_r8"/>
+                <bind_style name="me106_theme_light_soft_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_soft_panel" subject="meter_theme_index" ref_value="2"/>
+            </lv_obj>
+
+            <lv_obj name="system_hw_dot" x="40" y="117" width="7" height="7" style_radius="4" style_bg_color="0x6366F1" style_bg_opa="255" style_border_width="0" scrollable="false">
+            </lv_obj>
+            <lv_obj name="system_hw_panel" x="56" y="108" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <lv_label text="HW" align="left_mid" x="0" y="0" width="72">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_system_hw_version" align="right_mid" x="0" y="0" width="224">
+                    <style name="me106_text_16_white_right"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+            </lv_obj>
+
+            <lv_obj name="system_feature_dot" x="40" y="141" width="7" height="7" style_radius="4" style_bg_color="0x20D3D5" style_bg_opa="255" style_border_width="0" scrollable="false">
+            </lv_obj>
+            <lv_obj name="system_feature_panel" x="56" y="132" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <lv_label text="FEATURE" align="left_mid" x="0" y="0" width="82">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_system_feature_version" align="right_mid" x="0" y="0" width="224">
+                    <style name="me106_text_16_white_right"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+            </lv_obj>
+
+            <lv_obj name="system_build_dot" x="40" y="165" width="7" height="7" style_radius="4" style_bg_color="0x14B8A6" style_bg_opa="255" style_border_width="0" scrollable="false">
+            </lv_obj>
+            <lv_obj name="system_build_panel" x="56" y="156" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <lv_label text="BUILD" align="left_mid" x="0" y="0" width="82">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_system_build_date" align="right_mid" x="0" y="0" width="224">
+                    <style name="me106_text_16_white_right"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+            </lv_obj>
+
+            <lv_obj name="system_runtime_dot" x="40" y="189" width="7" height="7" style_radius="4" style_bg_color="0xF59E0B" style_bg_opa="255" style_border_width="0" scrollable="false">
+            </lv_obj>
+            <lv_obj name="system_runtime_panel" x="56" y="180" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <lv_label text="&#x8FD0;&#x884C;&#x65F6;&#x957F;" align="left_mid" x="0" y="0" width="82">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_system_runtime_text" align="right_mid" x="0" y="0" width="224">
+                    <style name="me106_text_16_white_right"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+            </lv_obj>
+        </lv_obj>
+
+        <!-- 底部硬按键只负责返回，不触发底层信息读取。 -->
+        <lv_obj name="screen_settings_system_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+        <lv_button name="system_btn_return" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        </lv_button>
+        <lv_button name="system_btn_placeholder_1" x="80" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_button>
+        <lv_button name="system_btn_placeholder_2" x="160" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_button>
+        <lv_button name="system_btn_yes" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_blue"/>
+            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        </lv_button>
+    </view>
+</screen>

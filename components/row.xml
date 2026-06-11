@@ -1,0 +1,12 @@
+<component>
+	<styles>
+		<!-- 基础横向容器：只负责 UI 排列，不承载业务逻辑。 -->
+		<style name="style_base" width="content" height="content" layout="flex" flex_flow="row" />
+	</styles>
+	<view>
+		<!-- 组件默认清空样式，避免和页面级主题样式耦合。 -->
+		<remove_style_all />
+		<style name="style_base" />
+	</view>
+</component>
+

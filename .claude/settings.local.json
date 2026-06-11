@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p __TRACKED_VAR__/.claude/skills)",
+      "Bash(cp -r /tmp/skills/lvgl-v9 __TRACKED_VAR__/.claude/skills/lvgl-v9)",
+      "Bash(mkdir -p .claude/skills)",
+      "Bash(cp -r /tmp/skills/lvgl-v9 .claude/skills/lvgl-v9)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(git init *)"
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+<screen>
+    <animations>
+        <timeline name="content_open">
+            <animation target="page_content" prop="opa" start="0" end="255" duration="110" early_apply="true"/>
+            <animation target="page_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true"/>
+        </timeline>
+    </animations>
+    <view width="320" height="240">
+        <style name="me106_fill_black"/>
+        <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+        <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+        <play_timeline_event target="self" timeline="content_open" trigger="screen_loaded"/>
+        <subject_set_int_event subject="meter_paid_contact_popup" value="0" trigger="screen_loaded"/>
+
+        <!-- UI分组：付费提示页只表达功能开通状态，不接入谐波数据逻辑。 -->
+        <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+            <lv_label text="&#x8C10;&#x6CE2;&#x529F;&#x80FD;" x="170" y="17" width="126">
+                <style name="me106_text_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+
+            <lv_obj name="paid_harmonic_icon_halo" x="130" y="48" width="60" height="60" style_pad_all="0" style_border_width="0" scrollable="false">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                <lv_image src="meter_icon_harmonic" align="center" style_transform_pivot_x="16" style_transform_pivot_y="16" style_transform_scale_x="150" style_transform_scale_y="150">
+                    <style name="me106_icon_cyan"/>
+                </lv_image>
+            </lv_obj>
+
+            <lv_label text="&#x9700;&#x4ED8;&#x8D39;&#x5347;&#x7EA7;" x="80" y="119" width="160">
+                <style name="me106_text_18_white_center"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+            <lv_label text="&#x8C10;&#x6CE2;&#x9891;&#x8C31;&#x548C;&#x6CE2;&#x5F62;&#x66F2;&#x7EBF;&#x5C5E;&#x4E8E;&#x8C10;&#x6CE2;&#x529F;&#x80FD;" x="28" y="148" width="264">
+                <style name="me106_text_16_gray_ba_center"/>
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+            <lv_label text="&#x8BF7;&#x8054;&#x7CFB;&#x670D;&#x52A1;&#x5546;&#x5F00;&#x901A;" x="70" y="174" width="180">
+                <style name="me106_text_14_gray_ba_center"/>
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+
+            <!-- 联系弹窗：确认键只打开联系方式，不触发真实购买或授权流程。 -->
+            <lv_obj name="paid_harmonic_contact_popup" x="34" y="31" width="252" height="162" style_pad_all="0" style_border_width="0" scrollable="false">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_paid_contact_popup" flag="hidden" ref_value="1"/>
+                <lv_label text="&#x5347;&#x7EA7;&#x8054;&#x7CFB;&#x65B9;&#x5F0F;" x="18" y="14" width="132">
+                    <style name="me106_text_16_white"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_image src="meter_power_quality_qr" x="18" y="44" width="92" height="92"/>
+                <lv_label text="&#x626B;&#x7801;&#x5F00;&#x901A;" x="126" y="48" width="96">
+                    <style name="me106_text_16_white"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label text="&#x738B;&#x5DE5;&#xFF1A;13328775236" x="126" y="76" width="112">
+                    <style name="me106_text_14_gray_ba"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label text="&#x8FD4;&#x56DE;&#x952E;&#x5173;&#x95ED;" x="126" y="105" width="104">
+                    <style name="me106_text_14_gray_ba"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_button name="paid_harmonic_popup_close" x="212" y="8" width="30" height="30" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                    <lv_label text="X" align="center" width="30"><style name="me106_text_14_gray_ba_center"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+                    <subject_set_int_event subject="meter_paid_contact_popup" value="0" trigger="clicked"/>
+                </lv_button>
+            </lv_obj>
+        </lv_obj>
+
+        <!-- UI分组：底部硬按键区。按钮只发出导航意图，不直接处理硬件。 -->
+        <lv_obj name="screen_paid_harmonic_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+        <lv_button name="paid_harmonic_btn_return" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_eq subject="meter_paid_contact_popup" flag="hidden" ref_value="1"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_function_menu" trigger="clicked" anim_type="none"/>
+        </lv_button>
+        <lv_button name="paid_harmonic_btn_close_popup" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_paid_contact_popup" flag="hidden" ref_value="1"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <subject_set_int_event subject="meter_paid_contact_popup" value="0" trigger="clicked"/>
+        </lv_button>
+        <lv_button name="paid_harmonic_btn_idle_1" x="80" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_button>
+        <lv_button name="paid_harmonic_btn_idle_2" x="160" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_button>
+        <lv_button name="paid_harmonic_btn_idle_3" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_icon_select" align="center"/>
+            <subject_set_int_event subject="meter_paid_contact_popup" value="1" trigger="clicked"/>
+        </lv_button>
+    </view>
+</screen>

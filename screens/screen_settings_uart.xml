@@ -1,0 +1,188 @@
+<screen>
+
+    <animations>
+        <timeline name="content_open">
+            <animation target="uart_content" prop="opa" start="0" end="255" duration="110" early_apply="true"/>
+            <animation target="uart_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true"/>
+        </timeline>
+    </animations>
+
+    <view width="320" height="240">
+        <style name="me106_fill_black"/>
+        <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+        <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+        <play_timeline_event target="self" timeline="content_open" trigger="screen_loaded"/>
+        <subject_set_int_event subject="meter_uart_selected_index" value="0" trigger="screen_loaded"/>
+
+        <!-- UI分组：串口内容区。页面只保存选项状态，硬件应用留在 XML 外部。 -->
+        <lv_obj name="uart_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+
+            <lv_label text="&#x4E32;&#x53E3;&#x8BBE;&#x7F6E;" align="top_mid" x="0" y="17" width="160">
+                <style name="me106_text_16_white_center"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+
+            <!-- 只有四个选项时使用更高行距，提高小屏可读性。 -->
+            <lv_button name="uart_row_baud" x="22" y="58" width="276" height="32" style_pad_all="0">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                                <lv_obj name="uart_row_baud_selected_bg" x="0" y="0" width="276" height="32" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_uart_selected_index" flag="hidden" ref_value="0"/>
+                </lv_obj>
+                <lv_label text="&#x6CE2;&#x7279;&#x7387;" align="left_mid" x="16" y="0" width="88">
+                    <style name="me106_text_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_16_white" subject="meter_uart_selected_index" ref_value="0"/>
+                </lv_label>
+                <lv_obj name="uart_value_baud" align="right_mid" x="-34" y="0" width="118" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                    <lv_label text="4800" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="0"/><bind_flag_if_not_eq subject="meter_uart_baud_index" flag="hidden" ref_value="0"/></lv_label>
+                    <lv_label text="9600" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="0"/><bind_flag_if_not_eq subject="meter_uart_baud_index" flag="hidden" ref_value="1"/></lv_label>
+                    <lv_label text="19200" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="0"/><bind_flag_if_not_eq subject="meter_uart_baud_index" flag="hidden" ref_value="2"/></lv_label>
+                    <lv_label text="38400" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="0"/><bind_flag_if_not_eq subject="meter_uart_baud_index" flag="hidden" ref_value="3"/></lv_label>
+                    <lv_label text="57600" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="0"/><bind_flag_if_not_eq subject="meter_uart_baud_index" flag="hidden" ref_value="4"/></lv_label>
+                    <lv_label text="115200" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="0"/><bind_flag_if_not_eq subject="meter_uart_baud_index" flag="hidden" ref_value="5"/></lv_label>
+                    <lv_label text="230400" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="0"/><bind_flag_if_not_eq subject="meter_uart_baud_index" flag="hidden" ref_value="6"/></lv_label>
+                    <lv_label text="460800" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="0"/><bind_flag_if_not_eq subject="meter_uart_baud_index" flag="hidden" ref_value="7"/></lv_label>
+                </lv_obj>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <subject_set_int_event subject="meter_uart_selected_index" value="0" trigger="clicked"/>
+            </lv_button>
+
+            <lv_button name="uart_row_data_bits" x="22" y="94" width="276" height="32" style_pad_all="0">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                                <lv_obj name="uart_row_data_bits_selected_bg" x="0" y="0" width="276" height="32" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_uart_selected_index" flag="hidden" ref_value="1"/>
+                </lv_obj>
+                <lv_label text="&#x6570;&#x636E;&#x4F4D;" align="left_mid" x="16" y="0" width="88">
+                    <style name="me106_text_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_16_white" subject="meter_uart_selected_index" ref_value="1"/>
+                </lv_label>
+                <lv_obj name="uart_value_data_bits" align="right_mid" x="-34" y="0" width="118" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                    <lv_label text="5" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="1"/><bind_flag_if_not_eq subject="meter_uart_data_bits_index" flag="hidden" ref_value="0"/></lv_label>
+                    <lv_label text="6" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="1"/><bind_flag_if_not_eq subject="meter_uart_data_bits_index" flag="hidden" ref_value="1"/></lv_label>
+                    <lv_label text="7" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="1"/><bind_flag_if_not_eq subject="meter_uart_data_bits_index" flag="hidden" ref_value="2"/></lv_label>
+                    <lv_label text="8" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="1"/><bind_flag_if_not_eq subject="meter_uart_data_bits_index" flag="hidden" ref_value="3"/></lv_label>
+                </lv_obj>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <subject_set_int_event subject="meter_uart_selected_index" value="1" trigger="clicked"/>
+            </lv_button>
+
+            <lv_button name="uart_row_parity" x="22" y="130" width="276" height="32" style_pad_all="0">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                                <lv_obj name="uart_row_parity_selected_bg" x="0" y="0" width="276" height="32" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_uart_selected_index" flag="hidden" ref_value="2"/>
+                </lv_obj>
+                <lv_label text="&#x6821;&#x9A8C;&#x4F4D;" align="left_mid" x="16" y="0" width="88">
+                    <style name="me106_text_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_16_white" subject="meter_uart_selected_index" ref_value="2"/>
+                </lv_label>
+                <lv_obj name="uart_value_parity" align="right_mid" x="-34" y="0" width="118" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                    <lv_label text="None" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_uart_parity_index" flag="hidden" ref_value="0"/></lv_label>
+                    <lv_label text="Odd" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_uart_parity_index" flag="hidden" ref_value="1"/></lv_label>
+                    <lv_label text="Even" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_uart_parity_index" flag="hidden" ref_value="2"/></lv_label>
+                </lv_obj>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <subject_set_int_event subject="meter_uart_selected_index" value="2" trigger="clicked"/>
+            </lv_button>
+
+            <lv_button name="uart_row_stop_bits" x="22" y="166" width="276" height="32" style_pad_all="0">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                                <lv_obj name="uart_row_stop_bits_selected_bg" x="0" y="0" width="276" height="32" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_uart_selected_index" flag="hidden" ref_value="3"/>
+                </lv_obj>
+                <lv_label text="&#x505C;&#x6B62;&#x4F4D;" align="left_mid" x="16" y="0" width="88">
+                    <style name="me106_text_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_16_white" subject="meter_uart_selected_index" ref_value="3"/>
+                </lv_label>
+                <lv_obj name="uart_value_stop_bits" align="right_mid" x="-34" y="0" width="118" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                    <lv_label text="1" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="3"/><bind_flag_if_not_eq subject="meter_uart_stop_bits_index" flag="hidden" ref_value="0"/></lv_label>
+                    <lv_label text="1.5" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="3"/><bind_flag_if_not_eq subject="meter_uart_stop_bits_index" flag="hidden" ref_value="1"/></lv_label>
+                    <lv_label text="2" align="right_mid" width="118"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="3"/><bind_flag_if_not_eq subject="meter_uart_stop_bits_index" flag="hidden" ref_value="2"/></lv_label>
+                </lv_obj>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <subject_set_int_event subject="meter_uart_selected_index" value="3" trigger="clicked"/>
+            </lv_button>
+        </lv_obj>
+
+        <!-- UI分组：底部硬按键区。按钮只发出导航/选择意图，不直接处理硬件。 -->
+        <lv_obj name="screen_settings_uart_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+        <lv_button name="uart_btn_return" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        </lv_button>
+
+        <lv_button name="uart_btn_down" x="80" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_arrow_down" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <subject_increment_event subject="meter_uart_selected_index" step="1" min_value="0" max_value="3" rollover="true" trigger="clicked"/>
+        </lv_button>
+
+        <lv_button name="uart_btn_set" x="160" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_icon_select" align="center"/>
+        </lv_button>
+
+        <lv_button name="uart_btn_yes" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_blue"/>
+            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
+        </lv_button>
+
+        <!-- 透明设置处理：第 3 键只修改当前聚焦项，确认保存留给第 4 键和 MCU 侧。 -->
+        <lv_button name="uart_btn_set_baud" x="160" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+            <bind_flag_if_not_eq subject="meter_uart_selected_index" flag="hidden" ref_value="0"/>
+            <subject_increment_event subject="meter_uart_baud_index" step="1" min_value="0" max_value="7" rollover="true" trigger="clicked"/>
+        </lv_button>
+        <lv_button name="uart_btn_set_data_bits" x="160" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+            <bind_flag_if_not_eq subject="meter_uart_selected_index" flag="hidden" ref_value="1"/>
+            <subject_increment_event subject="meter_uart_data_bits_index" step="1" min_value="0" max_value="3" rollover="true" trigger="clicked"/>
+        </lv_button>
+        <lv_button name="uart_btn_set_parity" x="160" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+            <bind_flag_if_not_eq subject="meter_uart_selected_index" flag="hidden" ref_value="2"/>
+            <subject_increment_event subject="meter_uart_parity_index" step="1" min_value="0" max_value="2" rollover="true" trigger="clicked"/>
+        </lv_button>
+        <lv_button name="uart_btn_set_stop_bits" x="160" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+            <bind_flag_if_not_eq subject="meter_uart_selected_index" flag="hidden" ref_value="3"/>
+            <subject_increment_event subject="meter_uart_stop_bits_index" step="1" min_value="0" max_value="2" rollover="true" trigger="clicked"/>
+        </lv_button>
+    </view>
+</screen>

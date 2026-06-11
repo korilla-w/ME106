@@ -1,0 +1,161 @@
+<screen>
+
+    <view width="320" height="240">
+        <style name="me106_fill_gray1f"/>
+        <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+        <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+
+        <!-- UI分组：页面内容区。外层页始终同时预览 CT/PT 两组当前生效值，内层页再显示编辑中值。 -->
+        <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+            <lv_label text="&#x53D8;&#x6BD4;&#x8BBE;&#x7F6E;" x="152" y="17" width="144">
+                <style name="me106_text_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+
+            <lv_button name="ratio_item_ct" x="40" y="74" width="240" height="44" style_pad_all="0">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                <lv_obj name="ratio_item_ct_selected_bg" x="0" y="0" width="240" height="44" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_ratio_selected_kind" flag="hidden" ref_value="0"/>
+                </lv_obj>
+                <lv_label text="CT&#x53D8;&#x6BD4;" align="left_mid" x="18" y="0" width="100">
+                    <style name="me106_text_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_16_white" subject="meter_ratio_selected_kind" ref_value="0"/>
+                </lv_label>
+                <lv_obj name="ratio_ct_value" align="right_mid" x="-14" y="0" width="90" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                    <lv_obj name="ratio_ct_digit_0_slot" x="0" y="0" width="20" height="24" style_bg_color="0x000000" style_bg_opa="56" style_border_width="0" style_radius="4" style_pad_all="0" scrollable="false">
+                        <lv_label bind_text="meter_ct_ratio_current_digit_0" bind_text-fmt="%d" align="center" width="20">
+                            <style name="me106_text_18_white_center"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        </lv_label>
+                    </lv_obj>
+                    <lv_obj name="ratio_ct_digit_1_slot" x="23" y="0" width="20" height="24" style_bg_color="0x000000" style_bg_opa="56" style_border_width="0" style_radius="4" style_pad_all="0" scrollable="false">
+                        <lv_label bind_text="meter_ct_ratio_current_digit_1" bind_text-fmt="%d" align="center" width="20">
+                            <style name="me106_text_18_white_center"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        </lv_label>
+                    </lv_obj>
+                    <lv_obj name="ratio_ct_digit_2_slot" x="46" y="0" width="20" height="24" style_bg_color="0x000000" style_bg_opa="56" style_border_width="0" style_radius="4" style_pad_all="0" scrollable="false">
+                        <lv_label bind_text="meter_ct_ratio_current_digit_2" bind_text-fmt="%d" align="center" width="20">
+                            <style name="me106_text_18_white_center"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        </lv_label>
+                    </lv_obj>
+                    <lv_obj name="ratio_ct_digit_3_slot" x="69" y="0" width="20" height="24" style_bg_color="0x000000" style_bg_opa="56" style_border_width="0" style_radius="4" style_pad_all="0" scrollable="false">
+                        <lv_label bind_text="meter_ct_ratio_current_digit_3" bind_text-fmt="%d" align="center" width="20">
+                            <style name="me106_text_18_white_center"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        </lv_label>
+                    </lv_obj>
+                </lv_obj>
+                <subject_set_int_event subject="meter_ratio_selected_kind" value="0" trigger="clicked"/>
+            </lv_button>
+
+            <lv_button name="ratio_item_pt" x="40" y="130" width="240" height="44" style_pad_all="0">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                <lv_obj name="ratio_item_pt_selected_bg" x="0" y="0" width="240" height="44" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_ratio_selected_kind" flag="hidden" ref_value="1"/>
+                </lv_obj>
+                <lv_label text="PT&#x53D8;&#x6BD4;" align="left_mid" x="18" y="0" width="100">
+                    <style name="me106_text_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_16_white" subject="meter_ratio_selected_kind" ref_value="1"/>
+                </lv_label>
+                <lv_obj name="ratio_pt_value" align="right_mid" x="-14" y="0" width="90" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                    <lv_obj name="ratio_pt_digit_0_slot" x="0" y="0" width="20" height="24" style_bg_color="0x000000" style_bg_opa="56" style_border_width="0" style_radius="4" style_pad_all="0" scrollable="false">
+                        <lv_label bind_text="meter_pt_ratio_current_digit_0" bind_text-fmt="%d" align="center" width="20">
+                            <style name="me106_text_18_white_center"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        </lv_label>
+                    </lv_obj>
+                    <lv_obj name="ratio_pt_digit_1_slot" x="23" y="0" width="20" height="24" style_bg_color="0x000000" style_bg_opa="56" style_border_width="0" style_radius="4" style_pad_all="0" scrollable="false">
+                        <lv_label bind_text="meter_pt_ratio_current_digit_1" bind_text-fmt="%d" align="center" width="20">
+                            <style name="me106_text_18_white_center"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        </lv_label>
+                    </lv_obj>
+                    <lv_obj name="ratio_pt_digit_2_slot" x="46" y="0" width="20" height="24" style_bg_color="0x000000" style_bg_opa="56" style_border_width="0" style_radius="4" style_pad_all="0" scrollable="false">
+                        <lv_label bind_text="meter_pt_ratio_current_digit_2" bind_text-fmt="%d" align="center" width="20">
+                            <style name="me106_text_18_white_center"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        </lv_label>
+                    </lv_obj>
+                    <lv_obj name="ratio_pt_digit_3_slot" x="69" y="0" width="20" height="24" style_bg_color="0x000000" style_bg_opa="56" style_border_width="0" style_radius="4" style_pad_all="0" scrollable="false">
+                        <lv_label bind_text="meter_pt_ratio_current_digit_3" bind_text-fmt="%d" align="center" width="20">
+                            <style name="me106_text_18_white_center"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        </lv_label>
+                    </lv_obj>
+                </lv_obj>
+                <subject_set_int_event subject="meter_ratio_selected_kind" value="1" trigger="clicked"/>
+            </lv_button>
+        </lv_obj>
+
+        <!-- UI分组：底部硬按键区。按钮只发出导航/选择意图，不直接处理硬件。 -->
+        <lv_obj name="screen_settings_ratio_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+        <lv_button name="ratio_btn_return" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        </lv_button>
+
+        <lv_button name="ratio_btn_down" x="80" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_arrow_down" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <subject_increment_event subject="meter_ratio_selected_kind" step="1" min_value="0" max_value="1" rollover="true" trigger="clicked"/>
+        </lv_button>
+
+        <lv_button name="ratio_btn_up" x="160" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_arrow_up" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <subject_increment_event subject="meter_ratio_selected_kind" step="-1" min_value="0" max_value="1" rollover="true" trigger="clicked"/>
+        </lv_button>
+
+        <lv_button name="ratio_btn_yes" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_blue"/>
+            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
+        </lv_button>
+
+        <lv_button name="ratio_btn_yes_ct" x="240" y="207" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+            <bind_flag_if_not_eq subject="meter_ratio_selected_kind" flag="hidden" ref_value="0"/>
+            <lv_obj-screen_create_event screen="screen_settings_ratio_ct" trigger="clicked" anim_type="none"/>
+        </lv_button>
+        <lv_button name="ratio_btn_yes_pt" x="240" y="207" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+            <bind_flag_if_not_eq subject="meter_ratio_selected_kind" flag="hidden" ref_value="1"/>
+            <lv_obj-screen_create_event screen="screen_settings_ratio_pt" trigger="clicked" anim_type="none"/>
+        </lv_button>
+    </view>
+</screen>
