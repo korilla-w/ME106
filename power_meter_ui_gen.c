@@ -213,6 +213,7 @@ lv_style_t me106_move_y_n208;
 lv_style_t me106_move_y_n254;
 lv_style_t me106_move_y_n300;
 lv_style_t me106_move_y_n346;
+lv_style_t me106_move_y_n346_tail;
 lv_style_t me106_move_y_n416;
 
 /*----------------
@@ -957,6 +958,9 @@ void power_meter_ui_init_gen(const char * asset_path)
 
         lv_style_init(&me106_move_y_n346);
         lv_style_set_translate_y(&me106_move_y_n346, -346);
+
+        lv_style_init(&me106_move_y_n346_tail);
+        lv_style_set_translate_y(&me106_move_y_n346_tail, -346);
 
         lv_style_init(&me106_move_y_n416);
         lv_style_set_translate_y(&me106_move_y_n416, -416);

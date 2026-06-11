@@ -85,8 +85,10 @@ lv_obj_t * screen_reactive_power_create(void)
     lv_image_set_src(reactive_a_power_issue, meter_icon_warning);
     lv_obj_set_x(reactive_a_power_issue, 56);
     lv_obj_set_y(reactive_a_power_issue, 55);
-    lv_obj_set_width(reactive_a_power_issue, 10);
-    lv_obj_set_height(reactive_a_power_issue, 10);
+    lv_obj_set_style_transform_pivot_x(reactive_a_power_issue, 0, 0);
+    lv_obj_set_style_transform_pivot_y(reactive_a_power_issue, 0, 0);
+    lv_obj_set_style_transform_scale_x(reactive_a_power_issue, 160, 0);
+    lv_obj_set_style_transform_scale_y(reactive_a_power_issue, 160, 0);
     lv_obj_bind_flag_if_not_eq(reactive_a_power_issue, &meter_reactive_a_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_2 = lv_label_create(page_content);
@@ -110,8 +112,10 @@ lv_obj_t * screen_reactive_power_create(void)
     lv_image_set_src(reactive_b_power_issue, meter_icon_warning);
     lv_obj_set_x(reactive_b_power_issue, 219);
     lv_obj_set_y(reactive_b_power_issue, 55);
-    lv_obj_set_width(reactive_b_power_issue, 10);
-    lv_obj_set_height(reactive_b_power_issue, 10);
+    lv_obj_set_style_transform_pivot_x(reactive_b_power_issue, 0, 0);
+    lv_obj_set_style_transform_pivot_y(reactive_b_power_issue, 0, 0);
+    lv_obj_set_style_transform_scale_x(reactive_b_power_issue, 160, 0);
+    lv_obj_set_style_transform_scale_y(reactive_b_power_issue, 160, 0);
     lv_obj_bind_flag_if_not_eq(reactive_b_power_issue, &meter_reactive_b_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_4 = lv_label_create(page_content);
@@ -135,8 +139,10 @@ lv_obj_t * screen_reactive_power_create(void)
     lv_image_set_src(reactive_c_power_issue, meter_icon_warning);
     lv_obj_set_x(reactive_c_power_issue, 56);
     lv_obj_set_y(reactive_c_power_issue, 122);
-    lv_obj_set_width(reactive_c_power_issue, 10);
-    lv_obj_set_height(reactive_c_power_issue, 10);
+    lv_obj_set_style_transform_pivot_x(reactive_c_power_issue, 0, 0);
+    lv_obj_set_style_transform_pivot_y(reactive_c_power_issue, 0, 0);
+    lv_obj_set_style_transform_scale_x(reactive_c_power_issue, 160, 0);
+    lv_obj_set_style_transform_scale_y(reactive_c_power_issue, 160, 0);
     lv_obj_bind_flag_if_not_eq(reactive_c_power_issue, &meter_reactive_c_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_6 = lv_label_create(page_content);
@@ -160,8 +166,10 @@ lv_obj_t * screen_reactive_power_create(void)
     lv_image_set_src(reactive_total_power_issue, meter_icon_warning);
     lv_obj_set_x(reactive_total_power_issue, 234);
     lv_obj_set_y(reactive_total_power_issue, 122);
-    lv_obj_set_width(reactive_total_power_issue, 10);
-    lv_obj_set_height(reactive_total_power_issue, 10);
+    lv_obj_set_style_transform_pivot_x(reactive_total_power_issue, 0, 0);
+    lv_obj_set_style_transform_pivot_y(reactive_total_power_issue, 0, 0);
+    lv_obj_set_style_transform_scale_x(reactive_total_power_issue, 160, 0);
+    lv_obj_set_style_transform_scale_y(reactive_total_power_issue, 160, 0);
     lv_obj_bind_flag_if_not_eq(reactive_total_power_issue, &meter_reactive_total_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_8 = lv_label_create(page_content);

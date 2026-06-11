@@ -98,7 +98,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_bind_style(settings_items, &me106_move_y_n254, 0, &meter_settings_selected_index, 7);
     lv_obj_bind_style(settings_items, &me106_move_y_n300, 0, &meter_settings_selected_index, 8);
     lv_obj_bind_style(settings_items, &me106_move_y_n346, 0, &meter_settings_selected_index, 9);
-    lv_obj_bind_style(settings_items, &me106_move_y_n346, 0, &meter_settings_selected_index, 10);
+    lv_obj_bind_style(settings_items, &me106_move_y_n346_tail, 0, &meter_settings_selected_index, 10);
     lv_obj_t * settings_item_wifi = lv_button_create(settings_items);
     lv_obj_set_name(settings_item_wifi, "settings_item_wifi");
     lv_obj_set_x(settings_item_wifi, 0);

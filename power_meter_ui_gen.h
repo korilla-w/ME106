@@ -25,6 +25,10 @@ extern "C" {
     #include "lvgl/lvgl_private.h"
 #endif
 
+#ifdef LV_USE_XML
+    #include "lv_xml/lv_xml.h"
+#endif
+
 
 
 /*********************
@@ -299,6 +303,7 @@ extern lv_style_t me106_move_y_n208;
 extern lv_style_t me106_move_y_n254;
 extern lv_style_t me106_move_y_n300;
 extern lv_style_t me106_move_y_n346;
+extern lv_style_t me106_move_y_n346_tail;
 extern lv_style_t me106_move_y_n416;
 
 /*----------------
