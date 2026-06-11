@@ -303,7 +303,7 @@ extern lv_style_t me106_move_y_n208;
 extern lv_style_t me106_move_y_n254;
 extern lv_style_t me106_move_y_n300;
 extern lv_style_t me106_move_y_n346;
-extern lv_style_t me106_move_y_n346_tail;
+extern lv_style_t me106_move_y_n392;
 extern lv_style_t me106_move_y_n416;
 
 /*----------------
