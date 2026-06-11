@@ -245,7 +245,7 @@
         <!-- 屏幕亮度 subject 只保存 UI 调节意图；背光 PWM 应由逻辑层转交执行层应用。 -->
         <int name="meter_screen_brightness" value="70" min_value="10" max_value="100"/>
         <!-- 息屏时间 subject 只保存 UI 档位；无操作计时和背光关闭由逻辑层/执行层处理。 -->
-        <int name="meter_screen_timeout_index" value="1" min_value="0" max_value="6"/>
+        <int name="meter_screen_timeout_index" value="0" min_value="0" max_value="4"/>
         <!-- 串口 subject 只保存 UI 选项；真正应用硬件参数留在执行层。 -->
         <int name="meter_uart_selected_index" value="0" min_value="0" max_value="3"/>
         <int name="meter_uart_baud_index" value="5" min_value="0" max_value="7"/>
