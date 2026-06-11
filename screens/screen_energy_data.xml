@@ -45,7 +45,7 @@
         </lv_label>
 
         <lv_label text="&#x611F;&#x6027;&#x65E0;&#x529F;&#xFF08;&#x6B;&#x76;&#x61;&#x72;&#x68;&#xFF09;" x="22" y="120">
-            <style name="me106_text_16_orange"/>
+            <style name="me106_text_16_purple"/>
             <bind_style name="me106_theme_light_energy_inductive_reactive" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_energy_inductive_reactive" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
