@@ -92,7 +92,7 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_set_name(energy_forward_active_issue, "energy_forward_active_issue");
     lv_image_set_src(energy_forward_active_issue, meter_icon_warning);
     lv_obj_set_x(energy_forward_active_issue, 124);
-    lv_obj_set_y(energy_forward_active_issue, 80);
+    lv_obj_set_y(energy_forward_active_issue, 58);
     lv_obj_bind_flag_if_not_eq(energy_forward_active_issue, &meter_energy_forward_active_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_3 = lv_label_create(page_content);
@@ -115,7 +115,7 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_set_name(energy_reverse_active_issue, "energy_reverse_active_issue");
     lv_image_set_src(energy_reverse_active_issue, meter_icon_warning);
     lv_obj_set_x(energy_reverse_active_issue, 276);
-    lv_obj_set_y(energy_reverse_active_issue, 80);
+    lv_obj_set_y(energy_reverse_active_issue, 58);
     lv_obj_bind_flag_if_not_eq(energy_reverse_active_issue, &meter_energy_reverse_active_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_5 = lv_label_create(page_content);
@@ -138,7 +138,7 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_set_name(energy_inductive_reactive_issue, "energy_inductive_reactive_issue");
     lv_image_set_src(energy_inductive_reactive_issue, meter_icon_warning);
     lv_obj_set_x(energy_inductive_reactive_issue, 124);
-    lv_obj_set_y(energy_inductive_reactive_issue, 145);
+    lv_obj_set_y(energy_inductive_reactive_issue, 123);
     lv_obj_bind_flag_if_not_eq(energy_inductive_reactive_issue, &meter_energy_inductive_reactive_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_7 = lv_label_create(page_content);
@@ -161,7 +161,7 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_set_name(energy_capacitive_reactive_issue, "energy_capacitive_reactive_issue");
     lv_image_set_src(energy_capacitive_reactive_issue, meter_icon_warning);
     lv_obj_set_x(energy_capacitive_reactive_issue, 276);
-    lv_obj_set_y(energy_capacitive_reactive_issue, 145);
+    lv_obj_set_y(energy_capacitive_reactive_issue, 123);
     lv_obj_bind_flag_if_not_eq(energy_capacitive_reactive_issue, &meter_energy_capacitive_reactive_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * screen_energy_data_bottom_bar = lv_obj_create(lv_obj_0);

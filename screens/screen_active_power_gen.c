@@ -91,7 +91,7 @@ lv_obj_t * screen_active_power_create(void)
     lv_obj_t * active_a_power_issue = lv_image_create(page_content);
     lv_obj_set_name(active_a_power_issue, "active_a_power_issue");
     lv_image_set_src(active_a_power_issue, meter_icon_warning);
-    lv_obj_set_x(active_a_power_issue, 56);
+    lv_obj_set_x(active_a_power_issue, 71);
     lv_obj_set_y(active_a_power_issue, 55);
     lv_obj_bind_flag_if_not_eq(active_a_power_issue, &meter_active_a_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
@@ -114,7 +114,7 @@ lv_obj_t * screen_active_power_create(void)
     lv_obj_t * active_b_power_issue = lv_image_create(page_content);
     lv_obj_set_name(active_b_power_issue, "active_b_power_issue");
     lv_image_set_src(active_b_power_issue, meter_icon_warning);
-    lv_obj_set_x(active_b_power_issue, 219);
+    lv_obj_set_x(active_b_power_issue, 234);
     lv_obj_set_y(active_b_power_issue, 55);
     lv_obj_bind_flag_if_not_eq(active_b_power_issue, &meter_active_b_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
@@ -137,7 +137,7 @@ lv_obj_t * screen_active_power_create(void)
     lv_obj_t * active_c_power_issue = lv_image_create(page_content);
     lv_obj_set_name(active_c_power_issue, "active_c_power_issue");
     lv_image_set_src(active_c_power_issue, meter_icon_warning);
-    lv_obj_set_x(active_c_power_issue, 56);
+    lv_obj_set_x(active_c_power_issue, 71);
     lv_obj_set_y(active_c_power_issue, 122);
     lv_obj_bind_flag_if_not_eq(active_c_power_issue, &meter_active_c_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     

@@ -161,7 +161,7 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_set_name(line_current_demand_issue, "line_current_demand_issue");
     lv_image_set_src(line_current_demand_issue, meter_icon_warning);
     lv_obj_set_x(line_current_demand_issue, 125);
-    lv_obj_set_y(line_current_demand_issue, 145);
+    lv_obj_set_y(line_current_demand_issue, 123);
     lv_obj_bind_flag_if_not_eq(line_current_demand_issue, &meter_line_current_demand_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_9 = lv_label_create(page_content);
@@ -184,7 +184,7 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_set_name(line_max_demand_issue, "line_max_demand_issue");
     lv_image_set_src(line_max_demand_issue, meter_icon_warning);
     lv_obj_set_x(line_max_demand_issue, 259);
-    lv_obj_set_y(line_max_demand_issue, 145);
+    lv_obj_set_y(line_max_demand_issue, 123);
     lv_obj_bind_flag_if_not_eq(line_max_demand_issue, &meter_line_max_demand_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * screen_line_voltage_demand_bottom_bar = lv_obj_create(lv_obj_0);

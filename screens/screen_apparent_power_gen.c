@@ -91,7 +91,7 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_obj_t * apparent_a_power_issue = lv_image_create(page_content);
     lv_obj_set_name(apparent_a_power_issue, "apparent_a_power_issue");
     lv_image_set_src(apparent_a_power_issue, meter_icon_warning);
-    lv_obj_set_x(apparent_a_power_issue, 56);
+    lv_obj_set_x(apparent_a_power_issue, 71);
     lv_obj_set_y(apparent_a_power_issue, 55);
     lv_obj_bind_flag_if_not_eq(apparent_a_power_issue, &meter_apparent_a_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
@@ -114,7 +114,7 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_obj_t * apparent_b_power_issue = lv_image_create(page_content);
     lv_obj_set_name(apparent_b_power_issue, "apparent_b_power_issue");
     lv_image_set_src(apparent_b_power_issue, meter_icon_warning);
-    lv_obj_set_x(apparent_b_power_issue, 219);
+    lv_obj_set_x(apparent_b_power_issue, 234);
     lv_obj_set_y(apparent_b_power_issue, 55);
     lv_obj_bind_flag_if_not_eq(apparent_b_power_issue, &meter_apparent_b_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
@@ -137,7 +137,7 @@ lv_obj_t * screen_apparent_power_create(void)
     lv_obj_t * apparent_c_power_issue = lv_image_create(page_content);
     lv_obj_set_name(apparent_c_power_issue, "apparent_c_power_issue");
     lv_image_set_src(apparent_c_power_issue, meter_icon_warning);
-    lv_obj_set_x(apparent_c_power_issue, 56);
+    lv_obj_set_x(apparent_c_power_issue, 71);
     lv_obj_set_y(apparent_c_power_issue, 122);
     lv_obj_bind_flag_if_not_eq(apparent_c_power_issue, &meter_apparent_c_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
