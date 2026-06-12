@@ -91,8 +91,8 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_t * line_ab_voltage_issue = lv_image_create(page_content);
     lv_obj_set_name(line_ab_voltage_issue, "line_ab_voltage_issue");
     lv_image_set_src(line_ab_voltage_issue, meter_icon_warning);
-    lv_obj_set_x(line_ab_voltage_issue, 104);
-    lv_obj_set_y(line_ab_voltage_issue, 80);
+    lv_obj_set_x(line_ab_voltage_issue, 78);
+    lv_obj_set_y(line_ab_voltage_issue, 58);
     lv_obj_bind_flag_if_not_eq(line_ab_voltage_issue, &meter_line_ab_voltage_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_3 = lv_label_create(page_content);
@@ -114,8 +114,8 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_t * line_bc_voltage_issue = lv_image_create(page_content);
     lv_obj_set_name(line_bc_voltage_issue, "line_bc_voltage_issue");
     lv_image_set_src(line_bc_voltage_issue, meter_icon_warning);
-    lv_obj_set_x(line_bc_voltage_issue, 203);
-    lv_obj_set_y(line_bc_voltage_issue, 80);
+    lv_obj_set_x(line_bc_voltage_issue, 177);
+    lv_obj_set_y(line_bc_voltage_issue, 58);
     lv_obj_bind_flag_if_not_eq(line_bc_voltage_issue, &meter_line_bc_voltage_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_5 = lv_label_create(page_content);
@@ -137,8 +137,8 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_t * line_ca_voltage_issue = lv_image_create(page_content);
     lv_obj_set_name(line_ca_voltage_issue, "line_ca_voltage_issue");
     lv_image_set_src(line_ca_voltage_issue, meter_icon_warning);
-    lv_obj_set_x(line_ca_voltage_issue, 302);
-    lv_obj_set_y(line_ca_voltage_issue, 80);
+    lv_obj_set_x(line_ca_voltage_issue, 276);
+    lv_obj_set_y(line_ca_voltage_issue, 58);
     lv_obj_bind_flag_if_not_eq(line_ca_voltage_issue, &meter_line_ca_voltage_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_7 = lv_label_create(page_content);
@@ -160,7 +160,7 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_t * line_current_demand_issue = lv_image_create(page_content);
     lv_obj_set_name(line_current_demand_issue, "line_current_demand_issue");
     lv_image_set_src(line_current_demand_issue, meter_icon_warning);
-    lv_obj_set_x(line_current_demand_issue, 145);
+    lv_obj_set_x(line_current_demand_issue, 125);
     lv_obj_set_y(line_current_demand_issue, 145);
     lv_obj_bind_flag_if_not_eq(line_current_demand_issue, &meter_line_current_demand_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
@@ -183,7 +183,7 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_t * line_max_demand_issue = lv_image_create(page_content);
     lv_obj_set_name(line_max_demand_issue, "line_max_demand_issue");
     lv_image_set_src(line_max_demand_issue, meter_icon_warning);
-    lv_obj_set_x(line_max_demand_issue, 279);
+    lv_obj_set_x(line_max_demand_issue, 259);
     lv_obj_set_y(line_max_demand_issue, 145);
     lv_obj_bind_flag_if_not_eq(line_max_demand_issue, &meter_line_max_demand_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
