@@ -32,7 +32,7 @@
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="active_a_power_issue" src="meter_icon_warning" x="56" y="55"><bind_flag_if_not_eq subject="meter_active_a_power_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="active_a_power_issue" src="meter_icon_warning" x="71" y="55"><bind_flag_if_not_eq subject="meter_active_a_power_issue" flag="hidden" ref_value="1"/></lv_image>
 
         <!-- 右上数据组 -->
         <lv_label text="B&#x76F8;" x="195" y="55">
@@ -45,7 +45,7 @@
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="active_b_power_issue" src="meter_icon_warning" x="219" y="55"><bind_flag_if_not_eq subject="meter_active_b_power_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="active_b_power_issue" src="meter_icon_warning" x="234" y="55"><bind_flag_if_not_eq subject="meter_active_b_power_issue" flag="hidden" ref_value="1"/></lv_image>
 
         <!-- 左下数据组 -->
         <lv_label text="C&#x76F8;" x="32" y="122">
@@ -58,7 +58,7 @@
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="active_c_power_issue" src="meter_icon_warning" x="56" y="122"><bind_flag_if_not_eq subject="meter_active_c_power_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="active_c_power_issue" src="meter_icon_warning" x="71" y="122"><bind_flag_if_not_eq subject="meter_active_c_power_issue" flag="hidden" ref_value="1"/></lv_image>
 
         <!-- 右下数据组 -->
         <lv_label text="&#x5408;&#x76F8;" x="195" y="122">
