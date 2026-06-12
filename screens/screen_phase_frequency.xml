@@ -30,7 +30,7 @@
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="phase_a_current_angle_issue" src="meter_icon_warning" x="89" y="58">
+        <lv_image name="phase_a_current_angle_issue" src="meter_icon_warning" x="99" y="58">
             <bind_flag_if_not_eq subject="meter_phase_a_current_angle_issue" flag="hidden" ref_value="1"/>
         </lv_image>
 
@@ -44,7 +44,7 @@
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="phase_b_current_angle_issue" src="meter_icon_warning" x="188" y="58">
+        <lv_image name="phase_b_current_angle_issue" src="meter_icon_warning" x="199" y="58">
             <bind_flag_if_not_eq subject="meter_phase_b_current_angle_issue" flag="hidden" ref_value="1"/>
         </lv_image>
 
@@ -58,11 +58,11 @@
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="phase_c_current_angle_issue" src="meter_icon_warning" x="287" y="58">
+        <lv_image name="phase_c_current_angle_issue" src="meter_icon_warning" x="297" y="58">
             <bind_flag_if_not_eq subject="meter_phase_c_current_angle_issue" flag="hidden" ref_value="1"/>
         </lv_image>
 
-        <lv_label text="&#x9891;&#x7387;&#xFF08;&#x48;&#x7A;&#xFF09;" x="23" y="120">
+        <lv_label text="&#x9891;&#x7387;(Hz)" x="23" y="120">
             <style name="me106_text_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
@@ -72,7 +72,7 @@
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="phase_frequency_issue" src="meter_icon_warning" x="101" y="123">
+        <lv_image name="phase_frequency_issue" src="meter_icon_warning" x="99" y="123">
             <bind_flag_if_not_eq subject="meter_phase_frequency_issue" flag="hidden" ref_value="1"/>
         </lv_image>
 
@@ -86,7 +86,7 @@
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="phase_b_voltage_angle_issue" src="meter_icon_warning" x="188" y="123">
+        <lv_image name="phase_b_voltage_angle_issue" src="meter_icon_warning" x="199" y="123">
             <bind_flag_if_not_eq subject="meter_phase_b_voltage_angle_issue" flag="hidden" ref_value="1"/>
         </lv_image>
 
@@ -100,7 +100,7 @@
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="phase_c_voltage_angle_issue" src="meter_icon_warning" x="287" y="123">
+        <lv_image name="phase_c_voltage_angle_issue" src="meter_icon_warning" x="297" y="123">
             <bind_flag_if_not_eq subject="meter_phase_c_voltage_angle_issue" flag="hidden" ref_value="1"/>
         </lv_image>
 
