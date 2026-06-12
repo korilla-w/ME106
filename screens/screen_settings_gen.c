@@ -106,6 +106,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_set_width(settings_item_wifi, 270);
     lv_obj_set_height(settings_item_wifi, 40);
     lv_obj_set_style_pad_all(settings_item_wifi, 0, 0);
+    lv_obj_add_subject_set_int_event(settings_item_wifi, &meter_settings_selected_index, LV_EVENT_CLICKED, 0);
     lv_obj_add_style(settings_item_wifi, &me106_panel_gray24_r8, 0);
     lv_obj_bind_style(settings_item_wifi, &me106_theme_light_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_item_wifi, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);
@@ -160,6 +161,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_set_width(settings_item_uart, 270);
     lv_obj_set_height(settings_item_uart, 40);
     lv_obj_set_style_pad_all(settings_item_uart, 0, 0);
+    lv_obj_add_subject_set_int_event(settings_item_uart, &meter_settings_selected_index, LV_EVENT_CLICKED, 1);
     lv_obj_add_style(settings_item_uart, &me106_panel_gray24_r8, 0);
     lv_obj_bind_style(settings_item_uart, &me106_theme_light_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_item_uart, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);
@@ -214,6 +216,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_set_width(settings_item_ratio, 270);
     lv_obj_set_height(settings_item_ratio, 40);
     lv_obj_set_style_pad_all(settings_item_ratio, 0, 0);
+    lv_obj_add_subject_set_int_event(settings_item_ratio, &meter_settings_selected_index, LV_EVENT_CLICKED, 2);
     lv_obj_add_style(settings_item_ratio, &me106_panel_gray24_r8, 0);
     lv_obj_bind_style(settings_item_ratio, &me106_theme_light_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_item_ratio, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);
@@ -268,6 +271,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_set_width(settings_item_meter_addr, 270);
     lv_obj_set_height(settings_item_meter_addr, 40);
     lv_obj_set_style_pad_all(settings_item_meter_addr, 0, 0);
+    lv_obj_add_subject_set_int_event(settings_item_meter_addr, &meter_settings_selected_index, LV_EVENT_CLICKED, 3);
     lv_obj_add_style(settings_item_meter_addr, &me106_panel_gray24_r8, 0);
     lv_obj_bind_style(settings_item_meter_addr, &me106_theme_light_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_item_meter_addr, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);
@@ -322,6 +326,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_set_width(settings_item_theme, 270);
     lv_obj_set_height(settings_item_theme, 40);
     lv_obj_set_style_pad_all(settings_item_theme, 0, 0);
+    lv_obj_add_subject_set_int_event(settings_item_theme, &meter_settings_selected_index, LV_EVENT_CLICKED, 4);
     lv_obj_add_style(settings_item_theme, &me106_panel_gray24_r8, 0);
     lv_obj_bind_style(settings_item_theme, &me106_theme_light_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_item_theme, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);
@@ -417,6 +422,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_set_width(settings_item_alarm, 270);
     lv_obj_set_height(settings_item_alarm, 40);
     lv_obj_set_style_pad_all(settings_item_alarm, 0, 0);
+    lv_obj_add_subject_set_int_event(settings_item_alarm, &meter_settings_selected_index, LV_EVENT_CLICKED, 5);
     lv_obj_add_style(settings_item_alarm, &me106_panel_gray24_r8, 0);
     lv_obj_bind_style(settings_item_alarm, &me106_theme_light_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_item_alarm, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);
@@ -471,6 +477,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_set_width(settings_item_brightness, 270);
     lv_obj_set_height(settings_item_brightness, 40);
     lv_obj_set_style_pad_all(settings_item_brightness, 0, 0);
+    lv_obj_add_subject_set_int_event(settings_item_brightness, &meter_settings_selected_index, LV_EVENT_CLICKED, 6);
     lv_obj_add_style(settings_item_brightness, &me106_panel_gray24_r8, 0);
     lv_obj_bind_style(settings_item_brightness, &me106_theme_light_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_item_brightness, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);
@@ -525,6 +532,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_set_width(settings_item_screen_timeout, 270);
     lv_obj_set_height(settings_item_screen_timeout, 40);
     lv_obj_set_style_pad_all(settings_item_screen_timeout, 0, 0);
+    lv_obj_add_subject_set_int_event(settings_item_screen_timeout, &meter_settings_selected_index, LV_EVENT_CLICKED, 7);
     lv_obj_add_style(settings_item_screen_timeout, &me106_panel_gray24_r8, 0);
     lv_obj_bind_style(settings_item_screen_timeout, &me106_theme_light_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_item_screen_timeout, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);
@@ -579,6 +587,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_set_width(settings_item_factory, 270);
     lv_obj_set_height(settings_item_factory, 40);
     lv_obj_set_style_pad_all(settings_item_factory, 0, 0);
+    lv_obj_add_subject_set_int_event(settings_item_factory, &meter_settings_selected_index, LV_EVENT_CLICKED, 8);
     lv_obj_add_style(settings_item_factory, &me106_panel_gray24_r8, 0);
     lv_obj_bind_style(settings_item_factory, &me106_theme_light_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_item_factory, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);
@@ -633,6 +642,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_set_width(settings_item_upgrade, 270);
     lv_obj_set_height(settings_item_upgrade, 40);
     lv_obj_set_style_pad_all(settings_item_upgrade, 0, 0);
+    lv_obj_add_subject_set_int_event(settings_item_upgrade, &meter_settings_selected_index, LV_EVENT_CLICKED, 9);
     lv_obj_add_style(settings_item_upgrade, &me106_panel_gray24_r8, 0);
     lv_obj_bind_style(settings_item_upgrade, &me106_theme_light_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_item_upgrade, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);
@@ -687,6 +697,7 @@ lv_obj_t * screen_settings_create(void)
     lv_obj_set_width(settings_item_system, 270);
     lv_obj_set_height(settings_item_system, 40);
     lv_obj_set_style_pad_all(settings_item_system, 0, 0);
+    lv_obj_add_subject_set_int_event(settings_item_system, &meter_settings_selected_index, LV_EVENT_CLICKED, 10);
     lv_obj_add_style(settings_item_system, &me106_panel_gray24_r8, 0);
     lv_obj_bind_style(settings_item_system, &me106_theme_light_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(settings_item_system, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);

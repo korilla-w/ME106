@@ -26,6 +26,7 @@
                 <bind_style name="me106_move_y_n392" subject="meter_settings_selected_index" ref_value="10"/>
 
             <lv_button name="settings_item_wifi" x="0" y="0" width="270" height="40" style_pad_all="0">
+                <subject_set_int_event subject="meter_settings_selected_index" value="0" trigger="clicked"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
@@ -50,6 +51,7 @@
             </lv_button>
 
             <lv_button name="settings_item_uart" x="0" y="46" width="270" height="40" style_pad_all="0">
+                <subject_set_int_event subject="meter_settings_selected_index" value="1" trigger="clicked"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
@@ -74,6 +76,7 @@
             </lv_button>
 
             <lv_button name="settings_item_ratio" x="0" y="92" width="270" height="40" style_pad_all="0">
+                <subject_set_int_event subject="meter_settings_selected_index" value="2" trigger="clicked"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
@@ -98,6 +101,7 @@
             </lv_button>
 
             <lv_button name="settings_item_meter_addr" x="0" y="138" width="270" height="40" style_pad_all="0">
+                <subject_set_int_event subject="meter_settings_selected_index" value="3" trigger="clicked"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
@@ -122,6 +126,7 @@
             </lv_button>
 
             <lv_button name="settings_item_theme" x="0" y="184" width="270" height="40" style_pad_all="0">
+                <subject_set_int_event subject="meter_settings_selected_index" value="4" trigger="clicked"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
@@ -169,6 +174,7 @@
             </lv_button>
 
             <lv_button name="settings_item_alarm" x="0" y="230" width="270" height="40" style_pad_all="0">
+                <subject_set_int_event subject="meter_settings_selected_index" value="5" trigger="clicked"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
@@ -193,6 +199,7 @@
             </lv_button>
 
             <lv_button name="settings_item_brightness" x="0" y="276" width="270" height="40" style_pad_all="0">
+                <subject_set_int_event subject="meter_settings_selected_index" value="6" trigger="clicked"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
@@ -217,6 +224,7 @@
             </lv_button>
 
             <lv_button name="settings_item_screen_timeout" x="0" y="322" width="270" height="40" style_pad_all="0">
+                <subject_set_int_event subject="meter_settings_selected_index" value="7" trigger="clicked"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
@@ -241,6 +249,7 @@
             </lv_button>
 
             <lv_button name="settings_item_factory" x="0" y="368" width="270" height="40" style_pad_all="0">
+                <subject_set_int_event subject="meter_settings_selected_index" value="8" trigger="clicked"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
@@ -265,6 +274,7 @@
             </lv_button>
 
             <lv_button name="settings_item_upgrade" x="0" y="414" width="270" height="40" style_pad_all="0">
+                <subject_set_int_event subject="meter_settings_selected_index" value="9" trigger="clicked"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
@@ -289,6 +299,7 @@
             </lv_button>
 
             <lv_button name="settings_item_system" x="0" y="460" width="270" height="40" style_pad_all="0">
+                <subject_set_int_event subject="meter_settings_selected_index" value="10" trigger="clicked"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
