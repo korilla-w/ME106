@@ -131,21 +131,21 @@ lv_obj_t * screen_home_create(void)
     lv_obj_t * home_a_voltage_issue = lv_image_create(page_content);
     lv_obj_set_name(home_a_voltage_issue, "home_a_voltage_issue");
     lv_image_set_src(home_a_voltage_issue, meter_icon_warning);
-    lv_obj_set_x(home_a_voltage_issue, 123);
+    lv_obj_set_x(home_a_voltage_issue, 128);
     lv_obj_set_y(home_a_voltage_issue, 59);
     lv_obj_bind_flag_if_not_eq(home_a_voltage_issue, &meter_home_a_voltage_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * home_a_current_issue = lv_image_create(page_content);
     lv_obj_set_name(home_a_current_issue, "home_a_current_issue");
     lv_image_set_src(home_a_current_issue, meter_icon_warning);
-    lv_obj_set_x(home_a_current_issue, 206);
+    lv_obj_set_x(home_a_current_issue, 211);
     lv_obj_set_y(home_a_current_issue, 59);
     lv_obj_bind_flag_if_not_eq(home_a_current_issue, &meter_home_a_current_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * home_a_pf_issue = lv_image_create(page_content);
     lv_obj_set_name(home_a_pf_issue, "home_a_pf_issue");
     lv_image_set_src(home_a_pf_issue, meter_icon_warning);
-    lv_obj_set_x(home_a_pf_issue, 297);
+    lv_obj_set_x(home_a_pf_issue, 301);
     lv_obj_set_y(home_a_pf_issue, 59);
     lv_obj_bind_flag_if_not_eq(home_a_pf_issue, &meter_home_a_pf_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
@@ -208,21 +208,21 @@ lv_obj_t * screen_home_create(void)
     lv_obj_t * home_b_voltage_issue = lv_image_create(page_content);
     lv_obj_set_name(home_b_voltage_issue, "home_b_voltage_issue");
     lv_image_set_src(home_b_voltage_issue, meter_icon_warning);
-    lv_obj_set_x(home_b_voltage_issue, 123);
+    lv_obj_set_x(home_b_voltage_issue, 128);
     lv_obj_set_y(home_b_voltage_issue, 109);
     lv_obj_bind_flag_if_not_eq(home_b_voltage_issue, &meter_home_b_voltage_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * home_b_current_issue = lv_image_create(page_content);
     lv_obj_set_name(home_b_current_issue, "home_b_current_issue");
     lv_image_set_src(home_b_current_issue, meter_icon_warning);
-    lv_obj_set_x(home_b_current_issue, 206);
+    lv_obj_set_x(home_b_current_issue, 211);
     lv_obj_set_y(home_b_current_issue, 109);
     lv_obj_bind_flag_if_not_eq(home_b_current_issue, &meter_home_b_current_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * home_b_pf_issue = lv_image_create(page_content);
     lv_obj_set_name(home_b_pf_issue, "home_b_pf_issue");
     lv_image_set_src(home_b_pf_issue, meter_icon_warning);
-    lv_obj_set_x(home_b_pf_issue, 297);
+    lv_obj_set_x(home_b_pf_issue, 301);
     lv_obj_set_y(home_b_pf_issue, 109);
     lv_obj_bind_flag_if_not_eq(home_b_pf_issue, &meter_home_b_pf_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
@@ -285,21 +285,21 @@ lv_obj_t * screen_home_create(void)
     lv_obj_t * home_c_voltage_issue = lv_image_create(page_content);
     lv_obj_set_name(home_c_voltage_issue, "home_c_voltage_issue");
     lv_image_set_src(home_c_voltage_issue, meter_icon_warning);
-    lv_obj_set_x(home_c_voltage_issue, 123);
+    lv_obj_set_x(home_c_voltage_issue, 128);
     lv_obj_set_y(home_c_voltage_issue, 159);
     lv_obj_bind_flag_if_not_eq(home_c_voltage_issue, &meter_home_c_voltage_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * home_c_current_issue = lv_image_create(page_content);
     lv_obj_set_name(home_c_current_issue, "home_c_current_issue");
     lv_image_set_src(home_c_current_issue, meter_icon_warning);
-    lv_obj_set_x(home_c_current_issue, 206);
+    lv_obj_set_x(home_c_current_issue, 211);
     lv_obj_set_y(home_c_current_issue, 159);
     lv_obj_bind_flag_if_not_eq(home_c_current_issue, &meter_home_c_current_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * home_c_pf_issue = lv_image_create(page_content);
     lv_obj_set_name(home_c_pf_issue, "home_c_pf_issue");
     lv_image_set_src(home_c_pf_issue, meter_icon_warning);
-    lv_obj_set_x(home_c_pf_issue, 297);
+    lv_obj_set_x(home_c_pf_issue, 301);
     lv_obj_set_y(home_c_pf_issue, 159);
     lv_obj_bind_flag_if_not_eq(home_c_pf_issue, &meter_home_c_pf_issue, LV_OBJ_FLAG_HIDDEN, 1);
     
