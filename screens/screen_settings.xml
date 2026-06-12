@@ -300,10 +300,11 @@
 
             <lv_button name="settings_item_system" x="0" y="460" width="270" height="40" style_pad_all="0">
                 <subject_set_int_event subject="meter_settings_selected_index" value="10" trigger="clicked"/>
+                <lv_obj-screen_create_event screen="screen_settings_system" trigger="clicked" anim_type="none"/>
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
-                                <lv_obj name="settings_item_system_selected_bg" x="0" y="0" width="270" height="40" style_pad_all="0" style_border_width="0" scrollable="false">
+                <lv_obj name="settings_item_system_selected_bg" x="0" y="0" width="270" height="40" style_pad_all="0" style_border_width="0" scrollable="false" clickable="false">
                     <style name="me106_panel_blue_r8"/>
                     <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
