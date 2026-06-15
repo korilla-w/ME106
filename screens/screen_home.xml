@@ -40,17 +40,17 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         <!-- UI告警点：首页每个电参只保留一个独立图标位，异常聚合交给逻辑层。 -->
-        <lv_label text="232.884" x="73" y="75">
+        <lv_label text="0.000" x="73" y="75">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="3.5420" x="156" y="75">
+        <lv_label text="0.0000" x="156" y="75">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="-0.985" x="239" y="75">
+        <lv_label text="0.000" x="239" y="75">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -79,17 +79,17 @@
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="232.884" x="73" y="125">
+        <lv_label text="0.000" x="73" y="125">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="3.5420" x="156" y="125">
+        <lv_label text="0.0000" x="156" y="125">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="-0.985" x="239" y="125">
+        <lv_label text="0.000" x="239" y="125">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -118,17 +118,17 @@
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="232.884" x="73" y="175">
+        <lv_label text="0.000" x="73" y="175">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="3.5420" x="156" y="175">
+        <lv_label text="0.0000" x="156" y="175">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="-0.985" x="239" y="175">
+        <lv_label text="0.000" x="239" y="175">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>

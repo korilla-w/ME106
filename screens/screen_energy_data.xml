@@ -25,7 +25,7 @@
             <bind_style name="me106_theme_alarm_energy_forward_active" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         <!-- UI告警点：电能增量越限由逻辑层置位，XML 只显示角标。 -->
-        <lv_label text="4534.554" x="22" y="77">
+        <lv_label text="0.000" x="22" y="77">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -37,7 +37,7 @@
             <bind_style name="me106_theme_light_energy_reverse_active" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_energy_reverse_active" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="4534.554" x="174" y="77">
+        <lv_label text="0.000" x="174" y="77">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -49,7 +49,7 @@
             <bind_style name="me106_theme_light_energy_inductive_reactive" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_energy_inductive_reactive" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="4534.554" x="22" y="142">
+        <lv_label text="0.000" x="22" y="142">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -61,7 +61,7 @@
             <bind_style name="me106_theme_light_energy_capacitive_reactive" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_energy_capacitive_reactive" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="4534.554" x="173" y="142">
+        <lv_label text="0.000" x="173" y="142">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
