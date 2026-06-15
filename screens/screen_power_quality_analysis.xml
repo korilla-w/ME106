@@ -171,38 +171,37 @@
                 </lv_obj>
 
                 <lv_obj name="power_quality_qr_page" x="0" y="416" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
-                    <lv_label text="&#x626B;&#x7801;&#x67E5;&#x770B;&#x62A5;&#x544A;" x="122" y="15" width="174">
+                    <lv_label text="&#x8BBE;&#x5907;&#x667A;&#x80FD;&#x8BCA;&#x65AD;" x="122" y="15" width="174">
                         <style name="me106_text_16_white_right"/>
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     </lv_label>
-                    <lv_label text="&#x626B;&#x7801;&#x62A5;&#x544A;" x="24" y="20" width="130">
+                    <lv_label text="&#x8BCA;&#x65AD;&#x4E91;" x="24" y="20" width="130">
                         <style name="me106_text_14_gray_ba"/>
                         <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                     </lv_label>
 
-                    <lv_obj name="power_quality_qr_frame" x="22" y="46" width="132" height="132" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <lv_obj name="power_quality_diagnose_panel" x="22" y="46" width="276" height="132" style_pad_all="0" style_border_width="0" scrollable="false">
                         <style name="me106_panel_gray24_r8"/>
                         <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
-                        <lv_image src="meter_power_quality_qr" x="18" y="18" width="96" height="96"/>
-                    </lv_obj>
-                    <lv_obj name="power_quality_report_panel" x="166" y="46" width="132" height="132" style_pad_all="0" style_border_width="0" scrollable="false">
-                        <style name="me106_panel_gray1f_r8"/>
-                        <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
-                        <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
-                        <lv_image src="meter_icon_waveform" x="15" y="14" style_transform_pivot_x="8" style_transform_pivot_y="8" style_transform_scale_x="240" style_transform_scale_y="240">
+                        <lv_image src="meter_icon_waveform" x="16" y="14" style_transform_pivot_x="8" style_transform_pivot_y="8" style_transform_scale_x="240" style_transform_scale_y="240">
                             <style name="me106_icon_white"/>
                             <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
                         </lv_image>
-                        <lv_label text="&#x6CE2;&#x5F62; / &#x62A5;&#x8868;" x="48" y="13" width="72">
+                        <lv_label text="&#x9AD8;&#x7EA7;&#x8BCA;&#x65AD;&#x7F51;&#x5740;" x="48" y="13" width="150">
                             <style name="me106_text_14_white"/>
                             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         </lv_label>
-                        <lv_label text="&#x626B;&#x7801;&#x540E;&#x67E5;&#x770B;&#x66F4;&#x5B8C;&#x6574;&#x7684;&#x8D8A;&#x9650;&#x8BCA;&#x65AD;&#x548C;&#x66F2;&#x7EBF;&#x8BB0;&#x5F55;" x="16" y="52" width="100" long_mode="wrap">
+                        <lv_label text="diagno.qinggrid.com" x="48" y="42" width="200">
+                            <style name="me106_text_16_cyan"/>
+                            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                        </lv_label>
+                        <lv_label text="&#x8BF7;&#x5728;&#x624B;&#x673A;&#x6216;&#x7535;&#x8111;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;&#x4E0A;&#x8FF0;&#x7F51;&#x5740;&#xFF0C;&#x767B;&#x5F55;&#x8BCA;&#x65AD;&#x4E91;&#x67E5;&#x770B;&#x66F4;&#x5B8C;&#x6574;&#x7684;&#x8D8A;&#x9650;&#x8BCA;&#x65AD;&#x5206;&#x6790;&#x4E0E;&#x6545;&#x969C;&#x6CE2;&#x5F62;&#x66F2;&#x7EBF;&#x3002;" x="16" y="78" width="244" long_mode="wrap">
                             <style name="me106_text_14_gray_ba"/>
                             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
