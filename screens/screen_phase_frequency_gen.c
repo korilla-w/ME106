@@ -81,7 +81,7 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_bind_style(lv_label_1, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_2 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_2, "1.05");
+    lv_label_set_text(lv_label_2, "0.00");
     lv_obj_set_x(lv_label_2, 24);
     lv_obj_set_y(lv_label_2, 77);
     lv_obj_add_style(lv_label_2, &me106_text_18_white, 0);
@@ -104,7 +104,7 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_bind_style(lv_label_3, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_4 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_4, "121.24");
+    lv_label_set_text(lv_label_4, "0.00");
     lv_obj_set_x(lv_label_4, 123);
     lv_obj_set_y(lv_label_4, 77);
     lv_obj_add_style(lv_label_4, &me106_text_18_white, 0);
@@ -127,7 +127,7 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_bind_style(lv_label_5, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_6 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_6, "241.54");
+    lv_label_set_text(lv_label_6, "0.00");
     lv_obj_set_x(lv_label_6, 221);
     lv_obj_set_y(lv_label_6, 77);
     lv_obj_add_style(lv_label_6, &me106_text_18_white, 0);
@@ -150,7 +150,7 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_bind_style(lv_label_7, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_8 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_8, "50.02");
+    lv_label_set_text(lv_label_8, "0.00");
     lv_obj_set_x(lv_label_8, 23);
     lv_obj_set_y(lv_label_8, 142);
     lv_obj_add_style(lv_label_8, &me106_text_18_white, 0);
@@ -173,7 +173,7 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_bind_style(lv_label_9, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_10 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_10, "120.12");
+    lv_label_set_text(lv_label_10, "0.00");
     lv_obj_set_x(lv_label_10, 123);
     lv_obj_set_y(lv_label_10, 142);
     lv_obj_add_style(lv_label_10, &me106_text_18_white, 0);
@@ -196,7 +196,7 @@ lv_obj_t * screen_phase_frequency_create(void)
     lv_obj_bind_style(lv_label_11, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_12 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_12, "240.20");
+    lv_label_set_text(lv_label_12, "0.00");
     lv_obj_set_x(lv_label_12, 221);
     lv_obj_set_y(lv_label_12, 142);
     lv_obj_add_style(lv_label_12, &me106_text_18_white, 0);

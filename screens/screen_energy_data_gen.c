@@ -81,7 +81,7 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_bind_style(lv_label_1, &me106_theme_alarm_energy_forward_active, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_2 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_2, "4534.554");
+    lv_label_set_text(lv_label_2, "0.000");
     lv_obj_set_x(lv_label_2, 22);
     lv_obj_set_y(lv_label_2, 77);
     lv_obj_add_style(lv_label_2, &me106_text_18_white, 0);
@@ -104,7 +104,7 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_bind_style(lv_label_3, &me106_theme_alarm_energy_reverse_active, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_4 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_4, "4534.554");
+    lv_label_set_text(lv_label_4, "0.000");
     lv_obj_set_x(lv_label_4, 174);
     lv_obj_set_y(lv_label_4, 77);
     lv_obj_add_style(lv_label_4, &me106_text_18_white, 0);
@@ -127,7 +127,7 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_bind_style(lv_label_5, &me106_theme_alarm_energy_inductive_reactive, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_6 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_6, "4534.554");
+    lv_label_set_text(lv_label_6, "0.000");
     lv_obj_set_x(lv_label_6, 22);
     lv_obj_set_y(lv_label_6, 142);
     lv_obj_add_style(lv_label_6, &me106_text_18_white, 0);
@@ -150,7 +150,7 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_bind_style(lv_label_7, &me106_theme_alarm_energy_capacitive_reactive, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_8 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_8, "4534.554");
+    lv_label_set_text(lv_label_8, "0.000");
     lv_obj_set_x(lv_label_8, 173);
     lv_obj_set_y(lv_label_8, 142);
     lv_obj_add_style(lv_label_8, &me106_text_18_white, 0);

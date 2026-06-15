@@ -105,7 +105,7 @@ lv_obj_t * screen_home_create(void)
     lv_obj_bind_style(lv_label_4, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_5 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_5, "232.884");
+    lv_label_set_text(lv_label_5, "0.000");
     lv_obj_set_x(lv_label_5, 73);
     lv_obj_set_y(lv_label_5, 75);
     lv_obj_add_style(lv_label_5, &me106_text_16_white, 0);
@@ -113,7 +113,7 @@ lv_obj_t * screen_home_create(void)
     lv_obj_bind_style(lv_label_5, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_6 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_6, "3.5420");
+    lv_label_set_text(lv_label_6, "0.0000");
     lv_obj_set_x(lv_label_6, 156);
     lv_obj_set_y(lv_label_6, 75);
     lv_obj_add_style(lv_label_6, &me106_text_16_white, 0);
@@ -121,7 +121,7 @@ lv_obj_t * screen_home_create(void)
     lv_obj_bind_style(lv_label_6, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_7 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_7, "-0.985");
+    lv_label_set_text(lv_label_7, "0.000");
     lv_obj_set_x(lv_label_7, 239);
     lv_obj_set_y(lv_label_7, 75);
     lv_obj_add_style(lv_label_7, &me106_text_16_white, 0);
@@ -182,7 +182,7 @@ lv_obj_t * screen_home_create(void)
     lv_obj_bind_style(lv_label_11, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_12 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_12, "232.884");
+    lv_label_set_text(lv_label_12, "0.000");
     lv_obj_set_x(lv_label_12, 73);
     lv_obj_set_y(lv_label_12, 125);
     lv_obj_add_style(lv_label_12, &me106_text_16_white, 0);
@@ -190,7 +190,7 @@ lv_obj_t * screen_home_create(void)
     lv_obj_bind_style(lv_label_12, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_13 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_13, "3.5420");
+    lv_label_set_text(lv_label_13, "0.0000");
     lv_obj_set_x(lv_label_13, 156);
     lv_obj_set_y(lv_label_13, 125);
     lv_obj_add_style(lv_label_13, &me106_text_16_white, 0);
@@ -198,7 +198,7 @@ lv_obj_t * screen_home_create(void)
     lv_obj_bind_style(lv_label_13, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_14 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_14, "-0.985");
+    lv_label_set_text(lv_label_14, "0.000");
     lv_obj_set_x(lv_label_14, 239);
     lv_obj_set_y(lv_label_14, 125);
     lv_obj_add_style(lv_label_14, &me106_text_16_white, 0);
@@ -259,7 +259,7 @@ lv_obj_t * screen_home_create(void)
     lv_obj_bind_style(lv_label_18, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_19 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_19, "232.884");
+    lv_label_set_text(lv_label_19, "0.000");
     lv_obj_set_x(lv_label_19, 73);
     lv_obj_set_y(lv_label_19, 175);
     lv_obj_add_style(lv_label_19, &me106_text_16_white, 0);
@@ -267,7 +267,7 @@ lv_obj_t * screen_home_create(void)
     lv_obj_bind_style(lv_label_19, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_20 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_20, "3.5420");
+    lv_label_set_text(lv_label_20, "0.0000");
     lv_obj_set_x(lv_label_20, 156);
     lv_obj_set_y(lv_label_20, 175);
     lv_obj_add_style(lv_label_20, &me106_text_16_white, 0);
@@ -275,7 +275,7 @@ lv_obj_t * screen_home_create(void)
     lv_obj_bind_style(lv_label_20, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_21 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_21, "-0.985");
+    lv_label_set_text(lv_label_21, "0.000");
     lv_obj_set_x(lv_label_21, 239);
     lv_obj_set_y(lv_label_21, 175);
     lv_obj_add_style(lv_label_21, &me106_text_16_white, 0);
