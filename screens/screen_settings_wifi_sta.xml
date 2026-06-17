@@ -86,7 +86,7 @@
                 </lv_label>
             </lv_obj>
 
-            <lv_label text="&#x4E32;&#x53E3;&#x4E0A;&#x4F4D;&#x673A;&#x4E0B;&#x53D1; &#x6309;&#x4E0A;&#x65B9;&#x5EFA;&#x70ED;&#x70B9;" x="24" y="184" width="272">
+            <lv_label text="&#x4E32;&#x53E3;&#x4E0A;&#x4F4D;&#x673A;&#x4E0B;&#x53D1;" x="24" y="184" width="272">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
