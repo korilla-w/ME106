@@ -251,7 +251,7 @@ lv_obj_t * screen_settings_wifi_sta_create(void)
     lv_obj_bind_style(lv_label_8, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_9 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_9, "串口上位机下发 按上方建热点");
+    lv_label_set_text(lv_label_9, "串口上位机下发");
     lv_obj_set_x(lv_label_9, 24);
     lv_obj_set_y(lv_label_9, 184);
     lv_obj_set_width(lv_label_9, 272);
