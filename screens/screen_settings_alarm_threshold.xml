@@ -21,49 +21,55 @@
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
 
-            <lv_label name="alarm_threshold_range_u_step" text="&#x4E32;&#x53E3;&#x914D;&#x7F6E; &#x00B7; 0-500 V" x="24" y="22" width="170">
+            <lv_label text="&#x4EC5;&#x67E5;&#x770B;" x="24" y="20" width="70">
+                <style name="me106_text_14_gray_ba"/>
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+
+            <lv_label name="alarm_threshold_range_u_step" text="&#x4E0A;&#x4F4D;&#x673A;&#x914D;&#x7F6E; &#x00B7; 0-500 V" x="24" y="36" width="190">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_alarm_threshold_selected_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label name="alarm_threshold_range_i_step" text="&#x4E32;&#x53E3;&#x914D;&#x7F6E; &#x00B7; 0-500 A" x="24" y="22" width="170">
+            <lv_label name="alarm_threshold_range_i_step" text="&#x4E0A;&#x4F4D;&#x673A;&#x914D;&#x7F6E; &#x00B7; 0-500 A" x="24" y="36" width="190">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_alarm_threshold_selected_index" flag="hidden" ref_value="1"/>
             </lv_label>
-            <lv_label name="alarm_threshold_range_p_step" text="&#x4E32;&#x53E3;&#x914D;&#x7F6E; &#x00B7; 0-5000 W" x="24" y="22" width="170">
+            <lv_label name="alarm_threshold_range_p_step" text="&#x4E0A;&#x4F4D;&#x673A;&#x914D;&#x7F6E; &#x00B7; 0-5000 W" x="24" y="36" width="190">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_alarm_threshold_selected_index" flag="hidden" ref_value="2"/>
             </lv_label>
-            <lv_label name="alarm_threshold_range_e_inc" text="&#x4E32;&#x53E3;&#x914D;&#x7F6E; &#x00B7; 0-5000 kWh" x="24" y="22" width="170">
+            <lv_label name="alarm_threshold_range_e_inc" text="&#x4E0A;&#x4F4D;&#x673A;&#x914D;&#x7F6E; &#x00B7; 0-5000 kWh" x="24" y="36" width="190">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_alarm_threshold_selected_index" flag="hidden" ref_value="3"/>
             </lv_label>
-            <lv_label name="alarm_threshold_range_lost_volt" text="&#x4E32;&#x53E3;&#x914D;&#x7F6E; &#x00B7; 0-65535 ms" x="24" y="22" width="170">
+            <lv_label name="alarm_threshold_range_lost_volt" text="&#x4E0A;&#x4F4D;&#x673A;&#x914D;&#x7F6E; &#x00B7; 0-65535 ms" x="24" y="36" width="190">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_alarm_threshold_selected_index" flag="hidden" ref_value="4"/>
             </lv_label>
-            <lv_label name="alarm_threshold_range_sagcfg" text="&#x4E32;&#x53E3;&#x914D;&#x7F6E; &#x00B7; 0-500 V" x="24" y="22" width="170">
+            <lv_label name="alarm_threshold_range_sagcfg" text="&#x4E0A;&#x4F4D;&#x673A;&#x914D;&#x7F6E; &#x00B7; 0-500 V" x="24" y="36" width="190">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_alarm_threshold_selected_index" flag="hidden" ref_value="5"/>
             </lv_label>
-            <lv_label name="alarm_threshold_range_ovlvl" text="&#x4E32;&#x53E3;&#x914D;&#x7F6E; &#x00B7; 0-500 V" x="24" y="22" width="170">
+            <lv_label name="alarm_threshold_range_ovlvl" text="&#x4E0A;&#x4F4D;&#x673A;&#x914D;&#x7F6E; &#x00B7; 0-500 V" x="24" y="36" width="190">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_alarm_threshold_selected_index" flag="hidden" ref_value="6"/>
             </lv_label>
-            <lv_label name="alarm_threshold_range_oilvl" text="&#x4E32;&#x53E3;&#x914D;&#x7F6E; &#x00B7; 0-500 A" x="24" y="22" width="170">
+            <lv_label name="alarm_threshold_range_oilvl" text="&#x4E0A;&#x4F4D;&#x673A;&#x914D;&#x7F6E; &#x00B7; 0-500 A" x="24" y="36" width="190">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
