@@ -74,10 +74,10 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_1 = lv_label_create(alarm_threshold_content);
-    lv_label_set_text(lv_label_1, "仅预览 / 不可设置");
+    lv_label_set_text(lv_label_1, "仅查看");
     lv_obj_set_x(lv_label_1, 24);
-    lv_obj_set_y(lv_label_1, 22);
-    lv_obj_set_width(lv_label_1, 170);
+    lv_obj_set_y(lv_label_1, 27);
+    lv_obj_set_width(lv_label_1, 70);
     lv_obj_add_style(lv_label_1, &me106_text_14_gray_ba, 0);
     lv_obj_bind_style(lv_label_1, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_1, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
@@ -132,7 +132,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_bind_flag_if_not_eq(alarm_threshold_item_u_step_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 0);
     
     lv_obj_t * lv_label_2 = lv_label_create(alarm_threshold_item_u_step);
-    lv_label_set_text(lv_label_2, "电压变化");
+    lv_label_set_text(lv_label_2, "电压突变");
     lv_obj_set_x(lv_label_2, 14);
     lv_obj_set_y(lv_label_2, 5);
     lv_obj_set_width(lv_label_2, 84);
@@ -166,10 +166,10 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_set_name(alarm_threshold_u_step_fill, "alarm_threshold_u_step_fill");
     lv_obj_set_x(alarm_threshold_u_step_fill, 0);
     lv_obj_set_y(alarm_threshold_u_step_fill, 0);
-    lv_obj_set_width(alarm_threshold_u_step_fill, 33);
+    lv_obj_set_width(alarm_threshold_u_step_fill, 25);
     lv_obj_set_height(alarm_threshold_u_step_fill, 5);
     lv_obj_set_style_radius(alarm_threshold_u_step_fill, 3, 0);
-    lv_obj_set_style_bg_color(alarm_threshold_u_step_fill, lv_color_hex(0x52A3FF), 0);
+    lv_obj_set_style_bg_color(alarm_threshold_u_step_fill, lv_color_hex(0xA78BFA), 0);
     lv_obj_set_style_bg_opa(alarm_threshold_u_step_fill, 255, 0);
     lv_obj_set_style_border_width(alarm_threshold_u_step_fill, 0, 0);
     lv_obj_set_flag(alarm_threshold_u_step_fill, LV_OBJ_FLAG_SCROLLABLE, false);
@@ -201,7 +201,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_bind_flag_if_not_eq(alarm_threshold_item_i_step_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 1);
     
     lv_obj_t * lv_label_4 = lv_label_create(alarm_threshold_item_i_step);
-    lv_label_set_text(lv_label_4, "电流变化");
+    lv_label_set_text(lv_label_4, "电流突变");
     lv_obj_set_x(lv_label_4, 14);
     lv_obj_set_y(lv_label_4, 5);
     lv_obj_set_width(lv_label_4, 84);
@@ -235,7 +235,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_set_name(alarm_threshold_i_step_fill, "alarm_threshold_i_step_fill");
     lv_obj_set_x(alarm_threshold_i_step_fill, 0);
     lv_obj_set_y(alarm_threshold_i_step_fill, 0);
-    lv_obj_set_width(alarm_threshold_i_step_fill, 66);
+    lv_obj_set_width(alarm_threshold_i_step_fill, 25);
     lv_obj_set_height(alarm_threshold_i_step_fill, 5);
     lv_obj_set_style_radius(alarm_threshold_i_step_fill, 3, 0);
     lv_obj_set_style_bg_color(alarm_threshold_i_step_fill, lv_color_hex(0x20D3D5), 0);
@@ -270,7 +270,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_bind_flag_if_not_eq(alarm_threshold_item_p_step_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 2);
     
     lv_obj_t * lv_label_6 = lv_label_create(alarm_threshold_item_p_step);
-    lv_label_set_text(lv_label_6, "功率变化");
+    lv_label_set_text(lv_label_6, "功率突变");
     lv_obj_set_x(lv_label_6, 14);
     lv_obj_set_y(lv_label_6, 5);
     lv_obj_set_width(lv_label_6, 84);
@@ -304,7 +304,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_set_name(alarm_threshold_p_step_fill, "alarm_threshold_p_step_fill");
     lv_obj_set_x(alarm_threshold_p_step_fill, 0);
     lv_obj_set_y(alarm_threshold_p_step_fill, 0);
-    lv_obj_set_width(alarm_threshold_p_step_fill, 66);
+    lv_obj_set_width(alarm_threshold_p_step_fill, 25);
     lv_obj_set_height(alarm_threshold_p_step_fill, 5);
     lv_obj_set_style_radius(alarm_threshold_p_step_fill, 3, 0);
     lv_obj_set_style_bg_color(alarm_threshold_p_step_fill, lv_color_hex(0xF59E0B), 0);
@@ -373,7 +373,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_set_name(alarm_threshold_e_inc_fill, "alarm_threshold_e_inc_fill");
     lv_obj_set_x(alarm_threshold_e_inc_fill, 0);
     lv_obj_set_y(alarm_threshold_e_inc_fill, 0);
-    lv_obj_set_width(alarm_threshold_e_inc_fill, 66);
+    lv_obj_set_width(alarm_threshold_e_inc_fill, 25);
     lv_obj_set_height(alarm_threshold_e_inc_fill, 5);
     lv_obj_set_style_radius(alarm_threshold_e_inc_fill, 3, 0);
     lv_obj_set_style_bg_color(alarm_threshold_e_inc_fill, lv_color_hex(0x32E67A), 0);
@@ -442,7 +442,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_set_name(alarm_threshold_lost_volt_fill, "alarm_threshold_lost_volt_fill");
     lv_obj_set_x(alarm_threshold_lost_volt_fill, 0);
     lv_obj_set_y(alarm_threshold_lost_volt_fill, 0);
-    lv_obj_set_width(alarm_threshold_lost_volt_fill, 42);
+    lv_obj_set_width(alarm_threshold_lost_volt_fill, 9);
     lv_obj_set_height(alarm_threshold_lost_volt_fill, 5);
     lv_obj_set_style_radius(alarm_threshold_lost_volt_fill, 3, 0);
     lv_obj_set_style_bg_color(alarm_threshold_lost_volt_fill, lv_color_hex(0x8D5CFF), 0);
@@ -477,7 +477,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_bind_flag_if_not_eq(alarm_threshold_item_sagcfg_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 5);
     
     lv_obj_t * lv_label_12 = lv_label_create(alarm_threshold_item_sagcfg);
-    lv_label_set_text(lv_label_12, "电压跌落");
+    lv_label_set_text(lv_label_12, "欠压");
     lv_obj_set_x(lv_label_12, 14);
     lv_obj_set_y(lv_label_12, 5);
     lv_obj_set_width(lv_label_12, 84);
@@ -511,7 +511,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_set_name(alarm_threshold_sagcfg_fill, "alarm_threshold_sagcfg_fill");
     lv_obj_set_x(alarm_threshold_sagcfg_fill, 0);
     lv_obj_set_y(alarm_threshold_sagcfg_fill, 0);
-    lv_obj_set_width(alarm_threshold_sagcfg_fill, 14);
+    lv_obj_set_width(alarm_threshold_sagcfg_fill, 45);
     lv_obj_set_height(alarm_threshold_sagcfg_fill, 5);
     lv_obj_set_style_radius(alarm_threshold_sagcfg_fill, 3, 0);
     lv_obj_set_style_bg_color(alarm_threshold_sagcfg_fill, lv_color_hex(0x6366F1), 0);
@@ -546,7 +546,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_bind_flag_if_not_eq(alarm_threshold_item_ovlvl_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 6);
     
     lv_obj_t * lv_label_14 = lv_label_create(alarm_threshold_item_ovlvl);
-    lv_label_set_text(lv_label_14, "过压保护");
+    lv_label_set_text(lv_label_14, "过压");
     lv_obj_set_x(lv_label_14, 14);
     lv_obj_set_y(lv_label_14, 5);
     lv_obj_set_width(lv_label_14, 84);
@@ -580,7 +580,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_set_name(alarm_threshold_ovlvl_fill, "alarm_threshold_ovlvl_fill");
     lv_obj_set_x(alarm_threshold_ovlvl_fill, 0);
     lv_obj_set_y(alarm_threshold_ovlvl_fill, 0);
-    lv_obj_set_width(alarm_threshold_ovlvl_fill, 14);
+    lv_obj_set_width(alarm_threshold_ovlvl_fill, 65);
     lv_obj_set_height(alarm_threshold_ovlvl_fill, 5);
     lv_obj_set_style_radius(alarm_threshold_ovlvl_fill, 3, 0);
     lv_obj_set_style_bg_color(alarm_threshold_ovlvl_fill, lv_color_hex(0xE33C64), 0);
@@ -615,7 +615,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_bind_flag_if_not_eq(alarm_threshold_item_oilvl_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 7);
     
     lv_obj_t * lv_label_16 = lv_label_create(alarm_threshold_item_oilvl);
-    lv_label_set_text(lv_label_16, "过流保护");
+    lv_label_set_text(lv_label_16, "过流");
     lv_obj_set_x(lv_label_16, 14);
     lv_obj_set_y(lv_label_16, 5);
     lv_obj_set_width(lv_label_16, 84);
@@ -649,7 +649,7 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
     lv_obj_set_name(alarm_threshold_oilvl_fill, "alarm_threshold_oilvl_fill");
     lv_obj_set_x(alarm_threshold_oilvl_fill, 0);
     lv_obj_set_y(alarm_threshold_oilvl_fill, 0);
-    lv_obj_set_width(alarm_threshold_oilvl_fill, 14);
+    lv_obj_set_width(alarm_threshold_oilvl_fill, 1);
     lv_obj_set_height(alarm_threshold_oilvl_fill, 5);
     lv_obj_set_style_radius(alarm_threshold_oilvl_fill, 3, 0);
     lv_obj_set_style_bg_color(alarm_threshold_oilvl_fill, lv_color_hex(0xE33C64), 0);
