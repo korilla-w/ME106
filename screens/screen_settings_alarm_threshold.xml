@@ -21,12 +21,7 @@
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
 
-            <lv_label text="&#x4EC5;&#x67E5;&#x770B;" x="24" y="20" width="70">
-                <style name="me106_text_14_gray_ba"/>
-                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
-                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
-            </lv_label>
-            <lv_label text="&#x4E0A;&#x4F4D;&#x673A;&#x914D;&#x7F6E;" x="24" y="36" width="110">
+            <lv_label text="&#x4EC5;&#x67E5;&#x770B; &#x00B7; &#x4E0A;&#x4F4D;&#x673A;&#x914D;&#x7F6E;" x="24" y="27" width="150">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
