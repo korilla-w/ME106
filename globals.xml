@@ -288,10 +288,10 @@
         <int name="meter_alarm_threshold_i_step_value" value="100" min_value="0" max_value="500"/>
         <int name="meter_alarm_threshold_p_step_value" value="1000" min_value="0" max_value="5000"/>
         <int name="meter_alarm_threshold_e_inc_value" value="1000" min_value="0" max_value="5000"/>
-        <int name="meter_alarm_threshold_lost_volt_value" value="1024" min_value="0" max_value="65535"/>
-        <int name="meter_alarm_threshold_sagcfg_value" value="0" min_value="0" max_value="16777215"/>
-        <int name="meter_alarm_threshold_ovlvl_value" value="0" min_value="0" max_value="65535"/>
-        <int name="meter_alarm_threshold_oilvl_value" value="0" min_value="0" max_value="65535"/>
+        <int name="meter_alarm_threshold_lost_volt_value" value="5000" min_value="0" max_value="65535"/>
+        <int name="meter_alarm_threshold_sagcfg_value" value="180" min_value="0" max_value="500"/>
+        <int name="meter_alarm_threshold_ovlvl_value" value="260" min_value="0" max_value="500"/>
+        <int name="meter_alarm_threshold_oilvl_value" value="5" min_value="0" max_value="500"/>
         <!-- 电能质量分析只展示逻辑层给出的越限摘要；阈值比较和深度分析不在 UI 层完成。 -->
         <int name="meter_power_quality_page_index" value="0" min_value="0" max_value="2"/>
         <int name="meter_power_quality_issue_count" value="0" min_value="0" max_value="8"/>
