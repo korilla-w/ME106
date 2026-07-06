@@ -63,6 +63,12 @@ lv_obj_t * screen_energy_data_create(void)
     lv_obj_set_style_border_width(page_content, 0, 0);
     lv_obj_set_style_pad_all(page_content, 0, 0);
     lv_obj_set_flag(page_content, LV_OBJ_FLAG_SCROLLABLE, false);
+    lv_obj_t * energy_brand_logo = lv_image_create(page_content);
+    lv_obj_set_name(energy_brand_logo, "energy_brand_logo");
+    lv_image_set_src(energy_brand_logo, meter_brand_logo);
+    lv_obj_set_x(energy_brand_logo, 20);
+    lv_obj_set_y(energy_brand_logo, 17);
+    
     lv_obj_t * lv_label_0 = lv_label_create(page_content);
     lv_label_set_text(lv_label_0, "电能数据");
     lv_obj_set_x(lv_label_0, 156);

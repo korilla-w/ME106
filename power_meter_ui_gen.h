@@ -237,6 +237,8 @@ extern lv_style_t me106_text_14_orange;
 extern lv_style_t me106_text_14_white_center;
 extern lv_style_t me106_text_14_gray_ba_right;
 extern lv_style_t me106_text_14_white_right;
+extern lv_style_t me106_brand_text_dark;
+extern lv_style_t me106_brand_text_light;
 extern lv_style_t me106_text_16_white;
 extern lv_style_t me106_text_16_white_center;
 extern lv_style_t me106_text_16_white_right;
@@ -348,6 +350,7 @@ extern const void * meter_icon_restart;
 extern const void * meter_icon_update;
 extern const void * meter_icon_information;
 extern const void * meter_power_quality_qr;
+extern const void * meter_brand_logo;
 
 /*----------------
  * Subjects

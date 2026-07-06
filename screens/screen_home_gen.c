@@ -63,6 +63,32 @@ lv_obj_t * screen_home_create(void)
     lv_obj_set_style_border_width(page_content, 0, 0);
     lv_obj_set_style_pad_all(page_content, 0, 0);
     lv_obj_set_flag(page_content, LV_OBJ_FLAG_SCROLLABLE, false);
+    lv_obj_t * home_brand = lv_obj_create(page_content);
+    lv_obj_set_name(home_brand, "home_brand");
+    lv_obj_set_x(home_brand, 20);
+    lv_obj_set_y(home_brand, 16);
+    lv_obj_set_width(home_brand, 104);
+    lv_obj_set_height(home_brand, 20);
+    lv_obj_set_style_bg_opa(home_brand, 0, 0);
+    lv_obj_set_style_border_width(home_brand, 0, 0);
+    lv_obj_set_style_shadow_width(home_brand, 0, 0);
+    lv_obj_set_style_pad_all(home_brand, 0, 0);
+    lv_obj_set_flag(home_brand, LV_OBJ_FLAG_SCROLLABLE, false);
+    lv_obj_t * home_brand_logo = lv_image_create(home_brand);
+    lv_obj_set_name(home_brand_logo, "home_brand_logo");
+    lv_image_set_src(home_brand_logo, meter_brand_logo);
+    lv_obj_set_x(home_brand_logo, 0);
+    lv_obj_set_y(home_brand_logo, 1);
+    
+    lv_obj_t * home_brand_name = lv_label_create(home_brand);
+    lv_obj_set_name(home_brand_name, "home_brand_name");
+    lv_label_set_text(home_brand_name, "清润微网");
+    lv_obj_set_x(home_brand_name, 17);
+    lv_obj_set_y(home_brand_name, 1);
+    lv_obj_set_width(home_brand_name, 86);
+    lv_obj_add_style(home_brand_name, &me106_brand_text_dark, 0);
+    lv_obj_bind_style(home_brand_name, &me106_brand_text_light, 0, &meter_theme_index, 1);
+    
     lv_obj_t * lv_label_0 = lv_label_create(page_content);
     lv_label_set_text(lv_label_0, "首页");
     lv_obj_set_x(lv_label_0, 156);

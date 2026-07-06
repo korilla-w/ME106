@@ -63,6 +63,12 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_set_style_border_width(page_content, 0, 0);
     lv_obj_set_style_pad_all(page_content, 0, 0);
     lv_obj_set_flag(page_content, LV_OBJ_FLAG_SCROLLABLE, false);
+    lv_obj_t * line_demand_brand_logo = lv_image_create(page_content);
+    lv_obj_set_name(line_demand_brand_logo, "line_demand_brand_logo");
+    lv_image_set_src(line_demand_brand_logo, meter_brand_logo);
+    lv_obj_set_x(line_demand_brand_logo, 20);
+    lv_obj_set_y(line_demand_brand_logo, 17);
+    
     lv_obj_t * lv_label_0 = lv_label_create(page_content);
     lv_label_set_text(lv_label_0, "线电压(V)和需量");
     lv_obj_set_x(lv_label_0, 156);

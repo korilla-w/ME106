@@ -78,6 +78,7 @@ const void * meter_icon_restart;
 const void * meter_icon_update;
 const void * meter_icon_information;
 const void * meter_power_quality_qr;
+const void * meter_brand_logo;
 
 /*----------------
  * Global styles
@@ -147,6 +148,8 @@ lv_style_t me106_text_14_orange;
 lv_style_t me106_text_14_white_center;
 lv_style_t me106_text_14_gray_ba_right;
 lv_style_t me106_text_14_white_right;
+lv_style_t me106_brand_text_dark;
+lv_style_t me106_brand_text_light;
 lv_style_t me106_text_16_white;
 lv_style_t me106_text_16_white_center;
 lv_style_t me106_text_16_white_right;
@@ -428,6 +431,8 @@ void power_meter_ui_init_gen(const char * asset_path)
     meter_icon_information = lv_strdup(buf);
     lv_snprintf(buf, 256, "%s%s", asset_path, "images/power_quality_qr.png");
     meter_power_quality_qr = lv_strdup(buf);
+    lv_snprintf(buf, 256, "%s%s", asset_path, "images/brand_logo.png");
+    meter_brand_logo = lv_strdup(buf);
 
     /*----------------
      * Global styles
@@ -684,6 +689,14 @@ void power_meter_ui_init_gen(const char * asset_path)
         lv_style_set_text_color(&me106_text_14_white_right, METER_WHITE);
         lv_style_set_text_font(&me106_text_14_white_right, meter_Harmony_Sans_SC_Medium_14);
         lv_style_set_text_align(&me106_text_14_white_right, LV_TEXT_ALIGN_RIGHT);
+
+        lv_style_init(&me106_brand_text_dark);
+        lv_style_set_text_color(&me106_brand_text_dark, METER_WHITE);
+        lv_style_set_text_font(&me106_brand_text_dark, meter_Harmony_Sans_SC_Medium_14);
+
+        lv_style_init(&me106_brand_text_light);
+        lv_style_set_text_color(&me106_brand_text_light, METER_BLACK);
+        lv_style_set_text_font(&me106_brand_text_light, meter_Harmony_Sans_SC_Medium_14);
 
         lv_style_init(&me106_text_16_white);
         lv_style_set_text_color(&me106_text_16_white, METER_WHITE);
@@ -1609,6 +1622,7 @@ void power_meter_ui_init_gen(const char * asset_path)
     lv_xml_register_image(NULL, "meter_icon_update", meter_icon_update);
     lv_xml_register_image(NULL, "meter_icon_information", meter_icon_information);
     lv_xml_register_image(NULL, "meter_power_quality_qr", meter_power_quality_qr);
+    lv_xml_register_image(NULL, "meter_brand_logo", meter_brand_logo);
 #endif
 
 #if LV_USE_XML == 0
