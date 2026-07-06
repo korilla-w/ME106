@@ -13,6 +13,7 @@
 
         <!-- UI分组：页面内容区。视觉布局与底部固定硬按键导航分离。 -->
         <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+        <lv_image name="apparent_brand_logo" src="meter_brand_logo" x="20" y="17"/>
         <lv_label text="&#x89C6;&#x5728;&#x529F;&#x7387;&#x28;&#x6B;&#x56;&#x41;&#x29;" x="156" y="17" width="140">
             <style name="me106_text_16_white_right"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>

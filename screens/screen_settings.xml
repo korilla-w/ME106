@@ -7,11 +7,14 @@
 
         <!-- UI分组：页面内容区。这里只放视觉控件，设置生效留给逻辑/执行层处理。 -->
         <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
-        <lv_label text="&#x8BBE;&#x7F6E;" x="156" y="17" width="140">
-            <style name="me106_text_16_white_right"/>
-            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
-        </lv_label>
+        <lv_obj name="settings_brand" x="104" y="16" width="112" height="20" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0" scrollable="false">
+            <lv_image name="settings_brand_logo" src="meter_brand_logo" x="0" y="1"/>
+            <lv_label name="settings_page_title" text="&#x8BBE;&#x7F6E;&#x83DC;&#x5355;" x="17" y="1" width="86">
+                <style name="me106_text_14_white"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+        </lv_obj>
 
         <lv_obj name="settings_list" x="24" y="48" width="270" height="154" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollbar_mode="off" scrollable="false">
             <lv_obj name="settings_items" x="0" y="0" width="270" height="500" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">

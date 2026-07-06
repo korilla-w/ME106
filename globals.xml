@@ -144,6 +144,8 @@
         <style name="me106_text_14_white_center" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_14" text_align="center"/>
         <style name="me106_text_14_gray_ba_right" text_color="#meter_gray_ba" text_font="meter_Harmony_Sans_SC_Medium_14" text_align="right"/>
         <style name="me106_text_14_white_right" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_14" text_align="right"/>
+        <style name="me106_brand_text_dark" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_brand_text_light" text_color="#meter_black" text_font="meter_Harmony_Sans_SC_Medium_14"/>
 
         <style name="me106_text_16_white" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_16"/>
         <style name="me106_text_16_white_center" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_16" text_align="center"/>
@@ -396,5 +398,6 @@
         <file name="meter_icon_update" src_path="images/update.png"/>
         <file name="meter_icon_information" src_path="images/information.png"/>
         <file name="meter_power_quality_qr" src_path="images/power_quality_qr.png"/>
+        <file name="meter_brand_logo" src_path="images/brand_logo.png"/>
     </images>
 </globals>
