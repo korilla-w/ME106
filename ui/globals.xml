@@ -370,42 +370,42 @@
 
     <fonts>
         <!-- 保持现有 XML 字体名稳定，只把字体文件来源切到 HarmonyOS Sans SC。 -->
-        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_14" src_path="../fonts/HarmonyOS_Sans_SC_Medium.ttf" size="14" as_file="true"/>
-        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_16" src_path="../fonts/HarmonyOS_Sans_SC_Medium.ttf" size="16" as_file="true"/>
-        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_18" src_path="../fonts/HarmonyOS_Sans_SC_Medium.ttf" size="18" as_file="true"/>
-        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_36" src_path="../fonts/HarmonyOS_Sans_SC_Medium.ttf" size="36" as_file="true"/>
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_14" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="14" as_file="true"/>
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_16" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="16" as_file="true"/>
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_18" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="18" as_file="true"/>
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_36" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="36" as_file="true"/>
     </fonts>
 
     <images>
         <!-- 图片资源组：统一在 globals 注册，页面只按语义名称引用图标。 -->
-        <file name="meter_setting" src_path="../images/setting.png"/>
-        <file name="meter_menu" src_path="../images/menu-line.png"/>
-        <file name="meter_arrow_left" src_path="../images/arrow_left.png"/>
-        <file name="meter_arrow_right" src_path="../images/arrow_right.png"/>
-        <file name="meter_icon_return" src_path="../images/return.png"/>
-        <file name="meter_arrow_down" src_path="../images/arrow_down.png"/>
-        <file name="meter_arrow_up" src_path="../images/arrow_up.png"/>
-        <file name="meter_yes" src_path="../images/yes.png"/>
-        <file name="meter_icon_table" src_path="../images/table.png"/>
-        <file name="meter_icon_select" src_path="../images/select.png"/>
-        <file name="meter_icon_harmonic" src_path="../images/Harmonic.png"/>
-        <file name="meter_icon_waveform" src_path="../images/Waveform.png"/>
-        <file name="meter_icon_electric_energy" src_path="../images/Electric energy.png"/>
-        <file name="meter_icon_wifi" src_path="../images/wifi.png"/>
-        <file name="meter_icon_wifi_connect" src_path="../images/wifi_connect_link.png"/>
-        <file name="meter_icon_wifi_disconnect" src_path="../images/wifi_disconnect_link.png"/>
-        <file name="meter_icon_modbus" src_path="../images/modbus.png"/>
-        <file name="meter_icon_serial" src_path="../images/serial.png"/>
-        <file name="meter_icon_ratio" src_path="../images/ratio.png"/>
-        <file name="meter_icon_address" src_path="../images/address.png"/>
-        <file name="meter_icon_theme" src_path="../images/theme.png"/>
-        <file name="meter_icon_alarm" src_path="../images/alarm.png"/>
-        <file name="meter_icon_warning" src_path="../images/warning.png"/>
-        <file name="meter_icon_screen" src_path="../images/screen.png"/>
-        <file name="meter_icon_restart" src_path="../images/restart.png"/>
-        <file name="meter_icon_update" src_path="../images/update.png"/>
-        <file name="meter_icon_information" src_path="../images/information.png"/>
-        <file name="meter_power_quality_qr" src_path="../images/power_quality_qr.png"/>
-        <file name="meter_brand_logo" src_path="../images/brand_logo.png"/>
+        <file name="meter_setting" src_path="images/setting.png"/>
+        <file name="meter_menu" src_path="images/menu-line.png"/>
+        <file name="meter_arrow_left" src_path="images/arrow_left.png"/>
+        <file name="meter_arrow_right" src_path="images/arrow_right.png"/>
+        <file name="meter_icon_return" src_path="images/return.png"/>
+        <file name="meter_arrow_down" src_path="images/arrow_down.png"/>
+        <file name="meter_arrow_up" src_path="images/arrow_up.png"/>
+        <file name="meter_yes" src_path="images/yes.png"/>
+        <file name="meter_icon_table" src_path="images/table.png"/>
+        <file name="meter_icon_select" src_path="images/select.png"/>
+        <file name="meter_icon_harmonic" src_path="images/Harmonic.png"/>
+        <file name="meter_icon_waveform" src_path="images/Waveform.png"/>
+        <file name="meter_icon_electric_energy" src_path="images/Electric energy.png"/>
+        <file name="meter_icon_wifi" src_path="images/wifi.png"/>
+        <file name="meter_icon_wifi_connect" src_path="images/wifi_connect_link.png"/>
+        <file name="meter_icon_wifi_disconnect" src_path="images/wifi_disconnect_link.png"/>
+        <file name="meter_icon_modbus" src_path="images/modbus.png"/>
+        <file name="meter_icon_serial" src_path="images/serial.png"/>
+        <file name="meter_icon_ratio" src_path="images/ratio.png"/>
+        <file name="meter_icon_address" src_path="images/address.png"/>
+        <file name="meter_icon_theme" src_path="images/theme.png"/>
+        <file name="meter_icon_alarm" src_path="images/alarm.png"/>
+        <file name="meter_icon_warning" src_path="images/warning.png"/>
+        <file name="meter_icon_screen" src_path="images/screen.png"/>
+        <file name="meter_icon_restart" src_path="images/restart.png"/>
+        <file name="meter_icon_update" src_path="images/update.png"/>
+        <file name="meter_icon_information" src_path="images/information.png"/>
+        <file name="meter_power_quality_qr" src_path="images/power_quality_qr.png"/>
+        <file name="meter_brand_logo" src_path="images/brand_logo.png"/>
     </images>
 </globals>
