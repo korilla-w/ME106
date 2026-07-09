@@ -1,0 +1,311 @@
+<screen>
+
+    <view width="320" height="240">
+        <style name="me106_fill_gray1f"/>
+        <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+        <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+        <subject_set_int_event subject="meter_address_digit_selected_index" value="0" trigger="screen_loaded"/>
+        <subject_set_int_event subject="meter_address_invalid_popup" value="0" trigger="screen_loaded"/>
+
+        <!-- UI分组：电表地址编辑区。这里只编辑 Modbus485 从站号，实际落库/下发由逻辑与执行层处理。 -->
+        <lv_obj name="address_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+            <lv_label text="&#x7535;&#x8868;&#x5730;&#x5740;" x="152" y="17" width="144">
+                <style name="me106_text_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+
+            <lv_obj name="address_badge" x="32" y="48" width="256" height="26" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <lv_label text="&#x5F53;&#x524D;&#x5730;&#x5740;" x="0" y="5" width="78">
+                    <style name="me106_text_14_gray_ba"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_address_current_value" bind_text-fmt="%03d" x="86" y="2" width="54">
+                    <style name="me106_text_18_white"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label text="001-247" x="158" y="5" width="98">
+                    <style name="me106_text_14_gray_ba_right"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+            </lv_obj>
+
+            <lv_button name="address_digit_0" x="56" y="92" width="56" height="60" style_pad_all="0">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                <lv_obj name="address_digit_0_selected_bg" x="0" y="0" width="56" height="60" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_address_digit_selected_index" flag="hidden" ref_value="0"/>
+                </lv_obj>
+                <lv_label bind_text="meter_address_digit_0" bind_text-fmt="%d" align="center" width="56">
+                    <style name="me106_text_36_white_center"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <subject_set_int_event subject="meter_address_digit_selected_index" value="0" trigger="clicked"/>
+            </lv_button>
+
+            <lv_button name="address_digit_1" x="132" y="92" width="56" height="60" style_pad_all="0">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                <lv_obj name="address_digit_1_selected_bg" x="0" y="0" width="56" height="60" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_address_digit_selected_index" flag="hidden" ref_value="1"/>
+                </lv_obj>
+                <lv_label bind_text="meter_address_digit_1" bind_text-fmt="%d" align="center" width="56">
+                    <style name="me106_text_36_white_center"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <subject_set_int_event subject="meter_address_digit_selected_index" value="1" trigger="clicked"/>
+            </lv_button>
+
+            <lv_button name="address_digit_2" x="208" y="92" width="56" height="60" style_pad_all="0">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                <lv_obj name="address_digit_2_selected_bg" x="0" y="0" width="56" height="60" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_address_digit_selected_index" flag="hidden" ref_value="2"/>
+                </lv_obj>
+                <lv_label bind_text="meter_address_digit_2" bind_text-fmt="%d" align="center" width="56">
+                    <style name="me106_text_36_white_center"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <subject_set_int_event subject="meter_address_digit_selected_index" value="2" trigger="clicked"/>
+            </lv_button>
+
+            <lv_obj name="address_hex_preview" x="74" y="162" width="172" height="28" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <lv_label text="HEX" x="0" y="7" width="44">
+                    <style name="me106_text_14_gray_ba"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_address_edit_hex_text" x="52" y="3" width="120">
+                    <style name="me106_text_18_cyan"/>
+                </lv_label>
+            </lv_obj>
+        </lv_obj>
+
+        <!-- UI分组：底部硬按键区。按键只表达返回、改值、右移、确认意图，不直接读写 485 外设。 -->
+        <lv_obj name="screen_settings_address_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+        <lv_button name="address_btn_return" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        </lv_button>
+
+        <lv_button name="address_btn_digit" x="80" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <lv_image src="meter_arrow_up" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
+        </lv_button>
+
+        <lv_button name="address_btn_next" x="160" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <lv_image src="meter_arrow_right" align="center" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="120" style_transform_scale_y="120"/>
+            <subject_increment_event subject="meter_address_digit_selected_index" step="1" min_value="0" max_value="2" rollover="true" trigger="clicked"/>
+        </lv_button>
+
+        <lv_button name="address_btn_yes" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_blue"/>
+            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
+        </lv_button>
+
+        <lv_button name="address_btn_value_0" x="80" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+            <bind_flag_if_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <bind_flag_if_not_eq subject="meter_address_digit_selected_index" flag="hidden" ref_value="0"/>
+            <subject_increment_event subject="meter_address_digit_0" step="1" min_value="0" max_value="2" rollover="true" trigger="clicked"/>
+        </lv_button>
+        <lv_button name="address_btn_value_1" x="80" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+            <bind_flag_if_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <bind_flag_if_not_eq subject="meter_address_digit_selected_index" flag="hidden" ref_value="1"/>
+            <subject_increment_event subject="meter_address_digit_1" step="1" min_value="0" max_value="9" rollover="true" trigger="clicked"/>
+        </lv_button>
+        <lv_button name="address_btn_value_2" x="80" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+            <bind_flag_if_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <bind_flag_if_not_eq subject="meter_address_digit_selected_index" flag="hidden" ref_value="2"/>
+            <subject_increment_event subject="meter_address_digit_2" step="1" min_value="0" max_value="9" rollover="true" trigger="clicked"/>
+        </lv_button>
+
+        <!-- 地址门禁：非法值时只拦截返回/确认，不接管数字选择和改值流程。 -->
+        <lv_obj name="address_invalid_return_gate" x="0" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+            <bind_flag_if_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <lv_obj name="address_invalid_return_000_h0" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+                <bind_flag_if_not_eq subject="meter_address_digit_0" flag="hidden" ref_value="0"/>
+                <lv_obj name="address_invalid_return_000_t0" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="0"/>
+                    <lv_button name="address_invalid_return_000" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                        <bind_flag_if_not_eq subject="meter_address_digit_2" flag="hidden" ref_value="0"/>
+                        <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                    </lv_button>
+                </lv_obj>
+            </lv_obj>
+            <lv_obj name="address_invalid_return_2xx_h2" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+                <bind_flag_if_not_eq subject="meter_address_digit_0" flag="hidden" ref_value="2"/>
+                <lv_button name="address_invalid_return_t5" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="5"/>
+                    <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                </lv_button>
+                <lv_button name="address_invalid_return_t6" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="6"/>
+                    <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                </lv_button>
+                <lv_button name="address_invalid_return_t7" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="7"/>
+                    <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                </lv_button>
+                <lv_button name="address_invalid_return_t8" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="8"/>
+                    <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                </lv_button>
+                <lv_button name="address_invalid_return_t9" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="9"/>
+                    <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                </lv_button>
+                <lv_obj name="address_invalid_return_t4" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="4"/>
+                    <lv_button name="address_invalid_return_248" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                        <bind_flag_if_not_eq subject="meter_address_digit_2" flag="hidden" ref_value="8"/>
+                        <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                    </lv_button>
+                    <lv_button name="address_invalid_return_249" x="0" y="0" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                        <bind_flag_if_not_eq subject="meter_address_digit_2" flag="hidden" ref_value="9"/>
+                        <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                    </lv_button>
+                </lv_obj>
+            </lv_obj>
+        </lv_obj>
+
+        <lv_obj name="address_invalid_confirm_gate" x="240" y="207" width="80" height="32" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+            <bind_flag_if_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <lv_obj name="address_invalid_confirm_000_h0" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+                <bind_flag_if_not_eq subject="meter_address_digit_0" flag="hidden" ref_value="0"/>
+                <lv_obj name="address_invalid_confirm_000_t0" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="0"/>
+                    <lv_button name="address_invalid_confirm_000" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                        <bind_flag_if_not_eq subject="meter_address_digit_2" flag="hidden" ref_value="0"/>
+                        <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                    </lv_button>
+                </lv_obj>
+            </lv_obj>
+            <lv_obj name="address_invalid_confirm_2xx_h2" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+                <bind_flag_if_not_eq subject="meter_address_digit_0" flag="hidden" ref_value="2"/>
+                <lv_button name="address_invalid_confirm_t5" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="5"/>
+                    <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                </lv_button>
+                <lv_button name="address_invalid_confirm_t6" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="6"/>
+                    <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                </lv_button>
+                <lv_button name="address_invalid_confirm_t7" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="7"/>
+                    <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                </lv_button>
+                <lv_button name="address_invalid_confirm_t8" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="8"/>
+                    <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                </lv_button>
+                <lv_button name="address_invalid_confirm_t9" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="9"/>
+                    <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                </lv_button>
+                <lv_obj name="address_invalid_confirm_t4" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+                    <bind_flag_if_not_eq subject="meter_address_digit_1" flag="hidden" ref_value="4"/>
+                    <lv_button name="address_invalid_confirm_248" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                        <bind_flag_if_not_eq subject="meter_address_digit_2" flag="hidden" ref_value="8"/>
+                        <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                    </lv_button>
+                    <lv_button name="address_invalid_confirm_249" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0">
+                        <bind_flag_if_not_eq subject="meter_address_digit_2" flag="hidden" ref_value="9"/>
+                        <subject_set_int_event subject="meter_address_invalid_popup" value="1" trigger="clicked"/>
+                    </lv_button>
+                </lv_obj>
+            </lv_obj>
+        </lv_obj>
+
+        <lv_button name="address_popup_btn_return" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <subject_set_int_event subject="meter_address_invalid_popup" value="0" trigger="clicked"/>
+        </lv_button>
+        <lv_button name="address_popup_btn_idle_left" x="80" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+        </lv_button>
+        <lv_button name="address_popup_btn_idle_right" x="160" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+        </lv_button>
+        <lv_button name="address_popup_btn_yes" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_blue"/>
+            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <subject_set_int_event subject="meter_address_invalid_popup" value="0" trigger="clicked"/>
+        </lv_button>
+
+        <lv_obj name="address_invalid_popup" x="44" y="56" width="232" height="98" style_pad_all="0" style_border_width="0" style_bg_opa="255" scrollable="false">
+            <style name="me106_panel_soft_r8"/>
+            <bind_style name="me106_theme_light_soft_panel" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_soft_panel" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
+            <lv_obj name="address_invalid_popup_accent" x="92" y="14" width="48" height="4" style_border_width="0" style_pad_all="0" style_radius="2" style_bg_opa="116" scrollable="false">
+                <style name="me106_panel_blue_r8"/>
+                <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            </lv_obj>
+            <lv_label text="&#x5730;&#x5740;&#x8D85;&#x51FA;&#x8303;&#x56F4;" x="42" y="24" width="148">
+                <style name="me106_text_18_white_center"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+            <lv_label text="&#x8BF7;&#x9009;&#x62E9; 001-247 &#x7684;&#x5730;&#x5740;" x="28" y="52" width="176">
+                <style name="me106_text_14_gray_ba_center"/>
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+            <lv_label text="&#x6309;&#x8FD4;&#x56DE;&#x6216;&#x786E;&#x8BA4;&#x5173;&#x95ED;" x="24" y="72" width="184">
+                <style name="me106_text_14_gray_ba_center"/>
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+        </lv_obj>
+    </view>
+</screen>

@@ -1,0 +1,96 @@
+<screen>
+
+    <view width="320" height="240">
+        <style name="me106_fill_black"/>
+        <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+        <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+
+        <!-- UI分组：页面内容区。视觉布局与底部固定硬按键导航分离。 -->
+        <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+            <lv_label text="&#x8C10;&#x6CE2;&#x8868;&#x683C;" x="172" y="16" width="124">
+                <style name="me106_text_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+            <lv_label text="U  2-63&#x6B21;  %" x="12" y="17" width="120"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="7/8" x="132" y="17" width="42"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+
+            <lv_obj name="spectrum_table_shell" x="8" y="40" width="304" height="154" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <style name="me106_chart_frame"/>
+            </lv_obj>
+            <lv_label text="次数" x="16" y="45" width="44"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="A" x="94" y="45" width="24"><style name="me106_text_14_blue"/></lv_label>
+            <lv_label text="B" x="172" y="45" width="24"><style name="me106_text_14_cyan"/></lv_label>
+            <lv_label text="C" x="250" y="45" width="24"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_obj name="table_header_line" x="12" y="63" width="296" height="1" style_border_width="0" style_pad_all="0" scrollable="false"><style name="me106_line_gray30"/><bind_style name="me106_theme_light_line" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_line" subject="meter_theme_index" ref_value="2"/></lv_obj>
+            <lv_label text="50&#x6B21;" x="16" y="68" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="0.00" x="82" y="68" width="58"><style name="me106_text_14_blue"/></lv_label>
+            <lv_label text="0.00" x="160" y="68" width="58"><style name="me106_text_14_cyan"/></lv_label>
+            <lv_label text="0.00" x="238" y="68" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="51&#x6B21;" x="16" y="83" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="0.00" x="82" y="83" width="58"><style name="me106_text_14_blue"/></lv_label>
+            <lv_label text="0.00" x="160" y="83" width="58"><style name="me106_text_14_cyan"/></lv_label>
+            <lv_label text="0.00" x="238" y="83" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="52&#x6B21;" x="16" y="98" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="0.00" x="82" y="98" width="58"><style name="me106_text_14_blue"/></lv_label>
+            <lv_label text="0.00" x="160" y="98" width="58"><style name="me106_text_14_cyan"/></lv_label>
+            <lv_label text="0.00" x="238" y="98" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="53&#x6B21;" x="16" y="113" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="0.01" x="82" y="113" width="58"><style name="me106_text_14_blue"/></lv_label>
+            <lv_label text="0.01" x="160" y="113" width="58"><style name="me106_text_14_cyan"/></lv_label>
+            <lv_label text="0.00" x="238" y="113" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="54&#x6B21;" x="16" y="128" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="0.00" x="82" y="128" width="58"><style name="me106_text_14_blue"/></lv_label>
+            <lv_label text="0.00" x="160" y="128" width="58"><style name="me106_text_14_cyan"/></lv_label>
+            <lv_label text="0.00" x="238" y="128" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="55&#x6B21;" x="16" y="143" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="0.00" x="82" y="143" width="58"><style name="me106_text_14_blue"/></lv_label>
+            <lv_label text="0.00" x="160" y="143" width="58"><style name="me106_text_14_cyan"/></lv_label>
+            <lv_label text="0.00" x="238" y="143" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="56&#x6B21;" x="16" y="158" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="0.00" x="82" y="158" width="58"><style name="me106_text_14_blue"/></lv_label>
+            <lv_label text="0.00" x="160" y="158" width="58"><style name="me106_text_14_cyan"/></lv_label>
+            <lv_label text="0.00" x="238" y="158" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="57&#x6B21;" x="16" y="173" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="0.00" x="82" y="173" width="58"><style name="me106_text_14_blue"/></lv_label>
+            <lv_label text="0.00" x="160" y="173" width="58"><style name="me106_text_14_cyan"/></lv_label>
+            <lv_label text="0.00" x="238" y="173" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/></lv_label>
+        </lv_obj>
+
+        <!-- UI分组：底部硬按键区。按钮只发出导航/选择意图，不直接处理硬件。 -->
+        <lv_obj name="screen_harmonic_spectrum_table_voltage_6_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+        <lv_button name="spectrum_table_btn_return" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_harmonic_spectrum" trigger="clicked" anim_type="none"/>
+        </lv_button>
+
+        <lv_button name="spectrum_table_btn_down" x="80" y="207" width="79" height="32">
+            <style name="me106_btn_flat_blue"/>
+            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_arrow_down" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_harmonic_spectrum_table_voltage_7" trigger="clicked" anim_type="none"/>
+        </lv_button>
+
+        <lv_button name="spectrum_table_btn_up" x="160" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_arrow_up" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_harmonic_spectrum_table_voltage_5" trigger="clicked" anim_type="none"/>
+        </lv_button>
+
+        <lv_button name="spectrum_table_btn_idle" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_button>
+    </view>
+</screen>

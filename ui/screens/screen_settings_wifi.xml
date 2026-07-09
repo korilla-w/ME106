@@ -1,0 +1,189 @@
+<screen>
+
+    <animations>
+        <timeline name="content_open">
+            <animation target="page_content" prop="opa" start="0" end="255" duration="110" early_apply="true"/>
+            <animation target="page_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true"/>
+        </timeline>
+    </animations>
+
+    <view width="320" height="240">
+        <style name="me106_fill_gray1f"/>
+        <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+        <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+        <play_timeline_event target="self" timeline="content_open" trigger="screen_loaded"/>
+        <subject_set_int_event subject="meter_wifi_page_index" value="0" trigger="screen_loaded"/>
+
+        <!-- UI分组：页面内容区。视觉布局与底部固定硬按键导航分离。 -->
+        <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+
+            <lv_obj name="wifi_info_page" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <bind_flag_if_not_eq subject="meter_wifi_page_index" flag="hidden" ref_value="0"/>
+
+                <lv_label text="WLAN&#x4FE1;&#x606F;" x="152" y="17" width="144">
+                    <style name="me106_text_16_white_right"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+
+                <lv_label text="SSID" x="40" y="54" width="44">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label text="MeterLab_2.4G" x="104" y="54" width="172">
+                    <style name="me106_text_16_white"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+
+                <lv_label text="&#x9A8C;&#x8BC1;" x="40" y="78" width="44">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label text="WPA2" x="104" y="78" width="172">
+                    <style name="me106_text_16_white"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+
+                <lv_label text="IP" x="40" y="102" width="44">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label text="10.21.23.42/24" x="104" y="102" width="172">
+                    <style name="me106_text_16_white"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+
+                <lv_label text="&#x7F51;&#x5173;" x="40" y="126" width="44">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label text="10.21.25.1" x="104" y="126" width="172">
+                    <style name="me106_text_16_white"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+
+                <lv_button name="wifi_pair_mode_btn" x="92" y="158" width="136" height="34">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <lv_label text="&#x914D;&#x7F51;&#x6A21;&#x5F0F;" align="center" width="136">
+                        <style name="me106_text_16_white_center"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    </lv_label>
+                    <subject_set_int_event subject="meter_wifi_page_index" value="1" trigger="clicked"/>
+                </lv_button>
+            </lv_obj>
+
+            <lv_obj name="wifi_pairing_page" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <bind_flag_if_not_eq subject="meter_wifi_page_index" flag="hidden" ref_value="1"/>
+
+                <lv_label text="&#x914D;&#x7F51;&#x6A21;&#x5F0F;" x="152" y="17" width="144">
+                    <style name="me106_text_16_white_right"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+
+                <lv_label text="&#x914D;&#x7F51;&#x4E2D;" x="40" y="60" width="80">
+                    <style name="me106_text_14_blue"/>
+                </lv_label>
+                <lv_label text="&#x8BF7;&#x7528;&#x624B;&#x673A;&#x8FDE;&#x63A5;&#x4E0B;&#x5217;&#x70ED;&#x70B9;" x="40" y="84" width="232">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+
+                <lv_label text="SSID" x="40" y="118" width="44">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_wifi_ap_ssid_text" x="104" y="118" width="172">
+                    <style name="me106_text_16_white"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+
+                <lv_label text="&#x5BC6;&#x7801;" x="40" y="142" width="44">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_wifi_ap_password_text" x="104" y="142" width="172">
+                    <style name="me106_text_16_white"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+
+                <lv_label text="&#x5165;&#x53E3;" x="40" y="166" width="44">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_wifi_ap_entry_text" x="104" y="166" width="172">
+                    <style name="me106_text_16_white"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+            </lv_obj>
+        </lv_obj>
+
+        <!-- UI分组：底部硬按键区。按钮只发出导航/选择意图，不直接处理硬件。 -->
+        <lv_obj name="screen_settings_wifi_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+        <lv_button name="wifi_btn_return" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+        </lv_button>
+
+        <lv_button name="wifi_btn_placeholder_1" x="80" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_button>
+
+        <lv_button name="wifi_btn_placeholder_2" x="160" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_button>
+
+        <lv_button name="wifi_btn_yes_slot" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_button>
+
+        <lv_button name="wifi_btn_yes" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_blue"/>
+            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_wifi_page_index" flag="hidden" ref_value="0"/>
+            <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <subject_set_int_event subject="meter_wifi_page_index" value="1" trigger="clicked"/>
+        </lv_button>
+
+        <lv_button name="wifi_btn_return_to_settings" x="0" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+            <bind_flag_if_not_eq subject="meter_wifi_page_index" flag="hidden" ref_value="0"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        </lv_button>
+
+        <lv_button name="wifi_btn_return_to_info" x="0" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+            <bind_flag_if_not_eq subject="meter_wifi_page_index" flag="hidden" ref_value="1"/>
+            <subject_set_int_event subject="meter_wifi_page_index" value="0" trigger="clicked"/>
+        </lv_button>
+    </view>
+</screen>
