@@ -13,7 +13,7 @@
         <play_timeline_event target="self" timeline="content_open" trigger="screen_loaded"/>
         <subject_set_int_event subject="meter_wifi_manage_action" value="0" trigger="screen_loaded"/>
 
-        <!-- C61 WiFi 信息页：复用原 WiFi 配置页版式，只增加状态回显和连接/断开按键。 -->
+        <!-- C61 WiFi 信息页：复用原 WiFi 配置页版式，显示热点、密码、IP 和连接/断开按键。 -->
         <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
             <lv_label text="WiFi&#x4FE1;&#x606F;" x="152" y="17" width="144">
                 <style name="me106_text_16_white_right"/>
@@ -26,7 +26,7 @@
             <lv_image src="meter_icon_wifi" x="35" y="53" style_transform_pivot_x="8" style_transform_pivot_y="8" style_transform_scale_x="220" style_transform_scale_y="220">
                 <style name="me106_icon_cyan"/>
             </lv_image>
-            <lv_label text="&#x70ED;&#x70B9;&#x914D;&#x7F6E;" x="82" y="46" width="92">
+            <lv_label text="&#x7F51;&#x7EDC;&#x4FE1;&#x606F;" x="82" y="46" width="92">
                 <style name="me106_text_18_cyan"/>
             </lv_label>
             <lv_label bind_text="meter_wifi_manage_status_text" x="82" y="71" width="170">
@@ -44,21 +44,6 @@
             <lv_obj name="wifi_manage_source_dot" x="40" y="111" width="7" height="7" style_radius="4" style_bg_color="0x20D3D5" style_bg_opa="255" style_border_width="0" scrollable="false">
             </lv_obj>
             <lv_obj name="wifi_manage_source_panel" x="56" y="102" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
-                <lv_label text="&#x6765;&#x6E90;" align="left_mid" x="0" y="0" width="82">
-                    <style name="me106_text_14_gray_8f"/>
-                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
-                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
-                </lv_label>
-                <lv_label bind_text="meter_wifi_manage_source_text" align="right_mid" x="0" y="0" width="224">
-                    <style name="me106_text_16_white_right"/>
-                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
-                </lv_label>
-            </lv_obj>
-
-            <lv_obj name="wifi_manage_ssid_dot" x="40" y="135" width="7" height="7" style_radius="4" style_bg_color="0x6366F1" style_bg_opa="255" style_border_width="0" scrollable="false">
-            </lv_obj>
-            <lv_obj name="wifi_manage_ssid_panel" x="56" y="126" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                 <lv_label text="&#x70ED;&#x70B9;" align="left_mid" x="0" y="0" width="82">
                     <style name="me106_text_14_gray_8f"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
@@ -71,15 +56,30 @@
                 </lv_label>
             </lv_obj>
 
-            <lv_obj name="wifi_manage_pass_dot" x="40" y="159" width="7" height="7" style_radius="4" style_bg_color="0x14B8A6" style_bg_opa="255" style_border_width="0" scrollable="false">
+            <lv_obj name="wifi_manage_ssid_dot" x="40" y="135" width="7" height="7" style_radius="4" style_bg_color="0x6366F1" style_bg_opa="255" style_border_width="0" scrollable="false">
             </lv_obj>
-            <lv_obj name="wifi_manage_pass_panel" x="56" y="150" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+            <lv_obj name="wifi_manage_ssid_panel" x="56" y="126" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                 <lv_label text="&#x5BC6;&#x7801;" align="left_mid" x="0" y="0" width="82">
                     <style name="me106_text_14_gray_8f"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 </lv_label>
                 <lv_label bind_text="meter_wifi_manage_password_state_text" align="right_mid" x="0" y="0" width="224">
+                    <style name="me106_text_16_white_right"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+            </lv_obj>
+
+            <lv_obj name="wifi_manage_pass_dot" x="40" y="159" width="7" height="7" style_radius="4" style_bg_color="0x14B8A6" style_bg_opa="255" style_border_width="0" scrollable="false">
+            </lv_obj>
+            <lv_obj name="wifi_manage_pass_panel" x="56" y="150" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                <lv_label text="IP" align="left_mid" x="0" y="0" width="82">
+                    <style name="me106_text_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label bind_text="meter_wifi_manage_ip_text" align="right_mid" x="0" y="0" width="224">
                     <style name="me106_text_16_white_right"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
