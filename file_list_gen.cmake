@@ -50,4 +50,5 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_uart_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_upgrade_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_wifi_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_wifi_manage_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_wifi_sta_gen.c)

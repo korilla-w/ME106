@@ -17,6 +17,8 @@
   "image:meter_icon_waveform": "1fce85f7ef52347a-969e7109b7e4c541",
   "image:meter_icon_electric_energy": "5bc2e6d372c61c6b-1a766ff803366436",
   "image:meter_icon_wifi": "01cd0b3675ae499e-a9355fedf0d764bd",
+  "image:meter_icon_wifi_connect": "d08b5f8a619bfb3d-96928a781044dc24",
+  "image:meter_icon_wifi_disconnect": "64d4f72fa14088f6-af767b245c2432ae",
   "image:meter_icon_modbus": "6f3985ed9d0aab6c-9ec0e530437e8703",
   "image:meter_icon_serial": "de7ba58340f55a21-7c2bf52573c724df",
   "image:meter_icon_ratio": "c0b9ebbd491dbe50-dd12f8f344151815",

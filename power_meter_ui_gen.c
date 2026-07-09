@@ -66,6 +66,8 @@ const void * meter_icon_harmonic;
 const void * meter_icon_waveform;
 const void * meter_icon_electric_energy;
 const void * meter_icon_wifi;
+const void * meter_icon_wifi_connect;
+const void * meter_icon_wifi_disconnect;
 const void * meter_icon_modbus;
 const void * meter_icon_serial;
 const void * meter_icon_ratio;
@@ -240,6 +242,11 @@ lv_subject_t meter_wifi_sta_hotspot_state_text;
 lv_subject_t meter_wifi_sta_password_state_text;
 lv_subject_t meter_wifi_sta_status_text;
 lv_subject_t meter_wifi_sta_connect_request;
+lv_subject_t meter_wifi_manage_action;
+lv_subject_t meter_wifi_manage_status_text;
+lv_subject_t meter_wifi_manage_source_text;
+lv_subject_t meter_wifi_manage_hotspot_state_text;
+lv_subject_t meter_wifi_manage_password_state_text;
 lv_subject_t meter_theme_index;
 lv_subject_t meter_screen_brightness;
 lv_subject_t meter_screen_timeout_index;
@@ -407,6 +414,10 @@ void power_meter_ui_init_gen(const char * asset_path)
     meter_icon_electric_energy = lv_strdup(buf);
     lv_snprintf(buf, 256, "%s%s", asset_path, "images/wifi.png");
     meter_icon_wifi = lv_strdup(buf);
+    lv_snprintf(buf, 256, "%s%s", asset_path, "images/wifi_connect_link.png");
+    meter_icon_wifi_connect = lv_strdup(buf);
+    lv_snprintf(buf, 256, "%s%s", asset_path, "images/wifi_disconnect_link.png");
+    meter_icon_wifi_disconnect = lv_strdup(buf);
     lv_snprintf(buf, 256, "%s%s", asset_path, "images/modbus.png");
     meter_icon_modbus = lv_strdup(buf);
     lv_snprintf(buf, 256, "%s%s", asset_path, "images/serial.png");
@@ -1085,6 +1096,41 @@ void power_meter_ui_init_gen(const char * asset_path)
     lv_subject_init_int(&meter_wifi_sta_connect_request, 0);
     lv_subject_set_min_value_int(&meter_wifi_sta_connect_request, 0);
     lv_subject_set_max_value_int(&meter_wifi_sta_connect_request, 1);
+    lv_subject_init_int(&meter_wifi_manage_action, 0);
+    lv_subject_set_min_value_int(&meter_wifi_manage_action, 0);
+    lv_subject_set_max_value_int(&meter_wifi_manage_action, 2);
+    static char meter_wifi_manage_status_text_buf[UI_SUBJECT_STRING_LENGTH];
+    static char meter_wifi_manage_status_text_prev_buf[UI_SUBJECT_STRING_LENGTH];
+    lv_subject_init_string(&meter_wifi_manage_status_text,
+                           meter_wifi_manage_status_text_buf,
+                           meter_wifi_manage_status_text_prev_buf,
+                           UI_SUBJECT_STRING_LENGTH,
+                           "未连接"
+                          );
+    static char meter_wifi_manage_source_text_buf[UI_SUBJECT_STRING_LENGTH];
+    static char meter_wifi_manage_source_text_prev_buf[UI_SUBJECT_STRING_LENGTH];
+    lv_subject_init_string(&meter_wifi_manage_source_text,
+                           meter_wifi_manage_source_text_buf,
+                           meter_wifi_manage_source_text_prev_buf,
+                           UI_SUBJECT_STRING_LENGTH,
+                           "出厂默认"
+                          );
+    static char meter_wifi_manage_hotspot_state_text_buf[UI_SUBJECT_STRING_LENGTH];
+    static char meter_wifi_manage_hotspot_state_text_prev_buf[UI_SUBJECT_STRING_LENGTH];
+    lv_subject_init_string(&meter_wifi_manage_hotspot_state_text,
+                           meter_wifi_manage_hotspot_state_text_buf,
+                           meter_wifi_manage_hotspot_state_text_prev_buf,
+                           UI_SUBJECT_STRING_LENGTH,
+                           "ME106_A1B2C3"
+                          );
+    static char meter_wifi_manage_password_state_text_buf[UI_SUBJECT_STRING_LENGTH];
+    static char meter_wifi_manage_password_state_text_prev_buf[UI_SUBJECT_STRING_LENGTH];
+    lv_subject_init_string(&meter_wifi_manage_password_state_text,
+                           meter_wifi_manage_password_state_text_buf,
+                           meter_wifi_manage_password_state_text_prev_buf,
+                           UI_SUBJECT_STRING_LENGTH,
+                           "MEA1B2C3"
+                          );
     lv_subject_init_int(&meter_theme_index, 0);
     lv_subject_set_min_value_int(&meter_theme_index, 0);
     lv_subject_set_max_value_int(&meter_theme_index, 2);
@@ -1484,6 +1530,11 @@ void power_meter_ui_init_gen(const char * asset_path)
     lv_xml_register_subject(NULL, "meter_wifi_sta_password_state_text", &meter_wifi_sta_password_state_text);
     lv_xml_register_subject(NULL, "meter_wifi_sta_status_text", &meter_wifi_sta_status_text);
     lv_xml_register_subject(NULL, "meter_wifi_sta_connect_request", &meter_wifi_sta_connect_request);
+    lv_xml_register_subject(NULL, "meter_wifi_manage_action", &meter_wifi_manage_action);
+    lv_xml_register_subject(NULL, "meter_wifi_manage_status_text", &meter_wifi_manage_status_text);
+    lv_xml_register_subject(NULL, "meter_wifi_manage_source_text", &meter_wifi_manage_source_text);
+    lv_xml_register_subject(NULL, "meter_wifi_manage_hotspot_state_text", &meter_wifi_manage_hotspot_state_text);
+    lv_xml_register_subject(NULL, "meter_wifi_manage_password_state_text", &meter_wifi_manage_password_state_text);
     lv_xml_register_subject(NULL, "meter_theme_index", &meter_theme_index);
     lv_xml_register_subject(NULL, "meter_screen_brightness", &meter_screen_brightness);
     lv_xml_register_subject(NULL, "meter_screen_timeout_index", &meter_screen_timeout_index);
@@ -1610,6 +1661,8 @@ void power_meter_ui_init_gen(const char * asset_path)
     lv_xml_register_image(NULL, "meter_icon_waveform", meter_icon_waveform);
     lv_xml_register_image(NULL, "meter_icon_electric_energy", meter_icon_electric_energy);
     lv_xml_register_image(NULL, "meter_icon_wifi", meter_icon_wifi);
+    lv_xml_register_image(NULL, "meter_icon_wifi_connect", meter_icon_wifi_connect);
+    lv_xml_register_image(NULL, "meter_icon_wifi_disconnect", meter_icon_wifi_disconnect);
     lv_xml_register_image(NULL, "meter_icon_modbus", meter_icon_modbus);
     lv_xml_register_image(NULL, "meter_icon_serial", meter_icon_serial);
     lv_xml_register_image(NULL, "meter_icon_ratio", meter_icon_ratio);

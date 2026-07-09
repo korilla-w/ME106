@@ -338,6 +338,8 @@ extern const void * meter_icon_harmonic;
 extern const void * meter_icon_waveform;
 extern const void * meter_icon_electric_energy;
 extern const void * meter_icon_wifi;
+extern const void * meter_icon_wifi_connect;
+extern const void * meter_icon_wifi_disconnect;
 extern const void * meter_icon_modbus;
 extern const void * meter_icon_serial;
 extern const void * meter_icon_ratio;
@@ -373,6 +375,11 @@ extern lv_subject_t meter_wifi_sta_hotspot_state_text;
 extern lv_subject_t meter_wifi_sta_password_state_text;
 extern lv_subject_t meter_wifi_sta_status_text;
 extern lv_subject_t meter_wifi_sta_connect_request;
+extern lv_subject_t meter_wifi_manage_action;
+extern lv_subject_t meter_wifi_manage_status_text;
+extern lv_subject_t meter_wifi_manage_source_text;
+extern lv_subject_t meter_wifi_manage_hotspot_state_text;
+extern lv_subject_t meter_wifi_manage_password_state_text;
 extern lv_subject_t meter_theme_index;
 extern lv_subject_t meter_screen_brightness;
 extern lv_subject_t meter_screen_timeout_index;
@@ -547,6 +554,7 @@ void power_meter_ui_init_gen(const char * asset_path);
 #include "screens/screen_settings_uart_gen.h"
 #include "screens/screen_settings_upgrade_gen.h"
 #include "screens/screen_settings_wifi_gen.h"
+#include "screens/screen_settings_wifi_manage_gen.h"
 #include "screens/screen_settings_wifi_sta_gen.h"
 
 #ifdef __cplusplus
