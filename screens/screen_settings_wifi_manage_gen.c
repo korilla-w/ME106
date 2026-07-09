@@ -97,7 +97,7 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
     lv_obj_add_style(lv_image_0, &me106_icon_cyan, 0);
     
     lv_obj_t * lv_label_1 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_1, "热点配置");
+    lv_label_set_text(lv_label_1, "网络信息");
     lv_obj_set_x(lv_label_1, 82);
     lv_obj_set_y(lv_label_1, 46);
     lv_obj_set_width(lv_label_1, 92);
@@ -147,7 +147,7 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
     lv_obj_set_style_pad_all(wifi_manage_source_panel, 0, 0);
     lv_obj_set_flag(wifi_manage_source_panel, LV_OBJ_FLAG_SCROLLABLE, false);
     lv_obj_t * lv_label_3 = lv_label_create(wifi_manage_source_panel);
-    lv_label_set_text(lv_label_3, "来源");
+    lv_label_set_text(lv_label_3, "热点");
     lv_obj_set_align(lv_label_3, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_3, 0);
     lv_obj_set_y(lv_label_3, 0);
@@ -157,7 +157,7 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
     lv_obj_bind_style(lv_label_3, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_4 = lv_label_create(wifi_manage_source_panel);
-    lv_label_bind_text(lv_label_4, &meter_wifi_manage_source_text, NULL);
+    lv_label_bind_text(lv_label_4, &meter_wifi_manage_hotspot_state_text, NULL);
     lv_obj_set_align(lv_label_4, LV_ALIGN_RIGHT_MID);
     lv_obj_set_x(lv_label_4, 0);
     lv_obj_set_y(lv_label_4, 0);
@@ -189,7 +189,7 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
     lv_obj_set_style_pad_all(wifi_manage_ssid_panel, 0, 0);
     lv_obj_set_flag(wifi_manage_ssid_panel, LV_OBJ_FLAG_SCROLLABLE, false);
     lv_obj_t * lv_label_5 = lv_label_create(wifi_manage_ssid_panel);
-    lv_label_set_text(lv_label_5, "热点");
+    lv_label_set_text(lv_label_5, "密码");
     lv_obj_set_align(lv_label_5, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_5, 0);
     lv_obj_set_y(lv_label_5, 0);
@@ -199,7 +199,7 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
     lv_obj_bind_style(lv_label_5, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_6 = lv_label_create(wifi_manage_ssid_panel);
-    lv_label_bind_text(lv_label_6, &meter_wifi_manage_hotspot_state_text, NULL);
+    lv_label_bind_text(lv_label_6, &meter_wifi_manage_password_state_text, NULL);
     lv_obj_set_align(lv_label_6, LV_ALIGN_RIGHT_MID);
     lv_obj_set_x(lv_label_6, 0);
     lv_obj_set_y(lv_label_6, 0);
@@ -231,7 +231,7 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
     lv_obj_set_style_pad_all(wifi_manage_pass_panel, 0, 0);
     lv_obj_set_flag(wifi_manage_pass_panel, LV_OBJ_FLAG_SCROLLABLE, false);
     lv_obj_t * lv_label_7 = lv_label_create(wifi_manage_pass_panel);
-    lv_label_set_text(lv_label_7, "密码");
+    lv_label_set_text(lv_label_7, "IP");
     lv_obj_set_align(lv_label_7, LV_ALIGN_LEFT_MID);
     lv_obj_set_x(lv_label_7, 0);
     lv_obj_set_y(lv_label_7, 0);
@@ -241,7 +241,7 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
     lv_obj_bind_style(lv_label_7, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_8 = lv_label_create(wifi_manage_pass_panel);
-    lv_label_bind_text(lv_label_8, &meter_wifi_manage_password_state_text, NULL);
+    lv_label_bind_text(lv_label_8, &meter_wifi_manage_ip_text, NULL);
     lv_obj_set_align(lv_label_8, LV_ALIGN_RIGHT_MID);
     lv_obj_set_x(lv_label_8, 0);
     lv_obj_set_y(lv_label_8, 0);

@@ -247,6 +247,7 @@ lv_subject_t meter_wifi_manage_status_text;
 lv_subject_t meter_wifi_manage_source_text;
 lv_subject_t meter_wifi_manage_hotspot_state_text;
 lv_subject_t meter_wifi_manage_password_state_text;
+lv_subject_t meter_wifi_manage_ip_text;
 lv_subject_t meter_theme_index;
 lv_subject_t meter_screen_brightness;
 lv_subject_t meter_screen_timeout_index;
@@ -1131,6 +1132,14 @@ void power_meter_ui_init_gen(const char * asset_path)
                            UI_SUBJECT_STRING_LENGTH,
                            "MEA1B2C3"
                           );
+    static char meter_wifi_manage_ip_text_buf[UI_SUBJECT_STRING_LENGTH];
+    static char meter_wifi_manage_ip_text_prev_buf[UI_SUBJECT_STRING_LENGTH];
+    lv_subject_init_string(&meter_wifi_manage_ip_text,
+                           meter_wifi_manage_ip_text_buf,
+                           meter_wifi_manage_ip_text_prev_buf,
+                           UI_SUBJECT_STRING_LENGTH,
+                           "--"
+                          );
     lv_subject_init_int(&meter_theme_index, 0);
     lv_subject_set_min_value_int(&meter_theme_index, 0);
     lv_subject_set_max_value_int(&meter_theme_index, 2);
@@ -1535,6 +1544,7 @@ void power_meter_ui_init_gen(const char * asset_path)
     lv_xml_register_subject(NULL, "meter_wifi_manage_source_text", &meter_wifi_manage_source_text);
     lv_xml_register_subject(NULL, "meter_wifi_manage_hotspot_state_text", &meter_wifi_manage_hotspot_state_text);
     lv_xml_register_subject(NULL, "meter_wifi_manage_password_state_text", &meter_wifi_manage_password_state_text);
+    lv_xml_register_subject(NULL, "meter_wifi_manage_ip_text", &meter_wifi_manage_ip_text);
     lv_xml_register_subject(NULL, "meter_theme_index", &meter_theme_index);
     lv_xml_register_subject(NULL, "meter_screen_brightness", &meter_screen_brightness);
     lv_xml_register_subject(NULL, "meter_screen_timeout_index", &meter_screen_timeout_index);

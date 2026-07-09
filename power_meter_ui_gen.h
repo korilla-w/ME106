@@ -380,6 +380,7 @@ extern lv_subject_t meter_wifi_manage_status_text;
 extern lv_subject_t meter_wifi_manage_source_text;
 extern lv_subject_t meter_wifi_manage_hotspot_state_text;
 extern lv_subject_t meter_wifi_manage_password_state_text;
+extern lv_subject_t meter_wifi_manage_ip_text;
 extern lv_subject_t meter_theme_index;
 extern lv_subject_t meter_screen_brightness;
 extern lv_subject_t meter_screen_timeout_index;
