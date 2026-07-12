@@ -360,11 +360,19 @@
         <string name="meter_system_feature_version" value="A"/>
         <string name="meter_system_build_date" value="260421"/>
         <string name="meter_system_runtime_text" value="0h 00m"/>
-        <!-- 固件升级 subject 只表达 UI 状态和升级意图；真正 OTA 下载/写 Flash 属于逻辑/执行层。 -->
+        <!-- 固件升级 subject 只表达 UI 状态和用户意图；真正的平台查询、下载和写 Flash 属于逻辑/执行层。 -->
         <string name="meter_upgrade_current_version" value="04.21"/>
         <string name="meter_upgrade_new_version" value="--"/>
-        <string name="meter_upgrade_status_text" value="&#x8BF7;&#x5148;&#x8FDE;&#x63A5;&#x70ED;&#x70B9;"/>
-        <int name="meter_upgrade_request" value="0" min_value="0" max_value="1"/>
+        <string name="meter_upgrade_file_size_text" value="--"/>
+        <string name="meter_upgrade_release_notes" value="&#x6682;&#x65E0;&#x66F4;&#x65B0;&#x8BF4;&#x660E;"/>
+        <string name="meter_upgrade_status_text" value="&#x70B9;&#x51FB;&#x68C0;&#x67E5;&#x66F4;&#x65B0;"/>
+        <string name="meter_upgrade_progress_text" value="0%"/>
+        <int name="meter_upgrade_progress" value="0" min_value="0" max_value="100"/>
+        <!-- UI 状态：0空闲，1查询中，2已是最新，3发现更新，4启动中，5下载中，6写入中。 -->
+        <int name="meter_upgrade_ui_state" value="0" min_value="0" max_value="6"/>
+        <!-- 用户意图：0无动作，1检查更新，2确认立即升级。 -->
+        <int name="meter_upgrade_request" value="0" min_value="0" max_value="2"/>
+        <int name="meter_upgrade_confirm_popup" value="0" min_value="0" max_value="1"/>
         <!-- 付费功能联系方式弹窗只保存 UI 展开状态；授权校验和购买流程由逻辑层处理。 -->
         <int name="meter_paid_contact_popup" value="0" min_value="0" max_value="1"/>
     </subjects>
