@@ -362,7 +362,7 @@
         <string name="meter_system_runtime_text" value="0h 00m"/>
         <!-- 固件升级 subject 只表达 UI 状态和用户意图；真正的平台查询、下载和写 Flash 属于逻辑/执行层。 -->
         <string name="meter_upgrade_current_version" value="04.21"/>
-        <string name="meter_upgrade_new_version" value="--"/>
+        <string name="meter_upgrade_new_version" value="&#x5F85;&#x68C0;&#x6D4B;"/>
         <string name="meter_upgrade_file_size_text" value="--"/>
         <string name="meter_upgrade_release_notes" value="&#x6682;&#x65E0;&#x66F4;&#x65B0;&#x8BF4;&#x660E;"/>
         <string name="meter_upgrade_status_text" value="&#x70B9;&#x51FB;&#x68C0;&#x67E5;&#x66F4;&#x65B0;"/>

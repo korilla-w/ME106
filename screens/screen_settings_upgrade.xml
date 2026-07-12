@@ -27,10 +27,10 @@
             <lv_image src="meter_icon_update" x="35" y="55" style_transform_pivot_x="8" style_transform_pivot_y="8" style_transform_scale_x="245" style_transform_scale_y="245">
                 <style name="me106_icon_cyan"/>
             </lv_image>
-            <lv_label text="OTA" x="82" y="48" width="56">
+            <lv_label text="OTA" x="82" y="57" width="42">
                 <style name="me106_text_18_cyan"/>
             </lv_label>
-            <lv_label bind_text="meter_upgrade_status_text" x="82" y="73" width="152">
+            <lv_label bind_text="meter_upgrade_status_text" x="128" y="60" width="108">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
@@ -98,7 +98,7 @@
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
-            <lv_bar name="upgrade_progress_bar" x="16" y="201" width="288" height="4" bind_value="meter_upgrade_progress" min_value="0" max_value="100" style_radius="2" style_bg_color="0x30343B" style_bg_opa="255" style_border_width="0" style_pad_all="0" style_bg_color-indicator="0x20D3D5" style_bg_opa-indicator="255" style_radius-indicator="2"/>
+            <lv_bar name="upgrade_progress_bar" x="16" y="198" width="288" height="7" bind_value="meter_upgrade_progress" min_value="0" max_value="100" style_radius="4" style_bg_color="0x30343B" style_bg_opa="255" style_border_width="0" style_pad_all="0" style_bg_color-indicator="0x20D3D5" style_bg_opa-indicator="255" style_radius-indicator="4"/>
 
             <lv_button name="upgrade_action_btn" x="248" y="154" width="64" height="45">
                 <style name="me106_panel_blue_r6"/>
