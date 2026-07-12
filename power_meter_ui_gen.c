@@ -349,8 +349,14 @@ lv_subject_t meter_system_build_date;
 lv_subject_t meter_system_runtime_text;
 lv_subject_t meter_upgrade_current_version;
 lv_subject_t meter_upgrade_new_version;
+lv_subject_t meter_upgrade_file_size_text;
+lv_subject_t meter_upgrade_release_notes;
 lv_subject_t meter_upgrade_status_text;
+lv_subject_t meter_upgrade_progress_text;
+lv_subject_t meter_upgrade_progress;
+lv_subject_t meter_upgrade_ui_state;
 lv_subject_t meter_upgrade_request;
+lv_subject_t meter_upgrade_confirm_popup;
 lv_subject_t meter_paid_contact_popup;
 
 /**********************
@@ -1491,7 +1497,23 @@ void power_meter_ui_init_gen(const char * asset_path)
                            meter_upgrade_new_version_buf,
                            meter_upgrade_new_version_prev_buf,
                            UI_SUBJECT_STRING_LENGTH,
+                           "待检测"
+                          );
+    static char meter_upgrade_file_size_text_buf[UI_SUBJECT_STRING_LENGTH];
+    static char meter_upgrade_file_size_text_prev_buf[UI_SUBJECT_STRING_LENGTH];
+    lv_subject_init_string(&meter_upgrade_file_size_text,
+                           meter_upgrade_file_size_text_buf,
+                           meter_upgrade_file_size_text_prev_buf,
+                           UI_SUBJECT_STRING_LENGTH,
                            "--"
+                          );
+    static char meter_upgrade_release_notes_buf[UI_SUBJECT_STRING_LENGTH];
+    static char meter_upgrade_release_notes_prev_buf[UI_SUBJECT_STRING_LENGTH];
+    lv_subject_init_string(&meter_upgrade_release_notes,
+                           meter_upgrade_release_notes_buf,
+                           meter_upgrade_release_notes_prev_buf,
+                           UI_SUBJECT_STRING_LENGTH,
+                           "暂无更新说明"
                           );
     static char meter_upgrade_status_text_buf[UI_SUBJECT_STRING_LENGTH];
     static char meter_upgrade_status_text_prev_buf[UI_SUBJECT_STRING_LENGTH];
@@ -1499,11 +1521,28 @@ void power_meter_ui_init_gen(const char * asset_path)
                            meter_upgrade_status_text_buf,
                            meter_upgrade_status_text_prev_buf,
                            UI_SUBJECT_STRING_LENGTH,
-                           "请先连接热点"
+                           "点击检查更新"
                           );
+    static char meter_upgrade_progress_text_buf[UI_SUBJECT_STRING_LENGTH];
+    static char meter_upgrade_progress_text_prev_buf[UI_SUBJECT_STRING_LENGTH];
+    lv_subject_init_string(&meter_upgrade_progress_text,
+                           meter_upgrade_progress_text_buf,
+                           meter_upgrade_progress_text_prev_buf,
+                           UI_SUBJECT_STRING_LENGTH,
+                           "0%"
+                          );
+    lv_subject_init_int(&meter_upgrade_progress, 0);
+    lv_subject_set_min_value_int(&meter_upgrade_progress, 0);
+    lv_subject_set_max_value_int(&meter_upgrade_progress, 100);
+    lv_subject_init_int(&meter_upgrade_ui_state, 0);
+    lv_subject_set_min_value_int(&meter_upgrade_ui_state, 0);
+    lv_subject_set_max_value_int(&meter_upgrade_ui_state, 6);
     lv_subject_init_int(&meter_upgrade_request, 0);
     lv_subject_set_min_value_int(&meter_upgrade_request, 0);
-    lv_subject_set_max_value_int(&meter_upgrade_request, 1);
+    lv_subject_set_max_value_int(&meter_upgrade_request, 2);
+    lv_subject_init_int(&meter_upgrade_confirm_popup, 0);
+    lv_subject_set_min_value_int(&meter_upgrade_confirm_popup, 0);
+    lv_subject_set_max_value_int(&meter_upgrade_confirm_popup, 1);
     lv_subject_init_int(&meter_paid_contact_popup, 0);
     lv_subject_set_min_value_int(&meter_paid_contact_popup, 0);
     lv_subject_set_max_value_int(&meter_paid_contact_popup, 1);
@@ -1646,8 +1685,14 @@ void power_meter_ui_init_gen(const char * asset_path)
     lv_xml_register_subject(NULL, "meter_system_runtime_text", &meter_system_runtime_text);
     lv_xml_register_subject(NULL, "meter_upgrade_current_version", &meter_upgrade_current_version);
     lv_xml_register_subject(NULL, "meter_upgrade_new_version", &meter_upgrade_new_version);
+    lv_xml_register_subject(NULL, "meter_upgrade_file_size_text", &meter_upgrade_file_size_text);
+    lv_xml_register_subject(NULL, "meter_upgrade_release_notes", &meter_upgrade_release_notes);
     lv_xml_register_subject(NULL, "meter_upgrade_status_text", &meter_upgrade_status_text);
+    lv_xml_register_subject(NULL, "meter_upgrade_progress_text", &meter_upgrade_progress_text);
+    lv_xml_register_subject(NULL, "meter_upgrade_progress", &meter_upgrade_progress);
+    lv_xml_register_subject(NULL, "meter_upgrade_ui_state", &meter_upgrade_ui_state);
     lv_xml_register_subject(NULL, "meter_upgrade_request", &meter_upgrade_request);
+    lv_xml_register_subject(NULL, "meter_upgrade_confirm_popup", &meter_upgrade_confirm_popup);
     lv_xml_register_subject(NULL, "meter_paid_contact_popup", &meter_paid_contact_popup);
 
     /* Register callbacks */

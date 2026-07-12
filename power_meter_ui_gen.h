@@ -482,8 +482,14 @@ extern lv_subject_t meter_system_build_date;
 extern lv_subject_t meter_system_runtime_text;
 extern lv_subject_t meter_upgrade_current_version;
 extern lv_subject_t meter_upgrade_new_version;
+extern lv_subject_t meter_upgrade_file_size_text;
+extern lv_subject_t meter_upgrade_release_notes;
 extern lv_subject_t meter_upgrade_status_text;
+extern lv_subject_t meter_upgrade_progress_text;
+extern lv_subject_t meter_upgrade_progress;
+extern lv_subject_t meter_upgrade_ui_state;
 extern lv_subject_t meter_upgrade_request;
+extern lv_subject_t meter_upgrade_confirm_popup;
 extern lv_subject_t meter_paid_contact_popup;
 
 /**********************
