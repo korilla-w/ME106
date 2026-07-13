@@ -543,7 +543,6 @@ void power_meter_ui_init_gen(const char * asset_path);
 #include "screens/screen_home_gen.h"
 #include "screens/screen_line_voltage_demand_gen.h"
 #include "screens/screen_paid_harmonic_gen.h"
-#include "screens/screen_paid_max_demand_gen.h"
 #include "screens/screen_phase_frequency_gen.h"
 #include "screens/screen_power_quality_analysis_gen.h"
 #include "screens/screen_reactive_power_gen.h"

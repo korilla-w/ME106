@@ -53,7 +53,6 @@ lv_obj_t * screen_paid_harmonic_create(void)
     lv_obj_add_style(lv_obj_0, &me106_fill_black, 0);
     lv_obj_bind_style(lv_obj_0, &me106_theme_light_screen_bg, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_obj_0, &me106_theme_alarm_screen_bg, 0, &meter_theme_index, 2);
-    lv_obj_add_subject_set_int_event(lv_obj_0, &meter_paid_contact_popup, LV_EVENT_SCREEN_LOADED, 0);
     lv_obj_t * page_content = lv_obj_create(lv_obj_0);
     lv_obj_set_name(page_content, "page_content");
     lv_obj_set_x(page_content, 0);
@@ -95,7 +94,7 @@ lv_obj_t * screen_paid_harmonic_create(void)
     lv_obj_add_style(lv_image_0, &me106_icon_cyan, 0);
     
     lv_obj_t * lv_label_1 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_1, "需付费升级");
+    lv_label_set_text(lv_label_1, "付费功能");
     lv_obj_set_x(lv_label_1, 80);
     lv_obj_set_y(lv_label_1, 119);
     lv_obj_set_width(lv_label_1, 160);
@@ -104,98 +103,22 @@ lv_obj_t * screen_paid_harmonic_create(void)
     lv_obj_bind_style(lv_label_1, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_2 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_2, "谐波频谱和波形曲线属于谐波功能");
-    lv_obj_set_x(lv_label_2, 28);
+    lv_label_set_text(lv_label_2, "需要付费升级后使用");
+    lv_obj_set_x(lv_label_2, 50);
     lv_obj_set_y(lv_label_2, 148);
-    lv_obj_set_width(lv_label_2, 264);
+    lv_obj_set_width(lv_label_2, 220);
     lv_obj_add_style(lv_label_2, &me106_text_16_gray_ba_center, 0);
     lv_obj_bind_style(lv_label_2, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_2, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     
     lv_obj_t * lv_label_3 = lv_label_create(page_content);
-    lv_label_set_text(lv_label_3, "请联系服务商开通");
+    lv_label_set_text(lv_label_3, "王工：13328775236");
     lv_obj_set_x(lv_label_3, 70);
     lv_obj_set_y(lv_label_3, 174);
     lv_obj_set_width(lv_label_3, 180);
     lv_obj_add_style(lv_label_3, &me106_text_14_gray_ba_center, 0);
     lv_obj_bind_style(lv_label_3, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_3, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
-    lv_obj_t * paid_harmonic_contact_popup = lv_obj_create(page_content);
-    lv_obj_set_name(paid_harmonic_contact_popup, "paid_harmonic_contact_popup");
-    lv_obj_set_x(paid_harmonic_contact_popup, 34);
-    lv_obj_set_y(paid_harmonic_contact_popup, 31);
-    lv_obj_set_width(paid_harmonic_contact_popup, 252);
-    lv_obj_set_height(paid_harmonic_contact_popup, 162);
-    lv_obj_set_style_pad_all(paid_harmonic_contact_popup, 0, 0);
-    lv_obj_set_style_border_width(paid_harmonic_contact_popup, 0, 0);
-    lv_obj_set_flag(paid_harmonic_contact_popup, LV_OBJ_FLAG_SCROLLABLE, false);
-    lv_obj_add_style(paid_harmonic_contact_popup, &me106_panel_gray24_r8, 0);
-    lv_obj_bind_style(paid_harmonic_contact_popup, &me106_theme_light_panel, 0, &meter_theme_index, 1);
-    lv_obj_bind_style(paid_harmonic_contact_popup, &me106_theme_alarm_panel, 0, &meter_theme_index, 2);
-    lv_obj_bind_flag_if_not_eq(paid_harmonic_contact_popup, &meter_paid_contact_popup, LV_OBJ_FLAG_HIDDEN, 1);
-    lv_obj_t * lv_label_4 = lv_label_create(paid_harmonic_contact_popup);
-    lv_label_set_text(lv_label_4, "升级联系方式");
-    lv_obj_set_x(lv_label_4, 18);
-    lv_obj_set_y(lv_label_4, 14);
-    lv_obj_set_width(lv_label_4, 132);
-    lv_obj_add_style(lv_label_4, &me106_text_16_white, 0);
-    lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
-    lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
-    lv_obj_t * lv_image_1 = lv_image_create(paid_harmonic_contact_popup);
-    lv_image_set_src(lv_image_1, meter_power_quality_qr);
-    lv_obj_set_x(lv_image_1, 18);
-    lv_obj_set_y(lv_image_1, 44);
-    lv_obj_set_width(lv_image_1, 92);
-    lv_obj_set_height(lv_image_1, 92);
-    
-    lv_obj_t * lv_label_5 = lv_label_create(paid_harmonic_contact_popup);
-    lv_label_set_text(lv_label_5, "扫码开通");
-    lv_obj_set_x(lv_label_5, 126);
-    lv_obj_set_y(lv_label_5, 48);
-    lv_obj_set_width(lv_label_5, 96);
-    lv_obj_add_style(lv_label_5, &me106_text_16_white, 0);
-    lv_obj_bind_style(lv_label_5, &me106_theme_light_text, 0, &meter_theme_index, 1);
-    lv_obj_bind_style(lv_label_5, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
-    lv_obj_t * lv_label_6 = lv_label_create(paid_harmonic_contact_popup);
-    lv_label_set_text(lv_label_6, "王工：13328775236");
-    lv_obj_set_x(lv_label_6, 126);
-    lv_obj_set_y(lv_label_6, 76);
-    lv_obj_set_width(lv_label_6, 112);
-    lv_obj_add_style(lv_label_6, &me106_text_14_gray_ba, 0);
-    lv_obj_bind_style(lv_label_6, &me106_theme_light_muted, 0, &meter_theme_index, 1);
-    lv_obj_bind_style(lv_label_6, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
-    lv_obj_t * lv_label_7 = lv_label_create(paid_harmonic_contact_popup);
-    lv_label_set_text(lv_label_7, "返回键关闭");
-    lv_obj_set_x(lv_label_7, 126);
-    lv_obj_set_y(lv_label_7, 105);
-    lv_obj_set_width(lv_label_7, 104);
-    lv_obj_add_style(lv_label_7, &me106_text_14_gray_ba, 0);
-    lv_obj_bind_style(lv_label_7, &me106_theme_light_muted, 0, &meter_theme_index, 1);
-    lv_obj_bind_style(lv_label_7, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
-    lv_obj_t * paid_harmonic_popup_close = lv_button_create(paid_harmonic_contact_popup);
-    lv_obj_set_name(paid_harmonic_popup_close, "paid_harmonic_popup_close");
-    lv_obj_set_x(paid_harmonic_popup_close, 212);
-    lv_obj_set_y(paid_harmonic_popup_close, 8);
-    lv_obj_set_width(paid_harmonic_popup_close, 30);
-    lv_obj_set_height(paid_harmonic_popup_close, 30);
-    lv_obj_set_style_bg_opa(paid_harmonic_popup_close, 0, 0);
-    lv_obj_set_style_border_width(paid_harmonic_popup_close, 0, 0);
-    lv_obj_set_style_shadow_width(paid_harmonic_popup_close, 0, 0);
-    lv_obj_set_style_pad_all(paid_harmonic_popup_close, 0, 0);
-    lv_obj_t * lv_label_8 = lv_label_create(paid_harmonic_popup_close);
-    lv_label_set_text(lv_label_8, "X");
-    lv_obj_set_align(lv_label_8, LV_ALIGN_CENTER);
-    lv_obj_set_width(lv_label_8, 30);
-    lv_obj_add_style(lv_label_8, &me106_text_14_gray_ba_center, 0);
-    lv_obj_bind_style(lv_label_8, &me106_theme_light_muted, 0, &meter_theme_index, 1);
-    lv_obj_bind_style(lv_label_8, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
-    lv_obj_add_subject_set_int_event(paid_harmonic_popup_close, &meter_paid_contact_popup, LV_EVENT_CLICKED, 0);
     
     lv_obj_t * screen_paid_harmonic_bottom_bar = lv_obj_create(lv_obj_0);
     lv_obj_set_name(screen_paid_harmonic_bottom_bar, "screen_paid_harmonic_bottom_bar");
@@ -219,36 +142,15 @@ lv_obj_t * screen_paid_harmonic_create(void)
     lv_obj_add_style(paid_harmonic_btn_return, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(paid_harmonic_btn_return, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(paid_harmonic_btn_return, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-    lv_obj_bind_flag_if_eq(paid_harmonic_btn_return, &meter_paid_contact_popup, LV_OBJ_FLAG_HIDDEN, 1);
-    lv_obj_t * lv_image_2 = lv_image_create(paid_harmonic_btn_return);
-    lv_image_set_src(lv_image_2, meter_icon_return);
-    lv_obj_set_align(lv_image_2, LV_ALIGN_CENTER);
-    lv_obj_set_style_transform_pivot_x(lv_image_2, 8, 0);
-    lv_obj_set_style_transform_pivot_y(lv_image_2, 7, 0);
-    lv_obj_set_style_transform_scale_x(lv_image_2, 230, 0);
-    lv_obj_set_style_transform_scale_y(lv_image_2, 230, 0);
+    lv_obj_t * lv_image_1 = lv_image_create(paid_harmonic_btn_return);
+    lv_image_set_src(lv_image_1, meter_icon_return);
+    lv_obj_set_align(lv_image_1, LV_ALIGN_CENTER);
+    lv_obj_set_style_transform_pivot_x(lv_image_1, 8, 0);
+    lv_obj_set_style_transform_pivot_y(lv_image_1, 7, 0);
+    lv_obj_set_style_transform_scale_x(lv_image_1, 230, 0);
+    lv_obj_set_style_transform_scale_y(lv_image_1, 230, 0);
     
     lv_obj_add_screen_create_event(paid_harmonic_btn_return, LV_EVENT_CLICKED, screen_function_menu_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-    
-    lv_obj_t * paid_harmonic_btn_close_popup = lv_button_create(lv_obj_0);
-    lv_obj_set_name(paid_harmonic_btn_close_popup, "paid_harmonic_btn_close_popup");
-    lv_obj_set_x(paid_harmonic_btn_close_popup, 0);
-    lv_obj_set_y(paid_harmonic_btn_close_popup, 207);
-    lv_obj_set_width(paid_harmonic_btn_close_popup, 79);
-    lv_obj_set_height(paid_harmonic_btn_close_popup, 32);
-    lv_obj_add_style(paid_harmonic_btn_close_popup, &me106_btn_flat_gray47, 0);
-    lv_obj_bind_style(paid_harmonic_btn_close_popup, &me106_theme_light_nav, 0, &meter_theme_index, 1);
-    lv_obj_bind_style(paid_harmonic_btn_close_popup, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-    lv_obj_bind_flag_if_not_eq(paid_harmonic_btn_close_popup, &meter_paid_contact_popup, LV_OBJ_FLAG_HIDDEN, 1);
-    lv_obj_t * lv_image_3 = lv_image_create(paid_harmonic_btn_close_popup);
-    lv_image_set_src(lv_image_3, meter_icon_return);
-    lv_obj_set_align(lv_image_3, LV_ALIGN_CENTER);
-    lv_obj_set_style_transform_pivot_x(lv_image_3, 8, 0);
-    lv_obj_set_style_transform_pivot_y(lv_image_3, 7, 0);
-    lv_obj_set_style_transform_scale_x(lv_image_3, 230, 0);
-    lv_obj_set_style_transform_scale_y(lv_image_3, 230, 0);
-    
-    lv_obj_add_subject_set_int_event(paid_harmonic_btn_close_popup, &meter_paid_contact_popup, LV_EVENT_CLICKED, 0);
     
     lv_obj_t * paid_harmonic_btn_idle_1 = lv_button_create(lv_obj_0);
     lv_obj_set_name(paid_harmonic_btn_idle_1, "paid_harmonic_btn_idle_1");
@@ -279,11 +181,9 @@ lv_obj_t * screen_paid_harmonic_create(void)
     lv_obj_add_style(paid_harmonic_btn_idle_3, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(paid_harmonic_btn_idle_3, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(paid_harmonic_btn_idle_3, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-    lv_obj_t * lv_image_4 = lv_image_create(paid_harmonic_btn_idle_3);
-    lv_image_set_src(lv_image_4, meter_icon_select);
-    lv_obj_set_align(lv_image_4, LV_ALIGN_CENTER);
-    
-    lv_obj_add_subject_set_int_event(paid_harmonic_btn_idle_3, &meter_paid_contact_popup, LV_EVENT_CLICKED, 1);
+    lv_obj_t * lv_image_2 = lv_image_create(paid_harmonic_btn_idle_3);
+    lv_image_set_src(lv_image_2, meter_icon_select);
+    lv_obj_set_align(lv_image_2, LV_ALIGN_CENTER);
     
     
     /* create animation timeline(s) */

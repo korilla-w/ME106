@@ -32,7 +32,6 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_home_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_line_voltage_demand_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_paid_harmonic_gen.c
-  ${CMAKE_CURRENT_LIST_DIR}/screens/screen_paid_max_demand_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_phase_frequency_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_power_quality_analysis_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_reactive_power_gen.c

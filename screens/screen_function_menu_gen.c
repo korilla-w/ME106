@@ -76,7 +76,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_image_set_src(function_brand_logo, meter_brand_logo);
     lv_obj_set_x(function_brand_logo, 0);
     lv_obj_set_y(function_brand_logo, 1);
-
+    
     lv_obj_t * function_page_title = lv_label_create(function_brand);
     lv_obj_set_name(function_page_title, "function_page_title");
     lv_label_set_text(function_page_title, "功能菜单");
@@ -86,7 +86,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_add_style(function_page_title, &me106_text_14_white, 0);
     lv_obj_bind_style(function_page_title, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(function_page_title, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-
+    
     lv_obj_t * function_menu_list = lv_obj_create(page_content);
     lv_obj_set_name(function_menu_list, "function_menu_list");
     lv_obj_set_x(function_menu_list, 24);
@@ -131,7 +131,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_bind_style(function_item_harmonic_selected_bg, &me106_theme_light_accent, 0, &meter_theme_index, 1);
     lv_obj_bind_style(function_item_harmonic_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(function_item_harmonic_selected_bg, &meter_function_menu_selected_index, LV_OBJ_FLAG_HIDDEN, 0);
-
+    
     lv_obj_add_screen_create_event(function_item_harmonic, LV_EVENT_CLICKED, screen_harmonic_spectrum_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
     lv_obj_t * lv_image_0 = lv_image_create(function_item_harmonic);
     lv_image_set_src(lv_image_0, meter_icon_harmonic);
@@ -141,7 +141,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_add_style(lv_image_0, &me106_icon_white, 0);
     lv_obj_bind_style(lv_image_0, &me106_theme_light_icon, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_image_0, &me106_theme_alarm_icon, 0, &meter_theme_index, 2);
-
+    
     lv_obj_t * lv_label_0 = lv_label_create(function_item_harmonic);
     lv_label_set_text(lv_label_0, "谐波频谱");
     lv_obj_set_align(lv_label_0, LV_ALIGN_LEFT_MID);
@@ -152,7 +152,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_bind_style(lv_label_0, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     lv_obj_bind_style(lv_label_0, &me106_text_16_white, 0, &meter_function_menu_selected_index, 0);
-
+    
     lv_obj_t * lv_label_1 = lv_label_create(function_item_harmonic);
     lv_label_set_text(lv_label_1, "›");
     lv_obj_set_align(lv_label_1, LV_ALIGN_RIGHT_MID);
@@ -162,7 +162,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_add_style(lv_label_1, &me106_text_18_white_center, 0);
     lv_obj_bind_style(lv_label_1, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_1, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-
+    
     lv_obj_t * function_item_waveform = lv_button_create(function_menu_items);
     lv_obj_set_name(function_item_waveform, "function_item_waveform");
     lv_obj_set_x(function_item_waveform, 0);
@@ -186,7 +186,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_bind_style(function_item_waveform_selected_bg, &me106_theme_light_accent, 0, &meter_theme_index, 1);
     lv_obj_bind_style(function_item_waveform_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(function_item_waveform_selected_bg, &meter_function_menu_selected_index, LV_OBJ_FLAG_HIDDEN, 1);
-
+    
     lv_obj_add_screen_create_event(function_item_waveform, LV_EVENT_CLICKED, screen_harmonic_waveform_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
     lv_obj_t * lv_image_1 = lv_image_create(function_item_waveform);
     lv_image_set_src(lv_image_1, meter_icon_waveform);
@@ -196,7 +196,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_add_style(lv_image_1, &me106_icon_white, 0);
     lv_obj_bind_style(lv_image_1, &me106_theme_light_icon, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_image_1, &me106_theme_alarm_icon, 0, &meter_theme_index, 2);
-
+    
     lv_obj_t * lv_label_2 = lv_label_create(function_item_waveform);
     lv_label_set_text(lv_label_2, "波形曲线");
     lv_obj_set_align(lv_label_2, LV_ALIGN_LEFT_MID);
@@ -207,7 +207,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_bind_style(lv_label_2, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_2, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     lv_obj_bind_style(lv_label_2, &me106_text_16_white, 0, &meter_function_menu_selected_index, 1);
-
+    
     lv_obj_t * lv_label_3 = lv_label_create(function_item_waveform);
     lv_label_set_text(lv_label_3, "›");
     lv_obj_set_align(lv_label_3, LV_ALIGN_RIGHT_MID);
@@ -217,7 +217,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_add_style(lv_label_3, &me106_text_18_white_center, 0);
     lv_obj_bind_style(lv_label_3, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_3, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-
+    
     lv_obj_t * function_item_quality = lv_button_create(function_menu_items);
     lv_obj_set_name(function_item_quality, "function_item_quality");
     lv_obj_set_x(function_item_quality, 0);
@@ -241,7 +241,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_bind_style(function_item_quality_selected_bg, &me106_theme_light_accent, 0, &meter_theme_index, 1);
     lv_obj_bind_style(function_item_quality_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(function_item_quality_selected_bg, &meter_function_menu_selected_index, LV_OBJ_FLAG_HIDDEN, 2);
-
+    
     lv_obj_add_screen_create_event(function_item_quality, LV_EVENT_CLICKED, screen_power_quality_analysis_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
     lv_obj_t * lv_image_2 = lv_image_create(function_item_quality);
     lv_image_set_src(lv_image_2, meter_icon_electric_energy);
@@ -251,7 +251,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_add_style(lv_image_2, &me106_icon_white, 0);
     lv_obj_bind_style(lv_image_2, &me106_theme_light_icon, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_image_2, &me106_theme_alarm_icon, 0, &meter_theme_index, 2);
-
+    
     lv_obj_t * lv_label_4 = lv_label_create(function_item_quality);
     lv_label_set_text(lv_label_4, "电能质量分析");
     lv_obj_set_align(lv_label_4, LV_ALIGN_LEFT_MID);
@@ -262,7 +262,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     lv_obj_bind_style(lv_label_4, &me106_text_16_white, 0, &meter_function_menu_selected_index, 2);
-
+    
     lv_obj_t * lv_label_5 = lv_label_create(function_item_quality);
     lv_label_set_text(lv_label_5, "›");
     lv_obj_set_align(lv_label_5, LV_ALIGN_RIGHT_MID);
@@ -272,7 +272,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_add_style(lv_label_5, &me106_text_18_white_center, 0);
     lv_obj_bind_style(lv_label_5, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_5, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-
+    
     lv_obj_t * screen_function_menu_bottom_bar = lv_obj_create(lv_obj_0);
     lv_obj_set_name(screen_function_menu_bottom_bar, "screen_function_menu_bottom_bar");
     lv_obj_set_x(screen_function_menu_bottom_bar, 0);
@@ -285,7 +285,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_add_style(screen_function_menu_bottom_bar, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(screen_function_menu_bottom_bar, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(screen_function_menu_bottom_bar, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-
+    
     lv_obj_t * function_btn_return = lv_button_create(lv_obj_0);
     lv_obj_set_name(function_btn_return, "function_btn_return");
     lv_obj_set_x(function_btn_return, 0);
@@ -302,9 +302,9 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_3, 7, 0);
     lv_obj_set_style_transform_scale_x(lv_image_3, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_3, 230, 0);
-
+    
     lv_obj_add_screen_create_event(function_btn_return, LV_EVENT_CLICKED, screen_home_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-
+    
     lv_obj_t * function_btn_down = lv_button_create(lv_obj_0);
     lv_obj_set_name(function_btn_down, "function_btn_down");
     lv_obj_set_x(function_btn_down, 80);
@@ -321,12 +321,12 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_4, 5, 0);
     lv_obj_set_style_transform_scale_x(lv_image_4, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_4, 230, 0);
-
+    
     lv_subject_increment_dsc_t * subject_increment_event_0 = lv_obj_add_subject_increment_event(function_btn_down, &meter_function_menu_selected_index, LV_EVENT_CLICKED, 1);
     lv_obj_set_subject_increment_event_min_value(function_btn_down, subject_increment_event_0, 0);
     lv_obj_set_subject_increment_event_max_value(function_btn_down, subject_increment_event_0, 2);
     lv_obj_set_subject_increment_event_rollover(function_btn_down, subject_increment_event_0, true);
-
+    
     lv_obj_t * function_btn_up = lv_button_create(lv_obj_0);
     lv_obj_set_name(function_btn_up, "function_btn_up");
     lv_obj_set_x(function_btn_up, 160);
@@ -343,12 +343,12 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_5, 5, 0);
     lv_obj_set_style_transform_scale_x(lv_image_5, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_5, 230, 0);
-
+    
     lv_subject_increment_dsc_t * subject_increment_event_1 = lv_obj_add_subject_increment_event(function_btn_up, &meter_function_menu_selected_index, LV_EVENT_CLICKED, -1);
     lv_obj_set_subject_increment_event_min_value(function_btn_up, subject_increment_event_1, 0);
     lv_obj_set_subject_increment_event_max_value(function_btn_up, subject_increment_event_1, 2);
     lv_obj_set_subject_increment_event_rollover(function_btn_up, subject_increment_event_1, true);
-
+    
     lv_obj_t * function_btn_yes = lv_button_create(lv_obj_0);
     lv_obj_set_name(function_btn_yes, "function_btn_yes");
     lv_obj_set_x(function_btn_yes, 240);
@@ -365,7 +365,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_6, 6, 0);
     lv_obj_set_style_transform_scale_x(lv_image_6, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_6, 230, 0);
-
+    
     lv_obj_t * function_btn_yes_harmonic = lv_button_create(lv_obj_0);
     lv_obj_set_name(function_btn_yes_harmonic, "function_btn_yes_harmonic");
     lv_obj_set_x(function_btn_yes_harmonic, 240);
@@ -377,7 +377,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_set_style_shadow_width(function_btn_yes_harmonic, 0, 0);
     lv_obj_bind_flag_if_not_eq(function_btn_yes_harmonic, &meter_function_menu_selected_index, LV_OBJ_FLAG_HIDDEN, 0);
     lv_obj_add_screen_create_event(function_btn_yes_harmonic, LV_EVENT_CLICKED, screen_harmonic_spectrum_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-
+    
     lv_obj_t * function_btn_yes_waveform = lv_button_create(lv_obj_0);
     lv_obj_set_name(function_btn_yes_waveform, "function_btn_yes_waveform");
     lv_obj_set_x(function_btn_yes_waveform, 240);
@@ -389,7 +389,7 @@ lv_obj_t * screen_function_menu_create(void)
     lv_obj_set_style_shadow_width(function_btn_yes_waveform, 0, 0);
     lv_obj_bind_flag_if_not_eq(function_btn_yes_waveform, &meter_function_menu_selected_index, LV_OBJ_FLAG_HIDDEN, 1);
     lv_obj_add_screen_create_event(function_btn_yes_waveform, LV_EVENT_CLICKED, screen_harmonic_waveform_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-
+    
     lv_obj_t * function_btn_yes_quality = lv_button_create(lv_obj_0);
     lv_obj_set_name(function_btn_yes_quality, "function_btn_yes_quality");
     lv_obj_set_x(function_btn_yes_quality, 240);
