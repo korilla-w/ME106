@@ -68,7 +68,7 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_image_set_src(line_demand_brand_logo, meter_brand_logo);
     lv_obj_set_x(line_demand_brand_logo, 20);
     lv_obj_set_y(line_demand_brand_logo, 17);
-    
+
     lv_obj_t * lv_label_0 = lv_label_create(page_content);
     lv_label_set_text(lv_label_0, "线电压(V)和需量");
     lv_obj_set_x(lv_label_0, 156);
@@ -77,7 +77,7 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_add_style(lv_label_0, &me106_text_16_white_right, 0);
     lv_obj_bind_style(lv_label_0, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_1 = lv_label_create(page_content);
     lv_label_set_text(lv_label_1, "AB线");
     lv_obj_set_x(lv_label_1, 24);
@@ -85,7 +85,7 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_add_style(lv_label_1, &me106_text_18_yellow, 0);
     lv_obj_bind_style(lv_label_1, &me106_theme_light_phase_a, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_1, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_2 = lv_label_create(page_content);
     lv_label_set_text(lv_label_2, "0.00");
     lv_obj_set_x(lv_label_2, 24);
@@ -93,14 +93,14 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_add_style(lv_label_2, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_2, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_2, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * line_ab_voltage_issue = lv_image_create(page_content);
     lv_obj_set_name(line_ab_voltage_issue, "line_ab_voltage_issue");
     lv_image_set_src(line_ab_voltage_issue, meter_icon_warning);
     lv_obj_set_x(line_ab_voltage_issue, 66);
     lv_obj_set_y(line_ab_voltage_issue, 58);
     lv_obj_bind_flag_if_not_eq(line_ab_voltage_issue, &meter_line_ab_voltage_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
     lv_obj_t * lv_label_3 = lv_label_create(page_content);
     lv_label_set_text(lv_label_3, "BC线");
     lv_obj_set_x(lv_label_3, 123);
@@ -108,7 +108,7 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_add_style(lv_label_3, &me106_text_18_green, 0);
     lv_obj_bind_style(lv_label_3, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_3, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_4 = lv_label_create(page_content);
     lv_label_set_text(lv_label_4, "0.00");
     lv_obj_set_x(lv_label_4, 123);
@@ -116,14 +116,14 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_add_style(lv_label_4, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * line_bc_voltage_issue = lv_image_create(page_content);
     lv_obj_set_name(line_bc_voltage_issue, "line_bc_voltage_issue");
     lv_image_set_src(line_bc_voltage_issue, meter_icon_warning);
     lv_obj_set_x(line_bc_voltage_issue, 165);
     lv_obj_set_y(line_bc_voltage_issue, 58);
     lv_obj_bind_flag_if_not_eq(line_bc_voltage_issue, &meter_line_bc_voltage_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
     lv_obj_t * lv_label_5 = lv_label_create(page_content);
     lv_label_set_text(lv_label_5, "CA线");
     lv_obj_set_x(lv_label_5, 222);
@@ -131,7 +131,7 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_add_style(lv_label_5, &me106_text_18_red, 0);
     lv_obj_bind_style(lv_label_5, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_5, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_6 = lv_label_create(page_content);
     lv_label_set_text(lv_label_6, "0.00");
     lv_obj_set_x(lv_label_6, 222);
@@ -139,14 +139,14 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_add_style(lv_label_6, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_6, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_6, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * line_ca_voltage_issue = lv_image_create(page_content);
     lv_obj_set_name(line_ca_voltage_issue, "line_ca_voltage_issue");
     lv_image_set_src(line_ca_voltage_issue, meter_icon_warning);
     lv_obj_set_x(line_ca_voltage_issue, 264);
     lv_obj_set_y(line_ca_voltage_issue, 58);
     lv_obj_bind_flag_if_not_eq(line_ca_voltage_issue, &meter_line_ca_voltage_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
     lv_obj_t * lv_label_7 = lv_label_create(page_content);
     lv_label_set_text(lv_label_7, "当前需量(kW)");
     lv_obj_set_x(lv_label_7, 23);
@@ -154,22 +154,23 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_add_style(lv_label_7, &me106_text_16_gray_ba, 0);
     lv_obj_bind_style(lv_label_7, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_7, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_8 = lv_label_create(page_content);
+    lv_obj_set_name(lv_label_8, "line_current_demand_value");
     lv_label_set_text(lv_label_8, "0.0");
     lv_obj_set_x(lv_label_8, 23);
     lv_obj_set_y(lv_label_8, 142);
     lv_obj_add_style(lv_label_8, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_8, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_8, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * line_current_demand_issue = lv_image_create(page_content);
     lv_obj_set_name(line_current_demand_issue, "line_current_demand_issue");
     lv_image_set_src(line_current_demand_issue, meter_icon_warning);
     lv_obj_set_x(line_current_demand_issue, 125);
     lv_obj_set_y(line_current_demand_issue, 123);
     lv_obj_bind_flag_if_not_eq(line_current_demand_issue, &meter_line_current_demand_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
     lv_obj_t * lv_label_9 = lv_label_create(page_content);
     lv_label_set_text(lv_label_9, "最大需量(kW)");
     lv_obj_set_x(lv_label_9, 157);
@@ -177,22 +178,34 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_add_style(lv_label_9, &me106_text_16_gray_ba, 0);
     lv_obj_bind_style(lv_label_9, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_9, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_10 = lv_label_create(page_content);
+    lv_obj_set_name(lv_label_10, "line_max_demand_value");
     lv_label_set_text(lv_label_10, "0.00");
     lv_obj_set_x(lv_label_10, 157);
     lv_obj_set_y(lv_label_10, 142);
     lv_obj_add_style(lv_label_10, &me106_text_18_white, 0);
     lv_obj_bind_style(lv_label_10, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_10, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * line_max_demand_issue = lv_image_create(page_content);
     lv_obj_set_name(line_max_demand_issue, "line_max_demand_issue");
     lv_image_set_src(line_max_demand_issue, meter_icon_warning);
     lv_obj_set_x(line_max_demand_issue, 259);
     lv_obj_set_y(line_max_demand_issue, 123);
     lv_obj_bind_flag_if_not_eq(line_max_demand_issue, &meter_line_max_demand_issue, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
+    lv_obj_t * lv_label_11 = lv_label_create(page_content);
+    lv_obj_set_name(lv_label_11, "line_demand_paid_hint");
+    lv_label_set_text(lv_label_11, "不支持此功能，请联系购买");
+    lv_obj_set_x(lv_label_11, 24);
+    lv_obj_set_y(lv_label_11, 144);
+    lv_obj_set_width(lv_label_11, 280);
+    lv_obj_add_style(lv_label_11, &me106_text_18_yellow, 0);
+    lv_obj_bind_style(lv_label_11, &me106_theme_light_phase_a, 0, &meter_theme_index, 1);
+    lv_obj_bind_style(lv_label_11, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
+    lv_obj_add_flag(lv_label_11, LV_OBJ_FLAG_HIDDEN);
+
     lv_obj_t * screen_line_voltage_demand_bottom_bar = lv_obj_create(lv_obj_0);
     lv_obj_set_name(screen_line_voltage_demand_bottom_bar, "screen_line_voltage_demand_bottom_bar");
     lv_obj_set_x(screen_line_voltage_demand_bottom_bar, 0);
@@ -205,7 +218,7 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_add_style(screen_line_voltage_demand_bottom_bar, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(screen_line_voltage_demand_bottom_bar, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(screen_line_voltage_demand_bottom_bar, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * line_demand_btn_settings = lv_button_create(lv_obj_0);
     lv_obj_set_name(line_demand_btn_settings, "line_demand_btn_settings");
     lv_obj_set_x(line_demand_btn_settings, 0);
@@ -227,9 +240,9 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_0, 16, 0);
     lv_obj_set_style_transform_scale_x(lv_image_0, 110, 0);
     lv_obj_set_style_transform_scale_y(lv_image_0, 110, 0);
-    
+
     lv_obj_add_screen_create_event(line_demand_btn_settings, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_FADE_IN, 120, 0);
-    
+
     lv_obj_t * line_demand_btn_reserved = lv_button_create(lv_obj_0);
     lv_obj_set_name(line_demand_btn_reserved, "line_demand_btn_reserved");
     lv_obj_set_x(line_demand_btn_reserved, 80);
@@ -251,9 +264,9 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_1, 12, 0);
     lv_obj_set_style_transform_scale_x(lv_image_1, 150, 0);
     lv_obj_set_style_transform_scale_y(lv_image_1, 150, 0);
-    
+
     lv_obj_add_screen_create_event(line_demand_btn_reserved, LV_EVENT_CLICKED, screen_function_menu_create, LV_SCREEN_LOAD_ANIM_FADE_IN, 120, 0);
-    
+
     lv_obj_t * line_demand_btn_prev = lv_button_create(lv_obj_0);
     lv_obj_set_name(line_demand_btn_prev, "line_demand_btn_prev");
     lv_obj_set_x(line_demand_btn_prev, 160);
@@ -274,9 +287,9 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_2, 14, 0);
     lv_obj_set_style_transform_scale_x(lv_image_2, 120, 0);
     lv_obj_set_style_transform_scale_y(lv_image_2, 120, 0);
-    
+
     lv_obj_add_screen_create_event(line_demand_btn_prev, LV_EVENT_CLICKED, screen_phase_frequency_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-    
+
     lv_obj_t * line_demand_btn_next = lv_button_create(lv_obj_0);
     lv_obj_set_name(line_demand_btn_next, "line_demand_btn_next");
     lv_obj_set_x(line_demand_btn_next, 240);
@@ -297,10 +310,10 @@ lv_obj_t * screen_line_voltage_demand_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_3, 14, 0);
     lv_obj_set_style_transform_scale_x(lv_image_3, 120, 0);
     lv_obj_set_style_transform_scale_y(lv_image_3, 120, 0);
-    
+
     lv_obj_add_screen_create_event(line_demand_btn_next, LV_EVENT_CLICKED, screen_home_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-    
-    
+
+
     /* create animation timeline(s) */
     lv_anim_timeline_t ** at_array = lv_malloc(sizeof(lv_anim_timeline_t *) * _SCREEN_LINE_VOLTAGE_DEMAND_TIMELINE_CNT);
     at_array[SCREEN_LINE_VOLTAGE_DEMAND_TIMELINE_CONTENT_OPEN] = timeline_content_open_create(lv_obj_0);
