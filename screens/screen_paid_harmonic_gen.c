@@ -142,14 +142,6 @@ lv_obj_t * screen_paid_harmonic_create(void)
     lv_obj_add_style(paid_harmonic_btn_return, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(paid_harmonic_btn_return, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(paid_harmonic_btn_return, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-    lv_obj_t * lv_image_1 = lv_image_create(paid_harmonic_btn_return);
-    lv_image_set_src(lv_image_1, meter_icon_return);
-    lv_obj_set_align(lv_image_1, LV_ALIGN_CENTER);
-    lv_obj_set_style_transform_pivot_x(lv_image_1, 8, 0);
-    lv_obj_set_style_transform_pivot_y(lv_image_1, 7, 0);
-    lv_obj_set_style_transform_scale_x(lv_image_1, 230, 0);
-    lv_obj_set_style_transform_scale_y(lv_image_1, 230, 0);
-    
     lv_obj_add_screen_create_event(paid_harmonic_btn_return, LV_EVENT_CLICKED, screen_function_menu_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
     
     lv_obj_t * paid_harmonic_btn_idle_1 = lv_button_create(lv_obj_0);
@@ -181,11 +173,7 @@ lv_obj_t * screen_paid_harmonic_create(void)
     lv_obj_add_style(paid_harmonic_btn_idle_3, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(paid_harmonic_btn_idle_3, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(paid_harmonic_btn_idle_3, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-    lv_obj_t * lv_image_2 = lv_image_create(paid_harmonic_btn_idle_3);
-    lv_image_set_src(lv_image_2, meter_icon_select);
-    lv_obj_set_align(lv_image_2, LV_ALIGN_CENTER);
-    
-    
+
     /* create animation timeline(s) */
     lv_anim_timeline_t ** at_array = lv_malloc(sizeof(lv_anim_timeline_t *) * _SCREEN_PAID_HARMONIC_TIMELINE_CNT);
     at_array[SCREEN_PAID_HARMONIC_TIMELINE_CONTENT_OPEN] = timeline_content_open_create(lv_obj_0);
