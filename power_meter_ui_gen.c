@@ -227,6 +227,8 @@ lv_style_t me106_move_y_n416;
 
 lv_subject_t meter_settings_selected_index;
 lv_subject_t meter_function_menu_selected_index;
+lv_subject_t meter_feature_harmonics_locked;
+lv_subject_t meter_function_menu_special_action;
 lv_subject_t meter_harmonic_spectrum_mode;
 lv_subject_t meter_harmonic_data_state;
 lv_subject_t meter_wifi_ap_selected_index;
@@ -1008,6 +1010,12 @@ void power_meter_ui_init_gen(const char * asset_path)
     lv_subject_init_int(&meter_function_menu_selected_index, 0);
     lv_subject_set_min_value_int(&meter_function_menu_selected_index, 0);
     lv_subject_set_max_value_int(&meter_function_menu_selected_index, 2);
+    lv_subject_init_int(&meter_feature_harmonics_locked, 0);
+    lv_subject_set_min_value_int(&meter_feature_harmonics_locked, 0);
+    lv_subject_set_max_value_int(&meter_feature_harmonics_locked, 1);
+    lv_subject_init_int(&meter_function_menu_special_action, 0);
+    lv_subject_set_min_value_int(&meter_function_menu_special_action, 0);
+    lv_subject_set_max_value_int(&meter_function_menu_special_action, 1);
     lv_subject_init_int(&meter_harmonic_spectrum_mode, 0);
     lv_subject_set_min_value_int(&meter_harmonic_spectrum_mode, 0);
     lv_subject_set_max_value_int(&meter_harmonic_spectrum_mode, 1);
@@ -1563,6 +1571,8 @@ void power_meter_ui_init_gen(const char * asset_path)
     /* Register subjects */
     lv_xml_register_subject(NULL, "meter_settings_selected_index", &meter_settings_selected_index);
     lv_xml_register_subject(NULL, "meter_function_menu_selected_index", &meter_function_menu_selected_index);
+    lv_xml_register_subject(NULL, "meter_feature_harmonics_locked", &meter_feature_harmonics_locked);
+    lv_xml_register_subject(NULL, "meter_function_menu_special_action", &meter_function_menu_special_action);
     lv_xml_register_subject(NULL, "meter_harmonic_spectrum_mode", &meter_harmonic_spectrum_mode);
     lv_xml_register_subject(NULL, "meter_harmonic_data_state", &meter_harmonic_data_state);
     lv_xml_register_subject(NULL, "meter_wifi_ap_selected_index", &meter_wifi_ap_selected_index);

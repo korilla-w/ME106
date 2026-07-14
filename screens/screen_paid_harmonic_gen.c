@@ -173,7 +173,8 @@ lv_obj_t * screen_paid_harmonic_create(void)
     lv_obj_add_style(paid_harmonic_btn_idle_3, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(paid_harmonic_btn_idle_3, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(paid_harmonic_btn_idle_3, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-
+    
+    
     /* create animation timeline(s) */
     lv_anim_timeline_t ** at_array = lv_malloc(sizeof(lv_anim_timeline_t *) * _SCREEN_PAID_HARMONIC_TIMELINE_CNT);
     at_array[SCREEN_PAID_HARMONIC_TIMELINE_CONTENT_OPEN] = timeline_content_open_create(lv_obj_0);

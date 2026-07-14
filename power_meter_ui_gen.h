@@ -360,6 +360,8 @@ extern const void * meter_brand_logo;
 
 extern lv_subject_t meter_settings_selected_index;
 extern lv_subject_t meter_function_menu_selected_index;
+extern lv_subject_t meter_feature_harmonics_locked;
+extern lv_subject_t meter_function_menu_special_action;
 extern lv_subject_t meter_harmonic_spectrum_mode;
 extern lv_subject_t meter_harmonic_data_state;
 extern lv_subject_t meter_wifi_ap_selected_index;
