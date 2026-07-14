@@ -226,6 +226,10 @@
     <subjects>
         <int name="meter_settings_selected_index" value="0" min_value="0" max_value="10"/>
         <int name="meter_function_menu_selected_index" value="0" min_value="0" max_value="2"/>
+        <!-- 功能可用状态由固件逻辑层写入；XML 只据此显示锁定态并拦截默认跳转。 -->
+        <int name="meter_feature_harmonics_locked" value="0" min_value="0" max_value="1"/>
+        <!-- 特殊动作只表达 UI 意图：0 无动作，1 请求打开谐波付费提示页。 -->
+        <int name="meter_function_menu_special_action" value="0" min_value="0" max_value="1"/>
         <int name="meter_harmonic_spectrum_mode" value="0" min_value="0" max_value="1"/>
         <int name="meter_harmonic_data_state" value="1" min_value="0" max_value="3"/>
         <int name="meter_wifi_ap_selected_index" value="0" min_value="0" max_value="5"/>
