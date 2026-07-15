@@ -212,5 +212,5 @@
 
 1. `meter_upgrade_request=1` 表示用户请求升级；单片机侧负责 OTA 检测、下载、写 Flash 和重启。
 2. `meter_upgrade_status_text` 可由单片机侧写入当前 OTA 状态文本。
-3. `meter_factory_reset_request=1` 表示用户确认恢复出厂；擦除配置和重启动作由单片机侧执行。
+3. `meter_factory_reset_request=1` 表示用户确认恢复出厂；单片机侧负责恢复应用、计量通信和 Wi-Fi 用户配置的默认值，并在运行时重新应用相关设置。当前流程不自动重启设备。
 4. `meter_paid_contact_popup` 只用于 `screen_paid_harmonic.xml`、`screen_paid_max_demand.xml` 这类受限功能提示页；授权校验、购买流程和功能开通状态不在 XML 完成。

@@ -420,5 +420,11 @@
         <file name="meter_icon_information" src_path="images/information.png"/>
         <file name="meter_power_quality_qr" src_path="images/power_quality_qr.png"/>
         <file name="meter_brand_logo" src_path="images/brand_logo.png"/>
+        <!-- 启动页分层品牌资源：保持官方 Logo 造型，仅用于 XML 时间轴错峰显现。 -->
+        <file name="meter_boot_logo_flame_1" src_path="images/boot_logo_flame_1.png"/>
+        <file name="meter_boot_logo_flame_2" src_path="images/boot_logo_flame_2.png"/>
+        <file name="meter_boot_logo_flame_3" src_path="images/boot_logo_flame_3.png"/>
+        <file name="meter_boot_logo_name_zh" src_path="images/boot_logo_name_zh.png"/>
+        <file name="meter_boot_logo_name_en" src_path="images/boot_logo_name_en.png"/>
     </images>
 </globals>

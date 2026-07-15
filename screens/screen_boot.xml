@@ -1,0 +1,53 @@
+<screen>
+    <animations>
+        <!--
+            XML-only 启动演示时间轴：各元素使用 delay 错峰进入，预览重载后自动重播。
+            真机何时退出启动页由后续非生成适配层根据系统就绪状态决定，本页不处理硬件状态。
+        -->
+        <timeline name="boot_intro">
+            <animation target="boot_flame_1" prop="opa" start="0" end="255" duration="360" delay="120" early_apply="true"/>
+            <animation target="boot_flame_1" prop="translate_y" start="8" end="0" duration="360" delay="120" early_apply="true"/>
+
+            <animation target="boot_flame_2" prop="opa" start="0" end="255" duration="360" delay="230" early_apply="true"/>
+            <animation target="boot_flame_2" prop="translate_y" start="7" end="0" duration="360" delay="230" early_apply="true"/>
+
+            <animation target="boot_flame_3" prop="opa" start="0" end="255" duration="360" delay="340" early_apply="true"/>
+            <animation target="boot_flame_3" prop="translate_y" start="6" end="0" duration="360" delay="340" early_apply="true"/>
+
+            <animation target="boot_name_zh" prop="opa" start="0" end="255" duration="450" delay="430" early_apply="true"/>
+            <animation target="boot_name_zh" prop="translate_x" start="-8" end="0" duration="450" delay="430" early_apply="true"/>
+
+            <animation target="boot_name_en" prop="opa" start="0" end="255" duration="360" delay="680" early_apply="true"/>
+            <animation target="boot_name_en" prop="translate_y" start="4" end="0" duration="360" delay="680" early_apply="true"/>
+
+            <animation target="boot_tagline" prop="opa" start="0" end="255" duration="420" delay="860" early_apply="true"/>
+            <animation target="boot_tagline" prop="translate_y" start="5" end="0" duration="420" delay="860" early_apply="true"/>
+        </timeline>
+    </animations>
+
+    <view width="320" height="240">
+        <!-- 启动画面固定使用暗色品牌底，不跟随用户主题切换，避免上电时出现白屏闪变。 -->
+        <style name="me106_fill_black"/>
+        <play_timeline_event target="self" timeline="boot_intro" trigger="screen_loaded"/>
+
+        <!--
+            官方横版 Logo 按统一比例缩放为 260x61 的视觉组。
+            分层只为动画服务，最终静止构图与原始白字 Logo 保持一致。
+        -->
+        <lv_obj name="boot_logo_group" x="30" y="76" width="260" height="61"
+                style_bg_opa="0" style_border_width="0" style_pad_all="0"
+                scrollable="false">
+            <lv_image name="boot_flame_1" src="meter_boot_logo_flame_1" x="0" y="0"/>
+            <lv_image name="boot_flame_2" src="meter_boot_logo_flame_2" x="11" y="13"/>
+            <lv_image name="boot_flame_3" src="meter_boot_logo_flame_3" x="16" y="33"/>
+            <lv_image name="boot_name_zh" src="meter_boot_logo_name_zh" x="54" y="6"/>
+            <lv_image name="boot_name_en" src="meter_boot_logo_name_en" x="54" y="45"/>
+        </lv_obj>
+
+        <lv_label name="boot_tagline"
+                  text="&#x667A;&#x63A7;&#x7535;&#x80FD; &#xB7; &#x6DA6;&#x6CFD;&#x672A;&#x6765;"
+                  x="40" y="156" width="240" style_text_align="center">
+            <style name="me106_text_16_gray_d8"/>
+        </lv_label>
+    </view>
+</screen>
