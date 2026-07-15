@@ -81,6 +81,11 @@ const void * meter_icon_update;
 const void * meter_icon_information;
 const void * meter_power_quality_qr;
 const void * meter_brand_logo;
+const void * meter_boot_logo_flame_1;
+const void * meter_boot_logo_flame_2;
+const void * meter_boot_logo_flame_3;
+const void * meter_boot_logo_name_zh;
+const void * meter_boot_logo_name_en;
 
 /*----------------
  * Global styles
@@ -453,6 +458,16 @@ void power_meter_ui_init_gen(const char * asset_path)
     meter_power_quality_qr = lv_strdup(buf);
     lv_snprintf(buf, 256, "%s%s", asset_path, "images/brand_logo.png");
     meter_brand_logo = lv_strdup(buf);
+    lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_flame_1.png");
+    meter_boot_logo_flame_1 = lv_strdup(buf);
+    lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_flame_2.png");
+    meter_boot_logo_flame_2 = lv_strdup(buf);
+    lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_flame_3.png");
+    meter_boot_logo_flame_3 = lv_strdup(buf);
+    lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_name_zh.png");
+    meter_boot_logo_name_zh = lv_strdup(buf);
+    lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_name_en.png");
+    meter_boot_logo_name_en = lv_strdup(buf);
 
     /*----------------
      * Global styles
@@ -1741,6 +1756,11 @@ void power_meter_ui_init_gen(const char * asset_path)
     lv_xml_register_image(NULL, "meter_icon_information", meter_icon_information);
     lv_xml_register_image(NULL, "meter_power_quality_qr", meter_power_quality_qr);
     lv_xml_register_image(NULL, "meter_brand_logo", meter_brand_logo);
+    lv_xml_register_image(NULL, "meter_boot_logo_flame_1", meter_boot_logo_flame_1);
+    lv_xml_register_image(NULL, "meter_boot_logo_flame_2", meter_boot_logo_flame_2);
+    lv_xml_register_image(NULL, "meter_boot_logo_flame_3", meter_boot_logo_flame_3);
+    lv_xml_register_image(NULL, "meter_boot_logo_name_zh", meter_boot_logo_name_zh);
+    lv_xml_register_image(NULL, "meter_boot_logo_name_en", meter_boot_logo_name_en);
 #endif
 
 #if LV_USE_XML == 0

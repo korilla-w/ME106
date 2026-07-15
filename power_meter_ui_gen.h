@@ -353,6 +353,11 @@ extern const void * meter_icon_update;
 extern const void * meter_icon_information;
 extern const void * meter_power_quality_qr;
 extern const void * meter_brand_logo;
+extern const void * meter_boot_logo_flame_1;
+extern const void * meter_boot_logo_flame_2;
+extern const void * meter_boot_logo_flame_3;
+extern const void * meter_boot_logo_name_zh;
+extern const void * meter_boot_logo_name_en;
 
 /*----------------
  * Subjects
@@ -520,6 +525,7 @@ void power_meter_ui_init_gen(const char * asset_path);
 #include "components/row_gen.h"
 #include "screens/screen_active_power_gen.h"
 #include "screens/screen_apparent_power_gen.h"
+#include "screens/screen_boot_gen.h"
 #include "screens/screen_energy_data_gen.h"
 #include "screens/screen_function_menu_gen.h"
 #include "screens/screen_harmonic_spectrum_gen.h"

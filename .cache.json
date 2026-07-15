@@ -31,5 +31,10 @@
   "image:meter_icon_update": "e9080bafab19ba58-630ce0c98e26ff65",
   "image:meter_icon_information": "2ba74087ccdbac1c-56b3a1246e4a5129",
   "image:meter_power_quality_qr": "b435b4376ef6757e-4b60a90ea70fa525",
-  "image:meter_brand_logo": "6bd7c897c8b49fda-8140447ad7a0189d"
+  "image:meter_brand_logo": "6bd7c897c8b49fda-8140447ad7a0189d",
+  "image:meter_boot_logo_flame_1": "fd8e255494cf8394-173db61ec20bbd55",
+  "image:meter_boot_logo_flame_2": "b0ac8c1a7e64587c-7cf7c991696feabd",
+  "image:meter_boot_logo_flame_3": "bb6319f8b814955c-bd2252ae48a0e501",
+  "image:meter_boot_logo_name_zh": "fb0613e28f1cb722-b69b8baa612a7635",
+  "image:meter_boot_logo_name_en": "a9d6da1677786ea4-6f90bc464f0e1f99"
 }

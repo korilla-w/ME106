@@ -7,6 +7,7 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/power_meter_ui.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_active_power_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_apparent_power_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/screen_boot_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_energy_data_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_function_menu_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_harmonic_spectrum_gen.c
