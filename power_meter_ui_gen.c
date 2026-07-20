@@ -148,6 +148,7 @@ lv_style_t me106_text_14_yellow;
 lv_style_t me106_text_14_green;
 lv_style_t me106_text_14_red;
 lv_style_t me106_text_14_cyan;
+lv_style_t me106_text_14_cyan_center;
 lv_style_t me106_text_14_purple;
 lv_style_t me106_text_14_indigo;
 lv_style_t me106_text_14_teal;
@@ -186,6 +187,8 @@ lv_style_t me106_panel_gray24_r8;
 lv_style_t me106_panel_soft_r8;
 lv_style_t me106_panel_blue_r8;
 lv_style_t me106_panel_blue_r6;
+lv_style_t me106_btn_ota_action;
+lv_style_t me106_btn_ota_busy;
 lv_style_t me106_theme_light_soft_panel;
 lv_style_t me106_theme_alarm_soft_panel;
 lv_style_t me106_icon_white;
@@ -359,6 +362,7 @@ lv_subject_t meter_upgrade_new_version;
 lv_subject_t meter_upgrade_file_size_text;
 lv_subject_t meter_upgrade_release_notes;
 lv_subject_t meter_upgrade_status_text;
+lv_subject_t meter_upgrade_confirm_text;
 lv_subject_t meter_upgrade_progress_text;
 lv_subject_t meter_upgrade_progress;
 lv_subject_t meter_upgrade_ui_state;
@@ -694,6 +698,11 @@ void power_meter_ui_init_gen(const char * asset_path)
         lv_style_set_text_color(&me106_text_14_cyan, METER_CYAN);
         lv_style_set_text_font(&me106_text_14_cyan, meter_Harmony_Sans_SC_Medium_14);
 
+        lv_style_init(&me106_text_14_cyan_center);
+        lv_style_set_text_color(&me106_text_14_cyan_center, METER_CYAN);
+        lv_style_set_text_font(&me106_text_14_cyan_center, meter_Harmony_Sans_SC_Medium_14);
+        lv_style_set_text_align(&me106_text_14_cyan_center, LV_TEXT_ALIGN_CENTER);
+
         lv_style_init(&me106_text_14_purple);
         lv_style_set_text_color(&me106_text_14_purple, METER_PURPLE);
         lv_style_set_text_font(&me106_text_14_purple, meter_Harmony_Sans_SC_Medium_14);
@@ -865,6 +874,20 @@ void power_meter_ui_init_gen(const char * asset_path)
         lv_style_set_bg_opa(&me106_panel_blue_r6, 255);
         lv_style_set_radius(&me106_panel_blue_r6, METER_R6);
         lv_style_set_shadow_width(&me106_panel_blue_r6, 0);
+
+        lv_style_init(&me106_btn_ota_action);
+        lv_style_set_bg_color(&me106_btn_ota_action, METER_GRAY_30);
+        lv_style_set_bg_opa(&me106_btn_ota_action, 255);
+        lv_style_set_radius(&me106_btn_ota_action, METER_R6);
+        lv_style_set_border_width(&me106_btn_ota_action, 0);
+        lv_style_set_shadow_width(&me106_btn_ota_action, 0);
+
+        lv_style_init(&me106_btn_ota_busy);
+        lv_style_set_bg_color(&me106_btn_ota_busy, METER_GRAY_30);
+        lv_style_set_bg_opa(&me106_btn_ota_busy, 255);
+        lv_style_set_radius(&me106_btn_ota_busy, METER_R6);
+        lv_style_set_border_width(&me106_btn_ota_busy, 0);
+        lv_style_set_shadow_width(&me106_btn_ota_busy, 0);
 
         lv_style_init(&me106_theme_light_soft_panel);
         lv_style_set_bg_color(&me106_theme_light_soft_panel, METER_THEME_LIGHT_COLOR_SURFACE_SOFT);
@@ -1536,7 +1559,7 @@ void power_meter_ui_init_gen(const char * asset_path)
                            meter_upgrade_release_notes_buf,
                            meter_upgrade_release_notes_prev_buf,
                            UI_SUBJECT_STRING_LENGTH,
-                           "暂无更新说明"
+                           "暂无固件说明"
                           );
     static char meter_upgrade_status_text_buf[UI_SUBJECT_STRING_LENGTH];
     static char meter_upgrade_status_text_prev_buf[UI_SUBJECT_STRING_LENGTH];
@@ -1544,7 +1567,15 @@ void power_meter_ui_init_gen(const char * asset_path)
                            meter_upgrade_status_text_buf,
                            meter_upgrade_status_text_prev_buf,
                            UI_SUBJECT_STRING_LENGTH,
-                           "点击检查更新"
+                           "点击查找固件"
+                          );
+    static char meter_upgrade_confirm_text_buf[UI_SUBJECT_STRING_LENGTH];
+    static char meter_upgrade_confirm_text_prev_buf[UI_SUBJECT_STRING_LENGTH];
+    lv_subject_init_string(&meter_upgrade_confirm_text,
+                           meter_upgrade_confirm_text_buf,
+                           meter_upgrade_confirm_text_prev_buf,
+                           UI_SUBJECT_STRING_LENGTH,
+                           "确认刷写该固件？"
                           );
     static char meter_upgrade_progress_text_buf[UI_SUBJECT_STRING_LENGTH];
     static char meter_upgrade_progress_text_prev_buf[UI_SUBJECT_STRING_LENGTH];
@@ -1713,6 +1744,7 @@ void power_meter_ui_init_gen(const char * asset_path)
     lv_xml_register_subject(NULL, "meter_upgrade_file_size_text", &meter_upgrade_file_size_text);
     lv_xml_register_subject(NULL, "meter_upgrade_release_notes", &meter_upgrade_release_notes);
     lv_xml_register_subject(NULL, "meter_upgrade_status_text", &meter_upgrade_status_text);
+    lv_xml_register_subject(NULL, "meter_upgrade_confirm_text", &meter_upgrade_confirm_text);
     lv_xml_register_subject(NULL, "meter_upgrade_progress_text", &meter_upgrade_progress_text);
     lv_xml_register_subject(NULL, "meter_upgrade_progress", &meter_upgrade_progress);
     lv_xml_register_subject(NULL, "meter_upgrade_ui_state", &meter_upgrade_ui_state);
