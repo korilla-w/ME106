@@ -137,6 +137,7 @@
         <style name="me106_text_14_green" text_color="#meter_green" text_font="meter_Harmony_Sans_SC_Medium_14"/>
         <style name="me106_text_14_red" text_color="#meter_red" text_font="meter_Harmony_Sans_SC_Medium_14"/>
         <style name="me106_text_14_cyan" text_color="#meter_cyan" text_font="meter_Harmony_Sans_SC_Medium_14"/>
+        <style name="me106_text_14_cyan_center" text_color="#meter_cyan" text_font="meter_Harmony_Sans_SC_Medium_14" text_align="center"/>
         <style name="me106_text_14_purple" text_color="#meter_purple" text_font="meter_Harmony_Sans_SC_Medium_14"/>
         <style name="me106_text_14_indigo" text_color="#meter_indigo" text_font="meter_Harmony_Sans_SC_Medium_14"/>
         <style name="me106_text_14_teal" text_color="#meter_teal" text_font="meter_Harmony_Sans_SC_Medium_14"/>
@@ -179,6 +180,9 @@
         <style name="me106_panel_soft_r8" bg_color="#meter_gray_24" bg_opa="150" radius="#meter_r8" border_width="0" shadow_width="0"/>
         <style name="me106_panel_blue_r8" bg_color="#meter_blue" bg_opa="255" radius="#meter_r8" shadow_width="0"/>
         <style name="me106_panel_blue_r6" bg_color="#meter_blue" bg_opa="255" radius="#meter_r6" shadow_width="0"/>
+        <!-- OTA 操作按钮使用无描边深色底，仅用文字色提示可操作。 -->
+        <style name="me106_btn_ota_action" bg_color="#meter_gray_30" bg_opa="255" radius="#meter_r6" border_width="0" shadow_width="0"/>
+        <style name="me106_btn_ota_busy" bg_color="#meter_gray_30" bg_opa="255" radius="#meter_r6" border_width="0" shadow_width="0"/>
         <style name="me106_theme_light_soft_panel" bg_color="#meter_theme_light_color_surface_soft" bg_opa="255" border_width="0"/>
         <style name="me106_theme_alarm_soft_panel" bg_color="#meter_theme_alarm_color_surface" bg_opa="220" border_width="0"/>
         <style name="me106_icon_white" image_recolor="#meter_white" image_recolor_opa="255"/>
@@ -368,13 +372,15 @@
         <string name="meter_upgrade_current_version" value="04.21"/>
         <string name="meter_upgrade_new_version" value="&#x5F85;&#x68C0;&#x6D4B;"/>
         <string name="meter_upgrade_file_size_text" value="--"/>
-        <string name="meter_upgrade_release_notes" value="&#x6682;&#x65E0;&#x66F4;&#x65B0;&#x8BF4;&#x660E;"/>
-        <string name="meter_upgrade_status_text" value="&#x70B9;&#x51FB;&#x68C0;&#x67E5;&#x66F4;&#x65B0;"/>
+        <string name="meter_upgrade_release_notes" value="&#x6682;&#x65E0;&#x56FA;&#x4EF6;&#x8BF4;&#x660E;"/>
+        <string name="meter_upgrade_status_text" value="&#x70B9;&#x51FB;&#x67E5;&#x627E;&#x56FA;&#x4EF6;"/>
+        <!-- 由逻辑层根据目标固件关系和版本号生成，XML 只负责展示。 -->
+        <string name="meter_upgrade_confirm_text" value="&#x786E;&#x8BA4;&#x5237;&#x5199;&#x8BE5;&#x56FA;&#x4EF6;&#xFF1F;"/>
         <string name="meter_upgrade_progress_text" value="0%"/>
         <int name="meter_upgrade_progress" value="0" min_value="0" max_value="100"/>
-        <!-- UI 状态：0空闲，1查询中，2已是最新，3发现更新，4启动中，5下载中，6写入中。 -->
+        <!-- UI 状态：0空闲；1查找中；2可重新查找（失败/无不同固件/无适用固件/刷写请求失效）；3发现目标固件；4请求刷写中；5接收固件中；6写入校验中。 -->
         <int name="meter_upgrade_ui_state" value="0" min_value="0" max_value="6"/>
-        <!-- 用户意图：0无动作，1检查更新，2确认立即升级。 -->
+        <!-- 用户意图：0无动作，1查找固件，2确认刷写。 -->
         <int name="meter_upgrade_request" value="0" min_value="0" max_value="2"/>
         <int name="meter_upgrade_confirm_popup" value="0" min_value="0" max_value="1"/>
         <!-- 付费功能联系方式弹窗只保存 UI 展开状态；授权校验和购买流程由逻辑层处理。 -->

@@ -45,116 +45,114 @@
                 <bind_flag_if_not_eq subject="meter_upgrade_request" flag="hidden" ref_value="1"/>
             </lv_label>
 
-            <lv_obj name="upgrade_version_band" x="16" y="88" width="288" height="60" style_pad_all="0" scrollable="false">
+            <!-- 与 OTA 图标卡片保留 4px 间距，避免圆角区域发生视觉重叠。 -->
+            <lv_obj name="upgrade_version_band" x="16" y="94" width="288" height="56" style_pad_all="0" scrollable="false">
                 <style name="me106_panel_soft_r8"/>
                 <bind_style name="me106_theme_light_soft_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_soft_panel" subject="meter_theme_index" ref_value="2"/>
             </lv_obj>
-            <lv_obj name="upgrade_current_mark" x="28" y="112" width="6" height="16" style_radius="3" style_bg_color="0x6366F1" style_bg_opa="255" style_border_width="0" scrollable="false">
+            <lv_obj name="upgrade_current_mark" x="28" y="116" width="6" height="16" style_radius="3" style_bg_color="0x6366F1" style_bg_opa="255" style_border_width="0" scrollable="false">
 
             </lv_obj>
-            <lv_label text="&#x5F53;&#x524D;&#x7248;&#x672C;" x="44" y="96" width="90">
+            <lv_label text="&#x5F53;&#x524D;&#x7248;&#x672C;" x="44" y="100" width="90">
                 <style name="me106_text_14_gray_8f"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
-            <lv_label bind_text="meter_upgrade_current_version" x="44" y="119" width="84">
+            <lv_label bind_text="meter_upgrade_current_version" x="44" y="121" width="84">
                 <style name="me106_text_16_white"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
 
-            <lv_label text="&#x203A;" x="148" y="108" width="24">
+            <lv_label text="&#x203A;" x="148" y="112" width="24">
                 <style name="me106_text_16_cyan"/>
             </lv_label>
-            <lv_obj name="upgrade_new_mark" x="174" y="112" width="6" height="16" style_radius="3" style_bg_color="0x20D3D5" style_bg_opa="255" style_border_width="0" scrollable="false">
+            <lv_obj name="upgrade_new_mark" x="174" y="116" width="6" height="16" style_radius="3" style_bg_color="0x20D3D5" style_bg_opa="255" style_border_width="0" scrollable="false">
             </lv_obj>
-            <lv_label text="&#x76EE;&#x6807;&#x7248;&#x672C;" x="190" y="96" width="90">
+            <lv_label text="&#x76EE;&#x6807;&#x7248;&#x672C;" x="190" y="100" width="90">
                 <style name="me106_text_14_gray_8f"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
-            <lv_label bind_text="meter_upgrade_new_version" x="190" y="119" width="84">
+            <lv_label bind_text="meter_upgrade_new_version" x="190" y="121" width="84">
                 <style name="me106_text_16_cyan"/>
             </lv_label>
 
-            <lv_obj name="upgrade_summary_panel" x="16" y="154" width="224" height="45" style_pad_all="0" scrollable="false">
+            <!-- 左侧信息与右侧操作共用一张卡片，缩短进度条以避免紧贴底栏。 -->
+            <lv_obj name="upgrade_summary_panel" x="16" y="154" width="288" height="49" style_pad_all="0" scrollable="false">
                 <style name="me106_panel_soft_r8"/>
                 <bind_style name="me106_theme_light_soft_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_soft_panel" subject="meter_theme_index" ref_value="2"/>
             </lv_obj>
-            <lv_label text="&#x56FA;&#x4EF6;&#x5927;&#x5C0F;" x="28" y="158" width="72">
+            <lv_label text="&#x56FA;&#x4EF6;&#x5927;&#x5C0F;" x="28" y="157" width="72">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
-            <lv_label bind_text="meter_upgrade_file_size_text" x="102" y="158" width="126">
+            <lv_label bind_text="meter_upgrade_file_size_text" x="102" y="157" width="116">
                 <style name="me106_text_14_white"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
-            <lv_label bind_text="meter_upgrade_release_notes" x="28" y="179" width="200" height="16" long_mode="wrap">
+            <lv_label bind_text="meter_upgrade_release_notes" x="28" y="176" width="190" height="16" long_mode="wrap">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
-            <lv_bar name="upgrade_progress_bar" x="16" y="198" width="288" height="7" bind_value="meter_upgrade_progress" min_value="0" max_value="100" style_radius="4" style_bg_color="0x30343B" style_bg_opa="255" style_border_width="0" style_pad_all="0" style_bg_color-indicator="0x20D3D5" style_bg_opa-indicator="255" style_radius-indicator="4"/>
+            <lv_bar name="upgrade_progress_bar" x="28" y="194" width="190" height="8" bind_value="meter_upgrade_progress" min_value="0" max_value="100" style_radius="4" style_bg_color="0x30343B" style_bg_opa="255" style_border_width="0" style_pad_all="0" style_bg_color-indicator="0x20D3D5" style_bg_opa-indicator="255" style_radius-indicator="4"/>
 
-            <lv_button name="upgrade_action_btn" x="248" y="154" width="64" height="45">
-                <style name="me106_panel_blue_r6"/>
-                <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
-                <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <lv_button name="upgrade_action_btn" x="240" y="162" width="72" height="30">
+                <style name="me106_btn_ota_action"/>
                 <bind_flag_if_not_eq subject="meter_upgrade_ui_state" flag="hidden" ref_value="0"/>
-                <lv_label text="&#x68C0;&#x67E5;&#x66F4;&#x65B0;" align="center" width="64">
-                    <style name="me106_text_14_white_center"/>
-                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <lv_label text="&#x67E5;&#x627E;&#x56FA;&#x4EF6;" align="center" width="72">
+                    <style name="me106_text_14_cyan_center"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_upgrade_request" value="1" trigger="clicked"/>
                 <subject_set_int_event subject="meter_upgrade_ui_state" value="1" trigger="clicked"/>
-                <subject_set_string_event subject="meter_upgrade_status_text" value="&#x6B63;&#x5728;&#x68C0;&#x67E5;&#x66F4;&#x65B0;" trigger="clicked"/>
+                <subject_set_string_event subject="meter_upgrade_status_text" value="&#x6B63;&#x5728;&#x67E5;&#x627E;&#x56FA;&#x4EF6;" trigger="clicked"/>
             </lv_button>
-            <lv_button name="upgrade_action_check_again" x="248" y="154" width="64" height="45">
-                <style name="me106_panel_blue_r6"/>
-                <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
-                <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <lv_button name="upgrade_action_check_again" x="240" y="162" width="72" height="30">
+                <style name="me106_btn_ota_action"/>
                 <bind_flag_if_not_eq subject="meter_upgrade_ui_state" flag="hidden" ref_value="2"/>
-                <lv_label text="&#x518D;&#x6B21;&#x68C0;&#x67E5;" align="center" width="64"><style name="me106_text_14_white_center"/></lv_label>
+                <lv_label text="&#x91CD;&#x65B0;&#x67E5;&#x627E;" align="center" width="72">
+                    <style name="me106_text_14_cyan_center"/>
+                </lv_label>
                 <subject_set_int_event subject="meter_upgrade_request" value="1" trigger="clicked"/>
                 <subject_set_int_event subject="meter_upgrade_ui_state" value="1" trigger="clicked"/>
-                <subject_set_string_event subject="meter_upgrade_status_text" value="&#x6B63;&#x5728;&#x68C0;&#x67E5;&#x66F4;&#x65B0;" trigger="clicked"/>
+                <subject_set_string_event subject="meter_upgrade_status_text" value="&#x6B63;&#x5728;&#x67E5;&#x627E;&#x56FA;&#x4EF6;" trigger="clicked"/>
             </lv_button>
-            <lv_button name="upgrade_action_start" x="248" y="154" width="64" height="45">
-                <style name="me106_panel_blue_r6"/>
-                <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
-                <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <lv_button name="upgrade_action_start" x="240" y="162" width="72" height="30">
+                <style name="me106_btn_ota_action"/>
                 <bind_flag_if_not_eq subject="meter_upgrade_ui_state" flag="hidden" ref_value="3"/>
-                <lv_label text="&#x7ACB;&#x5373;&#x5347;&#x7EA7;" align="center" width="64"><style name="me106_text_14_white_center"/></lv_label>
+                <lv_label text="&#x5237;&#x5199;" align="center" width="72">
+                    <style name="me106_text_14_cyan_center"/>
+                </lv_label>
                 <subject_set_int_event subject="meter_upgrade_confirm_popup" value="1" trigger="clicked"/>
             </lv_button>
-            <lv_button name="upgrade_action_busy_check" x="248" y="154" width="64" height="45">
-                <style name="me106_btn_flat_gray47"/>
+            <lv_button name="upgrade_action_busy_check" x="240" y="162" width="72" height="30">
+                <style name="me106_btn_ota_busy"/>
                 <bind_flag_if_not_eq subject="meter_upgrade_ui_state" flag="hidden" ref_value="1"/>
-                <lv_label text="&#x67E5;&#x8BE2;&#x4E2D;" align="center" width="64"><style name="me106_text_14_gray_ba"/></lv_label>
+                <lv_label text="&#x67E5;&#x8BE2;&#x4E2D;" align="center" width="72"><style name="me106_text_14_gray_ba_center"/></lv_label>
             </lv_button>
-            <lv_button name="upgrade_action_busy_start" x="248" y="154" width="64" height="45">
-                <style name="me106_btn_flat_gray47"/>
+            <lv_button name="upgrade_action_busy_start" x="240" y="162" width="72" height="30">
+                <style name="me106_btn_ota_busy"/>
                 <bind_flag_if_not_eq subject="meter_upgrade_ui_state" flag="hidden" ref_value="4"/>
-                <lv_label text="&#x542F;&#x52A8;&#x4E2D;" align="center" width="64"><style name="me106_text_14_gray_ba"/></lv_label>
+                <lv_label text="&#x542F;&#x52A8;&#x4E2D;" align="center" width="72"><style name="me106_text_14_gray_ba_center"/></lv_label>
             </lv_button>
-            <lv_button name="upgrade_action_busy_download" x="248" y="154" width="64" height="45">
-                <style name="me106_btn_flat_gray47"/>
+            <lv_button name="upgrade_action_busy_download" x="240" y="162" width="72" height="30">
+                <style name="me106_btn_ota_busy"/>
                 <bind_flag_if_not_eq subject="meter_upgrade_ui_state" flag="hidden" ref_value="5"/>
-                <lv_label text="&#x4E0B;&#x8F7D;&#x4E2D;" align="center" width="64"><style name="me106_text_14_gray_ba"/></lv_label>
+                <lv_label text="&#x4E0B;&#x8F7D;&#x4E2D;" align="center" width="72"><style name="me106_text_14_gray_ba_center"/></lv_label>
             </lv_button>
-            <lv_button name="upgrade_action_busy_write" x="248" y="154" width="64" height="45">
-                <style name="me106_btn_flat_gray47"/>
+            <lv_button name="upgrade_action_busy_write" x="240" y="162" width="72" height="30">
+                <style name="me106_btn_ota_busy"/>
                 <bind_flag_if_not_eq subject="meter_upgrade_ui_state" flag="hidden" ref_value="6"/>
-                <lv_label text="&#x5199;&#x5165;&#x4E2D;" align="center" width="64"><style name="me106_text_14_gray_ba"/></lv_label>
+                <lv_label text="&#x5199;&#x5165;&#x4E2D;" align="center" width="72"><style name="me106_text_14_gray_ba_center"/></lv_label>
             </lv_button>
         </lv_obj>
 
-        <!-- 底部硬按键只表达返回、联网入口和升级意图，不直接执行 OTA。 -->
+        <!-- 底部硬按键只表达返回、联网入口和刷写意图，不直接执行 OTA。 -->
         <lv_obj name="screen_settings_upgrade_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
             <style name="me106_btn_flat_gray47"/>
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
@@ -190,7 +188,7 @@
             <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
             <subject_set_int_event subject="meter_upgrade_request" value="1" trigger="clicked"/>
             <subject_set_int_event subject="meter_upgrade_ui_state" value="1" trigger="clicked"/>
-            <subject_set_string_event subject="meter_upgrade_status_text" value="&#x6B63;&#x5728;&#x68C0;&#x67E5;&#x66F4;&#x65B0;" trigger="clicked"/>
+            <subject_set_string_event subject="meter_upgrade_status_text" value="&#x6B63;&#x5728;&#x67E5;&#x627E;&#x56FA;&#x4EF6;" trigger="clicked"/>
         </lv_button>
         <lv_button name="upgrade_btn_yes_check_again" x="240" y="207" width="80" height="32">
             <style name="me106_btn_flat_blue"/>
@@ -200,7 +198,7 @@
             <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
             <subject_set_int_event subject="meter_upgrade_request" value="1" trigger="clicked"/>
             <subject_set_int_event subject="meter_upgrade_ui_state" value="1" trigger="clicked"/>
-            <subject_set_string_event subject="meter_upgrade_status_text" value="&#x6B63;&#x5728;&#x68C0;&#x67E5;&#x66F4;&#x65B0;" trigger="clicked"/>
+            <subject_set_string_event subject="meter_upgrade_status_text" value="&#x6B63;&#x5728;&#x67E5;&#x627E;&#x56FA;&#x4EF6;" trigger="clicked"/>
         </lv_button>
         <lv_button name="upgrade_btn_yes_start" x="240" y="207" width="80" height="32">
             <style name="me106_btn_flat_blue"/>
@@ -212,18 +210,18 @@
         </lv_button>
         <lv_obj name="upgrade_busy_guard_start" x="0" y="207" width="320" height="33" style_bg_color="0x30343B" style_bg_opa="255" style_border_width="0" style_pad_all="0" scrollable="false">
             <bind_flag_if_not_eq subject="meter_upgrade_ui_state" flag="hidden" ref_value="4"/>
-            <lv_label text="&#x5347;&#x7EA7;&#x4E2D;&#xFF0C;&#x8BF7;&#x52FF;&#x64CD;&#x4F5C;" align="center" width="320"><style name="me106_text_14_gray_ba"/></lv_label>
+            <lv_label text="&#x5237;&#x5199;&#x4E2D;&#xFF0C;&#x8BF7;&#x52FF;&#x64CD;&#x4F5C;" align="center" width="320"><style name="me106_text_14_gray_ba_center"/></lv_label>
         </lv_obj>
         <lv_obj name="upgrade_busy_guard_download" x="0" y="207" width="320" height="33" style_bg_color="0x30343B" style_bg_opa="255" style_border_width="0" style_pad_all="0" scrollable="false">
             <bind_flag_if_not_eq subject="meter_upgrade_ui_state" flag="hidden" ref_value="5"/>
-            <lv_label text="&#x5347;&#x7EA7;&#x4E2D;&#xFF0C;&#x8BF7;&#x52FF;&#x64CD;&#x4F5C;" align="center" width="320"><style name="me106_text_14_gray_ba"/></lv_label>
+            <lv_label text="&#x5237;&#x5199;&#x4E2D;&#xFF0C;&#x8BF7;&#x52FF;&#x64CD;&#x4F5C;" align="center" width="320"><style name="me106_text_14_gray_ba_center"/></lv_label>
         </lv_obj>
         <lv_obj name="upgrade_busy_guard_write" x="0" y="207" width="320" height="33" style_bg_color="0x30343B" style_bg_opa="255" style_border_width="0" style_pad_all="0" scrollable="false">
             <bind_flag_if_not_eq subject="meter_upgrade_ui_state" flag="hidden" ref_value="6"/>
-            <lv_label text="&#x5347;&#x7EA7;&#x4E2D;&#xFF0C;&#x8BF7;&#x52FF;&#x65AD;&#x7535;" align="center" width="320"><style name="me106_text_14_gray_ba"/></lv_label>
+            <lv_label text="&#x5237;&#x5199;&#x4E2D;&#xFF0C;&#x8BF7;&#x52FF;&#x65AD;&#x7535;" align="center" width="320"><style name="me106_text_14_gray_ba_center"/></lv_label>
         </lv_obj>
 
-        <!-- 二次确认覆盖层；取消只关闭弹窗，确认只提交升级意图。 -->
+        <!-- 二次确认覆盖层；取消只关闭弹窗，确认只提交刷写意图。 -->
         <lv_obj name="upgrade_confirm_mask" x="0" y="0" width="320" height="240" style_bg_color="0x000000" style_bg_opa="190" style_border_width="0" style_pad_all="0" scrollable="false">
             <bind_flag_if_not_eq subject="meter_upgrade_confirm_popup" flag="hidden" ref_value="1"/>
         </lv_obj>
@@ -233,20 +231,20 @@
             <bind_style name="me106_theme_alarm_soft_panel" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_upgrade_confirm_popup" flag="hidden" ref_value="1"/>
             <lv_image src="meter_icon_warning" x="112" y="14"/>
-            <lv_label text="&#x5347;&#x7EA7;&#x8FC7;&#x7A0B;&#x4E2D;&#x8BF7;&#x52FF;&#x65AD;&#x7535;" x="24" y="48" width="204"><style name="me106_text_16_white_center"/></lv_label>
-            <lv_label text="&#x786E;&#x5B9A;&#x7ACB;&#x5373;&#x5347;&#x7EA7;&#x5417;&#xFF1F;" x="24" y="72" width="204"><style name="me106_text_14_gray_ba"/></lv_label>
+            <lv_label text="&#x5237;&#x5199;&#x8FC7;&#x7A0B;&#x4E2D;&#x8BF7;&#x52FF;&#x65AD;&#x7535;" x="24" y="48" width="204"><style name="me106_text_16_white_center"/></lv_label>
+            <lv_label bind_text="meter_upgrade_confirm_text" x="24" y="72" width="204"><style name="me106_text_14_gray_ba_center"/></lv_label>
             <lv_button name="upgrade_confirm_cancel" x="18" y="100" width="98" height="30">
                 <style name="me106_btn_flat_gray47"/>
-                <lv_label text="&#x53D6;&#x6D88;" align="center" width="98"><style name="me106_text_14_gray_ba"/></lv_label>
+                <lv_label text="&#x53D6;&#x6D88;" align="center" width="98"><style name="me106_text_14_gray_ba_center"/></lv_label>
                 <subject_set_int_event subject="meter_upgrade_confirm_popup" value="0" trigger="clicked"/>
             </lv_button>
             <lv_button name="upgrade_confirm_yes" x="136" y="100" width="98" height="30">
                 <style name="me106_panel_blue_r6"/>
-                <lv_label text="&#x7ACB;&#x5373;&#x5347;&#x7EA7;" align="center" width="98"><style name="me106_text_14_white_center"/></lv_label>
+                <lv_label text="&#x5237;&#x5199;" align="center" width="98"><style name="me106_text_14_white_center"/></lv_label>
                 <subject_set_int_event subject="meter_upgrade_confirm_popup" value="0" trigger="clicked"/>
                 <subject_set_int_event subject="meter_upgrade_request" value="2" trigger="clicked"/>
                 <subject_set_int_event subject="meter_upgrade_ui_state" value="4" trigger="clicked"/>
-                <subject_set_string_event subject="meter_upgrade_status_text" value="&#x6B63;&#x5728;&#x542F;&#x52A8;&#x5347;&#x7EA7;" trigger="clicked"/>
+                <subject_set_string_event subject="meter_upgrade_status_text" value="&#x6B63;&#x5728;&#x8BF7;&#x6C42;&#x5237;&#x5199;" trigger="clicked"/>
             </lv_button>
         </lv_obj>
     </view>
