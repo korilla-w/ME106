@@ -34,7 +34,7 @@ extern "C" {
  **********************/
 
 typedef enum {
-    SCREEN_REACTIVE_POWER_TIMELINE_CONTENT_OPEN = 0,
+    SCREEN_REACTIVE_POWER_TIMELINE_MEASUREMENT_HEADER_OPEN = 0,
     _SCREEN_REACTIVE_POWER_TIMELINE_CNT = 1
 }screen_reactive_power_timeline_t;
 

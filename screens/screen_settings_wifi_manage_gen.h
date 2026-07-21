@@ -33,11 +33,6 @@ extern "C" {
  *      TYPEDEFS
  **********************/
 
-typedef enum {
-    SCREEN_SETTINGS_WIFI_MANAGE_TIMELINE_CONTENT_OPEN = 0,
-    _SCREEN_SETTINGS_WIFI_MANAGE_TIMELINE_CNT = 1
-}screen_settings_wifi_manage_timeline_t;
-
 /**********************
  * GLOBAL PROTOTYPES
  **********************/
@@ -45,14 +40,6 @@ typedef enum {
 
 
 lv_obj_t * screen_settings_wifi_manage_create(void);
-
-/**
- * Get a timeline of a screen_settings_wifi_manage
- * @param obj          pointer to a screen_settings_wifi_manage component
- * @param timeline_id  ID of the the timeline
- * @return             pointer to the timeline or NULL if not found
- */
-lv_anim_timeline_t * screen_settings_wifi_manage_get_timeline(lv_obj_t * obj, screen_settings_wifi_manage_timeline_t timeline_id);
 
 /**********************
  *      MACROS

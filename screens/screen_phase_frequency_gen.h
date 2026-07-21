@@ -34,7 +34,7 @@ extern "C" {
  **********************/
 
 typedef enum {
-    SCREEN_PHASE_FREQUENCY_TIMELINE_CONTENT_OPEN = 0,
+    SCREEN_PHASE_FREQUENCY_TIMELINE_MEASUREMENT_HEADER_OPEN = 0,
     _SCREEN_PHASE_FREQUENCY_TIMELINE_CNT = 1
 }screen_phase_frequency_timeline_t;
 

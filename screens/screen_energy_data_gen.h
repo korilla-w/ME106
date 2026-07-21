@@ -34,7 +34,7 @@ extern "C" {
  **********************/
 
 typedef enum {
-    SCREEN_ENERGY_DATA_TIMELINE_CONTENT_OPEN = 0,
+    SCREEN_ENERGY_DATA_TIMELINE_MEASUREMENT_HEADER_OPEN = 0,
     _SCREEN_ENERGY_DATA_TIMELINE_CNT = 1
 }screen_energy_data_timeline_t;
 

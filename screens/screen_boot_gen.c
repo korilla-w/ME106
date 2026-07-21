@@ -66,31 +66,31 @@ lv_obj_t * screen_boot_create(void)
     lv_image_set_src(boot_flame_1, meter_boot_logo_flame_1);
     lv_obj_set_x(boot_flame_1, 0);
     lv_obj_set_y(boot_flame_1, 0);
-    
+
     lv_obj_t * boot_flame_2 = lv_image_create(boot_logo_group);
     lv_obj_set_name(boot_flame_2, "boot_flame_2");
     lv_image_set_src(boot_flame_2, meter_boot_logo_flame_2);
     lv_obj_set_x(boot_flame_2, 11);
     lv_obj_set_y(boot_flame_2, 13);
-    
+
     lv_obj_t * boot_flame_3 = lv_image_create(boot_logo_group);
     lv_obj_set_name(boot_flame_3, "boot_flame_3");
     lv_image_set_src(boot_flame_3, meter_boot_logo_flame_3);
     lv_obj_set_x(boot_flame_3, 16);
     lv_obj_set_y(boot_flame_3, 33);
-    
+
     lv_obj_t * boot_name_zh = lv_image_create(boot_logo_group);
     lv_obj_set_name(boot_name_zh, "boot_name_zh");
     lv_image_set_src(boot_name_zh, meter_boot_logo_name_zh);
     lv_obj_set_x(boot_name_zh, 54);
     lv_obj_set_y(boot_name_zh, 6);
-    
+
     lv_obj_t * boot_name_en = lv_image_create(boot_logo_group);
     lv_obj_set_name(boot_name_en, "boot_name_en");
     lv_image_set_src(boot_name_en, meter_boot_logo_name_en);
     lv_obj_set_x(boot_name_en, 54);
     lv_obj_set_y(boot_name_en, 45);
-    
+
     lv_obj_t * boot_tagline = lv_label_create(lv_obj_0);
     lv_obj_set_name(boot_tagline, "boot_tagline");
     lv_label_set_text(boot_tagline, "智控电能 · 润泽未来");
@@ -99,8 +99,8 @@ lv_obj_t * screen_boot_create(void)
     lv_obj_set_width(boot_tagline, 240);
     lv_obj_set_style_text_align(boot_tagline, LV_TEXT_ALIGN_CENTER, 0);
     lv_obj_add_style(boot_tagline, &me106_text_16_gray_d8, 0);
-    
-    
+
+
     /* create animation timeline(s) */
     lv_anim_timeline_t ** at_array = lv_malloc(sizeof(lv_anim_timeline_t *) * _SCREEN_BOOT_TIMELINE_CNT);
     at_array[SCREEN_BOOT_TIMELINE_BOOT_INTRO] = timeline_boot_intro_create(lv_obj_0);

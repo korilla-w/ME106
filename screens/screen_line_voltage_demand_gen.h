@@ -34,7 +34,7 @@ extern "C" {
  **********************/
 
 typedef enum {
-    SCREEN_LINE_VOLTAGE_DEMAND_TIMELINE_CONTENT_OPEN = 0,
+    SCREEN_LINE_VOLTAGE_DEMAND_TIMELINE_MEASUREMENT_HEADER_OPEN = 0,
     _SCREEN_LINE_VOLTAGE_DEMAND_TIMELINE_CNT = 1
 }screen_line_voltage_demand_timeline_t;
 

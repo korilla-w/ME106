@@ -26,9 +26,6 @@
  *  STATIC PROTOTYPES
  **********************/
 
-static lv_anim_timeline_t * timeline_content_open_create(lv_obj_t * obj);
-static void free_timeline_event_cb(lv_event_t * e);
-
 /**********************
  *   GLOBAL FUNCTIONS
  **********************/
@@ -73,7 +70,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(lv_label_0, &me106_text_16_white_right, 0);
     lv_obj_bind_style(lv_label_0, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * upgrade_icon_halo = lv_obj_create(page_content);
     lv_obj_set_name(upgrade_icon_halo, "upgrade_icon_halo");
     lv_obj_set_x(upgrade_icon_halo, 24);
@@ -86,7 +83,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_border_width(upgrade_icon_halo, 0, 0);
     lv_obj_set_style_pad_all(upgrade_icon_halo, 0, 0);
     lv_obj_set_flag(upgrade_icon_halo, LV_OBJ_FLAG_SCROLLABLE, false);
-    
+
     lv_obj_t * lv_image_0 = lv_image_create(page_content);
     lv_image_set_src(lv_image_0, meter_icon_update);
     lv_obj_set_x(lv_image_0, 35);
@@ -96,14 +93,14 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_transform_scale_x(lv_image_0, 245, 0);
     lv_obj_set_style_transform_scale_y(lv_image_0, 245, 0);
     lv_obj_add_style(lv_image_0, &me106_icon_cyan, 0);
-    
+
     lv_obj_t * lv_label_1 = lv_label_create(page_content);
     lv_label_set_text(lv_label_1, "OTA");
     lv_obj_set_x(lv_label_1, 82);
     lv_obj_set_y(lv_label_1, 57);
     lv_obj_set_width(lv_label_1, 42);
     lv_obj_add_style(lv_label_1, &me106_text_18_cyan, 0);
-    
+
     lv_obj_t * lv_label_2 = lv_label_create(page_content);
     lv_label_bind_text(lv_label_2, &meter_upgrade_status_text, NULL);
     lv_obj_set_x(lv_label_2, 128);
@@ -112,7 +109,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(lv_label_2, &me106_text_14_gray_ba, 0);
     lv_obj_bind_style(lv_label_2, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_2, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * upgrade_status_dot = lv_obj_create(page_content);
     lv_obj_set_name(upgrade_status_dot, "upgrade_status_dot");
     lv_obj_set_x(upgrade_status_dot, 250);
@@ -125,7 +122,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_border_width(upgrade_status_dot, 0, 0);
     lv_obj_set_flag(upgrade_status_dot, LV_OBJ_FLAG_SCROLLABLE, false);
     lv_obj_bind_flag_if_not_eq(upgrade_status_dot, &meter_upgrade_request, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
     lv_obj_t * lv_label_3 = lv_label_create(page_content);
     lv_label_set_text(lv_label_3, "已提交");
     lv_obj_set_x(lv_label_3, 262);
@@ -135,7 +132,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_bind_style(lv_label_3, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_3, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(lv_label_3, &meter_upgrade_request, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
     lv_obj_t * upgrade_version_band = lv_obj_create(page_content);
     lv_obj_set_name(upgrade_version_band, "upgrade_version_band");
     lv_obj_set_x(upgrade_version_band, 16);
@@ -147,7 +144,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(upgrade_version_band, &me106_panel_soft_r8, 0);
     lv_obj_bind_style(upgrade_version_band, &me106_theme_light_soft_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(upgrade_version_band, &me106_theme_alarm_soft_panel, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * upgrade_current_mark = lv_obj_create(page_content);
     lv_obj_set_name(upgrade_current_mark, "upgrade_current_mark");
     lv_obj_set_x(upgrade_current_mark, 28);
@@ -159,7 +156,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_bg_opa(upgrade_current_mark, 255, 0);
     lv_obj_set_style_border_width(upgrade_current_mark, 0, 0);
     lv_obj_set_flag(upgrade_current_mark, LV_OBJ_FLAG_SCROLLABLE, false);
-    
+
     lv_obj_t * lv_label_4 = lv_label_create(page_content);
     lv_label_set_text(lv_label_4, "当前版本");
     lv_obj_set_x(lv_label_4, 44);
@@ -168,7 +165,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(lv_label_4, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_4, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_4, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_5 = lv_label_create(page_content);
     lv_label_bind_text(lv_label_5, &meter_upgrade_current_version, NULL);
     lv_obj_set_x(lv_label_5, 44);
@@ -177,14 +174,14 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(lv_label_5, &me106_text_16_white, 0);
     lv_obj_bind_style(lv_label_5, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_5, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_6 = lv_label_create(page_content);
     lv_label_set_text(lv_label_6, "›");
     lv_obj_set_x(lv_label_6, 148);
     lv_obj_set_y(lv_label_6, 112);
     lv_obj_set_width(lv_label_6, 24);
     lv_obj_add_style(lv_label_6, &me106_text_16_cyan, 0);
-    
+
     lv_obj_t * upgrade_new_mark = lv_obj_create(page_content);
     lv_obj_set_name(upgrade_new_mark, "upgrade_new_mark");
     lv_obj_set_x(upgrade_new_mark, 174);
@@ -196,7 +193,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_bg_opa(upgrade_new_mark, 255, 0);
     lv_obj_set_style_border_width(upgrade_new_mark, 0, 0);
     lv_obj_set_flag(upgrade_new_mark, LV_OBJ_FLAG_SCROLLABLE, false);
-    
+
     lv_obj_t * lv_label_7 = lv_label_create(page_content);
     lv_label_set_text(lv_label_7, "目标版本");
     lv_obj_set_x(lv_label_7, 190);
@@ -205,14 +202,14 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(lv_label_7, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_7, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_7, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_8 = lv_label_create(page_content);
     lv_label_bind_text(lv_label_8, &meter_upgrade_new_version, NULL);
     lv_obj_set_x(lv_label_8, 190);
     lv_obj_set_y(lv_label_8, 121);
     lv_obj_set_width(lv_label_8, 84);
     lv_obj_add_style(lv_label_8, &me106_text_16_cyan, 0);
-    
+
     lv_obj_t * upgrade_summary_panel = lv_obj_create(page_content);
     lv_obj_set_name(upgrade_summary_panel, "upgrade_summary_panel");
     lv_obj_set_x(upgrade_summary_panel, 16);
@@ -224,7 +221,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(upgrade_summary_panel, &me106_panel_soft_r8, 0);
     lv_obj_bind_style(upgrade_summary_panel, &me106_theme_light_soft_panel, 0, &meter_theme_index, 1);
     lv_obj_bind_style(upgrade_summary_panel, &me106_theme_alarm_soft_panel, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_9 = lv_label_create(page_content);
     lv_label_set_text(lv_label_9, "固件大小");
     lv_obj_set_x(lv_label_9, 28);
@@ -233,7 +230,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(lv_label_9, &me106_text_14_gray_ba, 0);
     lv_obj_bind_style(lv_label_9, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_9, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_10 = lv_label_create(page_content);
     lv_label_bind_text(lv_label_10, &meter_upgrade_file_size_text, NULL);
     lv_obj_set_x(lv_label_10, 102);
@@ -242,7 +239,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(lv_label_10, &me106_text_14_white, 0);
     lv_obj_bind_style(lv_label_10, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_10, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_11 = lv_label_create(page_content);
     lv_label_bind_text(lv_label_11, &meter_upgrade_release_notes, NULL);
     lv_obj_set_x(lv_label_11, 28);
@@ -253,7 +250,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(lv_label_11, &me106_text_14_gray_ba, 0);
     lv_obj_bind_style(lv_label_11, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_11, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * upgrade_progress_bar = lv_bar_create(page_content);
     lv_obj_set_name(upgrade_progress_bar, "upgrade_progress_bar");
     lv_obj_set_x(upgrade_progress_bar, 28);
@@ -268,7 +265,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_bg_opa(upgrade_progress_bar, 255, LV_PART_INDICATOR);
     lv_obj_set_style_border_width(upgrade_progress_bar, 0, 0);
     lv_obj_set_style_pad_all(upgrade_progress_bar, 0, 0);
-    
+
     lv_obj_t * upgrade_action_btn = lv_button_create(page_content);
     lv_obj_set_name(upgrade_action_btn, "upgrade_action_btn");
     lv_obj_set_x(upgrade_action_btn, 240);
@@ -282,11 +279,11 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_12, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_12, 72);
     lv_obj_add_style(lv_label_12, &me106_text_14_cyan_center, 0);
-    
+
     lv_obj_add_subject_set_int_event(upgrade_action_btn, &meter_upgrade_request, LV_EVENT_CLICKED, 1);
     lv_obj_add_subject_set_int_event(upgrade_action_btn, &meter_upgrade_ui_state, LV_EVENT_CLICKED, 1);
     lv_obj_add_subject_set_string_event(upgrade_action_btn, &meter_upgrade_status_text, LV_EVENT_CLICKED, "正在查找固件");
-    
+
     lv_obj_t * upgrade_action_check_again = lv_button_create(page_content);
     lv_obj_set_name(upgrade_action_check_again, "upgrade_action_check_again");
     lv_obj_set_x(upgrade_action_check_again, 240);
@@ -300,11 +297,11 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_13, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_13, 72);
     lv_obj_add_style(lv_label_13, &me106_text_14_cyan_center, 0);
-    
+
     lv_obj_add_subject_set_int_event(upgrade_action_check_again, &meter_upgrade_request, LV_EVENT_CLICKED, 1);
     lv_obj_add_subject_set_int_event(upgrade_action_check_again, &meter_upgrade_ui_state, LV_EVENT_CLICKED, 1);
     lv_obj_add_subject_set_string_event(upgrade_action_check_again, &meter_upgrade_status_text, LV_EVENT_CLICKED, "正在查找固件");
-    
+
     lv_obj_t * upgrade_action_start = lv_button_create(page_content);
     lv_obj_set_name(upgrade_action_start, "upgrade_action_start");
     lv_obj_set_x(upgrade_action_start, 240);
@@ -318,9 +315,9 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_14, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_14, 72);
     lv_obj_add_style(lv_label_14, &me106_text_14_cyan_center, 0);
-    
+
     lv_obj_add_subject_set_int_event(upgrade_action_start, &meter_upgrade_confirm_popup, LV_EVENT_CLICKED, 1);
-    
+
     lv_obj_t * upgrade_action_busy_check = lv_button_create(page_content);
     lv_obj_set_name(upgrade_action_busy_check, "upgrade_action_busy_check");
     lv_obj_set_x(upgrade_action_busy_check, 240);
@@ -334,7 +331,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_15, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_15, 72);
     lv_obj_add_style(lv_label_15, &me106_text_14_gray_ba_center, 0);
-    
+
     lv_obj_t * upgrade_action_busy_start = lv_button_create(page_content);
     lv_obj_set_name(upgrade_action_busy_start, "upgrade_action_busy_start");
     lv_obj_set_x(upgrade_action_busy_start, 240);
@@ -348,7 +345,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_16, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_16, 72);
     lv_obj_add_style(lv_label_16, &me106_text_14_gray_ba_center, 0);
-    
+
     lv_obj_t * upgrade_action_busy_download = lv_button_create(page_content);
     lv_obj_set_name(upgrade_action_busy_download, "upgrade_action_busy_download");
     lv_obj_set_x(upgrade_action_busy_download, 240);
@@ -362,7 +359,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_17, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_17, 72);
     lv_obj_add_style(lv_label_17, &me106_text_14_gray_ba_center, 0);
-    
+
     lv_obj_t * upgrade_action_busy_write = lv_button_create(page_content);
     lv_obj_set_name(upgrade_action_busy_write, "upgrade_action_busy_write");
     lv_obj_set_x(upgrade_action_busy_write, 240);
@@ -376,7 +373,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_18, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_18, 72);
     lv_obj_add_style(lv_label_18, &me106_text_14_gray_ba_center, 0);
-    
+
     lv_obj_t * screen_settings_upgrade_bottom_bar = lv_obj_create(lv_obj_0);
     lv_obj_set_name(screen_settings_upgrade_bottom_bar, "screen_settings_upgrade_bottom_bar");
     lv_obj_set_x(screen_settings_upgrade_bottom_bar, 0);
@@ -389,7 +386,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(screen_settings_upgrade_bottom_bar, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(screen_settings_upgrade_bottom_bar, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(screen_settings_upgrade_bottom_bar, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * upgrade_btn_return = lv_button_create(lv_obj_0);
     lv_obj_set_name(upgrade_btn_return, "upgrade_btn_return");
     lv_obj_set_x(upgrade_btn_return, 0);
@@ -406,9 +403,9 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_1, 7, 0);
     lv_obj_set_style_transform_scale_x(lv_image_1, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_1, 230, 0);
-    
-    lv_obj_add_screen_create_event(upgrade_btn_return, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-    
+
+    lv_obj_add_screen_create_event(upgrade_btn_return, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_FADE_OUT, 105, 0);
+
     lv_obj_t * upgrade_btn_placeholder_1 = lv_button_create(lv_obj_0);
     lv_obj_set_name(upgrade_btn_placeholder_1, "upgrade_btn_placeholder_1");
     lv_obj_set_x(upgrade_btn_placeholder_1, 80);
@@ -418,7 +415,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_add_style(upgrade_btn_placeholder_1, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(upgrade_btn_placeholder_1, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(upgrade_btn_placeholder_1, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * upgrade_btn_wifi = lv_button_create(lv_obj_0);
     lv_obj_set_name(upgrade_btn_wifi, "upgrade_btn_wifi");
     lv_obj_set_x(upgrade_btn_wifi, 160);
@@ -436,10 +433,10 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_transform_scale_x(lv_image_2, 220, 0);
     lv_obj_set_style_transform_scale_y(lv_image_2, 220, 0);
     lv_obj_add_style(lv_image_2, &me106_icon_cyan, 0);
-    
+
     lv_obj_add_subject_set_int_event(upgrade_btn_wifi, &meter_wifi_sta_connect_request, LV_EVENT_CLICKED, 1);
     lv_obj_add_subject_set_string_event(upgrade_btn_wifi, &meter_upgrade_status_text, LV_EVENT_CLICKED, "正在连接热点");
-    
+
     lv_obj_t * upgrade_btn_yes = lv_button_create(lv_obj_0);
     lv_obj_set_name(upgrade_btn_yes, "upgrade_btn_yes");
     lv_obj_set_x(upgrade_btn_yes, 240);
@@ -457,11 +454,11 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_3, 6, 0);
     lv_obj_set_style_transform_scale_x(lv_image_3, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_3, 230, 0);
-    
+
     lv_obj_add_subject_set_int_event(upgrade_btn_yes, &meter_upgrade_request, LV_EVENT_CLICKED, 1);
     lv_obj_add_subject_set_int_event(upgrade_btn_yes, &meter_upgrade_ui_state, LV_EVENT_CLICKED, 1);
     lv_obj_add_subject_set_string_event(upgrade_btn_yes, &meter_upgrade_status_text, LV_EVENT_CLICKED, "正在查找固件");
-    
+
     lv_obj_t * upgrade_btn_yes_check_again = lv_button_create(lv_obj_0);
     lv_obj_set_name(upgrade_btn_yes_check_again, "upgrade_btn_yes_check_again");
     lv_obj_set_x(upgrade_btn_yes_check_again, 240);
@@ -479,11 +476,11 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_4, 6, 0);
     lv_obj_set_style_transform_scale_x(lv_image_4, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_4, 230, 0);
-    
+
     lv_obj_add_subject_set_int_event(upgrade_btn_yes_check_again, &meter_upgrade_request, LV_EVENT_CLICKED, 1);
     lv_obj_add_subject_set_int_event(upgrade_btn_yes_check_again, &meter_upgrade_ui_state, LV_EVENT_CLICKED, 1);
     lv_obj_add_subject_set_string_event(upgrade_btn_yes_check_again, &meter_upgrade_status_text, LV_EVENT_CLICKED, "正在查找固件");
-    
+
     lv_obj_t * upgrade_btn_yes_start = lv_button_create(lv_obj_0);
     lv_obj_set_name(upgrade_btn_yes_start, "upgrade_btn_yes_start");
     lv_obj_set_x(upgrade_btn_yes_start, 240);
@@ -501,9 +498,9 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_5, 6, 0);
     lv_obj_set_style_transform_scale_x(lv_image_5, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_5, 230, 0);
-    
+
     lv_obj_add_subject_set_int_event(upgrade_btn_yes_start, &meter_upgrade_confirm_popup, LV_EVENT_CLICKED, 1);
-    
+
     lv_obj_t * upgrade_busy_guard_start = lv_obj_create(lv_obj_0);
     lv_obj_set_name(upgrade_busy_guard_start, "upgrade_busy_guard_start");
     lv_obj_set_x(upgrade_busy_guard_start, 0);
@@ -521,7 +518,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_19, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_19, 320);
     lv_obj_add_style(lv_label_19, &me106_text_14_gray_ba_center, 0);
-    
+
     lv_obj_t * upgrade_busy_guard_download = lv_obj_create(lv_obj_0);
     lv_obj_set_name(upgrade_busy_guard_download, "upgrade_busy_guard_download");
     lv_obj_set_x(upgrade_busy_guard_download, 0);
@@ -539,7 +536,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_20, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_20, 320);
     lv_obj_add_style(lv_label_20, &me106_text_14_gray_ba_center, 0);
-    
+
     lv_obj_t * upgrade_busy_guard_write = lv_obj_create(lv_obj_0);
     lv_obj_set_name(upgrade_busy_guard_write, "upgrade_busy_guard_write");
     lv_obj_set_x(upgrade_busy_guard_write, 0);
@@ -557,7 +554,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_21, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_21, 320);
     lv_obj_add_style(lv_label_21, &me106_text_14_gray_ba_center, 0);
-    
+
     lv_obj_t * upgrade_confirm_mask = lv_obj_create(lv_obj_0);
     lv_obj_set_name(upgrade_confirm_mask, "upgrade_confirm_mask");
     lv_obj_set_x(upgrade_confirm_mask, 0);
@@ -570,7 +567,7 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_style_pad_all(upgrade_confirm_mask, 0, 0);
     lv_obj_set_flag(upgrade_confirm_mask, LV_OBJ_FLAG_SCROLLABLE, false);
     lv_obj_bind_flag_if_not_eq(upgrade_confirm_mask, &meter_upgrade_confirm_popup, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
     lv_obj_t * upgrade_confirm_dialog = lv_obj_create(lv_obj_0);
     lv_obj_set_name(upgrade_confirm_dialog, "upgrade_confirm_dialog");
     lv_obj_set_x(upgrade_confirm_dialog, 34);
@@ -588,21 +585,21 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_image_set_src(lv_image_6, meter_icon_warning);
     lv_obj_set_x(lv_image_6, 112);
     lv_obj_set_y(lv_image_6, 14);
-    
+
     lv_obj_t * lv_label_22 = lv_label_create(upgrade_confirm_dialog);
     lv_label_set_text(lv_label_22, "刷写过程中请勿断电");
     lv_obj_set_x(lv_label_22, 24);
     lv_obj_set_y(lv_label_22, 48);
     lv_obj_set_width(lv_label_22, 204);
     lv_obj_add_style(lv_label_22, &me106_text_16_white_center, 0);
-    
+
     lv_obj_t * lv_label_23 = lv_label_create(upgrade_confirm_dialog);
     lv_label_bind_text(lv_label_23, &meter_upgrade_confirm_text, NULL);
     lv_obj_set_x(lv_label_23, 24);
     lv_obj_set_y(lv_label_23, 72);
     lv_obj_set_width(lv_label_23, 204);
     lv_obj_add_style(lv_label_23, &me106_text_14_gray_ba_center, 0);
-    
+
     lv_obj_t * upgrade_confirm_cancel = lv_button_create(upgrade_confirm_dialog);
     lv_obj_set_name(upgrade_confirm_cancel, "upgrade_confirm_cancel");
     lv_obj_set_x(upgrade_confirm_cancel, 18);
@@ -615,9 +612,9 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_24, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_24, 98);
     lv_obj_add_style(lv_label_24, &me106_text_14_gray_ba_center, 0);
-    
+
     lv_obj_add_subject_set_int_event(upgrade_confirm_cancel, &meter_upgrade_confirm_popup, LV_EVENT_CLICKED, 0);
-    
+
     lv_obj_t * upgrade_confirm_yes = lv_button_create(upgrade_confirm_dialog);
     lv_obj_set_name(upgrade_confirm_yes, "upgrade_confirm_yes");
     lv_obj_set_x(upgrade_confirm_yes, 136);
@@ -630,91 +627,18 @@ lv_obj_t * screen_settings_upgrade_create(void)
     lv_obj_set_align(lv_label_25, LV_ALIGN_CENTER);
     lv_obj_set_width(lv_label_25, 98);
     lv_obj_add_style(lv_label_25, &me106_text_14_white_center, 0);
-    
+
     lv_obj_add_subject_set_int_event(upgrade_confirm_yes, &meter_upgrade_confirm_popup, LV_EVENT_CLICKED, 0);
     lv_obj_add_subject_set_int_event(upgrade_confirm_yes, &meter_upgrade_request, LV_EVENT_CLICKED, 2);
     lv_obj_add_subject_set_int_event(upgrade_confirm_yes, &meter_upgrade_ui_state, LV_EVENT_CLICKED, 4);
     lv_obj_add_subject_set_string_event(upgrade_confirm_yes, &meter_upgrade_status_text, LV_EVENT_CLICKED, "正在请求刷写");
-    
-    
-    /* create animation timeline(s) */
-    lv_anim_timeline_t ** at_array = lv_malloc(sizeof(lv_anim_timeline_t *) * _SCREEN_SETTINGS_UPGRADE_TIMELINE_CNT);
-    at_array[SCREEN_SETTINGS_UPGRADE_TIMELINE_CONTENT_OPEN] = timeline_content_open_create(lv_obj_0);
-    lv_obj_set_user_data(lv_obj_0, at_array);
-    lv_obj_add_event_cb(lv_obj_0, free_timeline_event_cb, LV_EVENT_DELETE, at_array);
-
-    lv_obj_add_play_timeline_event(lv_obj_0, LV_EVENT_SCREEN_LOADED, screen_settings_upgrade_get_timeline(lv_obj_0, SCREEN_SETTINGS_UPGRADE_TIMELINE_CONTENT_OPEN), 0, false);
 
     LV_TRACE_OBJ_CREATE("finished");
 
     return lv_obj_0;
 }
 
-lv_anim_timeline_t * screen_settings_upgrade_get_timeline(lv_obj_t * obj, screen_settings_upgrade_timeline_t timeline_id)
-{
-    if (timeline_id >= _SCREEN_SETTINGS_UPGRADE_TIMELINE_CNT) {
-        LV_LOG_WARN("screen_settings_upgrade has no timeline with %d ID", timeline_id);
-        return NULL;
-    }
-
-    lv_anim_timeline_t ** at_array = lv_obj_get_user_data(obj);
-    return at_array[timeline_id];
-}
-
 /**********************
  *   STATIC FUNCTIONS
  **********************/
-
-/* Helper function to execute animations */
-static void int_anim_exec_cb(lv_anim_t * a, int32_t v)
-{
-    uint32_t data = (lv_uintptr_t)lv_anim_get_user_data(a);
-    lv_style_prop_t prop = data >> 24;
-    lv_style_selector_t selector = data & 0x00ffffff;
-
-    lv_style_value_t style_value;
-    style_value.num = v;
-    lv_obj_set_local_style_prop(a->var, prop, style_value, selector);
-}
-
-static lv_anim_timeline_t * timeline_content_open_create(lv_obj_t * obj)
-{
-    lv_anim_timeline_t * at = lv_anim_timeline_create();
-    lv_anim_timeline_t * at_to_merge = NULL;
-
-    lv_anim_t a;
-    uint32_t selector_and_prop;
-
-    selector_and_prop = ((LV_STYLE_OPA & 0xff) << 24) | 0;
-    lv_anim_init(&a);
-    lv_anim_set_custom_exec_cb(&a, int_anim_exec_cb);
-    lv_anim_set_var(&a, lv_obj_find_by_name(obj, "page_content"));
-    lv_anim_set_values(&a, 0, 255);
-    lv_anim_set_duration(&a, 110);
-    lv_anim_set_user_data(&a, (void *)((uintptr_t)selector_and_prop));
-    lv_anim_set_early_apply(&a, true);
-    lv_anim_timeline_add(at, 0, &a);
-
-    selector_and_prop = ((LV_STYLE_TRANSLATE_Y & 0xff) << 24) | 0;
-    lv_anim_init(&a);
-    lv_anim_set_custom_exec_cb(&a, int_anim_exec_cb);
-    lv_anim_set_var(&a, lv_obj_find_by_name(obj, "page_content"));
-    lv_anim_set_values(&a, 4, 0);
-    lv_anim_set_duration(&a, 110);
-    lv_anim_set_user_data(&a, (void *)((uintptr_t)selector_and_prop));
-    lv_anim_set_early_apply(&a, true);
-    lv_anim_timeline_add(at, 0, &a);
-
-    return at;
-}
-
-static void free_timeline_event_cb(lv_event_t * e)
-{
-    lv_anim_timeline_t ** at_array = lv_event_get_user_data(e);
-    uint32_t i;
-    for(i = 0; i < _SCREEN_SETTINGS_UPGRADE_TIMELINE_CNT; i++) {
-        lv_anim_timeline_delete(at_array[i]);
-    }
-    lv_free(at_array);
-}
 

@@ -26,9 +26,6 @@
  *  STATIC PROTOTYPES
  **********************/
 
-static lv_anim_timeline_t * timeline_content_open_create(lv_obj_t * obj);
-static void free_timeline_event_cb(lv_event_t * e);
-
 /**********************
  *   GLOBAL FUNCTIONS
  **********************/
@@ -71,7 +68,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_0, &me106_text_16_white_right, 0);
     lv_obj_bind_style(lv_label_0, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * harmonic_mode_voltage = lv_button_create(page_content);
     lv_obj_set_name(harmonic_mode_voltage, "harmonic_mode_voltage");
     lv_obj_set_x(harmonic_mode_voltage, 24);
@@ -95,7 +92,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_bind_style(harmonic_mode_voltage_selected_bg, &me106_theme_light_accent, 0, &meter_theme_index, 1);
     lv_obj_bind_style(harmonic_mode_voltage_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(harmonic_mode_voltage_selected_bg, &meter_harmonic_spectrum_mode, LV_OBJ_FLAG_HIDDEN, 0);
-    
+
     lv_obj_add_subject_set_int_event(harmonic_mode_voltage, &meter_harmonic_spectrum_mode, LV_EVENT_CLICKED, 0);
     lv_obj_t * lv_label_1 = lv_label_create(harmonic_mode_voltage);
     lv_label_set_text(lv_label_1, "电压");
@@ -106,7 +103,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_bind_style(lv_label_1, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_1, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     lv_obj_bind_style(lv_label_1, &me106_text_14_white_center, 0, &meter_harmonic_spectrum_mode, 0);
-    
+
     lv_obj_t * harmonic_mode_current = lv_button_create(page_content);
     lv_obj_set_name(harmonic_mode_current, "harmonic_mode_current");
     lv_obj_set_x(harmonic_mode_current, 86);
@@ -130,7 +127,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_bind_style(harmonic_mode_current_selected_bg, &me106_theme_light_accent, 0, &meter_theme_index, 1);
     lv_obj_bind_style(harmonic_mode_current_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(harmonic_mode_current_selected_bg, &meter_harmonic_spectrum_mode, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
     lv_obj_add_subject_set_int_event(harmonic_mode_current, &meter_harmonic_spectrum_mode, LV_EVENT_CLICKED, 1);
     lv_obj_t * lv_label_2 = lv_label_create(harmonic_mode_current);
     lv_label_set_text(lv_label_2, "电流");
@@ -141,7 +138,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_bind_style(lv_label_2, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_2, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     lv_obj_bind_style(lv_label_2, &me106_text_14_white_center, 0, &meter_harmonic_spectrum_mode, 1);
-    
+
     lv_obj_t * harmonic_voltage_legend = lv_obj_create(page_content);
     lv_obj_set_name(harmonic_voltage_legend, "harmonic_voltage_legend");
     lv_obj_set_x(harmonic_voltage_legend, 155);
@@ -159,14 +156,14 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_set_y(lv_label_3, 0);
     lv_obj_set_width(lv_label_3, 38);
     lv_obj_add_style(lv_label_3, &me106_text_14_blue, 0);
-    
+
     lv_obj_t * lv_label_4 = lv_label_create(harmonic_voltage_legend);
     lv_label_set_text(lv_label_4, "B相");
     lv_obj_set_x(lv_label_4, 47);
     lv_obj_set_y(lv_label_4, 0);
     lv_obj_set_width(lv_label_4, 38);
     lv_obj_add_style(lv_label_4, &me106_text_14_cyan, 0);
-    
+
     lv_obj_t * lv_label_5 = lv_label_create(harmonic_voltage_legend);
     lv_label_set_text(lv_label_5, "C相");
     lv_obj_set_x(lv_label_5, 94);
@@ -175,7 +172,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_5, &me106_text_14_orange, 0);
     lv_obj_bind_style(lv_label_5, &me106_theme_light_status_warning, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_5, &me106_theme_alarm_status_warning, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * harmonic_current_legend = lv_obj_create(page_content);
     lv_obj_set_name(harmonic_current_legend, "harmonic_current_legend");
     lv_obj_set_x(harmonic_current_legend, 155);
@@ -193,14 +190,14 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_set_y(lv_label_6, 0);
     lv_obj_set_width(lv_label_6, 38);
     lv_obj_add_style(lv_label_6, &me106_text_14_blue, 0);
-    
+
     lv_obj_t * lv_label_7 = lv_label_create(harmonic_current_legend);
     lv_label_set_text(lv_label_7, "B相");
     lv_obj_set_x(lv_label_7, 47);
     lv_obj_set_y(lv_label_7, 0);
     lv_obj_set_width(lv_label_7, 38);
     lv_obj_add_style(lv_label_7, &me106_text_14_cyan, 0);
-    
+
     lv_obj_t * lv_label_8 = lv_label_create(harmonic_current_legend);
     lv_label_set_text(lv_label_8, "C相");
     lv_obj_set_x(lv_label_8, 94);
@@ -209,7 +206,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_8, &me106_text_14_orange, 0);
     lv_obj_bind_style(lv_label_8, &me106_theme_light_status_warning, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_8, &me106_theme_alarm_status_warning, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_9 = lv_label_create(page_content);
     lv_label_set_text(lv_label_9, "含有率(%)");
     lv_obj_set_x(lv_label_9, 42);
@@ -218,7 +215,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_9, &me106_text_14_gray_ba, 0);
     lv_obj_bind_style(lv_label_9, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_9, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_10 = lv_label_create(page_content);
     lv_label_set_text(lv_label_10, "1");
     lv_obj_set_x(lv_label_10, 21);
@@ -228,7 +225,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_bind_style(lv_label_10, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_10, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(lv_label_10, &meter_harmonic_spectrum_mode, LV_OBJ_FLAG_HIDDEN, 0);
-    
+
     lv_obj_t * lv_label_11 = lv_label_create(page_content);
     lv_label_set_text(lv_label_11, "0.5");
     lv_obj_set_x(lv_label_11, 8);
@@ -238,7 +235,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_bind_style(lv_label_11, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_11, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(lv_label_11, &meter_harmonic_spectrum_mode, LV_OBJ_FLAG_HIDDEN, 0);
-    
+
     lv_obj_t * lv_label_12 = lv_label_create(page_content);
     lv_label_set_text(lv_label_12, "25");
     lv_obj_set_x(lv_label_12, 15);
@@ -248,7 +245,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_bind_style(lv_label_12, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_12, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(lv_label_12, &meter_harmonic_spectrum_mode, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
     lv_obj_t * lv_label_13 = lv_label_create(page_content);
     lv_label_set_text(lv_label_13, "12.5");
     lv_obj_set_x(lv_label_13, 2);
@@ -258,7 +255,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_bind_style(lv_label_13, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_13, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(lv_label_13, &meter_harmonic_spectrum_mode, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
     lv_obj_t * lv_label_14 = lv_label_create(page_content);
     lv_label_set_text(lv_label_14, "0");
     lv_obj_set_x(lv_label_14, 24);
@@ -267,7 +264,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_14, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_14, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_14, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * harmonic_voltage_chart = lv_chart_create(page_content);
     lv_obj_set_name(harmonic_voltage_chart, "harmonic_voltage_chart");
     lv_obj_set_x(harmonic_voltage_chart, 42);
@@ -299,7 +296,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_chart_series_t * lv_chart_series_2 = lv_chart_add_series(harmonic_voltage_chart, lv_color_hex(0xF59E0B), LV_CHART_AXIS_PRIMARY_Y);
     static const int32_t harmonic_voltage_chart_values_2[] = {15, 68, 1, 96, 1, 93, 2, 16, 2, 25, 2, 5, 2, 20, 2, 14, 0, 8, 1, 8, 1, 8, 1, 7, 0, 5, 1, 2, 0, 4, 0, 3, 0, 3, 0, 1, 0, 2, 0, 2, 0, 2, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     lv_chart_set_series_values(harmonic_voltage_chart, lv_chart_series_2, harmonic_voltage_chart_values_2, 62);
-    
+
     lv_obj_t * harmonic_current_chart = lv_chart_create(page_content);
     lv_obj_set_name(harmonic_current_chart, "harmonic_current_chart");
     lv_obj_set_x(harmonic_current_chart, 42);
@@ -331,7 +328,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_chart_series_t * lv_chart_series_5 = lv_chart_add_series(harmonic_current_chart, lv_color_hex(0xF59E0B), LV_CHART_AXIS_PRIMARY_Y);
     static const int32_t harmonic_current_chart_values_5[] = {35, 1257, 17, 2464, 25, 1060, 5, 412, 13, 221, 18, 317, 51, 410, 29, 113, 53, 147, 31, 174, 14, 149, 9, 78, 2, 111, 3, 82, 1, 56, 4, 52, 7, 30, 5, 14, 1, 21, 3, 14, 1, 14, 4, 16, 2, 2, 1, 16, 1, 3, 1, 5, 1, 3, 1, 4, 0, 2, 1, 2, 1, 1};
     lv_chart_set_series_values(harmonic_current_chart, lv_chart_series_5, harmonic_current_chart_values_5, 62);
-    
+
     lv_obj_t * lv_label_15 = lv_label_create(page_content);
     lv_label_set_text(lv_label_15, "2");
     lv_obj_set_x(lv_label_15, 42);
@@ -340,7 +337,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_15, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_15, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_15, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_16 = lv_label_create(page_content);
     lv_label_set_text(lv_label_16, "9");
     lv_obj_set_x(lv_label_16, 70);
@@ -349,7 +346,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_16, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_16, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_16, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_17 = lv_label_create(page_content);
     lv_label_set_text(lv_label_17, "16");
     lv_obj_set_x(lv_label_17, 97);
@@ -358,7 +355,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_17, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_17, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_17, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_18 = lv_label_create(page_content);
     lv_label_set_text(lv_label_18, "23");
     lv_obj_set_x(lv_label_18, 126);
@@ -367,7 +364,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_18, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_18, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_18, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_19 = lv_label_create(page_content);
     lv_label_set_text(lv_label_19, "30");
     lv_obj_set_x(lv_label_19, 154);
@@ -376,7 +373,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_19, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_19, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_19, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_20 = lv_label_create(page_content);
     lv_label_set_text(lv_label_20, "37");
     lv_obj_set_x(lv_label_20, 183);
@@ -385,7 +382,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_20, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_20, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_20, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_21 = lv_label_create(page_content);
     lv_label_set_text(lv_label_21, "44");
     lv_obj_set_x(lv_label_21, 212);
@@ -394,7 +391,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_21, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_21, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_21, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_22 = lv_label_create(page_content);
     lv_label_set_text(lv_label_22, "51");
     lv_obj_set_x(lv_label_22, 240);
@@ -403,7 +400,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_22, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_22, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_22, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_23 = lv_label_create(page_content);
     lv_label_set_text(lv_label_23, "58");
     lv_obj_set_x(lv_label_23, 269);
@@ -412,7 +409,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(lv_label_23, &me106_text_14_gray_8f, 0);
     lv_obj_bind_style(lv_label_23, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_23, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * lv_label_24 = lv_label_create(page_content);
     lv_label_set_text(lv_label_24, "加载中");
     lv_obj_set_x(lv_label_24, 70);
@@ -422,7 +419,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_bind_style(lv_label_24, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_24, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(lv_label_24, &meter_harmonic_data_state, LV_OBJ_FLAG_HIDDEN, 0);
-    
+
     lv_obj_t * lv_label_25 = lv_label_create(page_content);
     lv_label_set_text(lv_label_25, "暂无谐波数据");
     lv_obj_set_x(lv_label_25, 70);
@@ -432,7 +429,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_bind_style(lv_label_25, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_25, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(lv_label_25, &meter_harmonic_data_state, LV_OBJ_FLAG_HIDDEN, 2);
-    
+
     lv_obj_t * lv_label_26 = lv_label_create(page_content);
     lv_label_set_text(lv_label_26, "数据异常");
     lv_obj_set_x(lv_label_26, 70);
@@ -442,7 +439,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_bind_style(lv_label_26, &me106_theme_light_muted, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_26, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(lv_label_26, &meter_harmonic_data_state, LV_OBJ_FLAG_HIDDEN, 3);
-    
+
     lv_obj_t * screen_harmonic_spectrum_bottom_bar = lv_obj_create(lv_obj_0);
     lv_obj_set_name(screen_harmonic_spectrum_bottom_bar, "screen_harmonic_spectrum_bottom_bar");
     lv_obj_set_x(screen_harmonic_spectrum_bottom_bar, 0);
@@ -455,7 +452,7 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_add_style(screen_harmonic_spectrum_bottom_bar, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(screen_harmonic_spectrum_bottom_bar, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(screen_harmonic_spectrum_bottom_bar, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * harmonic_btn_return = lv_button_create(lv_obj_0);
     lv_obj_set_name(harmonic_btn_return, "harmonic_btn_return");
     lv_obj_set_x(harmonic_btn_return, 0);
@@ -472,9 +469,9 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_0, 7, 0);
     lv_obj_set_style_transform_scale_x(lv_image_0, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_0, 230, 0);
-    
+
     lv_obj_add_screen_create_event(harmonic_btn_return, LV_EVENT_CLICKED, screen_function_menu_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-    
+
     lv_obj_t * harmonic_btn_left = lv_button_create(lv_obj_0);
     lv_obj_set_name(harmonic_btn_left, "harmonic_btn_left");
     lv_obj_set_x(harmonic_btn_left, 80);
@@ -492,12 +489,12 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_1, 14, 0);
     lv_obj_set_style_transform_scale_x(lv_image_1, 120, 0);
     lv_obj_set_style_transform_scale_y(lv_image_1, 120, 0);
-    
+
     lv_subject_increment_dsc_t * subject_increment_event_0 = lv_obj_add_subject_increment_event(harmonic_btn_left, &meter_harmonic_spectrum_mode, LV_EVENT_CLICKED, -1);
     lv_obj_set_subject_increment_event_min_value(harmonic_btn_left, subject_increment_event_0, 0);
     lv_obj_set_subject_increment_event_max_value(harmonic_btn_left, subject_increment_event_0, 1);
     lv_obj_set_subject_increment_event_rollover(harmonic_btn_left, subject_increment_event_0, true);
-    
+
     lv_obj_t * harmonic_btn_right = lv_button_create(lv_obj_0);
     lv_obj_set_name(harmonic_btn_right, "harmonic_btn_right");
     lv_obj_set_x(harmonic_btn_right, 160);
@@ -515,12 +512,12 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_2, 14, 0);
     lv_obj_set_style_transform_scale_x(lv_image_2, 120, 0);
     lv_obj_set_style_transform_scale_y(lv_image_2, 120, 0);
-    
+
     lv_subject_increment_dsc_t * subject_increment_event_1 = lv_obj_add_subject_increment_event(harmonic_btn_right, &meter_harmonic_spectrum_mode, LV_EVENT_CLICKED, 1);
     lv_obj_set_subject_increment_event_min_value(harmonic_btn_right, subject_increment_event_1, 0);
     lv_obj_set_subject_increment_event_max_value(harmonic_btn_right, subject_increment_event_1, 1);
     lv_obj_set_subject_increment_event_rollover(harmonic_btn_right, subject_increment_event_1, true);
-    
+
     lv_obj_t * harmonic_btn_table_voltage = lv_button_create(lv_obj_0);
     lv_obj_set_name(harmonic_btn_table_voltage, "harmonic_btn_table_voltage");
     lv_obj_set_x(harmonic_btn_table_voltage, 240);
@@ -538,9 +535,9 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_3, 12, 0);
     lv_obj_set_style_transform_scale_x(lv_image_3, 150, 0);
     lv_obj_set_style_transform_scale_y(lv_image_3, 150, 0);
-    
+
     lv_obj_add_screen_create_event(harmonic_btn_table_voltage, LV_EVENT_CLICKED, screen_harmonic_spectrum_table_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-    
+
     lv_obj_t * harmonic_btn_table_current = lv_button_create(lv_obj_0);
     lv_obj_set_name(harmonic_btn_table_current, "harmonic_btn_table_current");
     lv_obj_set_x(harmonic_btn_table_current, 240);
@@ -558,88 +555,15 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_4, 12, 0);
     lv_obj_set_style_transform_scale_x(lv_image_4, 150, 0);
     lv_obj_set_style_transform_scale_y(lv_image_4, 150, 0);
-    
-    lv_obj_add_screen_create_event(harmonic_btn_table_current, LV_EVENT_CLICKED, screen_harmonic_spectrum_table_current_0_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-    
-    
-    /* create animation timeline(s) */
-    lv_anim_timeline_t ** at_array = lv_malloc(sizeof(lv_anim_timeline_t *) * _SCREEN_HARMONIC_SPECTRUM_TIMELINE_CNT);
-    at_array[SCREEN_HARMONIC_SPECTRUM_TIMELINE_CONTENT_OPEN] = timeline_content_open_create(lv_obj_0);
-    lv_obj_set_user_data(lv_obj_0, at_array);
-    lv_obj_add_event_cb(lv_obj_0, free_timeline_event_cb, LV_EVENT_DELETE, at_array);
 
-    lv_obj_add_play_timeline_event(lv_obj_0, LV_EVENT_SCREEN_LOADED, screen_harmonic_spectrum_get_timeline(lv_obj_0, SCREEN_HARMONIC_SPECTRUM_TIMELINE_CONTENT_OPEN), 0, false);
+    lv_obj_add_screen_create_event(harmonic_btn_table_current, LV_EVENT_CLICKED, screen_harmonic_spectrum_table_current_0_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
 
     LV_TRACE_OBJ_CREATE("finished");
 
     return lv_obj_0;
 }
 
-lv_anim_timeline_t * screen_harmonic_spectrum_get_timeline(lv_obj_t * obj, screen_harmonic_spectrum_timeline_t timeline_id)
-{
-    if (timeline_id >= _SCREEN_HARMONIC_SPECTRUM_TIMELINE_CNT) {
-        LV_LOG_WARN("screen_harmonic_spectrum has no timeline with %d ID", timeline_id);
-        return NULL;
-    }
-
-    lv_anim_timeline_t ** at_array = lv_obj_get_user_data(obj);
-    return at_array[timeline_id];
-}
-
 /**********************
  *   STATIC FUNCTIONS
  **********************/
-
-/* Helper function to execute animations */
-static void int_anim_exec_cb(lv_anim_t * a, int32_t v)
-{
-    uint32_t data = (lv_uintptr_t)lv_anim_get_user_data(a);
-    lv_style_prop_t prop = data >> 24;
-    lv_style_selector_t selector = data & 0x00ffffff;
-
-    lv_style_value_t style_value;
-    style_value.num = v;
-    lv_obj_set_local_style_prop(a->var, prop, style_value, selector);
-}
-
-static lv_anim_timeline_t * timeline_content_open_create(lv_obj_t * obj)
-{
-    lv_anim_timeline_t * at = lv_anim_timeline_create();
-    lv_anim_timeline_t * at_to_merge = NULL;
-
-    lv_anim_t a;
-    uint32_t selector_and_prop;
-
-    selector_and_prop = ((LV_STYLE_OPA & 0xff) << 24) | 0;
-    lv_anim_init(&a);
-    lv_anim_set_custom_exec_cb(&a, int_anim_exec_cb);
-    lv_anim_set_var(&a, lv_obj_find_by_name(obj, "page_content"));
-    lv_anim_set_values(&a, 0, 255);
-    lv_anim_set_duration(&a, 110);
-    lv_anim_set_user_data(&a, (void *)((uintptr_t)selector_and_prop));
-    lv_anim_set_early_apply(&a, true);
-    lv_anim_timeline_add(at, 0, &a);
-
-    selector_and_prop = ((LV_STYLE_TRANSLATE_Y & 0xff) << 24) | 0;
-    lv_anim_init(&a);
-    lv_anim_set_custom_exec_cb(&a, int_anim_exec_cb);
-    lv_anim_set_var(&a, lv_obj_find_by_name(obj, "page_content"));
-    lv_anim_set_values(&a, 4, 0);
-    lv_anim_set_duration(&a, 110);
-    lv_anim_set_user_data(&a, (void *)((uintptr_t)selector_and_prop));
-    lv_anim_set_early_apply(&a, true);
-    lv_anim_timeline_add(at, 0, &a);
-
-    return at;
-}
-
-static void free_timeline_event_cb(lv_event_t * e)
-{
-    lv_anim_timeline_t ** at_array = lv_event_get_user_data(e);
-    uint32_t i;
-    for(i = 0; i < _SCREEN_HARMONIC_SPECTRUM_TIMELINE_CNT; i++) {
-        lv_anim_timeline_delete(at_array[i]);
-    }
-    lv_free(at_array);
-}
 

@@ -68,7 +68,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_add_style(lv_label_0, &me106_text_16_white_right, 0);
     lv_obj_bind_style(lv_label_0, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * ratio_item_ct = lv_button_create(page_content);
     lv_obj_set_name(ratio_item_ct, "ratio_item_ct");
     lv_obj_set_x(ratio_item_ct, 40);
@@ -92,7 +92,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_bind_style(ratio_item_ct_selected_bg, &me106_theme_light_accent, 0, &meter_theme_index, 1);
     lv_obj_bind_style(ratio_item_ct_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(ratio_item_ct_selected_bg, &meter_ratio_selected_kind, LV_OBJ_FLAG_HIDDEN, 0);
-    
+
     lv_obj_t * lv_label_1 = lv_label_create(ratio_item_ct);
     lv_label_set_text(lv_label_1, "CT变比");
     lv_obj_set_align(lv_label_1, LV_ALIGN_LEFT_MID);
@@ -103,7 +103,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_bind_style(lv_label_1, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_1, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     lv_obj_bind_style(lv_label_1, &me106_text_16_white, 0, &meter_ratio_selected_kind, 0);
-    
+
     lv_obj_t * ratio_ct_value = lv_obj_create(ratio_item_ct);
     lv_obj_set_name(ratio_ct_value, "ratio_ct_value");
     lv_obj_set_align(ratio_ct_value, LV_ALIGN_RIGHT_MID);
@@ -134,7 +134,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_add_style(lv_label_2, &me106_text_18_white_center, 0);
     lv_obj_bind_style(lv_label_2, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_2, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * ratio_ct_digit_1_slot = lv_obj_create(ratio_ct_value);
     lv_obj_set_name(ratio_ct_digit_1_slot, "ratio_ct_digit_1_slot");
     lv_obj_set_x(ratio_ct_digit_1_slot, 23);
@@ -154,7 +154,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_add_style(lv_label_3, &me106_text_18_white_center, 0);
     lv_obj_bind_style(lv_label_3, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_3, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * ratio_ct_digit_2_slot = lv_obj_create(ratio_ct_value);
     lv_obj_set_name(ratio_ct_digit_2_slot, "ratio_ct_digit_2_slot");
     lv_obj_set_x(ratio_ct_digit_2_slot, 46);
@@ -174,7 +174,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_add_style(lv_label_4, &me106_text_18_white_center, 0);
     lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * ratio_ct_digit_3_slot = lv_obj_create(ratio_ct_value);
     lv_obj_set_name(ratio_ct_digit_3_slot, "ratio_ct_digit_3_slot");
     lv_obj_set_x(ratio_ct_digit_3_slot, 69);
@@ -194,9 +194,9 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_add_style(lv_label_5, &me106_text_18_white_center, 0);
     lv_obj_bind_style(lv_label_5, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_5, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_add_subject_set_int_event(ratio_item_ct, &meter_ratio_selected_kind, LV_EVENT_CLICKED, 0);
-    
+
     lv_obj_t * ratio_item_pt = lv_button_create(page_content);
     lv_obj_set_name(ratio_item_pt, "ratio_item_pt");
     lv_obj_set_x(ratio_item_pt, 40);
@@ -220,7 +220,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_bind_style(ratio_item_pt_selected_bg, &me106_theme_light_accent, 0, &meter_theme_index, 1);
     lv_obj_bind_style(ratio_item_pt_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
     lv_obj_bind_flag_if_not_eq(ratio_item_pt_selected_bg, &meter_ratio_selected_kind, LV_OBJ_FLAG_HIDDEN, 1);
-    
+
     lv_obj_t * lv_label_6 = lv_label_create(ratio_item_pt);
     lv_label_set_text(lv_label_6, "PT变比");
     lv_obj_set_align(lv_label_6, LV_ALIGN_LEFT_MID);
@@ -231,7 +231,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_bind_style(lv_label_6, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_6, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
     lv_obj_bind_style(lv_label_6, &me106_text_16_white, 0, &meter_ratio_selected_kind, 1);
-    
+
     lv_obj_t * ratio_pt_value = lv_obj_create(ratio_item_pt);
     lv_obj_set_name(ratio_pt_value, "ratio_pt_value");
     lv_obj_set_align(ratio_pt_value, LV_ALIGN_RIGHT_MID);
@@ -262,7 +262,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_add_style(lv_label_7, &me106_text_18_white_center, 0);
     lv_obj_bind_style(lv_label_7, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_7, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * ratio_pt_digit_1_slot = lv_obj_create(ratio_pt_value);
     lv_obj_set_name(ratio_pt_digit_1_slot, "ratio_pt_digit_1_slot");
     lv_obj_set_x(ratio_pt_digit_1_slot, 23);
@@ -282,7 +282,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_add_style(lv_label_8, &me106_text_18_white_center, 0);
     lv_obj_bind_style(lv_label_8, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_8, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * ratio_pt_digit_2_slot = lv_obj_create(ratio_pt_value);
     lv_obj_set_name(ratio_pt_digit_2_slot, "ratio_pt_digit_2_slot");
     lv_obj_set_x(ratio_pt_digit_2_slot, 46);
@@ -302,7 +302,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_add_style(lv_label_9, &me106_text_18_white_center, 0);
     lv_obj_bind_style(lv_label_9, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_9, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * ratio_pt_digit_3_slot = lv_obj_create(ratio_pt_value);
     lv_obj_set_name(ratio_pt_digit_3_slot, "ratio_pt_digit_3_slot");
     lv_obj_set_x(ratio_pt_digit_3_slot, 69);
@@ -322,9 +322,9 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_add_style(lv_label_10, &me106_text_18_white_center, 0);
     lv_obj_bind_style(lv_label_10, &me106_theme_light_text, 0, &meter_theme_index, 1);
     lv_obj_bind_style(lv_label_10, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-    
+
     lv_obj_add_subject_set_int_event(ratio_item_pt, &meter_ratio_selected_kind, LV_EVENT_CLICKED, 1);
-    
+
     lv_obj_t * screen_settings_ratio_bottom_bar = lv_obj_create(lv_obj_0);
     lv_obj_set_name(screen_settings_ratio_bottom_bar, "screen_settings_ratio_bottom_bar");
     lv_obj_set_x(screen_settings_ratio_bottom_bar, 0);
@@ -337,7 +337,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_add_style(screen_settings_ratio_bottom_bar, &me106_btn_flat_gray47, 0);
     lv_obj_bind_style(screen_settings_ratio_bottom_bar, &me106_theme_light_nav, 0, &meter_theme_index, 1);
     lv_obj_bind_style(screen_settings_ratio_bottom_bar, &me106_theme_alarm_nav, 0, &meter_theme_index, 2);
-    
+
     lv_obj_t * ratio_btn_return = lv_button_create(lv_obj_0);
     lv_obj_set_name(ratio_btn_return, "ratio_btn_return");
     lv_obj_set_x(ratio_btn_return, 0);
@@ -354,9 +354,9 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_0, 7, 0);
     lv_obj_set_style_transform_scale_x(lv_image_0, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_0, 230, 0);
-    
-    lv_obj_add_screen_create_event(ratio_btn_return, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-    
+
+    lv_obj_add_screen_create_event(ratio_btn_return, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_FADE_OUT, 105, 0);
+
     lv_obj_t * ratio_btn_down = lv_button_create(lv_obj_0);
     lv_obj_set_name(ratio_btn_down, "ratio_btn_down");
     lv_obj_set_x(ratio_btn_down, 80);
@@ -373,12 +373,12 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_1, 5, 0);
     lv_obj_set_style_transform_scale_x(lv_image_1, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_1, 230, 0);
-    
+
     lv_subject_increment_dsc_t * subject_increment_event_0 = lv_obj_add_subject_increment_event(ratio_btn_down, &meter_ratio_selected_kind, LV_EVENT_CLICKED, 1);
     lv_obj_set_subject_increment_event_min_value(ratio_btn_down, subject_increment_event_0, 0);
     lv_obj_set_subject_increment_event_max_value(ratio_btn_down, subject_increment_event_0, 1);
     lv_obj_set_subject_increment_event_rollover(ratio_btn_down, subject_increment_event_0, true);
-    
+
     lv_obj_t * ratio_btn_up = lv_button_create(lv_obj_0);
     lv_obj_set_name(ratio_btn_up, "ratio_btn_up");
     lv_obj_set_x(ratio_btn_up, 160);
@@ -395,12 +395,12 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_2, 5, 0);
     lv_obj_set_style_transform_scale_x(lv_image_2, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_2, 230, 0);
-    
+
     lv_subject_increment_dsc_t * subject_increment_event_1 = lv_obj_add_subject_increment_event(ratio_btn_up, &meter_ratio_selected_kind, LV_EVENT_CLICKED, -1);
     lv_obj_set_subject_increment_event_min_value(ratio_btn_up, subject_increment_event_1, 0);
     lv_obj_set_subject_increment_event_max_value(ratio_btn_up, subject_increment_event_1, 1);
     lv_obj_set_subject_increment_event_rollover(ratio_btn_up, subject_increment_event_1, true);
-    
+
     lv_obj_t * ratio_btn_yes = lv_button_create(lv_obj_0);
     lv_obj_set_name(ratio_btn_yes, "ratio_btn_yes");
     lv_obj_set_x(ratio_btn_yes, 240);
@@ -417,7 +417,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_set_style_transform_pivot_y(lv_image_3, 6, 0);
     lv_obj_set_style_transform_scale_x(lv_image_3, 230, 0);
     lv_obj_set_style_transform_scale_y(lv_image_3, 230, 0);
-    
+
     lv_obj_t * ratio_btn_yes_ct = lv_button_create(lv_obj_0);
     lv_obj_set_name(ratio_btn_yes_ct, "ratio_btn_yes_ct");
     lv_obj_set_x(ratio_btn_yes_ct, 240);
@@ -428,8 +428,8 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_set_style_border_width(ratio_btn_yes_ct, 0, 0);
     lv_obj_set_style_shadow_width(ratio_btn_yes_ct, 0, 0);
     lv_obj_bind_flag_if_not_eq(ratio_btn_yes_ct, &meter_ratio_selected_kind, LV_OBJ_FLAG_HIDDEN, 0);
-    lv_obj_add_screen_create_event(ratio_btn_yes_ct, LV_EVENT_CLICKED, screen_settings_ratio_ct_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
-    
+    lv_obj_add_screen_create_event(ratio_btn_yes_ct, LV_EVENT_CLICKED, screen_settings_ratio_ct_create, LV_SCREEN_LOAD_ANIM_FADE_IN, 125, 0);
+
     lv_obj_t * ratio_btn_yes_pt = lv_button_create(lv_obj_0);
     lv_obj_set_name(ratio_btn_yes_pt, "ratio_btn_yes_pt");
     lv_obj_set_x(ratio_btn_yes_pt, 240);
@@ -440,7 +440,7 @@ lv_obj_t * screen_settings_ratio_create(void)
     lv_obj_set_style_border_width(ratio_btn_yes_pt, 0, 0);
     lv_obj_set_style_shadow_width(ratio_btn_yes_pt, 0, 0);
     lv_obj_bind_flag_if_not_eq(ratio_btn_yes_pt, &meter_ratio_selected_kind, LV_OBJ_FLAG_HIDDEN, 1);
-    lv_obj_add_screen_create_event(ratio_btn_yes_pt, LV_EVENT_CLICKED, screen_settings_ratio_pt_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
+    lv_obj_add_screen_create_event(ratio_btn_yes_pt, LV_EVENT_CLICKED, screen_settings_ratio_pt_create, LV_SCREEN_LOAD_ANIM_FADE_IN, 125, 0);
 
     LV_TRACE_OBJ_CREATE("finished");
 
