@@ -1,17 +1,8 @@
 <screen>
-
-    <animations>
-        <timeline name="content_open">
-            <animation target="uart_content" prop="opa" start="0" end="255" duration="110" early_apply="true"/>
-            <animation target="uart_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true"/>
-        </timeline>
-    </animations>
-
     <view width="320" height="240">
         <style name="me106_fill_black"/>
         <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
         <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
-        <play_timeline_event target="self" timeline="content_open" trigger="screen_loaded"/>
         <subject_set_int_event subject="meter_uart_selected_index" value="0" trigger="screen_loaded"/>
 
         <!-- UI分组：串口内容区。页面只保存选项状态，硬件应用留在 XML 外部。 -->
@@ -142,7 +133,7 @@
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
         </lv_button>
 
         <lv_button name="uart_btn_down" x="80" y="207" width="79" height="32">

@@ -1,17 +1,8 @@
 <screen>
-
-    <animations>
-        <timeline name="content_open">
-            <animation target="page_content" prop="opa" start="0" end="255" duration="110" early_apply="true"/>
-            <animation target="page_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true"/>
-        </timeline>
-    </animations>
-
     <view width="320" height="240">
         <style name="me106_fill_gray1f"/>
         <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
         <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
-        <play_timeline_event target="self" timeline="content_open" trigger="screen_loaded"/>
         <subject_set_int_event subject="meter_wifi_page_index" value="0" trigger="screen_loaded"/>
 
         <!-- UI分组：页面内容区。视觉布局与底部固定硬按键导航分离。 -->
@@ -178,7 +169,7 @@
 
         <lv_button name="wifi_btn_return_to_settings" x="0" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
             <bind_flag_if_not_eq subject="meter_wifi_page_index" flag="hidden" ref_value="0"/>
-            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
         </lv_button>
 
         <lv_button name="wifi_btn_return_to_info" x="0" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">

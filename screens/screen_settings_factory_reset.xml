@@ -1,19 +1,8 @@
 <screen>
-
-    <animations>
-        <timeline name="factory_dialog_open">
-            <animation target="factory_dialog" prop="opa" start="0" end="255" duration="120" early_apply="true"/>
-            <animation target="factory_dialog" prop="translate_y" start="6" end="0" duration="120" early_apply="true"/>
-        </timeline>
-    </animations>
-
     <view width="320" height="240">
         <style name="me106_fill_black"/>
         <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
         <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
-
-
-        <play_timeline_event target="self" timeline="factory_dialog_open" trigger="screen_loaded"/>
         <subject_set_int_event subject="meter_factory_confirm_index" value="0" trigger="screen_loaded"/>
         <subject_set_int_event subject="meter_factory_reset_request" value="0" trigger="screen_loaded"/>
 
@@ -60,7 +49,7 @@
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_factory_confirm_index" value="0" trigger="clicked"/>
-                <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+                <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
             </lv_button>
 
             <lv_button name="factory_cancel_btn_inactive" x="24" y="104" width="96" height="32" style_bg_color="0x1F1F1F" style_bg_opa="255" style_border_width="0" style_radius="6" style_pad_all="0" style_shadow_width="0">
@@ -90,7 +79,7 @@
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_factory_reset_request" value="1" trigger="clicked"/>
-                <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+                <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
             </lv_button>
 
             <lv_button name="factory_confirm_btn_inactive" x="140" y="104" width="96" height="32" style_bg_color="0x1F1F1F" style_bg_opa="255" style_border_width="0" style_radius="6" style_pad_all="0" style_shadow_width="0">
@@ -124,7 +113,7 @@
 
 
             <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
         </lv_button>
 
         <lv_button name="factory_btn_left" x="80" y="207" width="79" height="32">
@@ -158,13 +147,13 @@
 
         <lv_button name="factory_btn_yes_cancel" x="240" y="207" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
             <bind_flag_if_not_eq subject="meter_factory_confirm_index" flag="hidden" ref_value="0"/>
-            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
         </lv_button>
 
         <lv_button name="factory_btn_yes_confirm" x="240" y="207" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
             <bind_flag_if_not_eq subject="meter_factory_confirm_index" flag="hidden" ref_value="1"/>
             <subject_set_int_event subject="meter_factory_reset_request" value="1" trigger="clicked"/>
-            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
         </lv_button>
     </view>
 </screen>

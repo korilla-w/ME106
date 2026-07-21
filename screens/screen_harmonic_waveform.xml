@@ -1,15 +1,8 @@
 <screen>
-	<animations>
-		<timeline name="content_open">
-			<animation target="page_content" prop="opa" start="0" end="255" duration="110" early_apply="true" />
-			<animation target="page_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true" />
-		</timeline>
-	</animations>
 	<view width="320" height="240">
 		<style name="me106_fill_black"/>
 		<bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
 		<bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
-		<play_timeline_event target="self" timeline="content_open" trigger="screen_loaded" />
 		<!-- UI分组：页面内容区。视觉布局与底部固定硬按键导航分离。 -->
 		<lv_obj
 			name="page_content"

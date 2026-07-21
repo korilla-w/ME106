@@ -1,17 +1,8 @@
 <screen>
-    <animations>
-        <timeline name="content_open">
-            <animation target="screen_timeout_content" prop="opa" start="0" end="255" duration="110" early_apply="true"/>
-            <animation target="screen_timeout_content" prop="translate_y" start="4" end="0" duration="110" early_apply="true"/>
-        </timeline>
-    </animations>
-
     <view width="320" height="240">
         <style name="me106_fill_gray1f"/>
         <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
         <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
-        <play_timeline_event target="self" timeline="content_open" trigger="screen_loaded"/>
-
         <!-- UI 只选择无操作息屏档位；计时、唤醒和背光关闭由逻辑层/执行层处理。 -->
         <lv_obj name="screen_timeout_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
             <lv_label text="&#x606F;&#x5C4F;&#x65F6;&#x95F4;" x="152" y="17" width="144">
@@ -135,7 +126,7 @@
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
         </lv_button>
         <lv_button name="screen_timeout_btn_down" x="80" y="207" width="79" height="32">
             <style name="me106_btn_flat_gray47"/>
@@ -156,7 +147,7 @@
             <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
         </lv_button>
     </view>
 </screen>

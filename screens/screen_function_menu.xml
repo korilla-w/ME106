@@ -169,7 +169,7 @@
                 style_transform_scale_x="230"
                 style_transform_scale_y="230"
             />
-            <lv_obj-screen_create_event screen="screen_home" trigger="clicked" anim_type="none"/>
+            <lv_obj-screen_create_event screen="screen_home" trigger="clicked" anim_type="fade_in" duration="125"/>
         </lv_button>
 
         <lv_button name="function_btn_down" x="80" y="207" width="79" height="32">

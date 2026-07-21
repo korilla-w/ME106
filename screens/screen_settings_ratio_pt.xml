@@ -99,7 +99,7 @@
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <lv_obj-screen_create_event screen="screen_settings_ratio" trigger="clicked" anim_type="none"/>
+            <lv_obj-screen_create_event screen="screen_settings_ratio" trigger="clicked" anim_type="fade_out" duration="105"/>
         </lv_button>
 
         <lv_button name="pt_ratio_btn_digit" x="80" y="207" width="79" height="32">
@@ -122,7 +122,7 @@
             <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <lv_obj-screen_create_event screen="screen_settings_ratio" trigger="clicked" anim_type="none"/>
+            <lv_obj-screen_create_event screen="screen_settings_ratio" trigger="clicked" anim_type="fade_out" duration="105"/>
         </lv_button>
 
         <lv_button name="pt_ratio_btn_value_0" x="80" y="207" width="79" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">

@@ -111,7 +111,7 @@
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
             <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
         </lv_button>
 
         <lv_button name="address_btn_digit" x="80" y="207" width="79" height="32">
