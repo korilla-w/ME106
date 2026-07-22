@@ -31,131 +31,93 @@ extern "C" {
 
 
 
+/* Prototypes for target functions, needed by responsive const definitions */
+
+void power_meter_ui_set_target(uint32_t target);
+uint32_t power_meter_ui_get_target(void);
+bool power_meter_ui_check_target(uint32_t target);
+
 /*********************
  *      DEFINES
  *********************/
 
+#define POWER_METER_UI_TARGET_UNDEFINED  (0 << 1)
+#define POWER_METER_UI_TARGET_TARGET1    (1 << 1)
+#define POWER_METER_UI_TARGET_ALL        0x0FFFFFFF
+
+/* By default compile for all targets, allowing to switch to any targets at runtime */
+#ifndef POWER_METER_UI_COMPILE_TARGET
+#define POWER_METER_UI_COMPILE_TARGET POWER_METER_UI_TARGET_ALL
+#endif
+
+#define POWER_METER_UI_CHECK_COMPILE_TARGET(target) (POWER_METER_UI_COMPILE_TARGET & (target) ? 1 : 0)
+
 #define METER_THEME_DARK_COLOR_BG lv_color_hex(0x000000)
-
 #define METER_THEME_DARK_COLOR_SURFACE lv_color_hex(0x242424)
-
 #define METER_THEME_DARK_COLOR_SURFACE_ALT lv_color_hex(0x1F1F1F)
-
 #define METER_THEME_DARK_COLOR_NAV lv_color_hex(0x474747)
-
 #define METER_THEME_DARK_COLOR_TEXT lv_color_hex(0xFFFFFF)
-
 #define METER_THEME_DARK_COLOR_MUTED lv_color_hex(0xBABABA)
-
 #define METER_THEME_DARK_COLOR_ACCENT lv_color_hex(0x52A3FF)
-
 #define METER_THEME_DARK_COLOR_LINE lv_color_hex(0x303030)
-
 #define METER_THEME_DARK_COLOR_PHASE_A lv_color_hex(0xFFEB3B)
-
 #define METER_THEME_DARK_COLOR_PHASE_B lv_color_hex(0x32E67A)
-
 #define METER_THEME_DARK_COLOR_PHASE_C lv_color_hex(0xE33C64)
-
 #define METER_THEME_LIGHT_COLOR_BG lv_color_hex(0xF8FAFF)
-
 #define METER_THEME_LIGHT_COLOR_SURFACE lv_color_hex(0xFFFFFF)
-
 #define METER_THEME_LIGHT_COLOR_SURFACE_SOFT lv_color_hex(0xEEF2FF)
-
 #define METER_THEME_LIGHT_COLOR_NAV lv_color_hex(0x243044)
-
 #define METER_THEME_LIGHT_COLOR_TEXT lv_color_hex(0x111827)
-
 #define METER_THEME_LIGHT_COLOR_MUTED lv_color_hex(0x64748B)
-
 #define METER_THEME_LIGHT_COLOR_ACCENT lv_color_hex(0x6366F1)
-
 #define METER_THEME_LIGHT_COLOR_LINE lv_color_hex(0xDAE2F1)
-
 #define METER_THEME_LIGHT_COLOR_PHASE_A lv_color_hex(0x7C3AED)
-
 #define METER_THEME_LIGHT_COLOR_PHASE_B lv_color_hex(0x0EA5E9)
-
 #define METER_THEME_LIGHT_COLOR_PHASE_C lv_color_hex(0x10B981)
-
 #define METER_THEME_LIGHT_COLOR_WARNING lv_color_hex(0xB7791F)
-
 #define METER_THEME_LIGHT_COLOR_OK lv_color_hex(0x0F766E)
-
 #define METER_THEME_LIGHT_COLOR_DANGER lv_color_hex(0xBE123C)
-
 #define METER_THEME_ALARM_COLOR_BG lv_color_hex(0x101010)
-
 #define METER_THEME_ALARM_COLOR_SURFACE lv_color_hex(0x1C1D1B)
-
 #define METER_THEME_ALARM_COLOR_NAV lv_color_hex(0x282521)
-
 #define METER_THEME_ALARM_COLOR_TEXT lv_color_hex(0xF8F7F2)
-
 #define METER_THEME_ALARM_COLOR_MUTED lv_color_hex(0xC8C1B7)
-
 #define METER_THEME_ALARM_COLOR_ACCENT lv_color_hex(0xD94A4A)
-
 #define METER_THEME_ALARM_COLOR_LINE lv_color_hex(0x3B332E)
-
 #define METER_THEME_ALARM_COLOR_PHASE_A lv_color_hex(0xEB5757)
-
 #define METER_THEME_ALARM_COLOR_PHASE_B lv_color_hex(0xF2C94C)
-
 #define METER_THEME_ALARM_COLOR_PHASE_C lv_color_hex(0x6FCF97)
-
 #define METER_THEME_ALARM_COLOR_DANGER lv_color_hex(0xEB5757)
-
 #define METER_THEME_ALARM_COLOR_WARNING lv_color_hex(0xF2C94C)
-
 #define METER_THEME_ALARM_COLOR_OK lv_color_hex(0x6FCF97)
-
 #define METER_BLACK lv_color_hex(0x000000)
-
 #define METER_GRAY_1F lv_color_hex(0x1F1F1F)
-
 #define METER_GRAY_24 lv_color_hex(0x242424)
-
 #define METER_GRAY_47 lv_color_hex(0x474747)
-
 #define METER_BLUE lv_color_hex(0x52A3FF)
-
 #define METER_GRAY_2C lv_color_hex(0x2C2C2C)
-
 #define METER_GRAY_30 lv_color_hex(0x303030)
-
 #define METER_WHITE lv_color_hex(0xFFFFFF)
-
 #define METER_GRAY_D8 lv_color_hex(0xD8D8D8)
-
 #define METER_GRAY_BA lv_color_hex(0xBABABA)
-
 #define METER_GRAY_8F lv_color_hex(0x8F8F8F)
-
 #define METER_GRAY_7F lv_color_hex(0x7F7F7F)
-
 #define METER_BLUE_EA lv_color_hex(0xEAF4FF)
-
 #define METER_YELLOW lv_color_hex(0xFFEB3B)
-
 #define METER_GREEN lv_color_hex(0x32E67A)
-
 #define METER_RED lv_color_hex(0xE33C64)
-
 #define METER_CYAN lv_color_hex(0x20D3D5)
-
 #define METER_PURPLE lv_color_hex(0x8D5CFF)
-
 #define METER_INDIGO lv_color_hex(0x6366F1)
-
 #define METER_TEAL lv_color_hex(0x14B8A6)
-
 #define METER_ORANGE lv_color_hex(0xF59E0B)
-
 #define METER_R8 8
-
 #define METER_R6 6
+
+
+#ifndef LV_XML_EVAL_STRING_BUF_SIZE
+    #define LV_XML_EVAL_STRING_BUF_SIZE 256
+#endif
 
 /**********************
  *      TYPEDEFS
@@ -315,18 +277,18 @@ extern lv_style_t me106_move_y_n416;
  * Fonts
  *----------------*/
 
+/* Targets: any */
 extern lv_font_t * meter_Harmony_Sans_SC_Medium_14;
-
 extern lv_font_t * meter_Harmony_Sans_SC_Medium_16;
-
 extern lv_font_t * meter_Harmony_Sans_SC_Medium_18;
-
 extern lv_font_t * meter_Harmony_Sans_SC_Medium_36;
+
 
 /*----------------
  * Images
  *----------------*/
 
+/* Targets: any */
 extern const void * meter_setting;
 extern const void * meter_menu;
 extern const void * meter_arrow_left;

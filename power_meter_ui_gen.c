@@ -23,9 +23,13 @@
  *  STATIC PROTOTYPES
  **********************/
 
+static void check_font(lv_font_t ** font, const char * name);
+
 /**********************
  *  STATIC VARIABLES
  **********************/
+
+static uint32_t power_meter_ui_target = POWER_METER_UI_TARGET_ALL;
 
 /*----------------
  * Translations
@@ -52,40 +56,41 @@ lv_font_t * meter_Harmony_Sans_SC_Medium_36;
  * Images
  *----------------*/
 
-const void * meter_setting;
-const void * meter_menu;
-const void * meter_arrow_left;
-const void * meter_arrow_right;
-const void * meter_icon_return;
-const void * meter_arrow_down;
-const void * meter_arrow_up;
-const void * meter_yes;
-const void * meter_icon_table;
-const void * meter_icon_select;
-const void * meter_icon_harmonic;
-const void * meter_icon_waveform;
-const void * meter_icon_electric_energy;
-const void * meter_icon_wifi;
-const void * meter_icon_wifi_connect;
-const void * meter_icon_wifi_disconnect;
-const void * meter_icon_modbus;
-const void * meter_icon_serial;
-const void * meter_icon_ratio;
-const void * meter_icon_address;
-const void * meter_icon_theme;
-const void * meter_icon_alarm;
-const void * meter_icon_warning;
-const void * meter_icon_screen;
-const void * meter_icon_restart;
-const void * meter_icon_update;
-const void * meter_icon_information;
-const void * meter_power_quality_qr;
-const void * meter_brand_logo;
-const void * meter_boot_logo_flame_1;
-const void * meter_boot_logo_flame_2;
-const void * meter_boot_logo_flame_3;
-const void * meter_boot_logo_name_zh;
-const void * meter_boot_logo_name_en;
+/* Targets: any */
+const void * meter_setting = NULL;
+const void * meter_menu = NULL;
+const void * meter_arrow_left = NULL;
+const void * meter_arrow_right = NULL;
+const void * meter_icon_return = NULL;
+const void * meter_arrow_down = NULL;
+const void * meter_arrow_up = NULL;
+const void * meter_yes = NULL;
+const void * meter_icon_table = NULL;
+const void * meter_icon_select = NULL;
+const void * meter_icon_harmonic = NULL;
+const void * meter_icon_waveform = NULL;
+const void * meter_icon_electric_energy = NULL;
+const void * meter_icon_wifi = NULL;
+const void * meter_icon_wifi_connect = NULL;
+const void * meter_icon_wifi_disconnect = NULL;
+const void * meter_icon_modbus = NULL;
+const void * meter_icon_serial = NULL;
+const void * meter_icon_ratio = NULL;
+const void * meter_icon_address = NULL;
+const void * meter_icon_theme = NULL;
+const void * meter_icon_alarm = NULL;
+const void * meter_icon_warning = NULL;
+const void * meter_icon_screen = NULL;
+const void * meter_icon_restart = NULL;
+const void * meter_icon_update = NULL;
+const void * meter_icon_information = NULL;
+const void * meter_power_quality_qr = NULL;
+const void * meter_brand_logo = NULL;
+const void * meter_boot_logo_flame_1 = NULL;
+const void * meter_boot_logo_flame_2 = NULL;
+const void * meter_boot_logo_flame_3 = NULL;
+const void * meter_boot_logo_name_zh = NULL;
+const void * meter_boot_logo_name_en = NULL;
 
 /*----------------
  * Global styles
@@ -387,91 +392,216 @@ void power_meter_ui_init_gen(const char * asset_path)
      * Fonts
      *----------------*/
 
-    /* create tiny ttf font "meter_Harmony_Sans_SC_Medium_14" from file */
-    lv_snprintf(buf, 256, "%s%s", asset_path, "fonts/HarmonyOS_Sans_SC_Medium.ttf");
-    meter_Harmony_Sans_SC_Medium_14 = lv_tiny_ttf_create_file(buf, 14);
-    /* create tiny ttf font "meter_Harmony_Sans_SC_Medium_16" from file */
-    lv_snprintf(buf, 256, "%s%s", asset_path, "fonts/HarmonyOS_Sans_SC_Medium.ttf");
-    meter_Harmony_Sans_SC_Medium_16 = lv_tiny_ttf_create_file(buf, 16);
-    /* create tiny ttf font "meter_Harmony_Sans_SC_Medium_18" from file */
-    lv_snprintf(buf, 256, "%s%s", asset_path, "fonts/HarmonyOS_Sans_SC_Medium.ttf");
-    meter_Harmony_Sans_SC_Medium_18 = lv_tiny_ttf_create_file(buf, 18);
-    /* create tiny ttf font "meter_Harmony_Sans_SC_Medium_36" from file */
-    lv_snprintf(buf, 256, "%s%s", asset_path, "fonts/HarmonyOS_Sans_SC_Medium.ttf");
-    meter_Harmony_Sans_SC_Medium_36 = lv_tiny_ttf_create_file(buf, 36);
+    /* Targets: any */
 
+    #if POWER_METER_UI_CHECK_COMPILE_TARGET(POWER_METER_UI_TARGET_ALL)
+    if (power_meter_ui_check_target(POWER_METER_UI_TARGET_ALL)) {
+        if (!meter_Harmony_Sans_SC_Medium_14) {
+            /* meter_Harmony_Sans_SC_Medium_14 */
+            /* create tiny ttf font "meter_Harmony_Sans_SC_Medium_14" from file */
+            lv_snprintf(buf, 256, "%s%s", asset_path, "fonts/HarmonyOS_Sans_SC_Medium.ttf");
+            meter_Harmony_Sans_SC_Medium_14 = lv_tiny_ttf_create_file(buf, 14);
+        }
+        if (!meter_Harmony_Sans_SC_Medium_16) {
+            /* meter_Harmony_Sans_SC_Medium_16 */
+            /* create tiny ttf font "meter_Harmony_Sans_SC_Medium_16" from file */
+            lv_snprintf(buf, 256, "%s%s", asset_path, "fonts/HarmonyOS_Sans_SC_Medium.ttf");
+            meter_Harmony_Sans_SC_Medium_16 = lv_tiny_ttf_create_file(buf, 16);
+        }
+        if (!meter_Harmony_Sans_SC_Medium_18) {
+            /* meter_Harmony_Sans_SC_Medium_18 */
+            /* create tiny ttf font "meter_Harmony_Sans_SC_Medium_18" from file */
+            lv_snprintf(buf, 256, "%s%s", asset_path, "fonts/HarmonyOS_Sans_SC_Medium.ttf");
+            meter_Harmony_Sans_SC_Medium_18 = lv_tiny_ttf_create_file(buf, 18);
+        }
+        if (!meter_Harmony_Sans_SC_Medium_36) {
+            /* meter_Harmony_Sans_SC_Medium_36 */
+            /* create tiny ttf font "meter_Harmony_Sans_SC_Medium_36" from file */
+            lv_snprintf(buf, 256, "%s%s", asset_path, "fonts/HarmonyOS_Sans_SC_Medium.ttf");
+            meter_Harmony_Sans_SC_Medium_36 = lv_tiny_ttf_create_file(buf, 36);
+        }
+    }
+    #endif
 
     /*----------------
      * Images
      *----------------*/
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/setting.png");
-    meter_setting = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/menu-line.png");
-    meter_menu = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/arrow_left.png");
-    meter_arrow_left = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/arrow_right.png");
-    meter_arrow_right = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/return.png");
-    meter_icon_return = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/arrow_down.png");
-    meter_arrow_down = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/arrow_up.png");
-    meter_arrow_up = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/yes.png");
-    meter_yes = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/table.png");
-    meter_icon_table = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/select.png");
-    meter_icon_select = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/Harmonic.png");
-    meter_icon_harmonic = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/Waveform.png");
-    meter_icon_waveform = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/Electric energy.png");
-    meter_icon_electric_energy = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/wifi.png");
-    meter_icon_wifi = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/wifi_connect_link.png");
-    meter_icon_wifi_connect = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/wifi_disconnect_link.png");
-    meter_icon_wifi_disconnect = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/modbus.png");
-    meter_icon_modbus = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/serial.png");
-    meter_icon_serial = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/ratio.png");
-    meter_icon_ratio = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/address.png");
-    meter_icon_address = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/theme.png");
-    meter_icon_theme = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/alarm.png");
-    meter_icon_alarm = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/warning.png");
-    meter_icon_warning = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/screen.png");
-    meter_icon_screen = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/restart.png");
-    meter_icon_restart = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/update.png");
-    meter_icon_update = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/information.png");
-    meter_icon_information = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/power_quality_qr.png");
-    meter_power_quality_qr = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/brand_logo.png");
-    meter_brand_logo = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_flame_1.png");
-    meter_boot_logo_flame_1 = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_flame_2.png");
-    meter_boot_logo_flame_2 = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_flame_3.png");
-    meter_boot_logo_flame_3 = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_name_zh.png");
-    meter_boot_logo_name_zh = lv_strdup(buf);
-    lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_name_en.png");
-    meter_boot_logo_name_en = lv_strdup(buf);
+
+    /* Targets: any */
+    #if POWER_METER_UI_CHECK_COMPILE_TARGET(POWER_METER_UI_TARGET_ALL)
+    if (power_meter_ui_check_target(POWER_METER_UI_TARGET_ALL)) {
+        /* meter_setting */
+        if (!meter_setting) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/setting.png");
+            meter_setting = lv_strdup(buf);
+        }
+        /* meter_menu */
+        if (!meter_menu) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/menu-line.png");
+            meter_menu = lv_strdup(buf);
+        }
+        /* meter_arrow_left */
+        if (!meter_arrow_left) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/arrow_left.png");
+            meter_arrow_left = lv_strdup(buf);
+        }
+        /* meter_arrow_right */
+        if (!meter_arrow_right) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/arrow_right.png");
+            meter_arrow_right = lv_strdup(buf);
+        }
+        /* meter_icon_return */
+        if (!meter_icon_return) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/return.png");
+            meter_icon_return = lv_strdup(buf);
+        }
+        /* meter_arrow_down */
+        if (!meter_arrow_down) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/arrow_down.png");
+            meter_arrow_down = lv_strdup(buf);
+        }
+        /* meter_arrow_up */
+        if (!meter_arrow_up) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/arrow_up.png");
+            meter_arrow_up = lv_strdup(buf);
+        }
+        /* meter_yes */
+        if (!meter_yes) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/yes.png");
+            meter_yes = lv_strdup(buf);
+        }
+        /* meter_icon_table */
+        if (!meter_icon_table) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/table.png");
+            meter_icon_table = lv_strdup(buf);
+        }
+        /* meter_icon_select */
+        if (!meter_icon_select) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/select.png");
+            meter_icon_select = lv_strdup(buf);
+        }
+        /* meter_icon_harmonic */
+        if (!meter_icon_harmonic) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/Harmonic.png");
+            meter_icon_harmonic = lv_strdup(buf);
+        }
+        /* meter_icon_waveform */
+        if (!meter_icon_waveform) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/Waveform.png");
+            meter_icon_waveform = lv_strdup(buf);
+        }
+        /* meter_icon_electric_energy */
+        if (!meter_icon_electric_energy) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/Electric energy.png");
+            meter_icon_electric_energy = lv_strdup(buf);
+        }
+        /* meter_icon_wifi */
+        if (!meter_icon_wifi) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/wifi.png");
+            meter_icon_wifi = lv_strdup(buf);
+        }
+        /* meter_icon_wifi_connect */
+        if (!meter_icon_wifi_connect) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/wifi_connect_link.png");
+            meter_icon_wifi_connect = lv_strdup(buf);
+        }
+        /* meter_icon_wifi_disconnect */
+        if (!meter_icon_wifi_disconnect) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/wifi_disconnect_link.png");
+            meter_icon_wifi_disconnect = lv_strdup(buf);
+        }
+        /* meter_icon_modbus */
+        if (!meter_icon_modbus) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/modbus.png");
+            meter_icon_modbus = lv_strdup(buf);
+        }
+        /* meter_icon_serial */
+        if (!meter_icon_serial) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/serial.png");
+            meter_icon_serial = lv_strdup(buf);
+        }
+        /* meter_icon_ratio */
+        if (!meter_icon_ratio) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/ratio.png");
+            meter_icon_ratio = lv_strdup(buf);
+        }
+        /* meter_icon_address */
+        if (!meter_icon_address) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/address.png");
+            meter_icon_address = lv_strdup(buf);
+        }
+        /* meter_icon_theme */
+        if (!meter_icon_theme) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/theme.png");
+            meter_icon_theme = lv_strdup(buf);
+        }
+        /* meter_icon_alarm */
+        if (!meter_icon_alarm) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/alarm.png");
+            meter_icon_alarm = lv_strdup(buf);
+        }
+        /* meter_icon_warning */
+        if (!meter_icon_warning) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/warning.png");
+            meter_icon_warning = lv_strdup(buf);
+        }
+        /* meter_icon_screen */
+        if (!meter_icon_screen) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/screen.png");
+            meter_icon_screen = lv_strdup(buf);
+        }
+        /* meter_icon_restart */
+        if (!meter_icon_restart) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/restart.png");
+            meter_icon_restart = lv_strdup(buf);
+        }
+        /* meter_icon_update */
+        if (!meter_icon_update) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/update.png");
+            meter_icon_update = lv_strdup(buf);
+        }
+        /* meter_icon_information */
+        if (!meter_icon_information) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/information.png");
+            meter_icon_information = lv_strdup(buf);
+        }
+        /* meter_power_quality_qr */
+        if (!meter_power_quality_qr) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/power_quality_qr.png");
+            meter_power_quality_qr = lv_strdup(buf);
+        }
+        /* meter_brand_logo */
+        if (!meter_brand_logo) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/brand_logo.png");
+            meter_brand_logo = lv_strdup(buf);
+        }
+        /* meter_boot_logo_flame_1 */
+        if (!meter_boot_logo_flame_1) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_flame_1.png");
+            meter_boot_logo_flame_1 = lv_strdup(buf);
+        }
+        /* meter_boot_logo_flame_2 */
+        if (!meter_boot_logo_flame_2) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_flame_2.png");
+            meter_boot_logo_flame_2 = lv_strdup(buf);
+        }
+        /* meter_boot_logo_flame_3 */
+        if (!meter_boot_logo_flame_3) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_flame_3.png");
+            meter_boot_logo_flame_3 = lv_strdup(buf);
+        }
+        /* meter_boot_logo_name_zh */
+        if (!meter_boot_logo_name_zh) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_name_zh.png");
+            meter_boot_logo_name_zh = lv_strdup(buf);
+        }
+        /* meter_boot_logo_name_en */
+        if (!meter_boot_logo_name_en) {
+            lv_snprintf(buf, 256, "%s%s", asset_path, "images/boot_logo_name_en.png");
+            meter_boot_logo_name_en = lv_strdup(buf);
+        }
+    }
+    #endif
 
     /*----------------
      * Global styles
@@ -480,562 +610,566 @@ void power_meter_ui_init_gen(const char * asset_path)
     static bool style_inited = false;
 
     if (!style_inited) {
-        lv_style_init(&me106_fill_black);
-        lv_style_set_bg_color(&me106_fill_black, METER_BLACK);
-        lv_style_set_bg_opa(&me106_fill_black, 255);
-
-        lv_style_init(&me106_fill_gray1f);
-        lv_style_set_bg_color(&me106_fill_gray1f, METER_GRAY_1F);
-        lv_style_set_bg_opa(&me106_fill_gray1f, 255);
-
-        lv_style_init(&me106_btn_flat_blue);
-        lv_style_set_bg_color(&me106_btn_flat_blue, METER_BLUE);
-        lv_style_set_bg_opa(&me106_btn_flat_blue, 255);
-        lv_style_set_radius(&me106_btn_flat_blue, 0);
-        lv_style_set_shadow_width(&me106_btn_flat_blue, 0);
-
-        lv_style_init(&me106_btn_flat_gray1f);
-        lv_style_set_bg_color(&me106_btn_flat_gray1f, METER_GRAY_1F);
-        lv_style_set_bg_opa(&me106_btn_flat_gray1f, 255);
-        lv_style_set_radius(&me106_btn_flat_gray1f, 0);
-        lv_style_set_shadow_width(&me106_btn_flat_gray1f, 0);
-
-        lv_style_init(&me106_btn_flat_gray47);
-        lv_style_set_bg_color(&me106_btn_flat_gray47, METER_GRAY_47);
-        lv_style_set_bg_opa(&me106_btn_flat_gray47, 255);
-        lv_style_set_radius(&me106_btn_flat_gray47, 0);
-        lv_style_set_shadow_width(&me106_btn_flat_gray47, 0);
-
-        lv_style_init(&me106_theme_light_screen_bg);
-        lv_style_set_bg_color(&me106_theme_light_screen_bg, METER_THEME_LIGHT_COLOR_BG);
-        lv_style_set_bg_opa(&me106_theme_light_screen_bg, 255);
-
-        lv_style_init(&me106_theme_light_panel);
-        lv_style_set_bg_color(&me106_theme_light_panel, METER_THEME_LIGHT_COLOR_SURFACE);
-        lv_style_set_bg_opa(&me106_theme_light_panel, 255);
-        lv_style_set_border_width(&me106_theme_light_panel, 1);
-        lv_style_set_border_color(&me106_theme_light_panel, METER_THEME_LIGHT_COLOR_LINE);
-        lv_style_set_border_opa(&me106_theme_light_panel, 255);
+        #if POWER_METER_UI_CHECK_COMPILE_TARGET(POWER_METER_UI_TARGET_ALL)
+        if (power_meter_ui_check_target(POWER_METER_UI_TARGET_ALL)) {
+            lv_style_init(&me106_fill_black);
+            lv_style_set_bg_color(&me106_fill_black, METER_BLACK);
+            lv_style_set_bg_opa(&me106_fill_black, 255);
+
+            lv_style_init(&me106_fill_gray1f);
+            lv_style_set_bg_color(&me106_fill_gray1f, METER_GRAY_1F);
+            lv_style_set_bg_opa(&me106_fill_gray1f, 255);
+
+            lv_style_init(&me106_btn_flat_blue);
+            lv_style_set_bg_color(&me106_btn_flat_blue, METER_BLUE);
+            lv_style_set_bg_opa(&me106_btn_flat_blue, 255);
+            lv_style_set_radius(&me106_btn_flat_blue, 0);
+            lv_style_set_shadow_width(&me106_btn_flat_blue, 0);
+
+            lv_style_init(&me106_btn_flat_gray1f);
+            lv_style_set_bg_color(&me106_btn_flat_gray1f, METER_GRAY_1F);
+            lv_style_set_bg_opa(&me106_btn_flat_gray1f, 255);
+            lv_style_set_radius(&me106_btn_flat_gray1f, 0);
+            lv_style_set_shadow_width(&me106_btn_flat_gray1f, 0);
+
+            lv_style_init(&me106_btn_flat_gray47);
+            lv_style_set_bg_color(&me106_btn_flat_gray47, METER_GRAY_47);
+            lv_style_set_bg_opa(&me106_btn_flat_gray47, 255);
+            lv_style_set_radius(&me106_btn_flat_gray47, 0);
+            lv_style_set_shadow_width(&me106_btn_flat_gray47, 0);
+
+            lv_style_init(&me106_theme_light_screen_bg);
+            lv_style_set_bg_color(&me106_theme_light_screen_bg, METER_THEME_LIGHT_COLOR_BG);
+            lv_style_set_bg_opa(&me106_theme_light_screen_bg, 255);
+
+            lv_style_init(&me106_theme_light_panel);
+            lv_style_set_bg_color(&me106_theme_light_panel, METER_THEME_LIGHT_COLOR_SURFACE);
+            lv_style_set_bg_opa(&me106_theme_light_panel, 255);
+            lv_style_set_border_width(&me106_theme_light_panel, 1);
+            lv_style_set_border_color(&me106_theme_light_panel, METER_THEME_LIGHT_COLOR_LINE);
+            lv_style_set_border_opa(&me106_theme_light_panel, 255);
+
+            lv_style_init(&me106_theme_light_nav);
+            lv_style_set_bg_color(&me106_theme_light_nav, METER_THEME_LIGHT_COLOR_NAV);
+            lv_style_set_bg_opa(&me106_theme_light_nav, 255);
+
+            lv_style_init(&me106_theme_light_accent);
+            lv_style_set_bg_color(&me106_theme_light_accent, METER_THEME_LIGHT_COLOR_ACCENT);
+            lv_style_set_bg_opa(&me106_theme_light_accent, 255);
+
+            lv_style_init(&me106_theme_light_text);
+            lv_style_set_text_color(&me106_theme_light_text, METER_THEME_LIGHT_COLOR_TEXT);
+
+            lv_style_init(&me106_theme_light_muted);
+            lv_style_set_text_color(&me106_theme_light_muted, METER_THEME_LIGHT_COLOR_MUTED);
 
-        lv_style_init(&me106_theme_light_nav);
-        lv_style_set_bg_color(&me106_theme_light_nav, METER_THEME_LIGHT_COLOR_NAV);
-        lv_style_set_bg_opa(&me106_theme_light_nav, 255);
+            lv_style_init(&me106_theme_light_icon);
+            lv_style_set_image_recolor(&me106_theme_light_icon, METER_THEME_LIGHT_COLOR_TEXT);
+            lv_style_set_image_recolor_opa(&me106_theme_light_icon, 255);
 
-        lv_style_init(&me106_theme_light_accent);
-        lv_style_set_bg_color(&me106_theme_light_accent, METER_THEME_LIGHT_COLOR_ACCENT);
-        lv_style_set_bg_opa(&me106_theme_light_accent, 255);
+            lv_style_init(&me106_theme_light_line);
+            lv_style_set_bg_color(&me106_theme_light_line, METER_THEME_LIGHT_COLOR_LINE);
+            lv_style_set_bg_opa(&me106_theme_light_line, 255);
+            lv_style_set_border_color(&me106_theme_light_line, METER_THEME_LIGHT_COLOR_LINE);
 
-        lv_style_init(&me106_theme_light_text);
-        lv_style_set_text_color(&me106_theme_light_text, METER_THEME_LIGHT_COLOR_TEXT);
+            lv_style_init(&me106_theme_light_phase_a);
+            lv_style_set_text_color(&me106_theme_light_phase_a, METER_THEME_LIGHT_COLOR_PHASE_A);
 
-        lv_style_init(&me106_theme_light_muted);
-        lv_style_set_text_color(&me106_theme_light_muted, METER_THEME_LIGHT_COLOR_MUTED);
+            lv_style_init(&me106_theme_light_phase_b);
+            lv_style_set_text_color(&me106_theme_light_phase_b, METER_THEME_LIGHT_COLOR_PHASE_B);
 
-        lv_style_init(&me106_theme_light_icon);
-        lv_style_set_image_recolor(&me106_theme_light_icon, METER_THEME_LIGHT_COLOR_TEXT);
-        lv_style_set_image_recolor_opa(&me106_theme_light_icon, 255);
+            lv_style_init(&me106_theme_light_phase_c);
+            lv_style_set_text_color(&me106_theme_light_phase_c, METER_THEME_LIGHT_COLOR_PHASE_C);
 
-        lv_style_init(&me106_theme_light_line);
-        lv_style_set_bg_color(&me106_theme_light_line, METER_THEME_LIGHT_COLOR_LINE);
-        lv_style_set_bg_opa(&me106_theme_light_line, 255);
-        lv_style_set_border_color(&me106_theme_light_line, METER_THEME_LIGHT_COLOR_LINE);
+            lv_style_init(&me106_theme_light_phase_b_line);
+            lv_style_set_bg_color(&me106_theme_light_phase_b_line, METER_THEME_LIGHT_COLOR_PHASE_B);
+            lv_style_set_bg_opa(&me106_theme_light_phase_b_line, 255);
 
-        lv_style_init(&me106_theme_light_phase_a);
-        lv_style_set_text_color(&me106_theme_light_phase_a, METER_THEME_LIGHT_COLOR_PHASE_A);
+            lv_style_init(&me106_theme_light_phase_c_line);
+            lv_style_set_bg_color(&me106_theme_light_phase_c_line, METER_THEME_LIGHT_COLOR_PHASE_C);
+            lv_style_set_bg_opa(&me106_theme_light_phase_c_line, 255);
 
-        lv_style_init(&me106_theme_light_phase_b);
-        lv_style_set_text_color(&me106_theme_light_phase_b, METER_THEME_LIGHT_COLOR_PHASE_B);
+            lv_style_init(&me106_theme_light_status_warning);
+            lv_style_set_text_color(&me106_theme_light_status_warning, METER_THEME_LIGHT_COLOR_WARNING);
 
-        lv_style_init(&me106_theme_light_phase_c);
-        lv_style_set_text_color(&me106_theme_light_phase_c, METER_THEME_LIGHT_COLOR_PHASE_C);
+            lv_style_init(&me106_theme_light_status_ok);
+            lv_style_set_text_color(&me106_theme_light_status_ok, METER_THEME_LIGHT_COLOR_OK);
 
-        lv_style_init(&me106_theme_light_phase_b_line);
-        lv_style_set_bg_color(&me106_theme_light_phase_b_line, METER_THEME_LIGHT_COLOR_PHASE_B);
-        lv_style_set_bg_opa(&me106_theme_light_phase_b_line, 255);
+            lv_style_init(&me106_theme_light_status_danger);
+            lv_style_set_text_color(&me106_theme_light_status_danger, METER_THEME_LIGHT_COLOR_DANGER);
 
-        lv_style_init(&me106_theme_light_phase_c_line);
-        lv_style_set_bg_color(&me106_theme_light_phase_c_line, METER_THEME_LIGHT_COLOR_PHASE_C);
-        lv_style_set_bg_opa(&me106_theme_light_phase_c_line, 255);
+            lv_style_init(&me106_theme_alarm_screen_bg);
+            lv_style_set_bg_color(&me106_theme_alarm_screen_bg, METER_THEME_ALARM_COLOR_BG);
+            lv_style_set_bg_opa(&me106_theme_alarm_screen_bg, 255);
 
-        lv_style_init(&me106_theme_light_status_warning);
-        lv_style_set_text_color(&me106_theme_light_status_warning, METER_THEME_LIGHT_COLOR_WARNING);
+            lv_style_init(&me106_theme_alarm_panel);
+            lv_style_set_bg_color(&me106_theme_alarm_panel, METER_THEME_ALARM_COLOR_SURFACE);
+            lv_style_set_bg_opa(&me106_theme_alarm_panel, 255);
+            lv_style_set_border_width(&me106_theme_alarm_panel, 1);
+            lv_style_set_border_color(&me106_theme_alarm_panel, METER_THEME_ALARM_COLOR_LINE);
+            lv_style_set_border_opa(&me106_theme_alarm_panel, 255);
 
-        lv_style_init(&me106_theme_light_status_ok);
-        lv_style_set_text_color(&me106_theme_light_status_ok, METER_THEME_LIGHT_COLOR_OK);
+            lv_style_init(&me106_theme_alarm_nav);
+            lv_style_set_bg_color(&me106_theme_alarm_nav, METER_THEME_ALARM_COLOR_NAV);
+            lv_style_set_bg_opa(&me106_theme_alarm_nav, 255);
 
-        lv_style_init(&me106_theme_light_status_danger);
-        lv_style_set_text_color(&me106_theme_light_status_danger, METER_THEME_LIGHT_COLOR_DANGER);
+            lv_style_init(&me106_theme_alarm_accent);
+            lv_style_set_bg_color(&me106_theme_alarm_accent, METER_THEME_ALARM_COLOR_ACCENT);
+            lv_style_set_bg_opa(&me106_theme_alarm_accent, 255);
 
-        lv_style_init(&me106_theme_alarm_screen_bg);
-        lv_style_set_bg_color(&me106_theme_alarm_screen_bg, METER_THEME_ALARM_COLOR_BG);
-        lv_style_set_bg_opa(&me106_theme_alarm_screen_bg, 255);
+            lv_style_init(&me106_theme_alarm_on_accent);
+            lv_style_set_text_color(&me106_theme_alarm_on_accent, METER_WHITE);
 
-        lv_style_init(&me106_theme_alarm_panel);
-        lv_style_set_bg_color(&me106_theme_alarm_panel, METER_THEME_ALARM_COLOR_SURFACE);
-        lv_style_set_bg_opa(&me106_theme_alarm_panel, 255);
-        lv_style_set_border_width(&me106_theme_alarm_panel, 1);
-        lv_style_set_border_color(&me106_theme_alarm_panel, METER_THEME_ALARM_COLOR_LINE);
-        lv_style_set_border_opa(&me106_theme_alarm_panel, 255);
+            lv_style_init(&me106_theme_alarm_text);
+            lv_style_set_text_color(&me106_theme_alarm_text, METER_THEME_ALARM_COLOR_TEXT);
 
-        lv_style_init(&me106_theme_alarm_nav);
-        lv_style_set_bg_color(&me106_theme_alarm_nav, METER_THEME_ALARM_COLOR_NAV);
-        lv_style_set_bg_opa(&me106_theme_alarm_nav, 255);
+            lv_style_init(&me106_theme_alarm_muted);
+            lv_style_set_text_color(&me106_theme_alarm_muted, METER_THEME_ALARM_COLOR_MUTED);
 
-        lv_style_init(&me106_theme_alarm_accent);
-        lv_style_set_bg_color(&me106_theme_alarm_accent, METER_THEME_ALARM_COLOR_ACCENT);
-        lv_style_set_bg_opa(&me106_theme_alarm_accent, 255);
+            lv_style_init(&me106_theme_alarm_icon);
+            lv_style_set_image_recolor(&me106_theme_alarm_icon, METER_THEME_ALARM_COLOR_TEXT);
+            lv_style_set_image_recolor_opa(&me106_theme_alarm_icon, 255);
 
-        lv_style_init(&me106_theme_alarm_on_accent);
-        lv_style_set_text_color(&me106_theme_alarm_on_accent, METER_WHITE);
+            lv_style_init(&me106_theme_alarm_line);
+            lv_style_set_bg_color(&me106_theme_alarm_line, METER_THEME_ALARM_COLOR_LINE);
+            lv_style_set_bg_opa(&me106_theme_alarm_line, 255);
+            lv_style_set_border_color(&me106_theme_alarm_line, METER_THEME_ALARM_COLOR_LINE);
 
-        lv_style_init(&me106_theme_alarm_text);
-        lv_style_set_text_color(&me106_theme_alarm_text, METER_THEME_ALARM_COLOR_TEXT);
+            lv_style_init(&me106_theme_alarm_phase_a);
+            lv_style_set_text_color(&me106_theme_alarm_phase_a, METER_THEME_ALARM_COLOR_PHASE_A);
 
-        lv_style_init(&me106_theme_alarm_muted);
-        lv_style_set_text_color(&me106_theme_alarm_muted, METER_THEME_ALARM_COLOR_MUTED);
+            lv_style_init(&me106_theme_alarm_phase_b);
+            lv_style_set_text_color(&me106_theme_alarm_phase_b, METER_THEME_ALARM_COLOR_PHASE_B);
 
-        lv_style_init(&me106_theme_alarm_icon);
-        lv_style_set_image_recolor(&me106_theme_alarm_icon, METER_THEME_ALARM_COLOR_TEXT);
-        lv_style_set_image_recolor_opa(&me106_theme_alarm_icon, 255);
+            lv_style_init(&me106_theme_alarm_phase_c);
+            lv_style_set_text_color(&me106_theme_alarm_phase_c, METER_THEME_ALARM_COLOR_PHASE_C);
 
-        lv_style_init(&me106_theme_alarm_line);
-        lv_style_set_bg_color(&me106_theme_alarm_line, METER_THEME_ALARM_COLOR_LINE);
-        lv_style_set_bg_opa(&me106_theme_alarm_line, 255);
-        lv_style_set_border_color(&me106_theme_alarm_line, METER_THEME_ALARM_COLOR_LINE);
+            lv_style_init(&me106_theme_alarm_phase_b_line);
+            lv_style_set_bg_color(&me106_theme_alarm_phase_b_line, METER_THEME_ALARM_COLOR_PHASE_B);
+            lv_style_set_bg_opa(&me106_theme_alarm_phase_b_line, 255);
 
-        lv_style_init(&me106_theme_alarm_phase_a);
-        lv_style_set_text_color(&me106_theme_alarm_phase_a, METER_THEME_ALARM_COLOR_PHASE_A);
+            lv_style_init(&me106_theme_alarm_phase_c_line);
+            lv_style_set_bg_color(&me106_theme_alarm_phase_c_line, METER_THEME_ALARM_COLOR_PHASE_C);
+            lv_style_set_bg_opa(&me106_theme_alarm_phase_c_line, 255);
 
-        lv_style_init(&me106_theme_alarm_phase_b);
-        lv_style_set_text_color(&me106_theme_alarm_phase_b, METER_THEME_ALARM_COLOR_PHASE_B);
+            lv_style_init(&me106_theme_light_energy_forward_active);
+            lv_style_set_text_color(&me106_theme_light_energy_forward_active, METER_INDIGO);
 
-        lv_style_init(&me106_theme_alarm_phase_c);
-        lv_style_set_text_color(&me106_theme_alarm_phase_c, METER_THEME_ALARM_COLOR_PHASE_C);
+            lv_style_init(&me106_theme_light_energy_reverse_active);
+            lv_style_set_text_color(&me106_theme_light_energy_reverse_active, METER_TEAL);
 
-        lv_style_init(&me106_theme_alarm_phase_b_line);
-        lv_style_set_bg_color(&me106_theme_alarm_phase_b_line, METER_THEME_ALARM_COLOR_PHASE_B);
-        lv_style_set_bg_opa(&me106_theme_alarm_phase_b_line, 255);
+            lv_style_init(&me106_theme_light_energy_inductive_reactive);
+            lv_style_set_text_color(&me106_theme_light_energy_inductive_reactive, METER_PURPLE);
 
-        lv_style_init(&me106_theme_alarm_phase_c_line);
-        lv_style_set_bg_color(&me106_theme_alarm_phase_c_line, METER_THEME_ALARM_COLOR_PHASE_C);
-        lv_style_set_bg_opa(&me106_theme_alarm_phase_c_line, 255);
+            lv_style_init(&me106_theme_light_energy_capacitive_reactive);
+            lv_style_set_text_color(&me106_theme_light_energy_capacitive_reactive, METER_RED);
 
-        lv_style_init(&me106_theme_light_energy_forward_active);
-        lv_style_set_text_color(&me106_theme_light_energy_forward_active, METER_INDIGO);
+            lv_style_init(&me106_theme_alarm_energy_forward_active);
+            lv_style_set_text_color(&me106_theme_alarm_energy_forward_active, METER_INDIGO);
 
-        lv_style_init(&me106_theme_light_energy_reverse_active);
-        lv_style_set_text_color(&me106_theme_light_energy_reverse_active, METER_TEAL);
+            lv_style_init(&me106_theme_alarm_energy_reverse_active);
+            lv_style_set_text_color(&me106_theme_alarm_energy_reverse_active, METER_TEAL);
 
-        lv_style_init(&me106_theme_light_energy_inductive_reactive);
-        lv_style_set_text_color(&me106_theme_light_energy_inductive_reactive, METER_PURPLE);
+            lv_style_init(&me106_theme_alarm_energy_inductive_reactive);
+            lv_style_set_text_color(&me106_theme_alarm_energy_inductive_reactive, METER_PURPLE);
 
-        lv_style_init(&me106_theme_light_energy_capacitive_reactive);
-        lv_style_set_text_color(&me106_theme_light_energy_capacitive_reactive, METER_RED);
+            lv_style_init(&me106_theme_alarm_energy_capacitive_reactive);
+            lv_style_set_text_color(&me106_theme_alarm_energy_capacitive_reactive, METER_RED);
 
-        lv_style_init(&me106_theme_alarm_energy_forward_active);
-        lv_style_set_text_color(&me106_theme_alarm_energy_forward_active, METER_INDIGO);
+            lv_style_init(&me106_theme_alarm_status_warning);
+            lv_style_set_text_color(&me106_theme_alarm_status_warning, METER_THEME_ALARM_COLOR_WARNING);
 
-        lv_style_init(&me106_theme_alarm_energy_reverse_active);
-        lv_style_set_text_color(&me106_theme_alarm_energy_reverse_active, METER_TEAL);
+            lv_style_init(&me106_theme_alarm_status_ok);
+            lv_style_set_text_color(&me106_theme_alarm_status_ok, METER_THEME_ALARM_COLOR_OK);
 
-        lv_style_init(&me106_theme_alarm_energy_inductive_reactive);
-        lv_style_set_text_color(&me106_theme_alarm_energy_inductive_reactive, METER_PURPLE);
+            lv_style_init(&me106_theme_alarm_status_danger);
+            lv_style_set_text_color(&me106_theme_alarm_status_danger, METER_THEME_ALARM_COLOR_DANGER);
 
-        lv_style_init(&me106_theme_alarm_energy_capacitive_reactive);
-        lv_style_set_text_color(&me106_theme_alarm_energy_capacitive_reactive, METER_RED);
+            lv_style_init(&me106_text_14_gray_ba);
+            lv_style_set_text_color(&me106_text_14_gray_ba, METER_GRAY_BA);
+            lv_style_set_text_font(&me106_text_14_gray_ba, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_theme_alarm_status_warning);
-        lv_style_set_text_color(&me106_theme_alarm_status_warning, METER_THEME_ALARM_COLOR_WARNING);
+            lv_style_init(&me106_text_14_gray_ba_center);
+            lv_style_set_text_color(&me106_text_14_gray_ba_center, METER_GRAY_BA);
+            lv_style_set_text_font(&me106_text_14_gray_ba_center, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_set_text_align(&me106_text_14_gray_ba_center, LV_TEXT_ALIGN_CENTER);
 
-        lv_style_init(&me106_theme_alarm_status_ok);
-        lv_style_set_text_color(&me106_theme_alarm_status_ok, METER_THEME_ALARM_COLOR_OK);
+            lv_style_init(&me106_text_14_gray_8f);
+            lv_style_set_text_color(&me106_text_14_gray_8f, METER_GRAY_8F);
+            lv_style_set_text_font(&me106_text_14_gray_8f, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_theme_alarm_status_danger);
-        lv_style_set_text_color(&me106_theme_alarm_status_danger, METER_THEME_ALARM_COLOR_DANGER);
+            lv_style_init(&me106_text_14_gray_7f);
+            lv_style_set_text_color(&me106_text_14_gray_7f, METER_GRAY_7F);
+            lv_style_set_text_font(&me106_text_14_gray_7f, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_gray_ba);
-        lv_style_set_text_color(&me106_text_14_gray_ba, METER_GRAY_BA);
-        lv_style_set_text_font(&me106_text_14_gray_ba, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_blue);
+            lv_style_set_text_color(&me106_text_14_blue, METER_BLUE);
+            lv_style_set_text_font(&me106_text_14_blue, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_gray_ba_center);
-        lv_style_set_text_color(&me106_text_14_gray_ba_center, METER_GRAY_BA);
-        lv_style_set_text_font(&me106_text_14_gray_ba_center, meter_Harmony_Sans_SC_Medium_14);
-        lv_style_set_text_align(&me106_text_14_gray_ba_center, LV_TEXT_ALIGN_CENTER);
+            lv_style_init(&me106_text_14_blue_ea);
+            lv_style_set_text_color(&me106_text_14_blue_ea, METER_BLUE_EA);
+            lv_style_set_text_font(&me106_text_14_blue_ea, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_gray_8f);
-        lv_style_set_text_color(&me106_text_14_gray_8f, METER_GRAY_8F);
-        lv_style_set_text_font(&me106_text_14_gray_8f, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_white);
+            lv_style_set_text_color(&me106_text_14_white, METER_WHITE);
+            lv_style_set_text_font(&me106_text_14_white, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_gray_7f);
-        lv_style_set_text_color(&me106_text_14_gray_7f, METER_GRAY_7F);
-        lv_style_set_text_font(&me106_text_14_gray_7f, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_yellow);
+            lv_style_set_text_color(&me106_text_14_yellow, METER_YELLOW);
+            lv_style_set_text_font(&me106_text_14_yellow, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_blue);
-        lv_style_set_text_color(&me106_text_14_blue, METER_BLUE);
-        lv_style_set_text_font(&me106_text_14_blue, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_green);
+            lv_style_set_text_color(&me106_text_14_green, METER_GREEN);
+            lv_style_set_text_font(&me106_text_14_green, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_blue_ea);
-        lv_style_set_text_color(&me106_text_14_blue_ea, METER_BLUE_EA);
-        lv_style_set_text_font(&me106_text_14_blue_ea, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_red);
+            lv_style_set_text_color(&me106_text_14_red, METER_RED);
+            lv_style_set_text_font(&me106_text_14_red, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_white);
-        lv_style_set_text_color(&me106_text_14_white, METER_WHITE);
-        lv_style_set_text_font(&me106_text_14_white, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_cyan);
+            lv_style_set_text_color(&me106_text_14_cyan, METER_CYAN);
+            lv_style_set_text_font(&me106_text_14_cyan, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_yellow);
-        lv_style_set_text_color(&me106_text_14_yellow, METER_YELLOW);
-        lv_style_set_text_font(&me106_text_14_yellow, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_cyan_center);
+            lv_style_set_text_color(&me106_text_14_cyan_center, METER_CYAN);
+            lv_style_set_text_font(&me106_text_14_cyan_center, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_set_text_align(&me106_text_14_cyan_center, LV_TEXT_ALIGN_CENTER);
 
-        lv_style_init(&me106_text_14_green);
-        lv_style_set_text_color(&me106_text_14_green, METER_GREEN);
-        lv_style_set_text_font(&me106_text_14_green, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_purple);
+            lv_style_set_text_color(&me106_text_14_purple, METER_PURPLE);
+            lv_style_set_text_font(&me106_text_14_purple, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_red);
-        lv_style_set_text_color(&me106_text_14_red, METER_RED);
-        lv_style_set_text_font(&me106_text_14_red, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_indigo);
+            lv_style_set_text_color(&me106_text_14_indigo, METER_INDIGO);
+            lv_style_set_text_font(&me106_text_14_indigo, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_cyan);
-        lv_style_set_text_color(&me106_text_14_cyan, METER_CYAN);
-        lv_style_set_text_font(&me106_text_14_cyan, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_teal);
+            lv_style_set_text_color(&me106_text_14_teal, METER_TEAL);
+            lv_style_set_text_font(&me106_text_14_teal, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_cyan_center);
-        lv_style_set_text_color(&me106_text_14_cyan_center, METER_CYAN);
-        lv_style_set_text_font(&me106_text_14_cyan_center, meter_Harmony_Sans_SC_Medium_14);
-        lv_style_set_text_align(&me106_text_14_cyan_center, LV_TEXT_ALIGN_CENTER);
+            lv_style_init(&me106_text_14_orange);
+            lv_style_set_text_color(&me106_text_14_orange, METER_ORANGE);
+            lv_style_set_text_font(&me106_text_14_orange, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_purple);
-        lv_style_set_text_color(&me106_text_14_purple, METER_PURPLE);
-        lv_style_set_text_font(&me106_text_14_purple, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_white_center);
+            lv_style_set_text_color(&me106_text_14_white_center, METER_WHITE);
+            lv_style_set_text_font(&me106_text_14_white_center, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_set_text_align(&me106_text_14_white_center, LV_TEXT_ALIGN_CENTER);
 
-        lv_style_init(&me106_text_14_indigo);
-        lv_style_set_text_color(&me106_text_14_indigo, METER_INDIGO);
-        lv_style_set_text_font(&me106_text_14_indigo, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_gray_ba_right);
+            lv_style_set_text_color(&me106_text_14_gray_ba_right, METER_GRAY_BA);
+            lv_style_set_text_font(&me106_text_14_gray_ba_right, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_set_text_align(&me106_text_14_gray_ba_right, LV_TEXT_ALIGN_RIGHT);
 
-        lv_style_init(&me106_text_14_teal);
-        lv_style_set_text_color(&me106_text_14_teal, METER_TEAL);
-        lv_style_set_text_font(&me106_text_14_teal, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_text_14_white_right);
+            lv_style_set_text_color(&me106_text_14_white_right, METER_WHITE);
+            lv_style_set_text_font(&me106_text_14_white_right, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_set_text_align(&me106_text_14_white_right, LV_TEXT_ALIGN_RIGHT);
 
-        lv_style_init(&me106_text_14_orange);
-        lv_style_set_text_color(&me106_text_14_orange, METER_ORANGE);
-        lv_style_set_text_font(&me106_text_14_orange, meter_Harmony_Sans_SC_Medium_14);
+            lv_style_init(&me106_brand_text_dark);
+            lv_style_set_text_color(&me106_brand_text_dark, METER_WHITE);
+            lv_style_set_text_font(&me106_brand_text_dark, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_white_center);
-        lv_style_set_text_color(&me106_text_14_white_center, METER_WHITE);
-        lv_style_set_text_font(&me106_text_14_white_center, meter_Harmony_Sans_SC_Medium_14);
-        lv_style_set_text_align(&me106_text_14_white_center, LV_TEXT_ALIGN_CENTER);
+            lv_style_init(&me106_brand_text_light);
+            lv_style_set_text_color(&me106_brand_text_light, METER_BLACK);
+            lv_style_set_text_font(&me106_brand_text_light, meter_Harmony_Sans_SC_Medium_14);
 
-        lv_style_init(&me106_text_14_gray_ba_right);
-        lv_style_set_text_color(&me106_text_14_gray_ba_right, METER_GRAY_BA);
-        lv_style_set_text_font(&me106_text_14_gray_ba_right, meter_Harmony_Sans_SC_Medium_14);
-        lv_style_set_text_align(&me106_text_14_gray_ba_right, LV_TEXT_ALIGN_RIGHT);
+            lv_style_init(&me106_text_16_white);
+            lv_style_set_text_color(&me106_text_16_white, METER_WHITE);
+            lv_style_set_text_font(&me106_text_16_white, meter_Harmony_Sans_SC_Medium_16);
 
-        lv_style_init(&me106_text_14_white_right);
-        lv_style_set_text_color(&me106_text_14_white_right, METER_WHITE);
-        lv_style_set_text_font(&me106_text_14_white_right, meter_Harmony_Sans_SC_Medium_14);
-        lv_style_set_text_align(&me106_text_14_white_right, LV_TEXT_ALIGN_RIGHT);
+            lv_style_init(&me106_text_16_white_center);
+            lv_style_set_text_color(&me106_text_16_white_center, METER_WHITE);
+            lv_style_set_text_font(&me106_text_16_white_center, meter_Harmony_Sans_SC_Medium_16);
+            lv_style_set_text_align(&me106_text_16_white_center, LV_TEXT_ALIGN_CENTER);
 
-        lv_style_init(&me106_brand_text_dark);
-        lv_style_set_text_color(&me106_brand_text_dark, METER_WHITE);
-        lv_style_set_text_font(&me106_brand_text_dark, meter_Harmony_Sans_SC_Medium_14);
-
-        lv_style_init(&me106_brand_text_light);
-        lv_style_set_text_color(&me106_brand_text_light, METER_BLACK);
-        lv_style_set_text_font(&me106_brand_text_light, meter_Harmony_Sans_SC_Medium_14);
-
-        lv_style_init(&me106_text_16_white);
-        lv_style_set_text_color(&me106_text_16_white, METER_WHITE);
-        lv_style_set_text_font(&me106_text_16_white, meter_Harmony_Sans_SC_Medium_16);
-
-        lv_style_init(&me106_text_16_white_center);
-        lv_style_set_text_color(&me106_text_16_white_center, METER_WHITE);
-        lv_style_set_text_font(&me106_text_16_white_center, meter_Harmony_Sans_SC_Medium_16);
-        lv_style_set_text_align(&me106_text_16_white_center, LV_TEXT_ALIGN_CENTER);
-
-        lv_style_init(&me106_text_16_white_right);
-        lv_style_set_text_color(&me106_text_16_white_right, METER_WHITE);
-        lv_style_set_text_font(&me106_text_16_white_right, meter_Harmony_Sans_SC_Medium_16);
-        lv_style_set_text_align(&me106_text_16_white_right, LV_TEXT_ALIGN_RIGHT);
-
-        lv_style_init(&me106_text_16_gray_d8);
-        lv_style_set_text_color(&me106_text_16_gray_d8, METER_GRAY_D8);
-        lv_style_set_text_font(&me106_text_16_gray_d8, meter_Harmony_Sans_SC_Medium_16);
-
-        lv_style_init(&me106_text_16_gray_ba);
-        lv_style_set_text_color(&me106_text_16_gray_ba, METER_GRAY_BA);
-        lv_style_set_text_font(&me106_text_16_gray_ba, meter_Harmony_Sans_SC_Medium_16);
-
-        lv_style_init(&me106_text_16_gray_ba_right);
-        lv_style_set_text_color(&me106_text_16_gray_ba_right, METER_GRAY_BA);
-        lv_style_set_text_font(&me106_text_16_gray_ba_right, meter_Harmony_Sans_SC_Medium_16);
-        lv_style_set_text_align(&me106_text_16_gray_ba_right, LV_TEXT_ALIGN_RIGHT);
-
-        lv_style_init(&me106_text_16_gray_ba_center);
-        lv_style_set_text_color(&me106_text_16_gray_ba_center, METER_GRAY_BA);
-        lv_style_set_text_font(&me106_text_16_gray_ba_center, meter_Harmony_Sans_SC_Medium_16);
-        lv_style_set_text_align(&me106_text_16_gray_ba_center, LV_TEXT_ALIGN_CENTER);
-
-        lv_style_init(&me106_text_16_yellow);
-        lv_style_set_text_color(&me106_text_16_yellow, METER_YELLOW);
-        lv_style_set_text_font(&me106_text_16_yellow, meter_Harmony_Sans_SC_Medium_16);
-
-        lv_style_init(&me106_text_16_green);
-        lv_style_set_text_color(&me106_text_16_green, METER_GREEN);
-        lv_style_set_text_font(&me106_text_16_green, meter_Harmony_Sans_SC_Medium_16);
-
-        lv_style_init(&me106_text_16_red);
-        lv_style_set_text_color(&me106_text_16_red, METER_RED);
-        lv_style_set_text_font(&me106_text_16_red, meter_Harmony_Sans_SC_Medium_16);
-
-        lv_style_init(&me106_text_16_purple);
-        lv_style_set_text_color(&me106_text_16_purple, METER_PURPLE);
-        lv_style_set_text_font(&me106_text_16_purple, meter_Harmony_Sans_SC_Medium_16);
-
-        lv_style_init(&me106_text_16_cyan);
-        lv_style_set_text_color(&me106_text_16_cyan, METER_CYAN);
-        lv_style_set_text_font(&me106_text_16_cyan, meter_Harmony_Sans_SC_Medium_16);
-
-        lv_style_init(&me106_text_16_teal);
-        lv_style_set_text_color(&me106_text_16_teal, METER_TEAL);
-        lv_style_set_text_font(&me106_text_16_teal, meter_Harmony_Sans_SC_Medium_16);
-
-        lv_style_init(&me106_text_16_indigo);
-        lv_style_set_text_color(&me106_text_16_indigo, METER_INDIGO);
-        lv_style_set_text_font(&me106_text_16_indigo, meter_Harmony_Sans_SC_Medium_16);
-
-        lv_style_init(&me106_text_16_orange);
-        lv_style_set_text_color(&me106_text_16_orange, METER_ORANGE);
-        lv_style_set_text_font(&me106_text_16_orange, meter_Harmony_Sans_SC_Medium_16);
-
-        lv_style_init(&me106_text_18_white);
-        lv_style_set_text_color(&me106_text_18_white, METER_WHITE);
-        lv_style_set_text_font(&me106_text_18_white, meter_Harmony_Sans_SC_Medium_18);
-
-        lv_style_init(&me106_text_18_white_center);
-        lv_style_set_text_color(&me106_text_18_white_center, METER_WHITE);
-        lv_style_set_text_font(&me106_text_18_white_center, meter_Harmony_Sans_SC_Medium_18);
-        lv_style_set_text_align(&me106_text_18_white_center, LV_TEXT_ALIGN_CENTER);
-
-        lv_style_init(&me106_text_18_gray_ba);
-        lv_style_set_text_color(&me106_text_18_gray_ba, METER_GRAY_BA);
-        lv_style_set_text_font(&me106_text_18_gray_ba, meter_Harmony_Sans_SC_Medium_18);
-
-        lv_style_init(&me106_text_18_yellow);
-        lv_style_set_text_color(&me106_text_18_yellow, METER_YELLOW);
-        lv_style_set_text_font(&me106_text_18_yellow, meter_Harmony_Sans_SC_Medium_18);
-
-        lv_style_init(&me106_text_18_green);
-        lv_style_set_text_color(&me106_text_18_green, METER_GREEN);
-        lv_style_set_text_font(&me106_text_18_green, meter_Harmony_Sans_SC_Medium_18);
-
-        lv_style_init(&me106_text_18_red);
-        lv_style_set_text_color(&me106_text_18_red, METER_RED);
-        lv_style_set_text_font(&me106_text_18_red, meter_Harmony_Sans_SC_Medium_18);
-
-        lv_style_init(&me106_text_18_cyan);
-        lv_style_set_text_color(&me106_text_18_cyan, METER_CYAN);
-        lv_style_set_text_font(&me106_text_18_cyan, meter_Harmony_Sans_SC_Medium_18);
-
-        lv_style_init(&me106_text_18_indigo);
-        lv_style_set_text_color(&me106_text_18_indigo, METER_INDIGO);
-        lv_style_set_text_font(&me106_text_18_indigo, meter_Harmony_Sans_SC_Medium_18);
-
-        lv_style_init(&me106_text_36_white_center);
-        lv_style_set_text_color(&me106_text_36_white_center, METER_WHITE);
-        lv_style_set_text_font(&me106_text_36_white_center, meter_Harmony_Sans_SC_Medium_36);
-        lv_style_set_text_align(&me106_text_36_white_center, LV_TEXT_ALIGN_CENTER);
-
-        lv_style_init(&me106_panel_gray1f_r8);
-        lv_style_set_bg_color(&me106_panel_gray1f_r8, METER_GRAY_1F);
-        lv_style_set_bg_opa(&me106_panel_gray1f_r8, 255);
-        lv_style_set_radius(&me106_panel_gray1f_r8, METER_R8);
-        lv_style_set_shadow_width(&me106_panel_gray1f_r8, 0);
-
-        lv_style_init(&me106_panel_gray24_r8);
-        lv_style_set_bg_color(&me106_panel_gray24_r8, METER_GRAY_24);
-        lv_style_set_bg_opa(&me106_panel_gray24_r8, 255);
-        lv_style_set_radius(&me106_panel_gray24_r8, METER_R8);
-        lv_style_set_shadow_width(&me106_panel_gray24_r8, 0);
-
-        lv_style_init(&me106_panel_soft_r8);
-        lv_style_set_bg_color(&me106_panel_soft_r8, METER_GRAY_24);
-        lv_style_set_bg_opa(&me106_panel_soft_r8, 150);
-        lv_style_set_radius(&me106_panel_soft_r8, METER_R8);
-        lv_style_set_border_width(&me106_panel_soft_r8, 0);
-        lv_style_set_shadow_width(&me106_panel_soft_r8, 0);
-
-        lv_style_init(&me106_panel_blue_r8);
-        lv_style_set_bg_color(&me106_panel_blue_r8, METER_BLUE);
-        lv_style_set_bg_opa(&me106_panel_blue_r8, 255);
-        lv_style_set_radius(&me106_panel_blue_r8, METER_R8);
-        lv_style_set_shadow_width(&me106_panel_blue_r8, 0);
-
-        lv_style_init(&me106_panel_blue_r6);
-        lv_style_set_bg_color(&me106_panel_blue_r6, METER_BLUE);
-        lv_style_set_bg_opa(&me106_panel_blue_r6, 255);
-        lv_style_set_radius(&me106_panel_blue_r6, METER_R6);
-        lv_style_set_shadow_width(&me106_panel_blue_r6, 0);
-
-        lv_style_init(&me106_btn_ota_action);
-        lv_style_set_bg_color(&me106_btn_ota_action, METER_GRAY_30);
-        lv_style_set_bg_opa(&me106_btn_ota_action, 255);
-        lv_style_set_radius(&me106_btn_ota_action, METER_R6);
-        lv_style_set_border_width(&me106_btn_ota_action, 0);
-        lv_style_set_shadow_width(&me106_btn_ota_action, 0);
-
-        lv_style_init(&me106_btn_ota_busy);
-        lv_style_set_bg_color(&me106_btn_ota_busy, METER_GRAY_30);
-        lv_style_set_bg_opa(&me106_btn_ota_busy, 255);
-        lv_style_set_radius(&me106_btn_ota_busy, METER_R6);
-        lv_style_set_border_width(&me106_btn_ota_busy, 0);
-        lv_style_set_shadow_width(&me106_btn_ota_busy, 0);
-
-        lv_style_init(&me106_theme_light_soft_panel);
-        lv_style_set_bg_color(&me106_theme_light_soft_panel, METER_THEME_LIGHT_COLOR_SURFACE_SOFT);
-        lv_style_set_bg_opa(&me106_theme_light_soft_panel, 255);
-        lv_style_set_border_width(&me106_theme_light_soft_panel, 0);
-
-        lv_style_init(&me106_theme_alarm_soft_panel);
-        lv_style_set_bg_color(&me106_theme_alarm_soft_panel, METER_THEME_ALARM_COLOR_SURFACE);
-        lv_style_set_bg_opa(&me106_theme_alarm_soft_panel, 220);
-        lv_style_set_border_width(&me106_theme_alarm_soft_panel, 0);
-
-        lv_style_init(&me106_icon_white);
-        lv_style_set_image_recolor(&me106_icon_white, METER_WHITE);
-        lv_style_set_image_recolor_opa(&me106_icon_white, 255);
-
-        lv_style_init(&me106_icon_cyan);
-        lv_style_set_image_recolor(&me106_icon_cyan, METER_CYAN);
-        lv_style_set_image_recolor_opa(&me106_icon_cyan, 255);
-
-        lv_style_init(&me106_icon_indigo);
-        lv_style_set_image_recolor(&me106_icon_indigo, METER_INDIGO);
-        lv_style_set_image_recolor_opa(&me106_icon_indigo, 255);
-
-        lv_style_init(&me106_line_gray2c);
-        lv_style_set_bg_color(&me106_line_gray2c, METER_GRAY_2C);
-        lv_style_set_bg_opa(&me106_line_gray2c, 255);
-
-        lv_style_init(&me106_line_gray30);
-        lv_style_set_bg_color(&me106_line_gray30, METER_GRAY_30);
-        lv_style_set_bg_opa(&me106_line_gray30, 255);
-
-        lv_style_init(&me106_line_cyan);
-        lv_style_set_bg_color(&me106_line_cyan, METER_CYAN);
-        lv_style_set_bg_opa(&me106_line_cyan, 255);
-
-        lv_style_init(&me106_line_orange);
-        lv_style_set_bg_color(&me106_line_orange, METER_ORANGE);
-        lv_style_set_bg_opa(&me106_line_orange, 255);
-
-        lv_style_init(&me106_slider_track);
-        lv_style_set_bg_color(&me106_slider_track, METER_GRAY_30);
-        lv_style_set_bg_opa(&me106_slider_track, 255);
-        lv_style_set_radius(&me106_slider_track, 5);
-        lv_style_set_border_width(&me106_slider_track, 0);
-
-        lv_style_init(&me106_slider_indicator);
-        lv_style_set_bg_color(&me106_slider_indicator, METER_BLUE);
-        lv_style_set_bg_opa(&me106_slider_indicator, 255);
-        lv_style_set_radius(&me106_slider_indicator, 5);
-        lv_style_set_border_width(&me106_slider_indicator, 0);
-
-        lv_style_init(&me106_slider_knob);
-        lv_style_set_bg_color(&me106_slider_knob, METER_WHITE);
-        lv_style_set_bg_opa(&me106_slider_knob, 255);
-        lv_style_set_radius(&me106_slider_knob, 8);
-        lv_style_set_border_width(&me106_slider_knob, 2);
-        lv_style_set_border_color(&me106_slider_knob, METER_BLUE);
-        lv_style_set_border_opa(&me106_slider_knob, 255);
-        lv_style_set_shadow_width(&me106_slider_knob, 0);
-        lv_style_set_width(&me106_slider_knob, 18);
-        lv_style_set_height(&me106_slider_knob, 18);
-
-        lv_style_init(&me106_chart_bar_gap);
-        lv_style_set_pad_column(&me106_chart_bar_gap, 1);
-
-        lv_style_init(&me106_chart_bar_thin);
-        lv_style_set_pad_column(&me106_chart_bar_thin, 3);
-
-        lv_style_init(&me106_chart_bar_inner_gap);
-        lv_style_set_pad_column(&me106_chart_bar_inner_gap, 2);
-
-        lv_style_init(&me106_chart_bar_spectrum_items);
-        lv_style_set_pad_column(&me106_chart_bar_spectrum_items, 0);
-
-        lv_style_init(&me106_chart_frame);
-        lv_style_set_border_width(&me106_chart_frame, 1);
-        lv_style_set_border_color(&me106_chart_frame, METER_GRAY_30);
-        lv_style_set_border_opa(&me106_chart_frame, 255);
-
-        lv_style_init(&me106_chart_point_hidden);
-        lv_style_set_width(&me106_chart_point_hidden, 0);
-        lv_style_set_height(&me106_chart_point_hidden, 0);
-        lv_style_set_bg_opa(&me106_chart_point_hidden, 0);
-
-        lv_style_init(&me106_chart_wave_line);
-        lv_style_set_line_width(&me106_chart_wave_line, 2);
-        lv_style_set_line_rounded(&me106_chart_wave_line, true);
-
-        lv_style_init(&me106_move_y_n20);
-        lv_style_set_translate_y(&me106_move_y_n20, -20);
-
-        lv_style_init(&me106_move_y_n24);
-        lv_style_set_translate_y(&me106_move_y_n24, -24);
-
-        lv_style_init(&me106_move_y_n38);
-        lv_style_set_translate_y(&me106_move_y_n38, -38);
-
-        lv_style_init(&me106_move_y_n46);
-        lv_style_set_translate_y(&me106_move_y_n46, -46);
-
-        lv_style_init(&me106_move_y_n62);
-        lv_style_set_translate_y(&me106_move_y_n62, -62);
-
-        lv_style_init(&me106_move_y_n70);
-        lv_style_set_translate_y(&me106_move_y_n70, -70);
-
-        lv_style_init(&me106_move_y_n76);
-        lv_style_set_translate_y(&me106_move_y_n76, -76);
-
-        lv_style_init(&me106_move_y_n92);
-        lv_style_set_translate_y(&me106_move_y_n92, -92);
-
-        lv_style_init(&me106_move_y_n104);
-        lv_style_set_translate_y(&me106_move_y_n104, -104);
-
-        lv_style_init(&me106_move_y_n114);
-        lv_style_set_translate_y(&me106_move_y_n114, -114);
-
-        lv_style_init(&me106_move_y_n116);
-        lv_style_set_translate_y(&me106_move_y_n116, -116);
-
-        lv_style_init(&me106_move_y_n138);
-        lv_style_set_translate_y(&me106_move_y_n138, -138);
-
-        lv_style_init(&me106_move_y_n152);
-        lv_style_set_translate_y(&me106_move_y_n152, -152);
-
-        lv_style_init(&me106_move_y_n162);
-        lv_style_set_translate_y(&me106_move_y_n162, -162);
-
-        lv_style_init(&me106_move_y_n208);
-        lv_style_set_translate_y(&me106_move_y_n208, -208);
-
-        lv_style_init(&me106_move_y_n254);
-        lv_style_set_translate_y(&me106_move_y_n254, -254);
-
-        lv_style_init(&me106_move_y_n300);
-        lv_style_set_translate_y(&me106_move_y_n300, -300);
-
-        lv_style_init(&me106_move_y_n346);
-        lv_style_set_translate_y(&me106_move_y_n346, -346);
-
-        lv_style_init(&me106_move_y_n392);
-        lv_style_set_translate_y(&me106_move_y_n392, -392);
-
-        lv_style_init(&me106_move_y_n416);
-        lv_style_set_translate_y(&me106_move_y_n416, -416);
-
+            lv_style_init(&me106_text_16_white_right);
+            lv_style_set_text_color(&me106_text_16_white_right, METER_WHITE);
+            lv_style_set_text_font(&me106_text_16_white_right, meter_Harmony_Sans_SC_Medium_16);
+            lv_style_set_text_align(&me106_text_16_white_right, LV_TEXT_ALIGN_RIGHT);
+
+            lv_style_init(&me106_text_16_gray_d8);
+            lv_style_set_text_color(&me106_text_16_gray_d8, METER_GRAY_D8);
+            lv_style_set_text_font(&me106_text_16_gray_d8, meter_Harmony_Sans_SC_Medium_16);
+
+            lv_style_init(&me106_text_16_gray_ba);
+            lv_style_set_text_color(&me106_text_16_gray_ba, METER_GRAY_BA);
+            lv_style_set_text_font(&me106_text_16_gray_ba, meter_Harmony_Sans_SC_Medium_16);
+
+            lv_style_init(&me106_text_16_gray_ba_right);
+            lv_style_set_text_color(&me106_text_16_gray_ba_right, METER_GRAY_BA);
+            lv_style_set_text_font(&me106_text_16_gray_ba_right, meter_Harmony_Sans_SC_Medium_16);
+            lv_style_set_text_align(&me106_text_16_gray_ba_right, LV_TEXT_ALIGN_RIGHT);
+
+            lv_style_init(&me106_text_16_gray_ba_center);
+            lv_style_set_text_color(&me106_text_16_gray_ba_center, METER_GRAY_BA);
+            lv_style_set_text_font(&me106_text_16_gray_ba_center, meter_Harmony_Sans_SC_Medium_16);
+            lv_style_set_text_align(&me106_text_16_gray_ba_center, LV_TEXT_ALIGN_CENTER);
+
+            lv_style_init(&me106_text_16_yellow);
+            lv_style_set_text_color(&me106_text_16_yellow, METER_YELLOW);
+            lv_style_set_text_font(&me106_text_16_yellow, meter_Harmony_Sans_SC_Medium_16);
+
+            lv_style_init(&me106_text_16_green);
+            lv_style_set_text_color(&me106_text_16_green, METER_GREEN);
+            lv_style_set_text_font(&me106_text_16_green, meter_Harmony_Sans_SC_Medium_16);
+
+            lv_style_init(&me106_text_16_red);
+            lv_style_set_text_color(&me106_text_16_red, METER_RED);
+            lv_style_set_text_font(&me106_text_16_red, meter_Harmony_Sans_SC_Medium_16);
+
+            lv_style_init(&me106_text_16_purple);
+            lv_style_set_text_color(&me106_text_16_purple, METER_PURPLE);
+            lv_style_set_text_font(&me106_text_16_purple, meter_Harmony_Sans_SC_Medium_16);
+
+            lv_style_init(&me106_text_16_cyan);
+            lv_style_set_text_color(&me106_text_16_cyan, METER_CYAN);
+            lv_style_set_text_font(&me106_text_16_cyan, meter_Harmony_Sans_SC_Medium_16);
+
+            lv_style_init(&me106_text_16_teal);
+            lv_style_set_text_color(&me106_text_16_teal, METER_TEAL);
+            lv_style_set_text_font(&me106_text_16_teal, meter_Harmony_Sans_SC_Medium_16);
+
+            lv_style_init(&me106_text_16_indigo);
+            lv_style_set_text_color(&me106_text_16_indigo, METER_INDIGO);
+            lv_style_set_text_font(&me106_text_16_indigo, meter_Harmony_Sans_SC_Medium_16);
+
+            lv_style_init(&me106_text_16_orange);
+            lv_style_set_text_color(&me106_text_16_orange, METER_ORANGE);
+            lv_style_set_text_font(&me106_text_16_orange, meter_Harmony_Sans_SC_Medium_16);
+
+            lv_style_init(&me106_text_18_white);
+            lv_style_set_text_color(&me106_text_18_white, METER_WHITE);
+            lv_style_set_text_font(&me106_text_18_white, meter_Harmony_Sans_SC_Medium_18);
+
+            lv_style_init(&me106_text_18_white_center);
+            lv_style_set_text_color(&me106_text_18_white_center, METER_WHITE);
+            lv_style_set_text_font(&me106_text_18_white_center, meter_Harmony_Sans_SC_Medium_18);
+            lv_style_set_text_align(&me106_text_18_white_center, LV_TEXT_ALIGN_CENTER);
+
+            lv_style_init(&me106_text_18_gray_ba);
+            lv_style_set_text_color(&me106_text_18_gray_ba, METER_GRAY_BA);
+            lv_style_set_text_font(&me106_text_18_gray_ba, meter_Harmony_Sans_SC_Medium_18);
+
+            lv_style_init(&me106_text_18_yellow);
+            lv_style_set_text_color(&me106_text_18_yellow, METER_YELLOW);
+            lv_style_set_text_font(&me106_text_18_yellow, meter_Harmony_Sans_SC_Medium_18);
+
+            lv_style_init(&me106_text_18_green);
+            lv_style_set_text_color(&me106_text_18_green, METER_GREEN);
+            lv_style_set_text_font(&me106_text_18_green, meter_Harmony_Sans_SC_Medium_18);
+
+            lv_style_init(&me106_text_18_red);
+            lv_style_set_text_color(&me106_text_18_red, METER_RED);
+            lv_style_set_text_font(&me106_text_18_red, meter_Harmony_Sans_SC_Medium_18);
+
+            lv_style_init(&me106_text_18_cyan);
+            lv_style_set_text_color(&me106_text_18_cyan, METER_CYAN);
+            lv_style_set_text_font(&me106_text_18_cyan, meter_Harmony_Sans_SC_Medium_18);
+
+            lv_style_init(&me106_text_18_indigo);
+            lv_style_set_text_color(&me106_text_18_indigo, METER_INDIGO);
+            lv_style_set_text_font(&me106_text_18_indigo, meter_Harmony_Sans_SC_Medium_18);
+
+            lv_style_init(&me106_text_36_white_center);
+            lv_style_set_text_color(&me106_text_36_white_center, METER_WHITE);
+            lv_style_set_text_font(&me106_text_36_white_center, meter_Harmony_Sans_SC_Medium_36);
+            lv_style_set_text_align(&me106_text_36_white_center, LV_TEXT_ALIGN_CENTER);
+
+            lv_style_init(&me106_panel_gray1f_r8);
+            lv_style_set_bg_color(&me106_panel_gray1f_r8, METER_GRAY_1F);
+            lv_style_set_bg_opa(&me106_panel_gray1f_r8, 255);
+            lv_style_set_radius(&me106_panel_gray1f_r8, METER_R8);
+            lv_style_set_shadow_width(&me106_panel_gray1f_r8, 0);
+
+            lv_style_init(&me106_panel_gray24_r8);
+            lv_style_set_bg_color(&me106_panel_gray24_r8, METER_GRAY_24);
+            lv_style_set_bg_opa(&me106_panel_gray24_r8, 255);
+            lv_style_set_radius(&me106_panel_gray24_r8, METER_R8);
+            lv_style_set_shadow_width(&me106_panel_gray24_r8, 0);
+
+            lv_style_init(&me106_panel_soft_r8);
+            lv_style_set_bg_color(&me106_panel_soft_r8, METER_GRAY_24);
+            lv_style_set_bg_opa(&me106_panel_soft_r8, 150);
+            lv_style_set_radius(&me106_panel_soft_r8, METER_R8);
+            lv_style_set_border_width(&me106_panel_soft_r8, 0);
+            lv_style_set_shadow_width(&me106_panel_soft_r8, 0);
+
+            lv_style_init(&me106_panel_blue_r8);
+            lv_style_set_bg_color(&me106_panel_blue_r8, METER_BLUE);
+            lv_style_set_bg_opa(&me106_panel_blue_r8, 255);
+            lv_style_set_radius(&me106_panel_blue_r8, METER_R8);
+            lv_style_set_shadow_width(&me106_panel_blue_r8, 0);
+
+            lv_style_init(&me106_panel_blue_r6);
+            lv_style_set_bg_color(&me106_panel_blue_r6, METER_BLUE);
+            lv_style_set_bg_opa(&me106_panel_blue_r6, 255);
+            lv_style_set_radius(&me106_panel_blue_r6, METER_R6);
+            lv_style_set_shadow_width(&me106_panel_blue_r6, 0);
+
+            lv_style_init(&me106_btn_ota_action);
+            lv_style_set_bg_color(&me106_btn_ota_action, METER_GRAY_30);
+            lv_style_set_bg_opa(&me106_btn_ota_action, 255);
+            lv_style_set_radius(&me106_btn_ota_action, METER_R6);
+            lv_style_set_border_width(&me106_btn_ota_action, 0);
+            lv_style_set_shadow_width(&me106_btn_ota_action, 0);
+
+            lv_style_init(&me106_btn_ota_busy);
+            lv_style_set_bg_color(&me106_btn_ota_busy, METER_GRAY_30);
+            lv_style_set_bg_opa(&me106_btn_ota_busy, 255);
+            lv_style_set_radius(&me106_btn_ota_busy, METER_R6);
+            lv_style_set_border_width(&me106_btn_ota_busy, 0);
+            lv_style_set_shadow_width(&me106_btn_ota_busy, 0);
+
+            lv_style_init(&me106_theme_light_soft_panel);
+            lv_style_set_bg_color(&me106_theme_light_soft_panel, METER_THEME_LIGHT_COLOR_SURFACE_SOFT);
+            lv_style_set_bg_opa(&me106_theme_light_soft_panel, 255);
+            lv_style_set_border_width(&me106_theme_light_soft_panel, 0);
+
+            lv_style_init(&me106_theme_alarm_soft_panel);
+            lv_style_set_bg_color(&me106_theme_alarm_soft_panel, METER_THEME_ALARM_COLOR_SURFACE);
+            lv_style_set_bg_opa(&me106_theme_alarm_soft_panel, 220);
+            lv_style_set_border_width(&me106_theme_alarm_soft_panel, 0);
+
+            lv_style_init(&me106_icon_white);
+            lv_style_set_image_recolor(&me106_icon_white, METER_WHITE);
+            lv_style_set_image_recolor_opa(&me106_icon_white, 255);
+
+            lv_style_init(&me106_icon_cyan);
+            lv_style_set_image_recolor(&me106_icon_cyan, METER_CYAN);
+            lv_style_set_image_recolor_opa(&me106_icon_cyan, 255);
+
+            lv_style_init(&me106_icon_indigo);
+            lv_style_set_image_recolor(&me106_icon_indigo, METER_INDIGO);
+            lv_style_set_image_recolor_opa(&me106_icon_indigo, 255);
+
+            lv_style_init(&me106_line_gray2c);
+            lv_style_set_bg_color(&me106_line_gray2c, METER_GRAY_2C);
+            lv_style_set_bg_opa(&me106_line_gray2c, 255);
+
+            lv_style_init(&me106_line_gray30);
+            lv_style_set_bg_color(&me106_line_gray30, METER_GRAY_30);
+            lv_style_set_bg_opa(&me106_line_gray30, 255);
+
+            lv_style_init(&me106_line_cyan);
+            lv_style_set_bg_color(&me106_line_cyan, METER_CYAN);
+            lv_style_set_bg_opa(&me106_line_cyan, 255);
+
+            lv_style_init(&me106_line_orange);
+            lv_style_set_bg_color(&me106_line_orange, METER_ORANGE);
+            lv_style_set_bg_opa(&me106_line_orange, 255);
+
+            lv_style_init(&me106_slider_track);
+            lv_style_set_bg_color(&me106_slider_track, METER_GRAY_30);
+            lv_style_set_bg_opa(&me106_slider_track, 255);
+            lv_style_set_radius(&me106_slider_track, 5);
+            lv_style_set_border_width(&me106_slider_track, 0);
+
+            lv_style_init(&me106_slider_indicator);
+            lv_style_set_bg_color(&me106_slider_indicator, METER_BLUE);
+            lv_style_set_bg_opa(&me106_slider_indicator, 255);
+            lv_style_set_radius(&me106_slider_indicator, 5);
+            lv_style_set_border_width(&me106_slider_indicator, 0);
+
+            lv_style_init(&me106_slider_knob);
+            lv_style_set_bg_color(&me106_slider_knob, METER_WHITE);
+            lv_style_set_bg_opa(&me106_slider_knob, 255);
+            lv_style_set_radius(&me106_slider_knob, 8);
+            lv_style_set_border_width(&me106_slider_knob, 2);
+            lv_style_set_border_color(&me106_slider_knob, METER_BLUE);
+            lv_style_set_border_opa(&me106_slider_knob, 255);
+            lv_style_set_shadow_width(&me106_slider_knob, 0);
+            lv_style_set_width(&me106_slider_knob, 18);
+            lv_style_set_height(&me106_slider_knob, 18);
+
+            lv_style_init(&me106_chart_bar_gap);
+            lv_style_set_pad_column(&me106_chart_bar_gap, 1);
+
+            lv_style_init(&me106_chart_bar_thin);
+            lv_style_set_pad_column(&me106_chart_bar_thin, 3);
+
+            lv_style_init(&me106_chart_bar_inner_gap);
+            lv_style_set_pad_column(&me106_chart_bar_inner_gap, 2);
+
+            lv_style_init(&me106_chart_bar_spectrum_items);
+            lv_style_set_pad_column(&me106_chart_bar_spectrum_items, 0);
+
+            lv_style_init(&me106_chart_frame);
+            lv_style_set_border_width(&me106_chart_frame, 1);
+            lv_style_set_border_color(&me106_chart_frame, METER_GRAY_30);
+            lv_style_set_border_opa(&me106_chart_frame, 255);
+
+            lv_style_init(&me106_chart_point_hidden);
+            lv_style_set_width(&me106_chart_point_hidden, 0);
+            lv_style_set_height(&me106_chart_point_hidden, 0);
+            lv_style_set_bg_opa(&me106_chart_point_hidden, 0);
+
+            lv_style_init(&me106_chart_wave_line);
+            lv_style_set_line_width(&me106_chart_wave_line, 2);
+            lv_style_set_line_rounded(&me106_chart_wave_line, true);
+
+            lv_style_init(&me106_move_y_n20);
+            lv_style_set_translate_y(&me106_move_y_n20, -20);
+
+            lv_style_init(&me106_move_y_n24);
+            lv_style_set_translate_y(&me106_move_y_n24, -24);
+
+            lv_style_init(&me106_move_y_n38);
+            lv_style_set_translate_y(&me106_move_y_n38, -38);
+
+            lv_style_init(&me106_move_y_n46);
+            lv_style_set_translate_y(&me106_move_y_n46, -46);
+
+            lv_style_init(&me106_move_y_n62);
+            lv_style_set_translate_y(&me106_move_y_n62, -62);
+
+            lv_style_init(&me106_move_y_n70);
+            lv_style_set_translate_y(&me106_move_y_n70, -70);
+
+            lv_style_init(&me106_move_y_n76);
+            lv_style_set_translate_y(&me106_move_y_n76, -76);
+
+            lv_style_init(&me106_move_y_n92);
+            lv_style_set_translate_y(&me106_move_y_n92, -92);
+
+            lv_style_init(&me106_move_y_n104);
+            lv_style_set_translate_y(&me106_move_y_n104, -104);
+
+            lv_style_init(&me106_move_y_n114);
+            lv_style_set_translate_y(&me106_move_y_n114, -114);
+
+            lv_style_init(&me106_move_y_n116);
+            lv_style_set_translate_y(&me106_move_y_n116, -116);
+
+            lv_style_init(&me106_move_y_n138);
+            lv_style_set_translate_y(&me106_move_y_n138, -138);
+
+            lv_style_init(&me106_move_y_n152);
+            lv_style_set_translate_y(&me106_move_y_n152, -152);
+
+            lv_style_init(&me106_move_y_n162);
+            lv_style_set_translate_y(&me106_move_y_n162, -162);
+
+            lv_style_init(&me106_move_y_n208);
+            lv_style_set_translate_y(&me106_move_y_n208, -208);
+
+            lv_style_init(&me106_move_y_n254);
+            lv_style_set_translate_y(&me106_move_y_n254, -254);
+
+            lv_style_init(&me106_move_y_n300);
+            lv_style_set_translate_y(&me106_move_y_n300, -300);
+
+            lv_style_init(&me106_move_y_n346);
+            lv_style_set_translate_y(&me106_move_y_n346, -346);
+
+            lv_style_init(&me106_move_y_n392);
+            lv_style_set_translate_y(&me106_move_y_n392, -392);
+
+            lv_style_init(&me106_move_y_n416);
+            lv_style_set_translate_y(&me106_move_y_n416, -416);
+
+        }
+        #endif
         style_inited = true;
     }
 
@@ -1608,6 +1742,13 @@ void power_meter_ui_init_gen(const char * asset_path)
 #if LV_USE_XML
     /* Register widgets */
 
+    /* Check all fonts / default if needed. This prevents fonts that are used in one target but
+       defined in another from causing assertion failures during rendering of the Preview. */
+    check_font(&meter_Harmony_Sans_SC_Medium_14, "meter_Harmony_Sans_SC_Medium_14");
+    check_font(&meter_Harmony_Sans_SC_Medium_16, "meter_Harmony_Sans_SC_Medium_16");
+    check_font(&meter_Harmony_Sans_SC_Medium_18, "meter_Harmony_Sans_SC_Medium_18");
+    check_font(&meter_Harmony_Sans_SC_Medium_36, "meter_Harmony_Sans_SC_Medium_36");
+
     /* Register fonts */
     lv_xml_register_font(NULL, "meter_Harmony_Sans_SC_Medium_14", meter_Harmony_Sans_SC_Medium_14);
     lv_xml_register_font(NULL, "meter_Harmony_Sans_SC_Medium_16", meter_Harmony_Sans_SC_Medium_16);
@@ -1800,8 +1941,23 @@ void power_meter_ui_init_gen(const char * asset_path)
      *  Permanent screens
      *-------------------*/
     /* If XML is enabled it's assumed that the permanent screens are created
-     * manaully from XML using lv_xml_create() */
+     * manually from XML using lv_xml_create() */
 #endif
+}
+
+void power_meter_ui_set_target(uint32_t target)
+{
+    power_meter_ui_target = target;
+}
+
+uint32_t power_meter_ui_get_target(void)
+{
+    return power_meter_ui_target;
+}
+
+bool power_meter_ui_check_target(uint32_t target)
+{
+    return (power_meter_ui_target & target) ? true : false;
 }
 
 /* Callbacks */
@@ -1809,3 +1965,11 @@ void power_meter_ui_init_gen(const char * asset_path)
 /**********************
  *   STATIC FUNCTIONS
  **********************/
+
+static void check_font(lv_font_t ** font, const char * name)
+{
+    if (!(*font)) {
+        *font = (lv_font_t *)LV_FONT_DEFAULT;
+        LV_LOG_WARN("font `%s` was not set. Using `LV_FONT_DEFAULT` instead", name);
+    }
+}

@@ -39,24 +39,37 @@ lv_obj_t * row_create(lv_obj_t * parent)
     static bool style_inited = false;
 
     if (!style_inited) {
-        lv_style_init(&style_base);
-        lv_style_set_layout(&style_base, LV_LAYOUT_FLEX);
-        lv_style_set_flex_flow(&style_base, LV_FLEX_FLOW_ROW);
+        #if POWER_METER_UI_CHECK_COMPILE_TARGET(POWER_METER_UI_TARGET_ALL)
+        if (power_meter_ui_check_target(POWER_METER_UI_TARGET_ALL)) {
+            lv_style_init(&style_base);
+            lv_style_set_layout(&style_base, LV_LAYOUT_FLEX);
+            lv_style_set_flex_flow(&style_base, LV_FLEX_FLOW_ROW);
 
+        }
+        #endif
         style_inited = true;
     }
 
-    lv_obj_t * lv_obj_0 = lv_obj_create(parent);
-    lv_obj_set_name_static(lv_obj_0, "row_#");
-    lv_obj_set_width(lv_obj_0, LV_SIZE_CONTENT);
-    lv_obj_set_height(lv_obj_0, LV_SIZE_CONTENT);
 
-    lv_obj_remove_style_all(lv_obj_0);
-    lv_obj_add_style(lv_obj_0, &style_base, 0);
+    lv_obj_t * the_root = NULL;
+
+    #if POWER_METER_UI_CHECK_COMPILE_TARGET(POWER_METER_UI_TARGET_ALL)
+    if (power_meter_ui_check_target(POWER_METER_UI_TARGET_ALL)) {
+        lv_obj_t * lv_obj_0 = lv_obj_create(parent);
+        lv_obj_set_name_static(lv_obj_0, "row_#");
+        lv_obj_set_width(lv_obj_0, LV_SIZE_CONTENT);
+        lv_obj_set_height(lv_obj_0, LV_SIZE_CONTENT);
+
+        lv_obj_remove_style_all(lv_obj_0);
+        lv_obj_add_style(lv_obj_0, &style_base, 0);
+
+        the_root = lv_obj_0;
+    }
+    #endif
 
     LV_TRACE_OBJ_CREATE("finished");
 
-    return lv_obj_0;
+    return the_root;
 }
 
 /**********************
