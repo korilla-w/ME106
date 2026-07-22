@@ -57,7 +57,7 @@
         </lv_label>
         <lv_image name="line_ca_voltage_issue" src="meter_icon_warning" x="264" y="58"><bind_flag_if_not_eq subject="meter_line_ca_voltage_issue" flag="hidden" ref_value="1"/></lv_image>
 
-        <lv_label text="&#x5F53;&#x524D;&#x9700;&#x91CF;(&#x6B;&#x57;)" x="23" y="120">
+        <lv_label name="line_current_demand_title" text="&#x5F53;&#x524D;&#x9700;&#x91CF;(&#x6B;&#x57;)" x="23" y="120">
             <style name="me106_text_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
@@ -69,7 +69,7 @@
         </lv_label>
         <lv_image name="line_current_demand_issue" src="meter_icon_warning" x="125" y="123"><bind_flag_if_not_eq subject="meter_line_current_demand_issue" flag="hidden" ref_value="1"/></lv_image>
 
-        <lv_label text="&#x6700;&#x5927;&#x9700;&#x91CF;(kW)" x="157" y="120">
+        <lv_label name="line_max_demand_title" text="&#x6700;&#x5927;&#x9700;&#x91CF;(kW)" x="157" y="120">
             <style name="me106_text_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
