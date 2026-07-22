@@ -1,3 +1,4 @@
 preview-build
+preview-bin.backup-*/
 .cache.json
 .claude/
