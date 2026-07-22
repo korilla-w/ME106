@@ -154,13 +154,14 @@ lv_obj_t * screen_line_voltage_demand_create(void)
         lv_obj_set_y(line_ca_voltage_issue, 58);
         lv_obj_bind_flag_if_not_eq(line_ca_voltage_issue, &meter_line_ca_voltage_issue, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_7 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_7, "当前需量(kW)");
-        lv_obj_set_x(lv_label_7, 23);
-        lv_obj_set_y(lv_label_7, 120);
-        lv_obj_add_style(lv_label_7, &me106_text_16_gray_ba, 0);
-        lv_obj_bind_style(lv_label_7, &me106_theme_light_muted, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_7, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_t * line_current_demand_title = lv_label_create(page_content);
+        lv_obj_set_name(line_current_demand_title, "line_current_demand_title");
+        lv_label_set_text(line_current_demand_title, "当前需量(kW)");
+        lv_obj_set_x(line_current_demand_title, 23);
+        lv_obj_set_y(line_current_demand_title, 120);
+        lv_obj_add_style(line_current_demand_title, &me106_text_16_gray_ba, 0);
+        lv_obj_bind_style(line_current_demand_title, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(line_current_demand_title, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
 
         lv_obj_t * line_current_demand_value = lv_label_create(page_content);
         lv_obj_set_name(line_current_demand_value, "line_current_demand_value");
@@ -178,13 +179,14 @@ lv_obj_t * screen_line_voltage_demand_create(void)
         lv_obj_set_y(line_current_demand_issue, 123);
         lv_obj_bind_flag_if_not_eq(line_current_demand_issue, &meter_line_current_demand_issue, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_8 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_8, "最大需量(kW)");
-        lv_obj_set_x(lv_label_8, 157);
-        lv_obj_set_y(lv_label_8, 120);
-        lv_obj_add_style(lv_label_8, &me106_text_16_gray_ba, 0);
-        lv_obj_bind_style(lv_label_8, &me106_theme_light_muted, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_8, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_t * line_max_demand_title = lv_label_create(page_content);
+        lv_obj_set_name(line_max_demand_title, "line_max_demand_title");
+        lv_label_set_text(line_max_demand_title, "最大需量(kW)");
+        lv_obj_set_x(line_max_demand_title, 157);
+        lv_obj_set_y(line_max_demand_title, 120);
+        lv_obj_add_style(line_max_demand_title, &me106_text_16_gray_ba, 0);
+        lv_obj_bind_style(line_max_demand_title, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(line_max_demand_title, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
 
         lv_obj_t * line_max_demand_value = lv_label_create(page_content);
         lv_obj_set_name(line_max_demand_value, "line_max_demand_value");

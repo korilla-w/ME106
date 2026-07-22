@@ -70,6 +70,14 @@
         <int name="meter_r6" value="6"/>
     </consts>
 
+    <fonts>
+        <!-- 预览解析样式前先注册字体，避免 LVGL 9.5 回退到不含中文的默认字体。 -->
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_14" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="14" as_file="true"/>
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_16" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="16" as_file="true"/>
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_18" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="18" as_file="true"/>
+        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_36" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="36" as_file="true"/>
+    </fonts>
+
     <styles>
         <!-- 主题样式：深色默认主题。未启用主题覆盖时保持当前暗色 UI。 -->
         <style name="me106_fill_black" bg_color="#meter_black" bg_opa="255"/>
@@ -386,14 +394,6 @@
         <!-- 付费功能联系方式弹窗只保存 UI 展开状态；授权校验和购买流程由逻辑层处理。 -->
         <int name="meter_paid_contact_popup" value="0" min_value="0" max_value="1"/>
     </subjects>
-
-    <fonts>
-        <!-- 保持现有 XML 字体名稳定，只把字体文件来源切到 HarmonyOS Sans SC。 -->
-        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_14" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="14" as_file="true"/>
-        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_16" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="16" as_file="true"/>
-        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_18" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="18" as_file="true"/>
-        <tiny_ttf name="meter_Harmony_Sans_SC_Medium_36" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="36" as_file="true"/>
-    </fonts>
 
     <images>
         <!-- 图片资源组：统一在 globals 注册，页面只按语义名称引用图标。 -->

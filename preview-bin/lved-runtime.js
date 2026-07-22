@@ -31,13 +31,16 @@ var readyPromise = new Promise((resolve, reject) => {
 
 // Determine the runtime environment we are in. You can customize this by
 // setting the ENVIRONMENT setting at compile time (see settings.js).
-var ENVIRONMENT_IS_WEB = true;
+// Attempt to auto-detect the environment
+var ENVIRONMENT_IS_WEB = typeof window == "object";
 
-var ENVIRONMENT_IS_WORKER = false;
+var ENVIRONMENT_IS_WORKER = typeof WorkerGlobalScope != "undefined";
 
-var ENVIRONMENT_IS_NODE = false;
+// N.b. Electron.js environment is simultaneously a NODE-environment, but
+// also a web environment.
+var ENVIRONMENT_IS_NODE = typeof process == "object" && typeof process.versions == "object" && typeof process.versions.node == "string" && process.type != "renderer";
 
-var ENVIRONMENT_IS_SHELL = false;
+var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIRONMENT_IS_WORKER;
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
@@ -103,6 +106,15 @@ if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
   if (!(typeof window == "object" || typeof WorkerGlobalScope != "undefined")) throw new Error("not compiled for this environment (did you build to HTML and try to run it not on the web, or set ENVIRONMENT to something - like node - and run it someplace else - like on the web?)");
   {
     // include: web_or_worker_shell_read.js
+    if (ENVIRONMENT_IS_WORKER) {
+      readBinary = url => {
+        var xhr = new XMLHttpRequest;
+        xhr.open("GET", url, false);
+        xhr.responseType = "arraybuffer";
+        xhr.send(null);
+        return new Uint8Array(/** @type{!ArrayBuffer} */ (xhr.response));
+      };
+    }
     readAsync = async url => {
       assert(!isFileURI(url), "readAsync does not work with file:// URLs");
       var response = await fetch(url, {
@@ -186,8 +198,6 @@ var JSFILEFS = "JSFILEFS is no longer included by default; build with -ljsfilefs
 var OPFS = "OPFS is no longer included by default; build with -lopfs.js";
 
 var NODEFS = "NODEFS is no longer included by default; build with -lnodefs.js";
-
-assert(!ENVIRONMENT_IS_WORKER, "worker environment detected but not enabled at build time.  Add `worker` to `-sENVIRONMENT` to enable.");
 
 assert(!ENVIRONMENT_IS_NODE, "node environment detected but not enabled at build time.  Add `node` to `-sENVIRONMENT` to enable.");
 
@@ -5641,13 +5651,13 @@ var JSEvents = {
   }
 };
 
-/** @type {Object} */ var specialHTMLTargets = [ 0, document, window ];
+/** @type {Object} */ var specialHTMLTargets = [ 0, typeof document != "undefined" ? document : 0, typeof window != "undefined" ? window : 0 ];
 
 var maybeCStringToJsString = cString => cString > 2 ? UTF8ToString(cString) : cString;
 
 /** @suppress {duplicate } */ var findEventTarget = target => {
   target = maybeCStringToJsString(target);
-  var domElement = specialHTMLTargets[target] || document.querySelector(target);
+  var domElement = specialHTMLTargets[target] || (typeof document != "undefined" ? document.querySelector(target) : null);
   return domElement;
 };
 
@@ -8591,6 +8601,9 @@ function _emscripten_set_visibilitychange_callback_on_thread(userData, useCaptur
   userData >>>= 0;
   callbackfunc >>>= 0;
   targetThread >>>= 0;
+  if (!specialHTMLTargets[1]) {
+    return -4;
+  }
   return registerVisibilityChangeEventCallback(specialHTMLTargets[1], userData, useCapture, callbackfunc, 21, "visibilitychange", targetThread);
 }
 
@@ -9141,7 +9154,7 @@ function checkIncomingModuleAPI() {
 }
 
 var ASM_CONSTS = {
-  16983892: ($0, $1, $2) => {
+  16985944: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -9212,7 +9225,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  16985360: ($0, $1, $2, $3, $4) => {
+  16987412: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -9249,19 +9262,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  16986348: $0 => {
+  16988400: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  16986431: () => {
+  16988483: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  16986500: () => window.innerWidth,
-  16986530: () => window.innerHeight,
-  16986561: $0 => {
+  16988552: () => window.innerWidth,
+  16988582: () => window.innerHeight,
+  16988613: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -9269,7 +9282,7 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  16986786: () => {
+  16988838: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -9277,7 +9290,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  16986933: () => {
+  16988985: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -9285,7 +9298,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  16987167: $0 => {
+  16989219: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -9309,11 +9322,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  16987719: () => {
+  16989771: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  16987787: ($0, $1, $2, $3) => {
+  16989839: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -9355,7 +9368,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  16989480: ($0, $1, $2, $3) => {
+  16991532: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -9387,7 +9400,7 @@ var ASM_CONSTS = {
       SDL2.audio.silenceTimer = setInterval(silence_callback, ($1 / SDL2.audioContext.sampleRate) * 1e3);
     }
   },
-  16990655: ($0, $1) => {
+  16992707: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -9406,7 +9419,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  16991260: ($0, $1) => {
+  16993312: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var buf = $0 >>> 2;
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
@@ -9420,7 +9433,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  16991749: $0 => {
+  16993801: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -9788,6 +9801,8 @@ var _lvrt_initialize = Module["_lvrt_initialize"] = createExportWrapper("lvrt_in
 
 var _lvrt_initialize_headless = Module["_lvrt_initialize_headless"] = createExportWrapper("lvrt_initialize_headless", 2);
 
+var _lvrt_set_simple_theme = Module["_lvrt_set_simple_theme"] = createExportWrapper("lvrt_set_simple_theme", 0);
+
 var _lvrt_process_data = Module["_lvrt_process_data"] = createExportWrapper("lvrt_process_data", 5);
 
 var _lvrt_xml_load_component_data = Module["_lvrt_xml_load_component_data"] = createExportWrapper("lvrt_xml_load_component_data", 2);
@@ -9820,6 +9835,8 @@ var _lvrt_subscribe_subject = Module["_lvrt_subscribe_subject"] = createExportWr
 
 var _lvrt_resize_canvas = Module["_lvrt_resize_canvas"] = createExportWrapper("lvrt_resize_canvas", 2);
 
+var _lvrt_set_target = Module["_lvrt_set_target"] = createExportWrapper("lvrt_set_target", 1);
+
 var _lvrt_cleanup_runtime = Module["_lvrt_cleanup_runtime"] = createExportWrapper("lvrt_cleanup_runtime", 0);
 
 var _lvrt_play_timeline = Module["_lvrt_play_timeline"] = createExportWrapper("lvrt_play_timeline", 1);
@@ -9833,6 +9850,10 @@ var _lvrt_xml_test_run_next = Module["_lvrt_xml_test_run_next"] = createExportWr
 var _lvrt_xml_test_run_stop = Module["_lvrt_xml_test_run_stop"] = createExportWrapper("lvrt_xml_test_run_stop", 0);
 
 var _lvrt_health_check = Module["_lvrt_health_check"] = createExportWrapper("lvrt_health_check", 0);
+
+var _get_screenshot = Module["_get_screenshot"] = createExportWrapper("get_screenshot", 3);
+
+var _power_meter_ui_set_target = Module["_power_meter_ui_set_target"] = createExportWrapper("power_meter_ui_set_target", 1);
 
 var _power_meter_ui_init = Module["_power_meter_ui_init"] = createExportWrapper("power_meter_ui_init", 1);
 
