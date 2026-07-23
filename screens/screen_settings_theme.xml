@@ -52,15 +52,15 @@
                     <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
                     <bind_flag_if_not_eq subject="meter_theme_index" flag="hidden" ref_value="1"/>
                 </lv_obj>
-                <lv_obj name="theme_light_swatch_bg" x="16" y="12" width="14" height="14" style_radius="7" style_bg_color="0xFFFFFF" style_bg_opa="255" style_border_width="1" style_border_color="0xC9D5E3" scrollable="false"/>
-                <lv_obj name="theme_light_swatch_accent" x="36" y="12" width="14" height="14" style_radius="7" style_bg_color="0x6366F1" style_bg_opa="255" style_border_width="0" scrollable="false"/>
+                <lv_obj name="theme_light_swatch_bg" x="16" y="12" width="14" height="14" style_radius="7" style_bg_color="0xF2F2EF" style_bg_opa="255" style_border_width="1" style_border_color="0xD2D4D1" scrollable="false"/>
+                <lv_obj name="theme_light_swatch_accent" x="36" y="12" width="14" height="14" style_radius="7" style_bg_color="0xD93A46" style_bg_opa="255" style_border_width="0" scrollable="false"/>
                 <lv_label text="2 &#x6D45;&#x8272;" align="left_mid" x="64" y="0" width="104">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_theme_index" ref_value="1"/>
                 </lv_label>
-                <lv_label text="&#x8F7B; UI" align="right_mid" x="-14" y="0" width="72">
+                <lv_label text="&#x4E2D;&#x6027;&#x7070;" align="right_mid" x="-14" y="0" width="72">
                     <style name="me106_text_14_gray_ba_right"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
@@ -69,6 +69,7 @@
                 <subject_set_int_event subject="meter_theme_index" value="1" trigger="clicked"/>
             </lv_button>
 
+            <!-- 第三项保留原内部对象名以兼容既有生成接口，用户可见语义改为赛博主题。 -->
             <lv_button name="theme_item_alarm" x="0" y="100" width="276" height="42" style_pad_all="0">
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
@@ -79,16 +80,16 @@
                     <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
                     <bind_flag_if_not_eq subject="meter_theme_index" flag="hidden" ref_value="2"/>
                 </lv_obj>
-                <lv_obj name="theme_alarm_swatch_red" x="16" y="12" width="10" height="14" style_radius="5" style_bg_color="0xEB5757" style_bg_opa="255" style_border_width="0" scrollable="false"/>
-                <lv_obj name="theme_alarm_swatch_yellow" x="30" y="12" width="10" height="14" style_radius="5" style_bg_color="0xF2C94C" style_bg_opa="255" style_border_width="0" scrollable="false"/>
-                <lv_obj name="theme_alarm_swatch_green" x="44" y="12" width="10" height="14" style_radius="5" style_bg_color="0x6FCF97" style_bg_opa="255" style_border_width="0" scrollable="false"/>
-                <lv_label text="3 &#x544A;&#x8B66;/&#x5DE5;&#x4E1A;&#x8272;" align="left_mid" x="64" y="0" width="122">
+                <lv_obj name="theme_alarm_swatch_red" x="16" y="12" width="10" height="14" style_radius="5" style_bg_color="0x080D18" style_bg_opa="255" style_border_width="1" style_border_color="0x263A52" scrollable="false"/>
+                <lv_obj name="theme_alarm_swatch_yellow" x="30" y="12" width="10" height="14" style_radius="5" style_bg_color="0x00F2FF" style_bg_opa="255" style_border_width="0" scrollable="false"/>
+                <lv_obj name="theme_alarm_swatch_green" x="44" y="12" width="10" height="14" style_radius="5" style_bg_color="0xFF0055" style_bg_opa="255" style_border_width="0" scrollable="false"/>
+                <lv_label text="3 &#x8D5B;&#x535A;&#x4EEA;&#x8868;" align="left_mid" x="64" y="0" width="122">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_theme_index" ref_value="2"/>
                 </lv_label>
-                <lv_label text="&#x9AD8;&#x8BC6;&#x522B;" align="right_mid" x="-14" y="0" width="72">
+                <lv_label text="&#x9713;&#x8679;&#x53CC;&#x5F69;" align="right_mid" x="-14" y="0" width="72">
                     <style name="me106_text_14_gray_ba_right"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>

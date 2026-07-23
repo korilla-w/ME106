@@ -31,22 +31,22 @@
 				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
 			</lv_label>
 			<lv_label text="&#x25CF;" x="113" y="43" width="12">
-				<style name="me106_text_14_blue"/>
+				<style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
 			</lv_label>
 			<lv_label text="A&#x6D41;" x="126" y="43" width="38">
-				<style name="me106_text_14_blue"/>
+				<style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
 			</lv_label>
 			<lv_label text="&#x25CF;" x="163" y="43" width="12">
-				<style name="me106_text_14_cyan"/>
+				<style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
 			</lv_label>
 			<lv_label text="B&#x6D41;" x="176" y="43" width="38">
-				<style name="me106_text_14_cyan"/>
+				<style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
 			</lv_label>
 			<lv_label text="&#x25CF;" x="213" y="43" width="12">
-				<style name="me106_text_14_purple" />
+				<style name="me106_text_14_purple" /><bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
 			</lv_label>
 			<lv_label text="C&#x6D41;" x="226" y="43" width="38">
-				<style name="me106_text_14_purple" />
+				<style name="me106_text_14_purple" /><bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
 			</lv_label>
 			<lv_label text="A" x="18" y="70" width="18">
 				<style name="me106_text_14_gray_ba"/>
@@ -81,9 +81,11 @@
 				style_bg_opa="0"
 				style_border_width="0"
 				style_pad_all="0"
-				style_line_color="0x303030"
 				style_line_opa="180"
 			>
+				<style name="me106_theme_dark_chart"/>
+				<bind_style name="me106_theme_light_chart" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_chart" subject="meter_theme_index" ref_value="2"/>
 				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="1" />
 				<style name="me106_chart_point_hidden" selector="indicator" />
 				<style name="me106_chart_wave_line" selector="items" />

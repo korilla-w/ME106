@@ -73,12 +73,13 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
         lv_obj_set_y(wifi_manage_icon_halo, 42);
         lv_obj_set_width(wifi_manage_icon_halo, 42);
         lv_obj_set_height(wifi_manage_icon_halo, 42);
-        lv_obj_set_style_bg_color(wifi_manage_icon_halo, lv_color_hex(0x20D3D5), 0);
-        lv_obj_set_style_bg_opa(wifi_manage_icon_halo, 48, 0);
         lv_obj_set_style_radius(wifi_manage_icon_halo, 12, 0);
         lv_obj_set_style_border_width(wifi_manage_icon_halo, 0, 0);
         lv_obj_set_style_pad_all(wifi_manage_icon_halo, 0, 0);
         lv_obj_set_flag(wifi_manage_icon_halo, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(wifi_manage_icon_halo, &me106_theme_dark_info_soft, 0);
+        lv_obj_bind_style(wifi_manage_icon_halo, &me106_theme_light_info_soft, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(wifi_manage_icon_halo, &me106_theme_alarm_info_soft, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_image_0 = lv_image_create(page_content);
         lv_image_set_src(lv_image_0, meter_icon_wifi);
@@ -88,7 +89,9 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
         lv_obj_set_style_transform_pivot_y(lv_image_0, 8, 0);
         lv_obj_set_style_transform_scale_x(lv_image_0, 220, 0);
         lv_obj_set_style_transform_scale_y(lv_image_0, 220, 0);
-        lv_obj_add_style(lv_image_0, &me106_icon_cyan, 0);
+        lv_obj_add_style(lv_image_0, &me106_theme_dark_info_icon, 0);
+        lv_obj_bind_style(lv_image_0, &me106_theme_light_info_icon, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_image_0, &me106_theme_alarm_info_icon, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_1 = lv_label_create(page_content);
         lv_label_set_text(lv_label_1, "网络信息");
@@ -96,6 +99,8 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
         lv_obj_set_y(lv_label_1, 46);
         lv_obj_set_width(lv_label_1, 92);
         lv_obj_add_style(lv_label_1, &me106_text_18_cyan, 0);
+        lv_obj_bind_style(lv_label_1, &me106_theme_light_info_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_1, &me106_theme_alarm_info_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_2 = lv_label_create(page_content);
         lv_label_bind_text(lv_label_2, &meter_wifi_manage_status_text, NULL);
@@ -125,10 +130,11 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
         lv_obj_set_width(wifi_manage_source_dot, 7);
         lv_obj_set_height(wifi_manage_source_dot, 7);
         lv_obj_set_style_radius(wifi_manage_source_dot, 4, 0);
-        lv_obj_set_style_bg_color(wifi_manage_source_dot, lv_color_hex(0x20D3D5), 0);
-        lv_obj_set_style_bg_opa(wifi_manage_source_dot, 255, 0);
         lv_obj_set_style_border_width(wifi_manage_source_dot, 0, 0);
         lv_obj_set_flag(wifi_manage_source_dot, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(wifi_manage_source_dot, &me106_theme_dark_info, 0);
+        lv_obj_bind_style(wifi_manage_source_dot, &me106_theme_light_info, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(wifi_manage_source_dot, &me106_theme_alarm_info, 0, &meter_theme_index, 2);
 
         lv_obj_t * wifi_manage_source_panel = lv_obj_create(page_content);
         lv_obj_set_name(wifi_manage_source_panel, "wifi_manage_source_panel");
@@ -167,10 +173,11 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
         lv_obj_set_width(wifi_manage_ssid_dot, 7);
         lv_obj_set_height(wifi_manage_ssid_dot, 7);
         lv_obj_set_style_radius(wifi_manage_ssid_dot, 4, 0);
-        lv_obj_set_style_bg_color(wifi_manage_ssid_dot, lv_color_hex(0x6366F1), 0);
-        lv_obj_set_style_bg_opa(wifi_manage_ssid_dot, 255, 0);
         lv_obj_set_style_border_width(wifi_manage_ssid_dot, 0, 0);
         lv_obj_set_flag(wifi_manage_ssid_dot, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(wifi_manage_ssid_dot, &me106_btn_flat_blue, 0);
+        lv_obj_bind_style(wifi_manage_ssid_dot, &me106_theme_light_accent, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(wifi_manage_ssid_dot, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
 
         lv_obj_t * wifi_manage_ssid_panel = lv_obj_create(page_content);
         lv_obj_set_name(wifi_manage_ssid_panel, "wifi_manage_ssid_panel");
@@ -209,10 +216,11 @@ lv_obj_t * screen_settings_wifi_manage_create(void)
         lv_obj_set_width(wifi_manage_pass_dot, 7);
         lv_obj_set_height(wifi_manage_pass_dot, 7);
         lv_obj_set_style_radius(wifi_manage_pass_dot, 4, 0);
-        lv_obj_set_style_bg_color(wifi_manage_pass_dot, lv_color_hex(0x14B8A6), 0);
-        lv_obj_set_style_bg_opa(wifi_manage_pass_dot, 255, 0);
         lv_obj_set_style_border_width(wifi_manage_pass_dot, 0, 0);
         lv_obj_set_flag(wifi_manage_pass_dot, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(wifi_manage_pass_dot, &me106_theme_dark_success, 0);
+        lv_obj_bind_style(wifi_manage_pass_dot, &me106_theme_light_success, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(wifi_manage_pass_dot, &me106_theme_alarm_success, 0, &meter_theme_index, 2);
 
         lv_obj_t * wifi_manage_pass_panel = lv_obj_create(page_content);
         lv_obj_set_name(wifi_manage_pass_panel, "wifi_manage_pass_panel");

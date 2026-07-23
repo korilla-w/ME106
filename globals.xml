@@ -12,37 +12,51 @@
         <color name="meter_theme_dark_color_phase_a" value="0xFFEB3B"/>
         <color name="meter_theme_dark_color_phase_b" value="0x32E67A"/>
         <color name="meter_theme_dark_color_phase_c" value="0xE33C64"/>
+        <color name="meter_theme_dark_color_info" value="0x20D3D5"/>
+        <color name="meter_theme_dark_color_secondary" value="0xA78BFA"/>
+        <color name="meter_theme_dark_color_success" value="0x14B8A6"/>
+        <color name="meter_theme_dark_color_warning" value="0xF59E0B"/>
+        <color name="meter_theme_dark_color_danger" value="0xE33C64"/>
 
-        <!-- 主题常量：浅色科技主题，用更轻的工业底色和清晰相位色。 -->
-        <color name="meter_theme_light_color_bg" value="0xF8FAFF"/>
-        <color name="meter_theme_light_color_surface" value="0xFFFFFF"/>
-        <color name="meter_theme_light_color_surface_soft" value="0xEEF2FF"/>
-        <color name="meter_theme_light_color_nav" value="0x243044"/>
-        <color name="meter_theme_light_color_text" value="0x111827"/>
-        <color name="meter_theme_light_color_muted" value="0x64748B"/>
-        <color name="meter_theme_light_color_accent" value="0x6366F1"/>
-        <color name="meter_theme_light_color_line" value="0xDAE2F1"/>
-        <color name="meter_theme_light_color_phase_a" value="0x7C3AED"/>
-        <color name="meter_theme_light_color_phase_b" value="0x0EA5E9"/>
-        <color name="meter_theme_light_color_phase_c" value="0x10B981"/>
-        <color name="meter_theme_light_color_warning" value="0xB7791F"/>
-        <color name="meter_theme_light_color_ok" value="0x0F766E"/>
-        <color name="meter_theme_light_color_danger" value="0xBE123C"/>
+        <!-- 主题常量：中性浅灰承接品牌红，避免冷白发青或暖米色发脏。 -->
+        <color name="meter_theme_light_color_bg" value="0xF2F2EF"/>
+        <color name="meter_theme_light_color_surface" value="0xFCFCFA"/>
+        <color name="meter_theme_light_color_surface_soft" value="0xE7E8E5"/>
+        <color name="meter_theme_light_color_nav" value="0x343A40"/>
+        <color name="meter_theme_light_color_text" value="0x1D2228"/>
+        <color name="meter_theme_light_color_muted" value="0x59616B"/>
+        <color name="meter_theme_light_color_accent" value="0xD93A46"/>
+        <color name="meter_theme_light_color_line" value="0xD2D4D1"/>
+        <!-- 三相色遵循国内工程认知，并加深到适合浅底小字号显示的范围。 -->
+        <color name="meter_theme_light_color_phase_a" value="0x955800"/>
+        <color name="meter_theme_light_color_phase_b" value="0x157347"/>
+        <color name="meter_theme_light_color_phase_c" value="0xB72E32"/>
+        <color name="meter_theme_light_color_info" value="0x256B8A"/>
+        <color name="meter_theme_light_color_secondary" value="0x6C5A85"/>
+        <color name="meter_theme_light_color_warning" value="0x955800"/>
+        <color name="meter_theme_light_color_ok" value="0x157347"/>
+        <color name="meter_theme_light_color_danger" value="0xB72E32"/>
 
-        <!-- 主题常量：告警工业主题，提高识别度，但避免过度霓虹化。 -->
-        <color name="meter_theme_alarm_color_bg" value="0x101010"/>
-        <color name="meter_theme_alarm_color_surface" value="0x1C1D1B"/>
-        <color name="meter_theme_alarm_color_nav" value="0x282521"/>
-        <color name="meter_theme_alarm_color_text" value="0xF8F7F2"/>
-        <color name="meter_theme_alarm_color_muted" value="0xC8C1B7"/>
-        <color name="meter_theme_alarm_color_accent" value="0xD94A4A"/>
-        <color name="meter_theme_alarm_color_line" value="0x3B332E"/>
-        <color name="meter_theme_alarm_color_phase_a" value="0xEB5757"/>
-        <color name="meter_theme_alarm_color_phase_b" value="0xF2C94C"/>
-        <color name="meter_theme_alarm_color_phase_c" value="0x6FCF97"/>
-        <color name="meter_theme_alarm_color_danger" value="0xEB5757"/>
-        <color name="meter_theme_alarm_color_warning" value="0xF2C94C"/>
-        <color name="meter_theme_alarm_color_ok" value="0x6FCF97"/>
+        <!-- 第三主题兼容沿用 alarm 内部标识，视觉语义调整为低开销的工业赛博主题。 -->
+        <color name="meter_theme_alarm_color_bg" value="0x080D18"/>
+        <color name="meter_theme_alarm_color_surface" value="0x0A121E"/>
+        <color name="meter_theme_alarm_color_surface_alt" value="0x0D1A2B"/>
+        <color name="meter_theme_alarm_color_nav" value="0x08111F"/>
+        <color name="meter_theme_alarm_color_text" value="0xEAFBFF"/>
+        <color name="meter_theme_alarm_color_muted" value="0x8292A8"/>
+        <color name="meter_theme_alarm_color_accent" value="0x00F2FF"/>
+        <!-- 选中态使用预混合暗蓝实色与高亮细边，避免浑浊渐变和运行时透明混合。 -->
+        <color name="meter_theme_alarm_color_accent_surface" value="0x082A44"/>
+        <color name="meter_theme_alarm_color_line" value="0x132F4C"/>
+        <color name="meter_theme_alarm_color_line_bright" value="0x005577"/>
+        <color name="meter_theme_alarm_color_phase_a" value="0xFFE500"/>
+        <color name="meter_theme_alarm_color_phase_b" value="0x00FF87"/>
+        <color name="meter_theme_alarm_color_phase_c" value="0xFF0055"/>
+        <color name="meter_theme_alarm_color_info" value="0x4DB8FF"/>
+        <color name="meter_theme_alarm_color_secondary" value="0xFF0055"/>
+        <color name="meter_theme_alarm_color_danger" value="0xFF3B5C"/>
+        <color name="meter_theme_alarm_color_warning" value="0xFFE600"/>
+        <color name="meter_theme_alarm_color_ok" value="0x00F58A"/>
 
         <!-- 兼容常量：供现有基础样式复用，取值与深色默认主题保持一致。 -->
         <color name="meter_black" value="0x000000"/>
@@ -85,12 +99,41 @@
         <style name="me106_btn_flat_blue" bg_color="#meter_blue" bg_opa="255" radius="0" shadow_width="0"/>
         <style name="me106_btn_flat_gray1f" bg_color="#meter_gray_1f" bg_opa="255" radius="0" shadow_width="0"/>
         <style name="me106_btn_flat_gray47" bg_color="#meter_gray_47" bg_opa="255" radius="0" shadow_width="0"/>
+        <!-- 深色基础样式必须使用命名 style，不能写成本地 style_* 属性，否则主题绑定无法覆盖。 -->
+        <style name="me106_theme_dark_modal_overlay" bg_color="#meter_black" bg_opa="190"/>
+        <style name="me106_theme_dark_dialog" bg_color="#meter_theme_dark_color_surface" bg_opa="255" border_width="1" border_color="#meter_theme_dark_color_line" border_opa="255"/>
+        <style name="me106_theme_dark_inactive" bg_color="#meter_theme_dark_color_surface_alt" bg_opa="255" border_width="0"/>
+        <style name="me106_theme_dark_control_track" bg_color="#meter_theme_dark_color_line" bg_opa="255"/>
+        <style name="me106_theme_dark_chart" border_color="#meter_theme_dark_color_line" border_opa="255" line_color="#meter_theme_dark_color_line"/>
+        <!-- 页面只引用视觉角色；新增主题时补齐同名角色，无需重新设计页面结构。 -->
+        <style name="me106_theme_dark_accent_soft" bg_color="#meter_theme_dark_color_accent" bg_opa="54"/>
+        <style name="me106_theme_dark_accent_text" text_color="#meter_theme_dark_color_accent"/>
+        <style name="me106_theme_dark_accent_icon" image_recolor="#meter_theme_dark_color_accent" image_recolor_opa="255"/>
+        <style name="me106_theme_dark_info" bg_color="#meter_theme_dark_color_info" bg_opa="255"/>
+        <style name="me106_theme_dark_info_soft" bg_color="#meter_theme_dark_color_info" bg_opa="48"/>
+        <style name="me106_theme_dark_info_text" text_color="#meter_theme_dark_color_info"/>
+        <style name="me106_theme_dark_info_icon" image_recolor="#meter_theme_dark_color_info" image_recolor_opa="255"/>
+        <style name="me106_theme_dark_secondary" bg_color="#meter_theme_dark_color_secondary" bg_opa="255"/>
+        <style name="me106_theme_dark_secondary_text" text_color="#meter_theme_dark_color_secondary"/>
+        <style name="me106_theme_dark_success" bg_color="#meter_theme_dark_color_success" bg_opa="255"/>
+        <style name="me106_theme_dark_success_text" text_color="#meter_theme_dark_color_success"/>
+        <style name="me106_theme_dark_warning" bg_color="#meter_theme_dark_color_warning" bg_opa="255"/>
+        <style name="me106_theme_dark_warning_text" text_color="#meter_theme_dark_color_warning"/>
+        <style name="me106_theme_dark_danger" bg_color="#meter_theme_dark_color_danger" bg_opa="255"/>
+        <style name="me106_theme_dark_danger_text" text_color="#meter_theme_dark_color_danger"/>
+        <style name="me106_theme_dark_phase_a_fill" bg_color="#meter_theme_dark_color_phase_a" bg_opa="255"/>
+        <style name="me106_theme_dark_phase_b_fill" bg_color="#meter_theme_dark_color_phase_b" bg_opa="255"/>
+        <style name="me106_theme_dark_phase_c_fill" bg_color="#meter_theme_dark_color_phase_c" bg_opa="255"/>
+        <style name="me106_theme_dark_digit_slot" bg_color="#meter_black" bg_opa="56" border_width="0"/>
+        <style name="me106_theme_dark_action" bg_color="#meter_gray_30" bg_opa="255" radius="#meter_r6" border_width="0" shadow_width="0"/>
+        <style name="me106_theme_dark_busy_guard" bg_color="#meter_theme_dark_color_line" bg_opa="255"/>
 
         <!-- 主题样式：浅色科技主题。 -->
         <style name="me106_theme_light_screen_bg" bg_color="#meter_theme_light_color_bg" bg_opa="255"/>
         <style name="me106_theme_light_panel" bg_color="#meter_theme_light_color_surface" bg_opa="255" border_width="1" border_color="#meter_theme_light_color_line" border_opa="255"/>
         <style name="me106_theme_light_nav" bg_color="#meter_theme_light_color_nav" bg_opa="255"/>
         <style name="me106_theme_light_accent" bg_color="#meter_theme_light_color_accent" bg_opa="255"/>
+        <style name="me106_theme_light_on_accent" text_color="#meter_white"/>
         <style name="me106_theme_light_text" text_color="#meter_theme_light_color_text"/>
         <style name="me106_theme_light_muted" text_color="#meter_theme_light_color_muted"/>
         <style name="me106_theme_light_icon" image_recolor="#meter_theme_light_color_text" image_recolor_opa="255"/>
@@ -103,12 +146,41 @@
         <style name="me106_theme_light_status_warning" text_color="#meter_theme_light_color_warning"/>
         <style name="me106_theme_light_status_ok" text_color="#meter_theme_light_color_ok"/>
         <style name="me106_theme_light_status_danger" text_color="#meter_theme_light_color_danger"/>
+        <!-- 弹窗/禁用态/控件轨道均使用语义样式，避免页面继续遗留深色硬编码。 -->
+        <style name="me106_theme_light_modal_overlay" bg_color="#meter_theme_light_color_line" bg_opa="76"/>
+        <style name="me106_theme_light_dialog" bg_color="#meter_theme_light_color_surface" bg_opa="255" border_color="#meter_theme_light_color_line" border_opa="255"/>
+        <style name="me106_theme_light_inactive" bg_color="#meter_theme_light_color_surface_soft" bg_opa="255" border_width="1" border_color="#meter_theme_light_color_line" border_opa="255"/>
+        <style name="me106_theme_light_control_track" bg_color="#meter_theme_light_color_line" bg_opa="255"/>
+        <style name="me106_theme_light_slider_indicator" bg_color="#meter_theme_light_color_accent" bg_opa="255"/>
+        <style name="me106_theme_light_slider_knob" bg_color="#meter_theme_light_color_surface" bg_opa="255" border_color="#meter_theme_light_color_accent" border_opa="255"/>
+        <style name="me106_theme_light_chart" border_color="#meter_theme_light_color_line" border_opa="255" line_color="#meter_theme_light_color_line"/>
+        <style name="me106_theme_light_accent_soft" bg_color="#meter_theme_light_color_accent" bg_opa="34"/>
+        <style name="me106_theme_light_accent_text" text_color="#meter_theme_light_color_accent"/>
+        <style name="me106_theme_light_accent_icon" image_recolor="#meter_theme_light_color_accent" image_recolor_opa="255"/>
+        <style name="me106_theme_light_info" bg_color="#meter_theme_light_color_info" bg_opa="255"/>
+        <style name="me106_theme_light_info_soft" bg_color="#meter_theme_light_color_info" bg_opa="30"/>
+        <style name="me106_theme_light_info_text" text_color="#meter_theme_light_color_info"/>
+        <style name="me106_theme_light_info_icon" image_recolor="#meter_theme_light_color_info" image_recolor_opa="255"/>
+        <style name="me106_theme_light_secondary" bg_color="#meter_theme_light_color_secondary" bg_opa="255"/>
+        <style name="me106_theme_light_secondary_text" text_color="#meter_theme_light_color_secondary"/>
+        <style name="me106_theme_light_success" bg_color="#meter_theme_light_color_ok" bg_opa="255"/>
+        <style name="me106_theme_light_success_text" text_color="#meter_theme_light_color_ok"/>
+        <style name="me106_theme_light_warning" bg_color="#meter_theme_light_color_warning" bg_opa="255"/>
+        <style name="me106_theme_light_warning_text" text_color="#meter_theme_light_color_warning"/>
+        <style name="me106_theme_light_danger" bg_color="#meter_theme_light_color_danger" bg_opa="255"/>
+        <style name="me106_theme_light_danger_text" text_color="#meter_theme_light_color_danger"/>
+        <style name="me106_theme_light_phase_a_fill" bg_color="#meter_theme_light_color_phase_a" bg_opa="255"/>
+        <style name="me106_theme_light_phase_b_fill" bg_color="#meter_theme_light_color_phase_b" bg_opa="255"/>
+        <style name="me106_theme_light_phase_c_fill" bg_color="#meter_theme_light_color_phase_c" bg_opa="255"/>
+        <style name="me106_theme_light_digit_slot" bg_color="#meter_theme_light_color_surface_soft" bg_opa="255" border_width="1" border_color="#meter_theme_light_color_line" border_opa="255"/>
+        <style name="me106_theme_light_action" bg_color="#meter_theme_light_color_surface" bg_opa="255" radius="#meter_r6" border_width="1" border_color="#meter_theme_light_color_accent" border_opa="255" shadow_width="0"/>
+        <style name="me106_theme_light_busy_guard" bg_color="#meter_theme_light_color_surface_soft" bg_opa="255"/>
 
-        <!-- 主题样式：告警工业主题。 -->
+        <!-- 第三主题：工业赛博。使用暗底与高亮细边模拟霓虹骨架，避免高开销模糊阴影。 -->
         <style name="me106_theme_alarm_screen_bg" bg_color="#meter_theme_alarm_color_bg" bg_opa="255"/>
         <style name="me106_theme_alarm_panel" bg_color="#meter_theme_alarm_color_surface" bg_opa="255" border_width="1" border_color="#meter_theme_alarm_color_line" border_opa="255"/>
-        <style name="me106_theme_alarm_nav" bg_color="#meter_theme_alarm_color_nav" bg_opa="255"/>
-        <style name="me106_theme_alarm_accent" bg_color="#meter_theme_alarm_color_accent" bg_opa="255"/>
+        <style name="me106_theme_alarm_nav" bg_color="#meter_theme_alarm_color_nav" bg_opa="255" border_width="1" border_side="top" border_color="#meter_theme_alarm_color_accent" border_opa="92"/>
+        <style name="me106_theme_alarm_accent" bg_color="#meter_theme_alarm_color_accent_surface" bg_opa="255" border_width="2" border_color="#meter_theme_alarm_color_accent" border_opa="255"/>
         <style name="me106_theme_alarm_on_accent" text_color="#meter_white"/>
         <style name="me106_theme_alarm_text" text_color="#meter_theme_alarm_color_text"/>
         <style name="me106_theme_alarm_muted" text_color="#meter_theme_alarm_color_muted"/>
@@ -119,16 +191,44 @@
         <style name="me106_theme_alarm_phase_c" text_color="#meter_theme_alarm_color_phase_c"/>
         <style name="me106_theme_alarm_phase_b_line" bg_color="#meter_theme_alarm_color_phase_b" bg_opa="255"/>
         <style name="me106_theme_alarm_phase_c_line" bg_color="#meter_theme_alarm_color_phase_c" bg_opa="255"/>
+        <style name="me106_theme_alarm_modal_overlay" bg_color="#meter_theme_alarm_color_bg" bg_opa="210"/>
+        <style name="me106_theme_alarm_dialog" bg_color="#meter_theme_alarm_color_surface" bg_opa="255" border_width="1" border_color="#meter_theme_alarm_color_line_bright" border_opa="255"/>
+        <style name="me106_theme_alarm_inactive" bg_color="#meter_theme_alarm_color_surface_alt" bg_opa="255" border_width="1" border_color="#meter_theme_alarm_color_line" border_opa="255"/>
+        <style name="me106_theme_alarm_control_track" bg_color="#meter_theme_alarm_color_line" bg_opa="255"/>
+        <style name="me106_theme_alarm_slider_indicator" bg_color="#meter_theme_alarm_color_accent" bg_opa="255"/>
+        <style name="me106_theme_alarm_slider_knob" bg_color="#meter_theme_alarm_color_text" bg_opa="255" border_color="#meter_theme_alarm_color_accent" border_opa="255"/>
+        <style name="me106_theme_alarm_chart" border_color="#meter_theme_alarm_color_line" border_opa="255" line_color="#meter_theme_alarm_color_line"/>
+        <style name="me106_theme_alarm_accent_soft" bg_color="#meter_theme_alarm_color_accent" bg_opa="30"/>
+        <style name="me106_theme_alarm_accent_text" text_color="#meter_theme_alarm_color_accent"/>
+        <style name="me106_theme_alarm_accent_icon" image_recolor="#meter_theme_alarm_color_accent" image_recolor_opa="255"/>
+        <style name="me106_theme_alarm_info" bg_color="#meter_theme_alarm_color_info" bg_opa="255"/>
+        <style name="me106_theme_alarm_info_soft" bg_color="#meter_theme_alarm_color_info" bg_opa="48"/>
+        <style name="me106_theme_alarm_info_text" text_color="#meter_theme_alarm_color_info"/>
+        <style name="me106_theme_alarm_info_icon" image_recolor="#meter_theme_alarm_color_info" image_recolor_opa="255"/>
+        <style name="me106_theme_alarm_secondary" bg_color="#meter_theme_alarm_color_secondary" bg_opa="255"/>
+        <style name="me106_theme_alarm_secondary_text" text_color="#meter_theme_alarm_color_secondary"/>
+        <style name="me106_theme_alarm_success" bg_color="#meter_theme_alarm_color_ok" bg_opa="255"/>
+        <style name="me106_theme_alarm_success_text" text_color="#meter_theme_alarm_color_ok"/>
+        <style name="me106_theme_alarm_warning" bg_color="#meter_theme_alarm_color_warning" bg_opa="255"/>
+        <style name="me106_theme_alarm_warning_text" text_color="#meter_theme_alarm_color_warning"/>
+        <style name="me106_theme_alarm_danger" bg_color="#meter_theme_alarm_color_danger" bg_opa="255"/>
+        <style name="me106_theme_alarm_danger_text" text_color="#meter_theme_alarm_color_danger"/>
+        <style name="me106_theme_alarm_phase_a_fill" bg_color="#meter_theme_alarm_color_phase_a" bg_opa="255"/>
+        <style name="me106_theme_alarm_phase_b_fill" bg_color="#meter_theme_alarm_color_phase_b" bg_opa="255"/>
+        <style name="me106_theme_alarm_phase_c_fill" bg_color="#meter_theme_alarm_color_phase_c" bg_opa="255"/>
+        <style name="me106_theme_alarm_digit_slot" bg_color="#meter_theme_alarm_color_surface_alt" bg_opa="255" border_width="1" border_color="#meter_theme_alarm_color_line" border_opa="255"/>
+        <style name="me106_theme_alarm_action" bg_color="#meter_theme_alarm_color_surface" bg_opa="255" radius="#meter_r6" border_width="1" border_color="#meter_theme_alarm_color_accent" border_opa="255" shadow_width="0"/>
+        <style name="me106_theme_alarm_busy_guard" bg_color="#meter_theme_alarm_color_nav" bg_opa="255"/>
 
         <!-- 电能数据颜色样式：靛蓝/青绿/紫/红，避免与ABC三相重复。 -->
-        <style name="me106_theme_light_energy_forward_active" text_color="#meter_indigo"/>
-        <style name="me106_theme_light_energy_reverse_active" text_color="#meter_teal"/>
-        <style name="me106_theme_light_energy_inductive_reactive" text_color="#meter_purple"/>
-        <style name="me106_theme_light_energy_capacitive_reactive" text_color="#meter_red"/>
-        <style name="me106_theme_alarm_energy_forward_active" text_color="#meter_indigo"/>
-        <style name="me106_theme_alarm_energy_reverse_active" text_color="#meter_teal"/>
-        <style name="me106_theme_alarm_energy_inductive_reactive" text_color="#meter_purple"/>
-        <style name="me106_theme_alarm_energy_capacitive_reactive" text_color="#meter_red"/>
+        <style name="me106_theme_light_energy_forward_active" text_color="#meter_theme_light_color_info"/>
+        <style name="me106_theme_light_energy_reverse_active" text_color="#meter_theme_light_color_ok"/>
+        <style name="me106_theme_light_energy_inductive_reactive" text_color="#meter_theme_light_color_warning"/>
+        <style name="me106_theme_light_energy_capacitive_reactive" text_color="#meter_theme_light_color_danger"/>
+        <style name="me106_theme_alarm_energy_forward_active" text_color="#meter_theme_alarm_color_accent"/>
+        <style name="me106_theme_alarm_energy_reverse_active" text_color="#meter_theme_alarm_color_ok"/>
+        <style name="me106_theme_alarm_energy_inductive_reactive" text_color="#meter_theme_alarm_color_warning"/>
+        <style name="me106_theme_alarm_energy_capacitive_reactive" text_color="#meter_theme_alarm_color_secondary"/>
         <style name="me106_theme_alarm_status_warning" text_color="#meter_theme_alarm_color_warning"/>
         <style name="me106_theme_alarm_status_ok" text_color="#meter_theme_alarm_color_ok"/>
         <style name="me106_theme_alarm_status_danger" text_color="#meter_theme_alarm_color_danger"/>
@@ -181,6 +281,8 @@
         <style name="me106_text_18_cyan" text_color="#meter_cyan" text_font="meter_Harmony_Sans_SC_Medium_18"/>
         <style name="me106_text_18_indigo" text_color="#meter_indigo" text_font="meter_Harmony_Sans_SC_Medium_18"/>
         <style name="me106_text_36_white_center" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_36" text_align="center"/>
+        <!-- 选中态仅覆盖文字颜色，避免 bind_style 移除时一并移除字号和对齐属性。 -->
+        <style name="me106_text_on_accent" text_color="#meter_white"/>
 
         <!-- 面板/图标/线条样式组：复用统一视觉皮肤，降低页面间耦合。 -->
         <style name="me106_panel_gray1f_r8" bg_color="#meter_gray_1f" bg_opa="255" radius="#meter_r8" shadow_width="0"/>
@@ -192,7 +294,7 @@
         <style name="me106_btn_ota_action" bg_color="#meter_gray_30" bg_opa="255" radius="#meter_r6" border_width="0" shadow_width="0"/>
         <style name="me106_btn_ota_busy" bg_color="#meter_gray_30" bg_opa="255" radius="#meter_r6" border_width="0" shadow_width="0"/>
         <style name="me106_theme_light_soft_panel" bg_color="#meter_theme_light_color_surface_soft" bg_opa="255" border_width="0"/>
-        <style name="me106_theme_alarm_soft_panel" bg_color="#meter_theme_alarm_color_surface" bg_opa="220" border_width="0"/>
+        <style name="me106_theme_alarm_soft_panel" bg_color="#meter_theme_alarm_color_surface" bg_opa="255" border_width="1" border_color="#meter_theme_alarm_color_line" border_opa="255"/>
         <style name="me106_icon_white" image_recolor="#meter_white" image_recolor_opa="255"/>
         <style name="me106_icon_cyan" image_recolor="#meter_cyan" image_recolor_opa="255"/>
         <style name="me106_icon_indigo" image_recolor="#meter_indigo" image_recolor_opa="255"/>

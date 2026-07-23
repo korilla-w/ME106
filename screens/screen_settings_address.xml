@@ -47,6 +47,7 @@
                     <style name="me106_text_36_white_center"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_on_accent" subject="meter_address_digit_selected_index" ref_value="0"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_address_digit_selected_index" value="0" trigger="clicked"/>
             </lv_button>
@@ -65,6 +66,7 @@
                     <style name="me106_text_36_white_center"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_on_accent" subject="meter_address_digit_selected_index" ref_value="1"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_address_digit_selected_index" value="1" trigger="clicked"/>
             </lv_button>
@@ -83,6 +85,7 @@
                     <style name="me106_text_36_white_center"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_on_accent" subject="meter_address_digit_selected_index" ref_value="2"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_address_digit_selected_index" value="2" trigger="clicked"/>
             </lv_button>
@@ -95,6 +98,8 @@
                 </lv_label>
                 <lv_label bind_text="meter_address_edit_hex_text" x="52" y="3" width="120">
                     <style name="me106_text_18_cyan"/>
+                    <bind_style name="me106_theme_light_info_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2"/>
                 </lv_label>
             </lv_obj>
         </lv_obj>
@@ -281,12 +286,12 @@
             <subject_set_int_event subject="meter_address_invalid_popup" value="0" trigger="clicked"/>
         </lv_button>
 
-        <lv_obj name="address_invalid_popup" x="44" y="56" width="232" height="98" style_pad_all="0" style_border_width="0" style_bg_opa="255" scrollable="false">
+        <lv_obj name="address_invalid_popup" x="44" y="56" width="232" height="98" style_pad_all="0" scrollable="false">
             <style name="me106_panel_soft_r8"/>
             <bind_style name="me106_theme_light_soft_panel" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_soft_panel" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_address_invalid_popup" flag="hidden" ref_value="1"/>
-            <lv_obj name="address_invalid_popup_accent" x="92" y="14" width="48" height="4" style_border_width="0" style_pad_all="0" style_radius="2" style_bg_opa="116" scrollable="false">
+            <lv_obj name="address_invalid_popup_accent" x="92" y="14" width="48" height="4" style_border_width="0" style_pad_all="0" style_radius="2" scrollable="false">
                 <style name="me106_panel_blue_r8"/>
                 <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>

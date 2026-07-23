@@ -187,8 +187,10 @@ lv_obj_t * screen_harmonic_waveform_voltage_create(void)
         lv_obj_set_style_bg_opa(waveform_voltage_chart, 0, 0);
         lv_obj_set_style_border_width(waveform_voltage_chart, 0, 0);
         lv_obj_set_style_pad_all(waveform_voltage_chart, 0, 0);
-        lv_obj_set_style_line_color(waveform_voltage_chart, lv_color_hex(0x303030), 0);
         lv_obj_set_style_line_opa(waveform_voltage_chart, 180, 0);
+        lv_obj_add_style(waveform_voltage_chart, &me106_theme_dark_chart, 0);
+        lv_obj_bind_style(waveform_voltage_chart, &me106_theme_light_chart, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(waveform_voltage_chart, &me106_theme_alarm_chart, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(waveform_voltage_chart, &meter_harmonic_data_state, LV_OBJ_FLAG_HIDDEN, 1);
         lv_obj_add_style(waveform_voltage_chart, &me106_chart_point_hidden, LV_PART_INDICATOR);
         lv_obj_add_style(waveform_voltage_chart, &me106_chart_wave_line, LV_PART_ITEMS);

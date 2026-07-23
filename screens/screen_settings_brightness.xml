@@ -33,14 +33,16 @@
                 <bind_style name="me106_theme_alarm_line" subject="meter_theme_index" ref_value="2"/>
                 <style name="me106_slider_indicator" selector="indicator"/>
                 <style name="me106_slider_knob" selector="knob"/>
-
-
+                <bind_style name="me106_theme_light_slider_indicator" subject="meter_theme_index" ref_value="1" selector="indicator"/>
+                <bind_style name="me106_theme_alarm_slider_indicator" subject="meter_theme_index" ref_value="2" selector="indicator"/>
+                <bind_style name="me106_theme_light_slider_knob" subject="meter_theme_index" ref_value="1" selector="knob"/>
+                <bind_style name="me106_theme_alarm_slider_knob" subject="meter_theme_index" ref_value="2" selector="knob"/>
             </lv_slider>
-            <lv_label text="&#x203A;" x="264" y="105" width="16">
-                <style name="me106_text_18_white_center"/>
-                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
-            </lv_label>
+            <lv_image src="meter_arrow_right" x="264" y="105" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="120" style_transform_scale_y="120">
+                <style name="me106_icon_white"/>
+                <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+            </lv_image>
 
             <lv_label text="LOW" x="68" y="142" width="42">
                 <style name="me106_text_14_gray_8f"/>

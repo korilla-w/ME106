@@ -7,11 +7,16 @@
         <subject_set_int_event subject="meter_factory_reset_request" value="0" trigger="screen_loaded"/>
 
         <!-- UI 层弹窗：只发出恢复设置请求，不直接擦除 NVS、升级固件或复位硬件。 -->
-        <lv_obj name="factory_modal_layer" x="0" y="0" width="320" height="207" style_bg_color="0x000000" style_bg_opa="190" style_border_width="0" style_pad_all="0" scrollable="false"/>
+        <lv_obj name="factory_modal_layer" x="0" y="0" width="320" height="207" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_theme_dark_modal_overlay"/>
+            <bind_style name="me106_theme_light_modal_overlay" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_modal_overlay" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
 
-        <lv_obj name="factory_dialog" x="30" y="36" width="260" height="150" style_bg_color="0x242424" style_bg_opa="255" style_border_width="1" style_border_color="0x303030" style_border_opa="255" style_radius="8" style_pad_all="0" scrollable="false">
-
-
+        <lv_obj name="factory_dialog" x="30" y="36" width="260" height="150" style_radius="8" style_pad_all="0" scrollable="false">
+            <style name="me106_theme_dark_dialog"/>
+            <bind_style name="me106_theme_light_dialog" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_dialog" subject="meter_theme_index" ref_value="2"/>
 
             <lv_label text="&#x6062;&#x590D;&#x51FA;&#x5382;&#x8BBE;&#x7F6E;&#xFF1F;" x="18" y="16" width="224">
                 <style name="me106_text_18_white_center"/>
@@ -45,16 +50,17 @@
                 <bind_flag_if_not_eq subject="meter_factory_confirm_index" flag="hidden" ref_value="0"/>
                 <lv_label text="&#x53D6;&#x6D88;" align="center" width="96">
                     <style name="me106_text_16_white_center"/>
-                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_theme_light_on_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_on_accent" subject="meter_theme_index" ref_value="2"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_factory_confirm_index" value="0" trigger="clicked"/>
                 <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
             </lv_button>
 
-            <lv_button name="factory_cancel_btn_inactive" x="24" y="104" width="96" height="32" style_bg_color="0x1F1F1F" style_bg_opa="255" style_border_width="0" style_radius="6" style_pad_all="0" style_shadow_width="0">
-
-
+            <lv_button name="factory_cancel_btn_inactive" x="24" y="104" width="96" height="32" style_radius="6" style_pad_all="0" style_shadow_width="0">
+                <style name="me106_theme_dark_inactive"/>
+                <bind_style name="me106_theme_light_inactive" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_inactive" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_factory_confirm_index" flag="hidden" ref_value="1"/>
                 <lv_label text="&#x53D6;&#x6D88;" align="center" width="96">
                     <style name="me106_text_16_gray_ba_center"/>
@@ -75,16 +81,17 @@
                 <bind_flag_if_not_eq subject="meter_factory_confirm_index" flag="hidden" ref_value="1"/>
                 <lv_label text="&#x6062;&#x590D;&#x8BBE;&#x7F6E;" align="center" width="96">
                     <style name="me106_text_16_white_center"/>
-                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_theme_light_on_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_on_accent" subject="meter_theme_index" ref_value="2"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_factory_reset_request" value="1" trigger="clicked"/>
                 <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
             </lv_button>
 
-            <lv_button name="factory_confirm_btn_inactive" x="140" y="104" width="96" height="32" style_bg_color="0x1F1F1F" style_bg_opa="255" style_border_width="0" style_radius="6" style_pad_all="0" style_shadow_width="0">
-
-
+            <lv_button name="factory_confirm_btn_inactive" x="140" y="104" width="96" height="32" style_radius="6" style_pad_all="0" style_shadow_width="0">
+                <style name="me106_theme_dark_inactive"/>
+                <bind_style name="me106_theme_light_inactive" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_inactive" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_factory_confirm_index" flag="hidden" ref_value="0"/>
                 <lv_label text="&#x6062;&#x590D;&#x8BBE;&#x7F6E;" align="center" width="96">
                     <style name="me106_text_16_gray_ba_center"/>

@@ -153,6 +153,8 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
         lv_obj_set_y(lv_label_3, 0);
         lv_obj_set_width(lv_label_3, 38);
         lv_obj_add_style(lv_label_3, &me106_text_14_blue, 0);
+        lv_obj_bind_style(lv_label_3, &me106_theme_light_phase_a, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_3, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_4 = lv_label_create(harmonic_voltage_legend);
         lv_label_set_text(lv_label_4, "B相");
@@ -160,6 +162,8 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
         lv_obj_set_y(lv_label_4, 0);
         lv_obj_set_width(lv_label_4, 38);
         lv_obj_add_style(lv_label_4, &me106_text_14_cyan, 0);
+        lv_obj_bind_style(lv_label_4, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_4, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_5 = lv_label_create(harmonic_voltage_legend);
         lv_label_set_text(lv_label_5, "C相");
@@ -167,8 +171,8 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
         lv_obj_set_y(lv_label_5, 0);
         lv_obj_set_width(lv_label_5, 38);
         lv_obj_add_style(lv_label_5, &me106_text_14_orange, 0);
-        lv_obj_bind_style(lv_label_5, &me106_theme_light_status_warning, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_5, &me106_theme_alarm_status_warning, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_5, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_5, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
 
         lv_obj_t * harmonic_current_legend = lv_obj_create(page_content);
         lv_obj_set_name(harmonic_current_legend, "harmonic_current_legend");
@@ -187,6 +191,8 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
         lv_obj_set_y(lv_label_6, 0);
         lv_obj_set_width(lv_label_6, 38);
         lv_obj_add_style(lv_label_6, &me106_text_14_blue, 0);
+        lv_obj_bind_style(lv_label_6, &me106_theme_light_phase_a, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_6, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_7 = lv_label_create(harmonic_current_legend);
         lv_label_set_text(lv_label_7, "B相");
@@ -194,6 +200,8 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
         lv_obj_set_y(lv_label_7, 0);
         lv_obj_set_width(lv_label_7, 38);
         lv_obj_add_style(lv_label_7, &me106_text_14_cyan, 0);
+        lv_obj_bind_style(lv_label_7, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_7, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_8 = lv_label_create(harmonic_current_legend);
         lv_label_set_text(lv_label_8, "C相");
@@ -201,8 +209,8 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
         lv_obj_set_y(lv_label_8, 0);
         lv_obj_set_width(lv_label_8, 38);
         lv_obj_add_style(lv_label_8, &me106_text_14_orange, 0);
-        lv_obj_bind_style(lv_label_8, &me106_theme_light_status_warning, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_8, &me106_theme_alarm_status_warning, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_8, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_8, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_9 = lv_label_create(page_content);
         lv_label_set_text(lv_label_9, "含有率(%)");
@@ -276,9 +284,10 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
         lv_obj_set_style_border_width(harmonic_voltage_chart, 0, 0);
         lv_obj_set_style_pad_all(harmonic_voltage_chart, 0, 0);
         lv_obj_set_style_pad_column(harmonic_voltage_chart, 1, 0);
-        lv_obj_set_style_line_color(harmonic_voltage_chart, lv_color_hex(0x303030), 0);
         lv_obj_set_style_line_opa(harmonic_voltage_chart, 180, 0);
         lv_obj_add_style(harmonic_voltage_chart, &me106_chart_frame, 0);
+        lv_obj_bind_style(harmonic_voltage_chart, &me106_theme_light_chart, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(harmonic_voltage_chart, &me106_theme_alarm_chart, 0, &meter_theme_index, 2);
         lv_obj_add_style(harmonic_voltage_chart, &me106_chart_bar_spectrum_items, LV_PART_ITEMS);
         lv_obj_bind_flag_if_not_eq(harmonic_voltage_chart, &meter_harmonic_data_state, LV_OBJ_FLAG_HIDDEN, 1);
         lv_obj_bind_flag_if_not_eq(harmonic_voltage_chart, &meter_harmonic_spectrum_mode, LV_OBJ_FLAG_HIDDEN, 0);
@@ -308,9 +317,10 @@ lv_obj_t * screen_harmonic_spectrum_create(void)
         lv_obj_set_style_border_width(harmonic_current_chart, 0, 0);
         lv_obj_set_style_pad_all(harmonic_current_chart, 0, 0);
         lv_obj_set_style_pad_column(harmonic_current_chart, 1, 0);
-        lv_obj_set_style_line_color(harmonic_current_chart, lv_color_hex(0x303030), 0);
         lv_obj_set_style_line_opa(harmonic_current_chart, 180, 0);
         lv_obj_add_style(harmonic_current_chart, &me106_chart_frame, 0);
+        lv_obj_bind_style(harmonic_current_chart, &me106_theme_light_chart, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(harmonic_current_chart, &me106_theme_alarm_chart, 0, &meter_theme_index, 2);
         lv_obj_add_style(harmonic_current_chart, &me106_chart_bar_spectrum_items, LV_PART_ITEMS);
         lv_obj_bind_flag_if_not_eq(harmonic_current_chart, &meter_harmonic_data_state, LV_OBJ_FLAG_HIDDEN, 1);
         lv_obj_bind_flag_if_not_eq(harmonic_current_chart, &meter_harmonic_spectrum_mode, LV_OBJ_FLAG_HIDDEN, 1);

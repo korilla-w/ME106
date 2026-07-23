@@ -180,10 +180,10 @@ lv_obj_t * screen_settings_theme_create(void)
         lv_obj_set_width(theme_light_swatch_bg, 14);
         lv_obj_set_height(theme_light_swatch_bg, 14);
         lv_obj_set_style_radius(theme_light_swatch_bg, 7, 0);
-        lv_obj_set_style_bg_color(theme_light_swatch_bg, lv_color_hex(0xFFFFFF), 0);
+        lv_obj_set_style_bg_color(theme_light_swatch_bg, lv_color_hex(0xF2F2EF), 0);
         lv_obj_set_style_bg_opa(theme_light_swatch_bg, 255, 0);
         lv_obj_set_style_border_width(theme_light_swatch_bg, 1, 0);
-        lv_obj_set_style_border_color(theme_light_swatch_bg, lv_color_hex(0xC9D5E3), 0);
+        lv_obj_set_style_border_color(theme_light_swatch_bg, lv_color_hex(0xD2D4D1), 0);
         lv_obj_set_flag(theme_light_swatch_bg, LV_OBJ_FLAG_SCROLLABLE, false);
 
         lv_obj_t * theme_light_swatch_accent = lv_obj_create(theme_item_light);
@@ -193,7 +193,7 @@ lv_obj_t * screen_settings_theme_create(void)
         lv_obj_set_width(theme_light_swatch_accent, 14);
         lv_obj_set_height(theme_light_swatch_accent, 14);
         lv_obj_set_style_radius(theme_light_swatch_accent, 7, 0);
-        lv_obj_set_style_bg_color(theme_light_swatch_accent, lv_color_hex(0x6366F1), 0);
+        lv_obj_set_style_bg_color(theme_light_swatch_accent, lv_color_hex(0xD93A46), 0);
         lv_obj_set_style_bg_opa(theme_light_swatch_accent, 255, 0);
         lv_obj_set_style_border_width(theme_light_swatch_accent, 0, 0);
         lv_obj_set_flag(theme_light_swatch_accent, LV_OBJ_FLAG_SCROLLABLE, false);
@@ -210,7 +210,7 @@ lv_obj_t * screen_settings_theme_create(void)
         lv_obj_bind_style(lv_label_3, &me106_text_16_white, 0, &meter_theme_index, 1);
 
         lv_obj_t * lv_label_4 = lv_label_create(theme_item_light);
-        lv_label_set_text(lv_label_4, "轻 UI");
+        lv_label_set_text(lv_label_4, "中性灰");
         lv_obj_set_align(lv_label_4, LV_ALIGN_RIGHT_MID);
         lv_obj_set_x(lv_label_4, -14);
         lv_obj_set_y(lv_label_4, 0);
@@ -253,9 +253,10 @@ lv_obj_t * screen_settings_theme_create(void)
         lv_obj_set_width(theme_alarm_swatch_red, 10);
         lv_obj_set_height(theme_alarm_swatch_red, 14);
         lv_obj_set_style_radius(theme_alarm_swatch_red, 5, 0);
-        lv_obj_set_style_bg_color(theme_alarm_swatch_red, lv_color_hex(0xEB5757), 0);
+        lv_obj_set_style_bg_color(theme_alarm_swatch_red, lv_color_hex(0x080D18), 0);
         lv_obj_set_style_bg_opa(theme_alarm_swatch_red, 255, 0);
-        lv_obj_set_style_border_width(theme_alarm_swatch_red, 0, 0);
+        lv_obj_set_style_border_width(theme_alarm_swatch_red, 1, 0);
+        lv_obj_set_style_border_color(theme_alarm_swatch_red, lv_color_hex(0x263A52), 0);
         lv_obj_set_flag(theme_alarm_swatch_red, LV_OBJ_FLAG_SCROLLABLE, false);
 
         lv_obj_t * theme_alarm_swatch_yellow = lv_obj_create(theme_item_alarm);
@@ -265,7 +266,7 @@ lv_obj_t * screen_settings_theme_create(void)
         lv_obj_set_width(theme_alarm_swatch_yellow, 10);
         lv_obj_set_height(theme_alarm_swatch_yellow, 14);
         lv_obj_set_style_radius(theme_alarm_swatch_yellow, 5, 0);
-        lv_obj_set_style_bg_color(theme_alarm_swatch_yellow, lv_color_hex(0xF2C94C), 0);
+        lv_obj_set_style_bg_color(theme_alarm_swatch_yellow, lv_color_hex(0x00F2FF), 0);
         lv_obj_set_style_bg_opa(theme_alarm_swatch_yellow, 255, 0);
         lv_obj_set_style_border_width(theme_alarm_swatch_yellow, 0, 0);
         lv_obj_set_flag(theme_alarm_swatch_yellow, LV_OBJ_FLAG_SCROLLABLE, false);
@@ -277,13 +278,13 @@ lv_obj_t * screen_settings_theme_create(void)
         lv_obj_set_width(theme_alarm_swatch_green, 10);
         lv_obj_set_height(theme_alarm_swatch_green, 14);
         lv_obj_set_style_radius(theme_alarm_swatch_green, 5, 0);
-        lv_obj_set_style_bg_color(theme_alarm_swatch_green, lv_color_hex(0x6FCF97), 0);
+        lv_obj_set_style_bg_color(theme_alarm_swatch_green, lv_color_hex(0xFF0055), 0);
         lv_obj_set_style_bg_opa(theme_alarm_swatch_green, 255, 0);
         lv_obj_set_style_border_width(theme_alarm_swatch_green, 0, 0);
         lv_obj_set_flag(theme_alarm_swatch_green, LV_OBJ_FLAG_SCROLLABLE, false);
 
         lv_obj_t * lv_label_5 = lv_label_create(theme_item_alarm);
-        lv_label_set_text(lv_label_5, "3 告警/工业色");
+        lv_label_set_text(lv_label_5, "3 赛博仪表");
         lv_obj_set_align(lv_label_5, LV_ALIGN_LEFT_MID);
         lv_obj_set_x(lv_label_5, 64);
         lv_obj_set_y(lv_label_5, 0);
@@ -294,7 +295,7 @@ lv_obj_t * screen_settings_theme_create(void)
         lv_obj_bind_style(lv_label_5, &me106_text_16_white, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_6 = lv_label_create(theme_item_alarm);
-        lv_label_set_text(lv_label_6, "高识别");
+        lv_label_set_text(lv_label_6, "霓虹双彩");
         lv_obj_set_align(lv_label_6, LV_ALIGN_RIGHT_MID);
         lv_obj_set_x(lv_label_6, -14);
         lv_obj_set_y(lv_label_6, 0);

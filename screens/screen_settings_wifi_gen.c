@@ -164,8 +164,8 @@ lv_obj_t * screen_settings_wifi_create(void)
         lv_obj_set_align(lv_label_9, LV_ALIGN_CENTER);
         lv_obj_set_width(lv_label_9, 136);
         lv_obj_add_style(lv_label_9, &me106_text_16_white_center, 0);
-        lv_obj_bind_style(lv_label_9, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_9, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_9, &me106_theme_light_on_accent, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_9, &me106_theme_alarm_on_accent, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(wifi_pair_mode_btn, &meter_wifi_page_index, LV_EVENT_CLICKED, 1);
 
@@ -195,6 +195,8 @@ lv_obj_t * screen_settings_wifi_create(void)
         lv_obj_set_y(lv_label_11, 60);
         lv_obj_set_width(lv_label_11, 80);
         lv_obj_add_style(lv_label_11, &me106_text_14_blue, 0);
+        lv_obj_bind_style(lv_label_11, &me106_theme_light_info_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_11, &me106_theme_alarm_info_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_12 = lv_label_create(wifi_pairing_page);
         lv_label_set_text(lv_label_12, "请用手机连接下列热点");

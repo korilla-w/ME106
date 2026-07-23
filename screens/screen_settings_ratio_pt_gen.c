@@ -98,6 +98,7 @@ lv_obj_t * screen_settings_ratio_pt_create(void)
         lv_obj_add_style(lv_label_1, &me106_text_36_white_center, 0);
         lv_obj_bind_style(lv_label_1, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(lv_label_1, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_1, &me106_text_on_accent, 0, &meter_ratio_digit_selected_index, 0);
 
         lv_obj_add_subject_set_int_event(pt_ratio_digit_0, &meter_ratio_digit_selected_index, LV_EVENT_CLICKED, 0);
 
@@ -132,6 +133,7 @@ lv_obj_t * screen_settings_ratio_pt_create(void)
         lv_obj_add_style(lv_label_2, &me106_text_36_white_center, 0);
         lv_obj_bind_style(lv_label_2, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(lv_label_2, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_2, &me106_text_on_accent, 0, &meter_ratio_digit_selected_index, 1);
 
         lv_obj_add_subject_set_int_event(pt_ratio_digit_1, &meter_ratio_digit_selected_index, LV_EVENT_CLICKED, 1);
 
@@ -166,6 +168,7 @@ lv_obj_t * screen_settings_ratio_pt_create(void)
         lv_obj_add_style(lv_label_3, &me106_text_36_white_center, 0);
         lv_obj_bind_style(lv_label_3, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(lv_label_3, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_3, &me106_text_on_accent, 0, &meter_ratio_digit_selected_index, 2);
 
         lv_obj_add_subject_set_int_event(pt_ratio_digit_2, &meter_ratio_digit_selected_index, LV_EVENT_CLICKED, 2);
 
@@ -200,6 +203,7 @@ lv_obj_t * screen_settings_ratio_pt_create(void)
         lv_obj_add_style(lv_label_4, &me106_text_36_white_center, 0);
         lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_4, &me106_text_on_accent, 0, &meter_ratio_digit_selected_index, 3);
 
         lv_obj_add_subject_set_int_event(pt_ratio_digit_3, &meter_ratio_digit_selected_index, LV_EVENT_CLICKED, 3);
 

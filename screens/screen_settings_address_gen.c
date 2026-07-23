@@ -136,6 +136,7 @@ lv_obj_t * screen_settings_address_create(void)
         lv_obj_add_style(lv_label_4, &me106_text_36_white_center, 0);
         lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_4, &me106_text_on_accent, 0, &meter_address_digit_selected_index, 0);
 
         lv_obj_add_subject_set_int_event(address_digit_0, &meter_address_digit_selected_index, LV_EVENT_CLICKED, 0);
 
@@ -170,6 +171,7 @@ lv_obj_t * screen_settings_address_create(void)
         lv_obj_add_style(lv_label_5, &me106_text_36_white_center, 0);
         lv_obj_bind_style(lv_label_5, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(lv_label_5, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_5, &me106_text_on_accent, 0, &meter_address_digit_selected_index, 1);
 
         lv_obj_add_subject_set_int_event(address_digit_1, &meter_address_digit_selected_index, LV_EVENT_CLICKED, 1);
 
@@ -204,6 +206,7 @@ lv_obj_t * screen_settings_address_create(void)
         lv_obj_add_style(lv_label_6, &me106_text_36_white_center, 0);
         lv_obj_bind_style(lv_label_6, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(lv_label_6, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_6, &me106_text_on_accent, 0, &meter_address_digit_selected_index, 2);
 
         lv_obj_add_subject_set_int_event(address_digit_2, &meter_address_digit_selected_index, LV_EVENT_CLICKED, 2);
 
@@ -232,6 +235,8 @@ lv_obj_t * screen_settings_address_create(void)
         lv_obj_set_y(lv_label_8, 3);
         lv_obj_set_width(lv_label_8, 120);
         lv_obj_add_style(lv_label_8, &me106_text_18_cyan, 0);
+        lv_obj_bind_style(lv_label_8, &me106_theme_light_info_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_8, &me106_theme_alarm_info_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * screen_settings_address_bottom_bar = lv_obj_create(lv_obj_0);
         lv_obj_set_name(screen_settings_address_bottom_bar, "screen_settings_address_bottom_bar");
@@ -770,8 +775,6 @@ lv_obj_t * screen_settings_address_create(void)
         lv_obj_set_width(address_invalid_popup, 232);
         lv_obj_set_height(address_invalid_popup, 98);
         lv_obj_set_style_pad_all(address_invalid_popup, 0, 0);
-        lv_obj_set_style_border_width(address_invalid_popup, 0, 0);
-        lv_obj_set_style_bg_opa(address_invalid_popup, 255, 0);
         lv_obj_set_flag(address_invalid_popup, LV_OBJ_FLAG_SCROLLABLE, false);
         lv_obj_add_style(address_invalid_popup, &me106_panel_soft_r8, 0);
         lv_obj_bind_style(address_invalid_popup, &me106_theme_light_soft_panel, 0, &meter_theme_index, 1);
@@ -786,7 +789,6 @@ lv_obj_t * screen_settings_address_create(void)
         lv_obj_set_style_border_width(address_invalid_popup_accent, 0, 0);
         lv_obj_set_style_pad_all(address_invalid_popup_accent, 0, 0);
         lv_obj_set_style_radius(address_invalid_popup_accent, 2, 0);
-        lv_obj_set_style_bg_opa(address_invalid_popup_accent, 116, 0);
         lv_obj_set_flag(address_invalid_popup_accent, LV_OBJ_FLAG_SCROLLABLE, false);
         lv_obj_add_style(address_invalid_popup_accent, &me106_panel_blue_r8, 0);
         lv_obj_bind_style(address_invalid_popup_accent, &me106_theme_light_accent, 0, &meter_theme_index, 1);

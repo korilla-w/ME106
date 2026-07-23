@@ -202,6 +202,10 @@ lv_obj_t * screen_settings_uart_create(void)
         lv_obj_set_style_transform_pivot_y(lv_image_0, 14, 0);
         lv_obj_set_style_transform_scale_x(lv_image_0, 90, 0);
         lv_obj_set_style_transform_scale_y(lv_image_0, 90, 0);
+        lv_obj_add_style(lv_image_0, &me106_icon_white, 0);
+        lv_obj_bind_style(lv_image_0, &me106_theme_light_icon, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_image_0, &me106_theme_alarm_icon, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_image_0, &me106_icon_white, 0, &meter_uart_selected_index, 0);
 
         lv_obj_add_subject_set_int_event(uart_row_baud, &meter_uart_selected_index, LV_EVENT_CLICKED, 0);
 
@@ -300,6 +304,10 @@ lv_obj_t * screen_settings_uart_create(void)
         lv_obj_set_style_transform_pivot_y(lv_image_1, 14, 0);
         lv_obj_set_style_transform_scale_x(lv_image_1, 90, 0);
         lv_obj_set_style_transform_scale_y(lv_image_1, 90, 0);
+        lv_obj_add_style(lv_image_1, &me106_icon_white, 0);
+        lv_obj_bind_style(lv_image_1, &me106_theme_light_icon, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_image_1, &me106_theme_alarm_icon, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_image_1, &me106_icon_white, 0, &meter_uart_selected_index, 1);
 
         lv_obj_add_subject_set_int_event(uart_row_data_bits, &meter_uart_selected_index, LV_EVENT_CLICKED, 1);
 
@@ -388,6 +396,10 @@ lv_obj_t * screen_settings_uart_create(void)
         lv_obj_set_style_transform_pivot_y(lv_image_2, 14, 0);
         lv_obj_set_style_transform_scale_x(lv_image_2, 90, 0);
         lv_obj_set_style_transform_scale_y(lv_image_2, 90, 0);
+        lv_obj_add_style(lv_image_2, &me106_icon_white, 0);
+        lv_obj_bind_style(lv_image_2, &me106_theme_light_icon, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_image_2, &me106_theme_alarm_icon, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_image_2, &me106_icon_white, 0, &meter_uart_selected_index, 2);
 
         lv_obj_add_subject_set_int_event(uart_row_parity, &meter_uart_selected_index, LV_EVENT_CLICKED, 2);
 
@@ -476,6 +488,10 @@ lv_obj_t * screen_settings_uart_create(void)
         lv_obj_set_style_transform_pivot_y(lv_image_3, 14, 0);
         lv_obj_set_style_transform_scale_x(lv_image_3, 90, 0);
         lv_obj_set_style_transform_scale_y(lv_image_3, 90, 0);
+        lv_obj_add_style(lv_image_3, &me106_icon_white, 0);
+        lv_obj_bind_style(lv_image_3, &me106_theme_light_icon, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_image_3, &me106_theme_alarm_icon, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_image_3, &me106_icon_white, 0, &meter_uart_selected_index, 3);
 
         lv_obj_add_subject_set_int_event(uart_row_stop_bits, &meter_uart_selected_index, LV_EVENT_CLICKED, 3);
 

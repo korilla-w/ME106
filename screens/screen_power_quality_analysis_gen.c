@@ -105,7 +105,6 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(power_quality_score_panel, 276);
         lv_obj_set_height(power_quality_score_panel, 72);
         lv_obj_set_style_pad_all(power_quality_score_panel, 0, 0);
-        lv_obj_set_style_border_width(power_quality_score_panel, 0, 0);
         lv_obj_set_flag(power_quality_score_panel, LV_OBJ_FLAG_SCROLLABLE, false);
         lv_obj_add_style(power_quality_score_panel, &me106_panel_gray24_r8, 0);
         lv_obj_bind_style(power_quality_score_panel, &me106_theme_light_panel, 0, &meter_theme_index, 1);
@@ -180,7 +179,6 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(power_quality_trend_panel, 276);
         lv_obj_set_height(power_quality_trend_panel, 62);
         lv_obj_set_style_pad_all(power_quality_trend_panel, 0, 0);
-        lv_obj_set_style_border_width(power_quality_trend_panel, 0, 0);
         lv_obj_set_flag(power_quality_trend_panel, LV_OBJ_FLAG_SCROLLABLE, false);
         lv_obj_add_style(power_quality_trend_panel, &me106_panel_gray1f_r8, 0);
         lv_obj_bind_style(power_quality_trend_panel, &me106_theme_light_panel, 0, &meter_theme_index, 1);
@@ -201,11 +199,12 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(power_quality_u_bar_track, 80);
         lv_obj_set_height(power_quality_u_bar_track, 8);
         lv_obj_set_style_radius(power_quality_u_bar_track, 4, 0);
-        lv_obj_set_style_bg_color(power_quality_u_bar_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(power_quality_u_bar_track, 255, 0);
         lv_obj_set_style_border_width(power_quality_u_bar_track, 0, 0);
         lv_obj_set_style_pad_all(power_quality_u_bar_track, 0, 0);
         lv_obj_set_flag(power_quality_u_bar_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(power_quality_u_bar_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(power_quality_u_bar_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(power_quality_u_bar_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_t * power_quality_u_bar_fill = lv_obj_create(power_quality_u_bar_track);
         lv_obj_set_name(power_quality_u_bar_fill, "power_quality_u_bar_fill");
         lv_obj_set_x(power_quality_u_bar_fill, 0);
@@ -213,10 +212,11 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(power_quality_u_bar_fill, 60);
         lv_obj_set_height(power_quality_u_bar_fill, 8);
         lv_obj_set_style_radius(power_quality_u_bar_fill, 4, 0);
-        lv_obj_set_style_bg_color(power_quality_u_bar_fill, lv_color_hex(0xFFEB3B), 0);
-        lv_obj_set_style_bg_opa(power_quality_u_bar_fill, 255, 0);
         lv_obj_set_style_border_width(power_quality_u_bar_fill, 0, 0);
         lv_obj_set_flag(power_quality_u_bar_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(power_quality_u_bar_fill, &me106_theme_dark_secondary, 0);
+        lv_obj_bind_style(power_quality_u_bar_fill, &me106_theme_light_secondary, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(power_quality_u_bar_fill, &me106_theme_alarm_secondary, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_8 = lv_label_create(power_quality_trend_panel);
         lv_label_set_text(lv_label_8, "电流");
@@ -224,6 +224,8 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_y(lv_label_8, 10);
         lv_obj_set_width(lv_label_8, 34);
         lv_obj_add_style(lv_label_8, &me106_text_16_cyan, 0);
+        lv_obj_bind_style(lv_label_8, &me106_theme_light_info_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_8, &me106_theme_alarm_info_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * power_quality_i_bar_track = lv_obj_create(power_quality_trend_panel);
         lv_obj_set_name(power_quality_i_bar_track, "power_quality_i_bar_track");
@@ -232,11 +234,12 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(power_quality_i_bar_track, 64);
         lv_obj_set_height(power_quality_i_bar_track, 8);
         lv_obj_set_style_radius(power_quality_i_bar_track, 4, 0);
-        lv_obj_set_style_bg_color(power_quality_i_bar_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(power_quality_i_bar_track, 255, 0);
         lv_obj_set_style_border_width(power_quality_i_bar_track, 0, 0);
         lv_obj_set_style_pad_all(power_quality_i_bar_track, 0, 0);
         lv_obj_set_flag(power_quality_i_bar_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(power_quality_i_bar_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(power_quality_i_bar_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(power_quality_i_bar_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_t * power_quality_i_bar_fill = lv_obj_create(power_quality_i_bar_track);
         lv_obj_set_name(power_quality_i_bar_fill, "power_quality_i_bar_fill");
         lv_obj_set_x(power_quality_i_bar_fill, 0);
@@ -244,10 +247,11 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(power_quality_i_bar_fill, 42);
         lv_obj_set_height(power_quality_i_bar_fill, 8);
         lv_obj_set_style_radius(power_quality_i_bar_fill, 4, 0);
-        lv_obj_set_style_bg_color(power_quality_i_bar_fill, lv_color_hex(0x20D3D5), 0);
-        lv_obj_set_style_bg_opa(power_quality_i_bar_fill, 255, 0);
         lv_obj_set_style_border_width(power_quality_i_bar_fill, 0, 0);
         lv_obj_set_flag(power_quality_i_bar_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(power_quality_i_bar_fill, &me106_theme_dark_info, 0);
+        lv_obj_bind_style(power_quality_i_bar_fill, &me106_theme_light_info, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(power_quality_i_bar_fill, &me106_theme_alarm_info, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_9 = lv_label_create(power_quality_trend_panel);
         lv_label_set_text(lv_label_9, "功率");
@@ -265,11 +269,12 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(power_quality_p_bar_track, 80);
         lv_obj_set_height(power_quality_p_bar_track, 8);
         lv_obj_set_style_radius(power_quality_p_bar_track, 4, 0);
-        lv_obj_set_style_bg_color(power_quality_p_bar_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(power_quality_p_bar_track, 255, 0);
         lv_obj_set_style_border_width(power_quality_p_bar_track, 0, 0);
         lv_obj_set_style_pad_all(power_quality_p_bar_track, 0, 0);
         lv_obj_set_flag(power_quality_p_bar_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(power_quality_p_bar_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(power_quality_p_bar_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(power_quality_p_bar_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_t * power_quality_p_bar_fill = lv_obj_create(power_quality_p_bar_track);
         lv_obj_set_name(power_quality_p_bar_fill, "power_quality_p_bar_fill");
         lv_obj_set_x(power_quality_p_bar_fill, 0);
@@ -277,10 +282,11 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(power_quality_p_bar_fill, 52);
         lv_obj_set_height(power_quality_p_bar_fill, 8);
         lv_obj_set_style_radius(power_quality_p_bar_fill, 4, 0);
-        lv_obj_set_style_bg_color(power_quality_p_bar_fill, lv_color_hex(0xF59E0B), 0);
-        lv_obj_set_style_bg_opa(power_quality_p_bar_fill, 255, 0);
         lv_obj_set_style_border_width(power_quality_p_bar_fill, 0, 0);
         lv_obj_set_flag(power_quality_p_bar_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(power_quality_p_bar_fill, &me106_theme_dark_warning, 0);
+        lv_obj_bind_style(power_quality_p_bar_fill, &me106_theme_light_warning, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(power_quality_p_bar_fill, &me106_theme_alarm_warning, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_10 = lv_label_create(power_quality_trend_panel);
         lv_label_set_text(lv_label_10, "电能");
@@ -298,11 +304,12 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(power_quality_e_bar_track, 64);
         lv_obj_set_height(power_quality_e_bar_track, 8);
         lv_obj_set_style_radius(power_quality_e_bar_track, 4, 0);
-        lv_obj_set_style_bg_color(power_quality_e_bar_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(power_quality_e_bar_track, 255, 0);
         lv_obj_set_style_border_width(power_quality_e_bar_track, 0, 0);
         lv_obj_set_style_pad_all(power_quality_e_bar_track, 0, 0);
         lv_obj_set_flag(power_quality_e_bar_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(power_quality_e_bar_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(power_quality_e_bar_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(power_quality_e_bar_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_t * power_quality_e_bar_fill = lv_obj_create(power_quality_e_bar_track);
         lv_obj_set_name(power_quality_e_bar_fill, "power_quality_e_bar_fill");
         lv_obj_set_x(power_quality_e_bar_fill, 0);
@@ -310,10 +317,11 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(power_quality_e_bar_fill, 50);
         lv_obj_set_height(power_quality_e_bar_fill, 8);
         lv_obj_set_style_radius(power_quality_e_bar_fill, 4, 0);
-        lv_obj_set_style_bg_color(power_quality_e_bar_fill, lv_color_hex(0x32E67A), 0);
-        lv_obj_set_style_bg_opa(power_quality_e_bar_fill, 255, 0);
         lv_obj_set_style_border_width(power_quality_e_bar_fill, 0, 0);
         lv_obj_set_flag(power_quality_e_bar_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(power_quality_e_bar_fill, &me106_theme_dark_success, 0);
+        lv_obj_bind_style(power_quality_e_bar_fill, &me106_theme_light_success, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(power_quality_e_bar_fill, &me106_theme_alarm_success, 0, &meter_theme_index, 2);
 
         lv_obj_t * power_quality_status_page = lv_obj_create(power_quality_pages);
         lv_obj_set_name(power_quality_status_page, "power_quality_status_page");
@@ -350,7 +358,6 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(quality_tag_u_step, 132);
         lv_obj_set_height(quality_tag_u_step, 34);
         lv_obj_set_style_pad_all(quality_tag_u_step, 0, 0);
-        lv_obj_set_style_border_width(quality_tag_u_step, 0, 0);
         lv_obj_set_flag(quality_tag_u_step, LV_OBJ_FLAG_SCROLLABLE, false);
         lv_obj_add_style(quality_tag_u_step, &me106_panel_gray24_r8, 0);
         lv_obj_bind_style(quality_tag_u_step, &me106_theme_light_panel, 0, &meter_theme_index, 1);
@@ -361,10 +368,11 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(lv_obj_1, 18);
         lv_obj_set_height(lv_obj_1, 18);
         lv_obj_set_style_radius(lv_obj_1, 9, 0);
-        lv_obj_set_style_bg_color(lv_obj_1, lv_color_hex(0xFFEB3B), 0);
-        lv_obj_set_style_bg_opa(lv_obj_1, 255, 0);
         lv_obj_set_style_border_width(lv_obj_1, 0, 0);
         lv_obj_set_flag(lv_obj_1, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(lv_obj_1, &me106_theme_dark_secondary, 0);
+        lv_obj_bind_style(lv_obj_1, &me106_theme_light_secondary, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_obj_1, &me106_theme_alarm_secondary, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_13 = lv_label_create(quality_tag_u_step);
         lv_label_set_text(lv_label_13, "电压");
@@ -405,7 +413,6 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(quality_tag_i_step, 132);
         lv_obj_set_height(quality_tag_i_step, 34);
         lv_obj_set_style_pad_all(quality_tag_i_step, 0, 0);
-        lv_obj_set_style_border_width(quality_tag_i_step, 0, 0);
         lv_obj_set_flag(quality_tag_i_step, LV_OBJ_FLAG_SCROLLABLE, false);
         lv_obj_add_style(quality_tag_i_step, &me106_panel_gray24_r8, 0);
         lv_obj_bind_style(quality_tag_i_step, &me106_theme_light_panel, 0, &meter_theme_index, 1);
@@ -416,10 +423,11 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(lv_obj_2, 18);
         lv_obj_set_height(lv_obj_2, 18);
         lv_obj_set_style_radius(lv_obj_2, 9, 0);
-        lv_obj_set_style_bg_color(lv_obj_2, lv_color_hex(0x20D3D5), 0);
-        lv_obj_set_style_bg_opa(lv_obj_2, 255, 0);
         lv_obj_set_style_border_width(lv_obj_2, 0, 0);
         lv_obj_set_flag(lv_obj_2, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(lv_obj_2, &me106_theme_dark_info, 0);
+        lv_obj_bind_style(lv_obj_2, &me106_theme_light_info, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_obj_2, &me106_theme_alarm_info, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_16 = lv_label_create(quality_tag_i_step);
         lv_label_set_text(lv_label_16, "电流");
@@ -460,7 +468,6 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(quality_tag_p_step, 132);
         lv_obj_set_height(quality_tag_p_step, 34);
         lv_obj_set_style_pad_all(quality_tag_p_step, 0, 0);
-        lv_obj_set_style_border_width(quality_tag_p_step, 0, 0);
         lv_obj_set_flag(quality_tag_p_step, LV_OBJ_FLAG_SCROLLABLE, false);
         lv_obj_add_style(quality_tag_p_step, &me106_panel_gray24_r8, 0);
         lv_obj_bind_style(quality_tag_p_step, &me106_theme_light_panel, 0, &meter_theme_index, 1);
@@ -471,10 +478,11 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(lv_obj_3, 18);
         lv_obj_set_height(lv_obj_3, 18);
         lv_obj_set_style_radius(lv_obj_3, 9, 0);
-        lv_obj_set_style_bg_color(lv_obj_3, lv_color_hex(0xF59E0B), 0);
-        lv_obj_set_style_bg_opa(lv_obj_3, 255, 0);
         lv_obj_set_style_border_width(lv_obj_3, 0, 0);
         lv_obj_set_flag(lv_obj_3, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(lv_obj_3, &me106_theme_dark_warning, 0);
+        lv_obj_bind_style(lv_obj_3, &me106_theme_light_warning, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_obj_3, &me106_theme_alarm_warning, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_19 = lv_label_create(quality_tag_p_step);
         lv_label_set_text(lv_label_19, "功率");
@@ -515,7 +523,6 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(quality_tag_e_inc, 132);
         lv_obj_set_height(quality_tag_e_inc, 34);
         lv_obj_set_style_pad_all(quality_tag_e_inc, 0, 0);
-        lv_obj_set_style_border_width(quality_tag_e_inc, 0, 0);
         lv_obj_set_flag(quality_tag_e_inc, LV_OBJ_FLAG_SCROLLABLE, false);
         lv_obj_add_style(quality_tag_e_inc, &me106_panel_gray24_r8, 0);
         lv_obj_bind_style(quality_tag_e_inc, &me106_theme_light_panel, 0, &meter_theme_index, 1);
@@ -526,10 +533,11 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(lv_obj_4, 18);
         lv_obj_set_height(lv_obj_4, 18);
         lv_obj_set_style_radius(lv_obj_4, 9, 0);
-        lv_obj_set_style_bg_color(lv_obj_4, lv_color_hex(0x32E67A), 0);
-        lv_obj_set_style_bg_opa(lv_obj_4, 255, 0);
         lv_obj_set_style_border_width(lv_obj_4, 0, 0);
         lv_obj_set_flag(lv_obj_4, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(lv_obj_4, &me106_theme_dark_success, 0);
+        lv_obj_bind_style(lv_obj_4, &me106_theme_light_success, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_obj_4, &me106_theme_alarm_success, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_22 = lv_label_create(quality_tag_e_inc);
         lv_label_set_text(lv_label_22, "电能");
@@ -570,7 +578,6 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(quality_alarm_strip, 276);
         lv_obj_set_height(quality_alarm_strip, 44);
         lv_obj_set_style_pad_all(quality_alarm_strip, 0, 0);
-        lv_obj_set_style_border_width(quality_alarm_strip, 0, 0);
         lv_obj_set_flag(quality_alarm_strip, LV_OBJ_FLAG_SCROLLABLE, false);
         lv_obj_add_style(quality_alarm_strip, &me106_panel_gray1f_r8, 0);
         lv_obj_bind_style(quality_alarm_strip, &me106_theme_light_panel, 0, &meter_theme_index, 1);
@@ -662,7 +669,6 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_set_width(power_quality_diagnose_panel, 276);
         lv_obj_set_height(power_quality_diagnose_panel, 132);
         lv_obj_set_style_pad_all(power_quality_diagnose_panel, 0, 0);
-        lv_obj_set_style_border_width(power_quality_diagnose_panel, 0, 0);
         lv_obj_set_flag(power_quality_diagnose_panel, LV_OBJ_FLAG_SCROLLABLE, false);
         lv_obj_add_style(power_quality_diagnose_panel, &me106_panel_gray24_r8, 0);
         lv_obj_bind_style(power_quality_diagnose_panel, &me106_theme_light_panel, 0, &meter_theme_index, 1);
@@ -691,16 +697,16 @@ lv_obj_t * screen_power_quality_analysis_create(void)
         lv_obj_t * lv_label_32 = lv_label_create(power_quality_diagnose_panel);
         lv_label_set_text(lv_label_32, "diagno.qinggrid.com");
         lv_obj_set_x(lv_label_32, 48);
-        lv_obj_set_y(lv_label_32, 42);
-        lv_obj_set_width(lv_label_32, 200);
+        lv_obj_set_y(lv_label_32, 40);
+        lv_obj_set_width(lv_label_32, 168);
         lv_obj_add_style(lv_label_32, &me106_text_16_cyan, 0);
-        lv_obj_bind_style(lv_label_32, &me106_theme_light_accent, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_32, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_32, &me106_theme_light_info_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_32, &me106_theme_alarm_info_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_33 = lv_label_create(power_quality_diagnose_panel);
         lv_label_set_text(lv_label_33, "请在手机或电脑浏览器中输入上述网址，登录诊断云查看更完整的越限诊断分析与故障波形曲线。");
         lv_obj_set_x(lv_label_33, 16);
-        lv_obj_set_y(lv_label_33, 78);
+        lv_obj_set_y(lv_label_33, 74);
         lv_obj_set_width(lv_label_33, 244);
         lv_label_set_long_mode(lv_label_33, LV_LABEL_LONG_MODE_WRAP);
         lv_obj_add_style(lv_label_33, &me106_text_14_gray_ba, 0);

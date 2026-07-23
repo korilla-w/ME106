@@ -28,6 +28,7 @@
                 <style name="me106_text_36_white_center"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_style name="me106_text_on_accent" subject="meter_ratio_digit_selected_index" ref_value="0"/>
             </lv_label>
             <subject_set_int_event subject="meter_ratio_digit_selected_index" value="0" trigger="clicked"/>
         </lv_button>
@@ -46,6 +47,7 @@
                 <style name="me106_text_36_white_center"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_style name="me106_text_on_accent" subject="meter_ratio_digit_selected_index" ref_value="1"/>
             </lv_label>
             <subject_set_int_event subject="meter_ratio_digit_selected_index" value="1" trigger="clicked"/>
         </lv_button>
@@ -64,6 +66,7 @@
                 <style name="me106_text_36_white_center"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_style name="me106_text_on_accent" subject="meter_ratio_digit_selected_index" ref_value="2"/>
             </lv_label>
             <subject_set_int_event subject="meter_ratio_digit_selected_index" value="2" trigger="clicked"/>
         </lv_button>
@@ -82,6 +85,7 @@
                 <style name="me106_text_36_white_center"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_style name="me106_text_on_accent" subject="meter_ratio_digit_selected_index" ref_value="3"/>
             </lv_label>
             <subject_set_int_event subject="meter_ratio_digit_selected_index" value="3" trigger="clicked"/>
         </lv_button>

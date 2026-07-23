@@ -144,6 +144,8 @@ lv_obj_t * screen_harmonic_waveform_create(void)
         lv_obj_set_y(lv_label_9, 43);
         lv_obj_set_width(lv_label_9, 12);
         lv_obj_add_style(lv_label_9, &me106_text_14_blue, 0);
+        lv_obj_bind_style(lv_label_9, &me106_theme_light_phase_a, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_9, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_10 = lv_label_create(page_content);
         lv_label_set_text(lv_label_10, "A流");
@@ -151,6 +153,8 @@ lv_obj_t * screen_harmonic_waveform_create(void)
         lv_obj_set_y(lv_label_10, 43);
         lv_obj_set_width(lv_label_10, 38);
         lv_obj_add_style(lv_label_10, &me106_text_14_blue, 0);
+        lv_obj_bind_style(lv_label_10, &me106_theme_light_phase_a, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_10, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_11 = lv_label_create(page_content);
         lv_label_set_text(lv_label_11, "●");
@@ -158,6 +162,8 @@ lv_obj_t * screen_harmonic_waveform_create(void)
         lv_obj_set_y(lv_label_11, 43);
         lv_obj_set_width(lv_label_11, 12);
         lv_obj_add_style(lv_label_11, &me106_text_14_cyan, 0);
+        lv_obj_bind_style(lv_label_11, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_11, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_12 = lv_label_create(page_content);
         lv_label_set_text(lv_label_12, "B流");
@@ -165,6 +171,8 @@ lv_obj_t * screen_harmonic_waveform_create(void)
         lv_obj_set_y(lv_label_12, 43);
         lv_obj_set_width(lv_label_12, 38);
         lv_obj_add_style(lv_label_12, &me106_text_14_cyan, 0);
+        lv_obj_bind_style(lv_label_12, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_12, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_13 = lv_label_create(page_content);
         lv_label_set_text(lv_label_13, "●");
@@ -172,6 +180,8 @@ lv_obj_t * screen_harmonic_waveform_create(void)
         lv_obj_set_y(lv_label_13, 43);
         lv_obj_set_width(lv_label_13, 12);
         lv_obj_add_style(lv_label_13, &me106_text_14_purple, 0);
+        lv_obj_bind_style(lv_label_13, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_13, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_14 = lv_label_create(page_content);
         lv_label_set_text(lv_label_14, "C流");
@@ -179,6 +189,8 @@ lv_obj_t * screen_harmonic_waveform_create(void)
         lv_obj_set_y(lv_label_14, 43);
         lv_obj_set_width(lv_label_14, 38);
         lv_obj_add_style(lv_label_14, &me106_text_14_purple, 0);
+        lv_obj_bind_style(lv_label_14, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_14, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_15 = lv_label_create(page_content);
         lv_label_set_text(lv_label_15, "V");
@@ -265,8 +277,10 @@ lv_obj_t * screen_harmonic_waveform_create(void)
         lv_obj_set_style_bg_opa(waveform_total_chart, 0, 0);
         lv_obj_set_style_border_width(waveform_total_chart, 0, 0);
         lv_obj_set_style_pad_all(waveform_total_chart, 0, 0);
-        lv_obj_set_style_line_color(waveform_total_chart, lv_color_hex(0x303030), 0);
         lv_obj_set_style_line_opa(waveform_total_chart, 180, 0);
+        lv_obj_add_style(waveform_total_chart, &me106_theme_dark_chart, 0);
+        lv_obj_bind_style(waveform_total_chart, &me106_theme_light_chart, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(waveform_total_chart, &me106_theme_alarm_chart, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(waveform_total_chart, &meter_harmonic_data_state, LV_OBJ_FLAG_HIDDEN, 1);
         lv_obj_add_style(waveform_total_chart, &me106_chart_point_hidden, LV_PART_INDICATOR);
         lv_obj_add_style(waveform_total_chart, &me106_chart_wave_line, LV_PART_ITEMS);

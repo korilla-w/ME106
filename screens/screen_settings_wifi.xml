@@ -67,8 +67,8 @@
                     <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
                     <lv_label text="&#x914D;&#x7F51;&#x6A21;&#x5F0F;" align="center" width="136">
                         <style name="me106_text_16_white_center"/>
-                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_theme_light_on_accent" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_on_accent" subject="meter_theme_index" ref_value="2"/>
                     </lv_label>
                     <subject_set_int_event subject="meter_wifi_page_index" value="1" trigger="clicked"/>
                 </lv_button>
@@ -85,6 +85,8 @@
 
                 <lv_label text="&#x914D;&#x7F51;&#x4E2D;" x="40" y="60" width="80">
                     <style name="me106_text_14_blue"/>
+                    <bind_style name="me106_theme_light_info_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2"/>
                 </lv_label>
                 <lv_label text="&#x8BF7;&#x7528;&#x624B;&#x673A;&#x8FDE;&#x63A5;&#x4E0B;&#x5217;&#x70ED;&#x70B9;" x="40" y="84" width="232">
                     <style name="me106_text_14_gray_8f"/>

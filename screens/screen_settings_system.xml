@@ -11,10 +11,15 @@
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
 
-            <lv_obj name="system_icon_halo" x="24" y="44" width="46" height="46" style_bg_color="0x6366F1" style_bg_opa="54" style_radius="12" style_border_width="0" style_pad_all="0" scrollable="false">
+            <lv_obj name="system_icon_halo" x="24" y="44" width="46" height="46" style_radius="12" style_border_width="0" style_pad_all="0" scrollable="false">
+                <style name="me106_theme_dark_accent_soft"/>
+                <bind_style name="me106_theme_light_accent_soft" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_accent_soft" subject="meter_theme_index" ref_value="2"/>
             </lv_obj>
             <lv_image src="meter_icon_information" x="35" y="55" style_transform_pivot_x="8" style_transform_pivot_y="8" style_transform_scale_x="245" style_transform_scale_y="245">
-                <style name="me106_icon_indigo"/>
+                <style name="me106_theme_dark_accent_icon"/>
+                <bind_style name="me106_theme_light_accent_icon" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_accent_icon" subject="meter_theme_index" ref_value="2"/>
             </lv_image>
             <lv_label bind_text="meter_system_product_name" x="82" y="57" width="94">
                 <style name="me106_text_18_white"/>
@@ -32,6 +37,8 @@
                 </lv_label>
                 <lv_label bind_text="meter_system_fw_version" align="right_mid" x="-12" y="0" width="56">
                     <style name="me106_text_16_cyan"/>
+                    <bind_style name="me106_theme_light_info_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2"/>
                 </lv_label>
             </lv_obj>
 
@@ -41,7 +48,10 @@
                 <bind_style name="me106_theme_alarm_soft_panel" subject="meter_theme_index" ref_value="2"/>
             </lv_obj>
 
-            <lv_obj name="system_hw_dot" x="40" y="117" width="7" height="7" style_radius="4" style_bg_color="0x6366F1" style_bg_opa="255" style_border_width="0" scrollable="false">
+            <lv_obj name="system_hw_dot" x="40" y="117" width="7" height="7" style_radius="4" style_border_width="0" scrollable="false">
+                <style name="me106_btn_flat_blue"/>
+                <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
             </lv_obj>
             <lv_obj name="system_hw_panel" x="56" y="108" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                 <lv_label text="HW" align="left_mid" x="0" y="0" width="72">
@@ -56,7 +66,10 @@
                 </lv_label>
             </lv_obj>
 
-            <lv_obj name="system_feature_dot" x="40" y="141" width="7" height="7" style_radius="4" style_bg_color="0x20D3D5" style_bg_opa="255" style_border_width="0" scrollable="false">
+            <lv_obj name="system_feature_dot" x="40" y="141" width="7" height="7" style_radius="4" style_border_width="0" scrollable="false">
+                <style name="me106_theme_dark_info"/>
+                <bind_style name="me106_theme_light_info" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_info" subject="meter_theme_index" ref_value="2"/>
             </lv_obj>
             <lv_obj name="system_feature_panel" x="56" y="132" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                 <lv_label text="FEATURE" align="left_mid" x="0" y="0" width="82">
@@ -71,7 +84,10 @@
                 </lv_label>
             </lv_obj>
 
-            <lv_obj name="system_build_dot" x="40" y="165" width="7" height="7" style_radius="4" style_bg_color="0x14B8A6" style_bg_opa="255" style_border_width="0" scrollable="false">
+            <lv_obj name="system_build_dot" x="40" y="165" width="7" height="7" style_radius="4" style_border_width="0" scrollable="false">
+                <style name="me106_theme_dark_success"/>
+                <bind_style name="me106_theme_light_success" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_success" subject="meter_theme_index" ref_value="2"/>
             </lv_obj>
             <lv_obj name="system_build_panel" x="56" y="156" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                 <lv_label text="BUILD" align="left_mid" x="0" y="0" width="82">
@@ -86,7 +102,10 @@
                 </lv_label>
             </lv_obj>
 
-            <lv_obj name="system_runtime_dot" x="40" y="189" width="7" height="7" style_radius="4" style_bg_color="0xF59E0B" style_bg_opa="255" style_border_width="0" scrollable="false">
+            <lv_obj name="system_runtime_dot" x="40" y="189" width="7" height="7" style_radius="4" style_border_width="0" scrollable="false">
+                <style name="me106_theme_dark_warning"/>
+                <bind_style name="me106_theme_light_warning" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_warning" subject="meter_theme_index" ref_value="2"/>
             </lv_obj>
             <lv_obj name="system_runtime_panel" x="56" y="180" width="224" height="22" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                 <lv_label text="&#x8FD0;&#x884C;&#x65F6;&#x957F;" align="left_mid" x="0" y="0" width="82">

@@ -93,9 +93,11 @@
 				style_bg_opa="0"
 				style_border_width="0"
 				style_pad_all="0"
-				style_line_color="0x303030"
 				style_line_opa="180"
 			>
+				<style name="me106_theme_dark_chart"/>
+				<bind_style name="me106_theme_light_chart" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_chart" subject="meter_theme_index" ref_value="2"/>
 				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="1" />
 				<style name="me106_chart_point_hidden" selector="indicator" />
 				<style name="me106_chart_wave_line" selector="items" />

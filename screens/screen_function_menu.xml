@@ -54,6 +54,7 @@
                         <style name="me106_icon_white"/>
                         <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_icon_white" subject="meter_function_menu_selected_index" ref_value="0"/>
                     </lv_image>
                     <lv_label text="&#x8C10;&#x6CE2;&#x9891;&#x8C31;" align="left_mid" x="40" y="0" width="160">
                         <style name="me106_text_16_gray_d8"/>
@@ -61,11 +62,12 @@
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_16_white" subject="meter_function_menu_selected_index" ref_value="0"/>
                     </lv_label>
-                    <lv_label text="&#x203A;" align="right_mid" x="-14" y="-1" width="14">
-                        <style name="me106_text_18_white_center"/>
-                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
-                    </lv_label>
+                    <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90">
+                        <style name="me106_icon_white"/>
+                        <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_icon_white" subject="meter_function_menu_selected_index" ref_value="0"/>
+                    </lv_image>
                     <!-- 锁定时覆盖并拦截父按钮点击；正常跳转仍由父按钮的 screen_create_event 负责。 -->
                     <lv_button name="function_item_harmonic_lock" x="0" y="0" width="270" height="40" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0" scrollable="false">
                         <bind_flag_if_not_eq subject="meter_feature_harmonics_locked" flag="hidden" ref_value="1"/>
@@ -74,6 +76,7 @@
                             <style name="me106_text_14_white"/>
                             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_style name="me106_text_14_white" subject="meter_function_menu_selected_index" ref_value="0"/>
                         </lv_label>
                     </lv_button>
                 </lv_button>
@@ -93,6 +96,7 @@
                         <style name="me106_icon_white"/>
                         <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_icon_white" subject="meter_function_menu_selected_index" ref_value="1"/>
                     </lv_image>
                     <lv_label text="&#x6CE2;&#x5F62;&#x66F2;&#x7EBF;" align="left_mid" x="40" y="0" width="160">
                         <style name="me106_text_16_gray_d8"/>
@@ -100,11 +104,12 @@
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_16_white" subject="meter_function_menu_selected_index" ref_value="1"/>
                     </lv_label>
-                    <lv_label text="&#x203A;" align="right_mid" x="-14" y="-1" width="14">
-                        <style name="me106_text_18_white_center"/>
-                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
-                    </lv_label>
+                    <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90">
+                        <style name="me106_icon_white"/>
+                        <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_icon_white" subject="meter_function_menu_selected_index" ref_value="1"/>
+                    </lv_image>
                     <!-- 波形同属谐波裁剪范围，锁定覆盖层只提交特殊动作意图。 -->
                     <lv_button name="function_item_waveform_lock" x="0" y="0" width="270" height="40" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0" scrollable="false">
                         <bind_flag_if_not_eq subject="meter_feature_harmonics_locked" flag="hidden" ref_value="1"/>
@@ -113,6 +118,7 @@
                             <style name="me106_text_14_white"/>
                             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_style name="me106_text_14_white" subject="meter_function_menu_selected_index" ref_value="1"/>
                         </lv_label>
                     </lv_button>
                 </lv_button>
@@ -132,6 +138,7 @@
                         <style name="me106_icon_white"/>
                         <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_icon_white" subject="meter_function_menu_selected_index" ref_value="2"/>
                     </lv_image>
                     <lv_label text="&#x7535;&#x80FD;&#x8D28;&#x91CF;&#x5206;&#x6790;" align="left_mid" x="40" y="0" width="180">
                         <style name="me106_text_16_gray_d8"/>
@@ -139,11 +146,12 @@
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_16_white" subject="meter_function_menu_selected_index" ref_value="2"/>
                     </lv_label>
-                    <lv_label text="&#x203A;" align="right_mid" x="-14" y="-1" width="14">
-                        <style name="me106_text_18_white_center"/>
-                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
-                    </lv_label>
+                    <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90">
+                        <style name="me106_icon_white"/>
+                        <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_icon_white" subject="meter_function_menu_selected_index" ref_value="2"/>
+                    </lv_image>
                 </lv_button>
 
             </lv_obj>

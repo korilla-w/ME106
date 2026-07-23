@@ -55,11 +55,12 @@ lv_obj_t * screen_settings_factory_reset_create(void)
         lv_obj_set_y(factory_modal_layer, 0);
         lv_obj_set_width(factory_modal_layer, 320);
         lv_obj_set_height(factory_modal_layer, 207);
-        lv_obj_set_style_bg_color(factory_modal_layer, lv_color_hex(0x000000), 0);
-        lv_obj_set_style_bg_opa(factory_modal_layer, 190, 0);
         lv_obj_set_style_border_width(factory_modal_layer, 0, 0);
         lv_obj_set_style_pad_all(factory_modal_layer, 0, 0);
         lv_obj_set_flag(factory_modal_layer, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(factory_modal_layer, &me106_theme_dark_modal_overlay, 0);
+        lv_obj_bind_style(factory_modal_layer, &me106_theme_light_modal_overlay, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(factory_modal_layer, &me106_theme_alarm_modal_overlay, 0, &meter_theme_index, 2);
 
         lv_obj_t * factory_dialog = lv_obj_create(lv_obj_0);
         lv_obj_set_name(factory_dialog, "factory_dialog");
@@ -67,14 +68,12 @@ lv_obj_t * screen_settings_factory_reset_create(void)
         lv_obj_set_y(factory_dialog, 36);
         lv_obj_set_width(factory_dialog, 260);
         lv_obj_set_height(factory_dialog, 150);
-        lv_obj_set_style_bg_color(factory_dialog, lv_color_hex(0x242424), 0);
-        lv_obj_set_style_bg_opa(factory_dialog, 255, 0);
-        lv_obj_set_style_border_width(factory_dialog, 1, 0);
-        lv_obj_set_style_border_color(factory_dialog, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_border_opa(factory_dialog, 255, 0);
         lv_obj_set_style_radius(factory_dialog, 8, 0);
         lv_obj_set_style_pad_all(factory_dialog, 0, 0);
         lv_obj_set_flag(factory_dialog, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(factory_dialog, &me106_theme_dark_dialog, 0);
+        lv_obj_bind_style(factory_dialog, &me106_theme_light_dialog, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(factory_dialog, &me106_theme_alarm_dialog, 0, &meter_theme_index, 2);
         lv_obj_t * lv_label_0 = lv_label_create(factory_dialog);
         lv_label_set_text(lv_label_0, "恢复出厂设置？");
         lv_obj_set_x(lv_label_0, 18);
@@ -118,8 +117,8 @@ lv_obj_t * screen_settings_factory_reset_create(void)
         lv_obj_set_align(lv_label_3, LV_ALIGN_CENTER);
         lv_obj_set_width(lv_label_3, 96);
         lv_obj_add_style(lv_label_3, &me106_text_16_white_center, 0);
-        lv_obj_bind_style(lv_label_3, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_3, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_3, &me106_theme_light_on_accent, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_3, &me106_theme_alarm_on_accent, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(factory_cancel_btn, &meter_factory_confirm_index, LV_EVENT_CLICKED, 0);
         lv_obj_add_screen_create_event(factory_cancel_btn, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_FADE_OUT, 105, 0);
@@ -130,12 +129,12 @@ lv_obj_t * screen_settings_factory_reset_create(void)
         lv_obj_set_y(factory_cancel_btn_inactive, 104);
         lv_obj_set_width(factory_cancel_btn_inactive, 96);
         lv_obj_set_height(factory_cancel_btn_inactive, 32);
-        lv_obj_set_style_bg_color(factory_cancel_btn_inactive, lv_color_hex(0x1F1F1F), 0);
-        lv_obj_set_style_bg_opa(factory_cancel_btn_inactive, 255, 0);
-        lv_obj_set_style_border_width(factory_cancel_btn_inactive, 0, 0);
         lv_obj_set_style_radius(factory_cancel_btn_inactive, 6, 0);
         lv_obj_set_style_pad_all(factory_cancel_btn_inactive, 0, 0);
         lv_obj_set_style_shadow_width(factory_cancel_btn_inactive, 0, 0);
+        lv_obj_add_style(factory_cancel_btn_inactive, &me106_theme_dark_inactive, 0);
+        lv_obj_bind_style(factory_cancel_btn_inactive, &me106_theme_light_inactive, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(factory_cancel_btn_inactive, &me106_theme_alarm_inactive, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(factory_cancel_btn_inactive, &meter_factory_confirm_index, LV_OBJ_FLAG_HIDDEN, 1);
         lv_obj_t * lv_label_4 = lv_label_create(factory_cancel_btn_inactive);
         lv_label_set_text(lv_label_4, "取消");
@@ -163,8 +162,8 @@ lv_obj_t * screen_settings_factory_reset_create(void)
         lv_obj_set_align(lv_label_5, LV_ALIGN_CENTER);
         lv_obj_set_width(lv_label_5, 96);
         lv_obj_add_style(lv_label_5, &me106_text_16_white_center, 0);
-        lv_obj_bind_style(lv_label_5, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_5, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(lv_label_5, &me106_theme_light_on_accent, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_5, &me106_theme_alarm_on_accent, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(factory_confirm_btn, &meter_factory_reset_request, LV_EVENT_CLICKED, 1);
         lv_obj_add_screen_create_event(factory_confirm_btn, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_FADE_OUT, 105, 0);
@@ -175,12 +174,12 @@ lv_obj_t * screen_settings_factory_reset_create(void)
         lv_obj_set_y(factory_confirm_btn_inactive, 104);
         lv_obj_set_width(factory_confirm_btn_inactive, 96);
         lv_obj_set_height(factory_confirm_btn_inactive, 32);
-        lv_obj_set_style_bg_color(factory_confirm_btn_inactive, lv_color_hex(0x1F1F1F), 0);
-        lv_obj_set_style_bg_opa(factory_confirm_btn_inactive, 255, 0);
-        lv_obj_set_style_border_width(factory_confirm_btn_inactive, 0, 0);
         lv_obj_set_style_radius(factory_confirm_btn_inactive, 6, 0);
         lv_obj_set_style_pad_all(factory_confirm_btn_inactive, 0, 0);
         lv_obj_set_style_shadow_width(factory_confirm_btn_inactive, 0, 0);
+        lv_obj_add_style(factory_confirm_btn_inactive, &me106_theme_dark_inactive, 0);
+        lv_obj_bind_style(factory_confirm_btn_inactive, &me106_theme_light_inactive, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(factory_confirm_btn_inactive, &me106_theme_alarm_inactive, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(factory_confirm_btn_inactive, &meter_factory_confirm_index, LV_OBJ_FLAG_HIDDEN, 0);
         lv_obj_t * lv_label_6 = lv_label_create(factory_confirm_btn_inactive);
         lv_label_set_text(lv_label_6, "恢复设置");

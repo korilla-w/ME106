@@ -131,6 +131,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_2, 5);
         lv_obj_set_width(lv_label_2, 84);
         lv_obj_add_style(lv_label_2, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(lv_label_2, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_2, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_2, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 0);
 
         lv_obj_t * lv_label_3 = lv_label_create(alarm_threshold_item_u_step);
@@ -140,6 +142,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_3, -6);
         lv_obj_set_width(lv_label_3, 76);
         lv_obj_add_style(lv_label_3, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(lv_label_3, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_3, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_3, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 0);
 
         lv_obj_t * alarm_threshold_u_step_track = lv_obj_create(alarm_threshold_item_u_step);
@@ -149,11 +153,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_u_step_track, 126);
         lv_obj_set_height(alarm_threshold_u_step_track, 5);
         lv_obj_set_style_radius(alarm_threshold_u_step_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_u_step_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_u_step_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_u_step_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_u_step_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_u_step_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_u_step_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_u_step_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_u_step_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_u_step_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_u_step_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_u_step_fill = lv_obj_create(alarm_threshold_u_step_track);
@@ -163,10 +168,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_u_step_fill, 25);
         lv_obj_set_height(alarm_threshold_u_step_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_u_step_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_u_step_fill, lv_color_hex(0xA78BFA), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_u_step_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_u_step_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_u_step_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_u_step_fill, &me106_theme_dark_secondary, 0);
+        lv_obj_bind_style(alarm_threshold_u_step_fill, &me106_theme_light_secondary, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_u_step_fill, &me106_theme_alarm_secondary, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_u_step, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 0);
 
@@ -200,6 +206,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_4, 5);
         lv_obj_set_width(lv_label_4, 84);
         lv_obj_add_style(lv_label_4, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(lv_label_4, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_4, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_4, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 1);
 
         lv_obj_t * lv_label_5 = lv_label_create(alarm_threshold_item_i_step);
@@ -209,6 +217,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_5, -6);
         lv_obj_set_width(lv_label_5, 76);
         lv_obj_add_style(lv_label_5, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(lv_label_5, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_5, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_5, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 1);
 
         lv_obj_t * alarm_threshold_i_step_track = lv_obj_create(alarm_threshold_item_i_step);
@@ -218,11 +228,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_i_step_track, 126);
         lv_obj_set_height(alarm_threshold_i_step_track, 5);
         lv_obj_set_style_radius(alarm_threshold_i_step_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_i_step_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_i_step_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_i_step_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_i_step_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_i_step_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_i_step_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_i_step_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_i_step_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_i_step_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_i_step_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_i_step_fill = lv_obj_create(alarm_threshold_i_step_track);
@@ -232,10 +243,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_i_step_fill, 25);
         lv_obj_set_height(alarm_threshold_i_step_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_i_step_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_i_step_fill, lv_color_hex(0x20D3D5), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_i_step_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_i_step_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_i_step_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_i_step_fill, &me106_theme_dark_info, 0);
+        lv_obj_bind_style(alarm_threshold_i_step_fill, &me106_theme_light_info, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_i_step_fill, &me106_theme_alarm_info, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_i_step, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 1);
 
@@ -269,6 +281,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_6, 5);
         lv_obj_set_width(lv_label_6, 84);
         lv_obj_add_style(lv_label_6, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(lv_label_6, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_6, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_6, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 2);
 
         lv_obj_t * lv_label_7 = lv_label_create(alarm_threshold_item_p_step);
@@ -278,6 +292,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_7, -6);
         lv_obj_set_width(lv_label_7, 76);
         lv_obj_add_style(lv_label_7, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(lv_label_7, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_7, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_7, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 2);
 
         lv_obj_t * alarm_threshold_p_step_track = lv_obj_create(alarm_threshold_item_p_step);
@@ -287,11 +303,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_p_step_track, 126);
         lv_obj_set_height(alarm_threshold_p_step_track, 5);
         lv_obj_set_style_radius(alarm_threshold_p_step_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_p_step_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_p_step_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_p_step_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_p_step_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_p_step_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_p_step_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_p_step_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_p_step_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_p_step_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_p_step_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_p_step_fill = lv_obj_create(alarm_threshold_p_step_track);
@@ -301,10 +318,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_p_step_fill, 25);
         lv_obj_set_height(alarm_threshold_p_step_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_p_step_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_p_step_fill, lv_color_hex(0xF59E0B), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_p_step_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_p_step_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_p_step_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_p_step_fill, &me106_theme_dark_warning, 0);
+        lv_obj_bind_style(alarm_threshold_p_step_fill, &me106_theme_light_warning, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_p_step_fill, &me106_theme_alarm_warning, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_p_step, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 2);
 
@@ -338,6 +356,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_8, 5);
         lv_obj_set_width(lv_label_8, 84);
         lv_obj_add_style(lv_label_8, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(lv_label_8, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_8, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_8, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 3);
 
         lv_obj_t * lv_label_9 = lv_label_create(alarm_threshold_item_e_inc);
@@ -347,6 +367,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_9, -6);
         lv_obj_set_width(lv_label_9, 92);
         lv_obj_add_style(lv_label_9, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(lv_label_9, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_9, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_9, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 3);
 
         lv_obj_t * alarm_threshold_e_inc_track = lv_obj_create(alarm_threshold_item_e_inc);
@@ -356,11 +378,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_e_inc_track, 126);
         lv_obj_set_height(alarm_threshold_e_inc_track, 5);
         lv_obj_set_style_radius(alarm_threshold_e_inc_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_e_inc_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_e_inc_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_e_inc_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_e_inc_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_e_inc_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_e_inc_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_e_inc_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_e_inc_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_e_inc_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_e_inc_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_e_inc_fill = lv_obj_create(alarm_threshold_e_inc_track);
@@ -370,10 +393,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_e_inc_fill, 25);
         lv_obj_set_height(alarm_threshold_e_inc_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_e_inc_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_e_inc_fill, lv_color_hex(0x32E67A), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_e_inc_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_e_inc_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_e_inc_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_e_inc_fill, &me106_theme_dark_success, 0);
+        lv_obj_bind_style(alarm_threshold_e_inc_fill, &me106_theme_light_success, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_e_inc_fill, &me106_theme_alarm_success, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_e_inc, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 3);
 
@@ -407,6 +431,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_10, 5);
         lv_obj_set_width(lv_label_10, 84);
         lv_obj_add_style(lv_label_10, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(lv_label_10, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_10, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_10, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 4);
 
         lv_obj_t * lv_label_11 = lv_label_create(alarm_threshold_item_lost_volt);
@@ -416,6 +442,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_11, -6);
         lv_obj_set_width(lv_label_11, 92);
         lv_obj_add_style(lv_label_11, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(lv_label_11, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_11, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_11, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 4);
 
         lv_obj_t * alarm_threshold_lost_volt_track = lv_obj_create(alarm_threshold_item_lost_volt);
@@ -425,11 +453,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_lost_volt_track, 126);
         lv_obj_set_height(alarm_threshold_lost_volt_track, 5);
         lv_obj_set_style_radius(alarm_threshold_lost_volt_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_lost_volt_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_lost_volt_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_lost_volt_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_lost_volt_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_lost_volt_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_lost_volt_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_lost_volt_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_lost_volt_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_lost_volt_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_lost_volt_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_lost_volt_fill = lv_obj_create(alarm_threshold_lost_volt_track);
@@ -439,10 +468,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_lost_volt_fill, 9);
         lv_obj_set_height(alarm_threshold_lost_volt_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_lost_volt_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_lost_volt_fill, lv_color_hex(0x8D5CFF), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_lost_volt_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_lost_volt_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_lost_volt_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_lost_volt_fill, &me106_theme_dark_secondary, 0);
+        lv_obj_bind_style(alarm_threshold_lost_volt_fill, &me106_theme_light_secondary, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_lost_volt_fill, &me106_theme_alarm_secondary, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_lost_volt, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 4);
 
@@ -476,6 +506,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_12, 5);
         lv_obj_set_width(lv_label_12, 84);
         lv_obj_add_style(lv_label_12, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(lv_label_12, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_12, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_12, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 5);
 
         lv_obj_t * lv_label_13 = lv_label_create(alarm_threshold_item_sagcfg);
@@ -485,6 +517,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_13, -6);
         lv_obj_set_width(lv_label_13, 84);
         lv_obj_add_style(lv_label_13, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(lv_label_13, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_13, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_13, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 5);
 
         lv_obj_t * alarm_threshold_sagcfg_track = lv_obj_create(alarm_threshold_item_sagcfg);
@@ -494,11 +528,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_sagcfg_track, 126);
         lv_obj_set_height(alarm_threshold_sagcfg_track, 5);
         lv_obj_set_style_radius(alarm_threshold_sagcfg_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_sagcfg_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_sagcfg_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_sagcfg_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_sagcfg_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_sagcfg_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_sagcfg_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_sagcfg_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_sagcfg_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_sagcfg_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_sagcfg_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_sagcfg_fill = lv_obj_create(alarm_threshold_sagcfg_track);
@@ -508,10 +543,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_sagcfg_fill, 45);
         lv_obj_set_height(alarm_threshold_sagcfg_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_sagcfg_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_sagcfg_fill, lv_color_hex(0x6366F1), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_sagcfg_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_sagcfg_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_sagcfg_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_sagcfg_fill, &me106_theme_dark_secondary, 0);
+        lv_obj_bind_style(alarm_threshold_sagcfg_fill, &me106_theme_light_secondary, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_sagcfg_fill, &me106_theme_alarm_secondary, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_sagcfg, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 5);
 
@@ -545,6 +581,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_14, 5);
         lv_obj_set_width(lv_label_14, 84);
         lv_obj_add_style(lv_label_14, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(lv_label_14, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_14, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_14, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 6);
 
         lv_obj_t * lv_label_15 = lv_label_create(alarm_threshold_item_ovlvl);
@@ -554,6 +592,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_15, -6);
         lv_obj_set_width(lv_label_15, 84);
         lv_obj_add_style(lv_label_15, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(lv_label_15, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_15, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_15, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 6);
 
         lv_obj_t * alarm_threshold_ovlvl_track = lv_obj_create(alarm_threshold_item_ovlvl);
@@ -563,11 +603,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_ovlvl_track, 126);
         lv_obj_set_height(alarm_threshold_ovlvl_track, 5);
         lv_obj_set_style_radius(alarm_threshold_ovlvl_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_ovlvl_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_ovlvl_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_ovlvl_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_ovlvl_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_ovlvl_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_ovlvl_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_ovlvl_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_ovlvl_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_ovlvl_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_ovlvl_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_ovlvl_fill = lv_obj_create(alarm_threshold_ovlvl_track);
@@ -577,10 +618,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_ovlvl_fill, 65);
         lv_obj_set_height(alarm_threshold_ovlvl_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_ovlvl_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_ovlvl_fill, lv_color_hex(0xE33C64), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_ovlvl_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_ovlvl_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_ovlvl_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_ovlvl_fill, &me106_theme_dark_danger, 0);
+        lv_obj_bind_style(alarm_threshold_ovlvl_fill, &me106_theme_light_danger, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_ovlvl_fill, &me106_theme_alarm_danger, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_ovlvl, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 6);
 
@@ -614,6 +656,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_16, 5);
         lv_obj_set_width(lv_label_16, 84);
         lv_obj_add_style(lv_label_16, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(lv_label_16, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_16, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_16, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 7);
 
         lv_obj_t * lv_label_17 = lv_label_create(alarm_threshold_item_oilvl);
@@ -623,6 +667,8 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_y(lv_label_17, -6);
         lv_obj_set_width(lv_label_17, 84);
         lv_obj_add_style(lv_label_17, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(lv_label_17, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_label_17, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
         lv_obj_bind_style(lv_label_17, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 7);
 
         lv_obj_t * alarm_threshold_oilvl_track = lv_obj_create(alarm_threshold_item_oilvl);
@@ -632,11 +678,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_oilvl_track, 126);
         lv_obj_set_height(alarm_threshold_oilvl_track, 5);
         lv_obj_set_style_radius(alarm_threshold_oilvl_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_oilvl_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_oilvl_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_oilvl_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_oilvl_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_oilvl_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_oilvl_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_oilvl_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_oilvl_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_oilvl_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_oilvl_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_oilvl_fill = lv_obj_create(alarm_threshold_oilvl_track);
@@ -646,10 +693,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_oilvl_fill, 1);
         lv_obj_set_height(alarm_threshold_oilvl_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_oilvl_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_oilvl_fill, lv_color_hex(0xE33C64), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_oilvl_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_oilvl_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_oilvl_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_oilvl_fill, &me106_theme_dark_danger, 0);
+        lv_obj_bind_style(alarm_threshold_oilvl_fill, &me106_theme_light_danger, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_oilvl_fill, &me106_theme_alarm_danger, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_oilvl, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 7);
 

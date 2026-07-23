@@ -73,7 +73,6 @@ lv_obj_t * screen_paid_harmonic_create(void)
         lv_obj_set_width(paid_harmonic_icon_halo, 60);
         lv_obj_set_height(paid_harmonic_icon_halo, 60);
         lv_obj_set_style_pad_all(paid_harmonic_icon_halo, 0, 0);
-        lv_obj_set_style_border_width(paid_harmonic_icon_halo, 0, 0);
         lv_obj_set_flag(paid_harmonic_icon_halo, LV_OBJ_FLAG_SCROLLABLE, false);
         lv_obj_add_style(paid_harmonic_icon_halo, &me106_panel_gray24_r8, 0);
         lv_obj_bind_style(paid_harmonic_icon_halo, &me106_theme_light_panel, 0, &meter_theme_index, 1);
@@ -86,6 +85,8 @@ lv_obj_t * screen_paid_harmonic_create(void)
         lv_obj_set_style_transform_scale_x(lv_image_0, 150, 0);
         lv_obj_set_style_transform_scale_y(lv_image_0, 150, 0);
         lv_obj_add_style(lv_image_0, &me106_icon_cyan, 0);
+        lv_obj_bind_style(lv_image_0, &me106_theme_light_info_icon, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(lv_image_0, &me106_theme_alarm_info_icon, 0, &meter_theme_index, 2);
 
         lv_obj_t * lv_label_1 = lv_label_create(page_content);
         lv_label_set_text(lv_label_1, "付费功能");
