@@ -1,6 +1,6 @@
 <screen>
     <view width="320" height="240">
-        <style name="me106_fill_gray1f"/>
+        <style name="me106_fill_black"/>
         <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
         <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
         <!-- UI 只展示逻辑层同步过来的版本 subject，不跨层读取芯片或寄存器。 -->
