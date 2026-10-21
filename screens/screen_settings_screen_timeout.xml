@@ -5,13 +5,13 @@
         <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
         <!-- UI 只选择无操作息屏档位；计时、唤醒和背光关闭由逻辑层/执行层处理。 -->
         <lv_obj name="screen_timeout_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
-            <lv_label text="&#x606F;&#x5C4F;&#x65F6;&#x95F4;" x="152" y="17" width="144">
+            <lv_label text="&#x606F;&#x5C4F;&#x65F6;&#x95F4;" x="152" y="17" width="144" name="settings_screen_timeout_timeout_label">
                 <style name="me106_text_16_white_right"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
 
-            <lv_label text="&#x65E0;&#x64CD;&#x4F5C;&#x540E;" x="24" y="24" width="112">
+            <lv_label text="&#x65E0;&#x64CD;&#x4F5C;&#x540E;" x="24" y="24" width="112" name="settings_screen_timeout_timeout_label_2">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
@@ -28,7 +28,7 @@
                         <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
                         <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="0"/>
                     </lv_obj>
-                    <lv_label text="5 &#x5206;&#x949F;" align="center" width="248">
+                    <lv_label text="5 &#x5206;&#x949F;" align="center" width="248" name="settings_screen_timeout_item_5m_tick_5_label">
                         <style name="me106_text_16_gray_ba_center"/>
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -47,7 +47,7 @@
                         <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
                         <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="1"/>
                     </lv_obj>
-                    <lv_label text="15 &#x5206;&#x949F;" align="center" width="248">
+                    <lv_label text="15 &#x5206;&#x949F;" align="center" width="248" name="settings_screen_timeout_item_15m_tick_15_label">
                         <style name="me106_text_16_gray_ba_center"/>
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -66,7 +66,7 @@
                         <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
                         <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="2"/>
                     </lv_obj>
-                    <lv_label text="30 &#x5206;&#x949F;" align="center" width="248">
+                    <lv_label text="30 &#x5206;&#x949F;" align="center" width="248" name="settings_screen_timeout_item_30m_tick_30_label">
                         <style name="me106_text_16_gray_ba_center"/>
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -85,7 +85,7 @@
                         <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
                         <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="3"/>
                     </lv_obj>
-                    <lv_label text="1 &#x5C0F;&#x65F6;" align="center" width="248">
+                    <lv_label text="1 &#x5C0F;&#x65F6;" align="center" width="248" name="settings_screen_timeout_item_1h_tick_1_label">
                         <style name="me106_text_16_gray_ba_center"/>
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -104,7 +104,7 @@
                         <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
                         <bind_flag_if_not_eq subject="meter_screen_timeout_index" flag="hidden" ref_value="4"/>
                     </lv_obj>
-                    <lv_label text="&#x6C38;&#x4E0D;" align="center" width="248">
+                    <lv_label text="&#x6C38;&#x4E0D;" align="center" width="248" name="settings_screen_timeout_item_never_timeout_item_never_label">
                         <style name="me106_text_16_gray_ba_center"/>
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>

@@ -44,7 +44,7 @@ lv_obj_t * screen_settings_ratio_ct_create(void)
         lv_obj_set_width(lv_obj_0, 320);
         lv_obj_set_height(lv_obj_0, 240);
 
-        lv_obj_add_style(lv_obj_0, &me106_fill_gray1f, 0);
+        lv_obj_add_style(lv_obj_0, &me106_fill_black, 0);
         lv_obj_bind_style(lv_obj_0, &me106_theme_light_screen_bg, 0, &meter_theme_index, 1);
         lv_obj_bind_style(lv_obj_0, &me106_theme_alarm_screen_bg, 0, &meter_theme_index, 2);
         lv_obj_add_subject_set_int_event(lv_obj_0, &meter_ratio_digit_selected_index, LV_EVENT_SCREEN_LOADED, 0);
@@ -58,14 +58,15 @@ lv_obj_t * screen_settings_ratio_ct_create(void)
         lv_obj_set_style_border_width(page_content, 0, 0);
         lv_obj_set_style_pad_all(page_content, 0, 0);
         lv_obj_set_flag(page_content, LV_OBJ_FLAG_SCROLLABLE, false);
-        lv_obj_t * lv_label_0 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_0, "CT变比");
-        lv_obj_set_x(lv_label_0, 152);
-        lv_obj_set_y(lv_label_0, 17);
-        lv_obj_set_width(lv_label_0, 144);
-        lv_obj_add_style(lv_label_0, &me106_text_16_white_right, 0);
-        lv_obj_bind_style(lv_label_0, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * settings_ratio_ct_ct_ratio_label = lv_label_create(page_content);
+        lv_label_set_text(settings_ratio_ct_ct_ratio_label, "CT变比");
+        lv_obj_set_x(settings_ratio_ct_ct_ratio_label, 152);
+        lv_obj_set_y(settings_ratio_ct_ct_ratio_label, 17);
+        lv_obj_set_width(settings_ratio_ct_ct_ratio_label, 144);
+        lv_obj_set_name(settings_ratio_ct_ct_ratio_label, "settings_ratio_ct_ct_ratio_label");
+        lv_obj_add_style(settings_ratio_ct_ct_ratio_label, &me106_text_16_white_right, 0);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_label, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_label, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * ct_ratio_digit_0 = lv_button_create(page_content);
         lv_obj_set_name(ct_ratio_digit_0, "ct_ratio_digit_0");
@@ -91,13 +92,15 @@ lv_obj_t * screen_settings_ratio_ct_create(void)
         lv_obj_bind_style(ct_ratio_digit_0_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(ct_ratio_digit_0_selected_bg, &meter_ratio_digit_selected_index, LV_OBJ_FLAG_HIDDEN, 0);
 
-        lv_obj_t * lv_label_1 = lv_label_create(ct_ratio_digit_0);
-        lv_label_bind_text(lv_label_1, &meter_ct_ratio_digit_0, "%d");
-        lv_obj_set_align(lv_label_1, LV_ALIGN_CENTER);
-        lv_obj_set_width(lv_label_1, 48);
-        lv_obj_add_style(lv_label_1, &me106_text_36_white_center, 0);
-        lv_obj_bind_style(lv_label_1, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_1, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * settings_ratio_ct_ct_ratio_digit_0_ratio_digit_0_value = lv_label_create(ct_ratio_digit_0);
+        lv_label_bind_text(settings_ratio_ct_ct_ratio_digit_0_ratio_digit_0_value, &meter_ct_ratio_digit_0, "%d");
+        lv_obj_set_align(settings_ratio_ct_ct_ratio_digit_0_ratio_digit_0_value, LV_ALIGN_CENTER);
+        lv_obj_set_width(settings_ratio_ct_ct_ratio_digit_0_ratio_digit_0_value, 48);
+        lv_obj_set_name(settings_ratio_ct_ct_ratio_digit_0_ratio_digit_0_value, "settings_ratio_ct_ct_ratio_digit_0_ratio_digit_0_value");
+        lv_obj_add_style(settings_ratio_ct_ct_ratio_digit_0_ratio_digit_0_value, &me106_text_36_white_center, 0);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_0_ratio_digit_0_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_0_ratio_digit_0_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_0_ratio_digit_0_value, &me106_text_on_accent, 0, &meter_ratio_digit_selected_index, 0);
 
         lv_obj_add_subject_set_int_event(ct_ratio_digit_0, &meter_ratio_digit_selected_index, LV_EVENT_CLICKED, 0);
 
@@ -125,13 +128,15 @@ lv_obj_t * screen_settings_ratio_ct_create(void)
         lv_obj_bind_style(ct_ratio_digit_1_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(ct_ratio_digit_1_selected_bg, &meter_ratio_digit_selected_index, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_2 = lv_label_create(ct_ratio_digit_1);
-        lv_label_bind_text(lv_label_2, &meter_ct_ratio_digit_1, "%d");
-        lv_obj_set_align(lv_label_2, LV_ALIGN_CENTER);
-        lv_obj_set_width(lv_label_2, 48);
-        lv_obj_add_style(lv_label_2, &me106_text_36_white_center, 0);
-        lv_obj_bind_style(lv_label_2, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_2, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * settings_ratio_ct_ct_ratio_digit_1_ratio_digit_1_value = lv_label_create(ct_ratio_digit_1);
+        lv_label_bind_text(settings_ratio_ct_ct_ratio_digit_1_ratio_digit_1_value, &meter_ct_ratio_digit_1, "%d");
+        lv_obj_set_align(settings_ratio_ct_ct_ratio_digit_1_ratio_digit_1_value, LV_ALIGN_CENTER);
+        lv_obj_set_width(settings_ratio_ct_ct_ratio_digit_1_ratio_digit_1_value, 48);
+        lv_obj_set_name(settings_ratio_ct_ct_ratio_digit_1_ratio_digit_1_value, "settings_ratio_ct_ct_ratio_digit_1_ratio_digit_1_value");
+        lv_obj_add_style(settings_ratio_ct_ct_ratio_digit_1_ratio_digit_1_value, &me106_text_36_white_center, 0);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_1_ratio_digit_1_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_1_ratio_digit_1_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_1_ratio_digit_1_value, &me106_text_on_accent, 0, &meter_ratio_digit_selected_index, 1);
 
         lv_obj_add_subject_set_int_event(ct_ratio_digit_1, &meter_ratio_digit_selected_index, LV_EVENT_CLICKED, 1);
 
@@ -159,13 +164,15 @@ lv_obj_t * screen_settings_ratio_ct_create(void)
         lv_obj_bind_style(ct_ratio_digit_2_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(ct_ratio_digit_2_selected_bg, &meter_ratio_digit_selected_index, LV_OBJ_FLAG_HIDDEN, 2);
 
-        lv_obj_t * lv_label_3 = lv_label_create(ct_ratio_digit_2);
-        lv_label_bind_text(lv_label_3, &meter_ct_ratio_digit_2, "%d");
-        lv_obj_set_align(lv_label_3, LV_ALIGN_CENTER);
-        lv_obj_set_width(lv_label_3, 48);
-        lv_obj_add_style(lv_label_3, &me106_text_36_white_center, 0);
-        lv_obj_bind_style(lv_label_3, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_3, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * settings_ratio_ct_ct_ratio_digit_2_ratio_digit_2_value = lv_label_create(ct_ratio_digit_2);
+        lv_label_bind_text(settings_ratio_ct_ct_ratio_digit_2_ratio_digit_2_value, &meter_ct_ratio_digit_2, "%d");
+        lv_obj_set_align(settings_ratio_ct_ct_ratio_digit_2_ratio_digit_2_value, LV_ALIGN_CENTER);
+        lv_obj_set_width(settings_ratio_ct_ct_ratio_digit_2_ratio_digit_2_value, 48);
+        lv_obj_set_name(settings_ratio_ct_ct_ratio_digit_2_ratio_digit_2_value, "settings_ratio_ct_ct_ratio_digit_2_ratio_digit_2_value");
+        lv_obj_add_style(settings_ratio_ct_ct_ratio_digit_2_ratio_digit_2_value, &me106_text_36_white_center, 0);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_2_ratio_digit_2_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_2_ratio_digit_2_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_2_ratio_digit_2_value, &me106_text_on_accent, 0, &meter_ratio_digit_selected_index, 2);
 
         lv_obj_add_subject_set_int_event(ct_ratio_digit_2, &meter_ratio_digit_selected_index, LV_EVENT_CLICKED, 2);
 
@@ -193,13 +200,15 @@ lv_obj_t * screen_settings_ratio_ct_create(void)
         lv_obj_bind_style(ct_ratio_digit_3_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(ct_ratio_digit_3_selected_bg, &meter_ratio_digit_selected_index, LV_OBJ_FLAG_HIDDEN, 3);
 
-        lv_obj_t * lv_label_4 = lv_label_create(ct_ratio_digit_3);
-        lv_label_bind_text(lv_label_4, &meter_ct_ratio_digit_3, "%d");
-        lv_obj_set_align(lv_label_4, LV_ALIGN_CENTER);
-        lv_obj_set_width(lv_label_4, 48);
-        lv_obj_add_style(lv_label_4, &me106_text_36_white_center, 0);
-        lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * settings_ratio_ct_ct_ratio_digit_3_ratio_digit_3_value = lv_label_create(ct_ratio_digit_3);
+        lv_label_bind_text(settings_ratio_ct_ct_ratio_digit_3_ratio_digit_3_value, &meter_ct_ratio_digit_3, "%d");
+        lv_obj_set_align(settings_ratio_ct_ct_ratio_digit_3_ratio_digit_3_value, LV_ALIGN_CENTER);
+        lv_obj_set_width(settings_ratio_ct_ct_ratio_digit_3_ratio_digit_3_value, 48);
+        lv_obj_set_name(settings_ratio_ct_ct_ratio_digit_3_ratio_digit_3_value, "settings_ratio_ct_ct_ratio_digit_3_ratio_digit_3_value");
+        lv_obj_add_style(settings_ratio_ct_ct_ratio_digit_3_ratio_digit_3_value, &me106_text_36_white_center, 0);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_3_ratio_digit_3_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_3_ratio_digit_3_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_ratio_ct_ct_ratio_digit_3_ratio_digit_3_value, &me106_text_on_accent, 0, &meter_ratio_digit_selected_index, 3);
 
         lv_obj_add_subject_set_int_event(ct_ratio_digit_3, &meter_ratio_digit_selected_index, LV_EVENT_CLICKED, 3);
 

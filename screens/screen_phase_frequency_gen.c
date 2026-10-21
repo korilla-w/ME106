@@ -76,30 +76,33 @@ lv_obj_t * screen_phase_frequency_create(void)
         lv_obj_set_x(phase_brand_logo, 20);
         lv_obj_set_y(phase_brand_logo, 17);
 
-        lv_obj_t * lv_label_0 = lv_label_create(phase_header);
-        lv_label_set_text(lv_label_0, "相角和频率");
-        lv_obj_set_x(lv_label_0, 156);
-        lv_obj_set_y(lv_label_0, 17);
-        lv_obj_set_width(lv_label_0, 140);
-        lv_obj_add_style(lv_label_0, &me106_text_16_white_right, 0);
-        lv_obj_bind_style(lv_label_0, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_frequency_phase_label = lv_label_create(phase_header);
+        lv_label_set_text(phase_frequency_phase_label, "相角和频率");
+        lv_obj_set_x(phase_frequency_phase_label, 156);
+        lv_obj_set_y(phase_frequency_phase_label, 17);
+        lv_obj_set_width(phase_frequency_phase_label, 140);
+        lv_obj_set_name(phase_frequency_phase_label, "phase_frequency_phase_label");
+        lv_obj_add_style(phase_frequency_phase_label, &me106_text_16_white_right, 0);
+        lv_obj_bind_style(phase_frequency_phase_label, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_frequency_phase_label, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_1 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_1, "A相电流°");
-        lv_obj_set_x(lv_label_1, 24);
-        lv_obj_set_y(lv_label_1, 55);
-        lv_obj_add_style(lv_label_1, &me106_text_16_yellow, 0);
-        lv_obj_bind_style(lv_label_1, &me106_theme_light_phase_a, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_1, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_frequency_phase_acurrentdegree_label = lv_label_create(page_content);
+        lv_label_set_text(phase_frequency_phase_acurrentdegree_label, "A相电流°");
+        lv_obj_set_x(phase_frequency_phase_acurrentdegree_label, 24);
+        lv_obj_set_y(phase_frequency_phase_acurrentdegree_label, 55);
+        lv_obj_set_name(phase_frequency_phase_acurrentdegree_label, "phase_frequency_phase_acurrentdegree_label");
+        lv_obj_add_style(phase_frequency_phase_acurrentdegree_label, &me106_text_16_yellow, 0);
+        lv_obj_bind_style(phase_frequency_phase_acurrentdegree_label, &me106_theme_light_phase_a, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_frequency_phase_acurrentdegree_label, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_2 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_2, "0.00");
-        lv_obj_set_x(lv_label_2, 24);
-        lv_obj_set_y(lv_label_2, 77);
-        lv_obj_add_style(lv_label_2, &me106_text_18_white, 0);
-        lv_obj_bind_style(lv_label_2, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_2, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_current_angle_a_value = lv_label_create(page_content);
+        lv_obj_set_name(phase_current_angle_a_value, "phase_current_angle_a_value");
+        lv_label_set_text(phase_current_angle_a_value, "0.00");
+        lv_obj_set_x(phase_current_angle_a_value, 24);
+        lv_obj_set_y(phase_current_angle_a_value, 77);
+        lv_obj_add_style(phase_current_angle_a_value, &me106_text_18_white, 0);
+        lv_obj_bind_style(phase_current_angle_a_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_current_angle_a_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * phase_a_current_angle_issue = lv_image_create(page_content);
         lv_obj_set_name(phase_a_current_angle_issue, "phase_a_current_angle_issue");
@@ -108,21 +111,23 @@ lv_obj_t * screen_phase_frequency_create(void)
         lv_obj_set_y(phase_a_current_angle_issue, 58);
         lv_obj_bind_flag_if_not_eq(phase_a_current_angle_issue, &meter_phase_a_current_angle_issue, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_3 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_3, "B相电流°");
-        lv_obj_set_x(lv_label_3, 123);
-        lv_obj_set_y(lv_label_3, 55);
-        lv_obj_add_style(lv_label_3, &me106_text_16_green, 0);
-        lv_obj_bind_style(lv_label_3, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_3, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_frequency_phase_bcurrentdegree_label = lv_label_create(page_content);
+        lv_label_set_text(phase_frequency_phase_bcurrentdegree_label, "B相电流°");
+        lv_obj_set_x(phase_frequency_phase_bcurrentdegree_label, 123);
+        lv_obj_set_y(phase_frequency_phase_bcurrentdegree_label, 55);
+        lv_obj_set_name(phase_frequency_phase_bcurrentdegree_label, "phase_frequency_phase_bcurrentdegree_label");
+        lv_obj_add_style(phase_frequency_phase_bcurrentdegree_label, &me106_text_16_green, 0);
+        lv_obj_bind_style(phase_frequency_phase_bcurrentdegree_label, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_frequency_phase_bcurrentdegree_label, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_4 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_4, "0.00");
-        lv_obj_set_x(lv_label_4, 123);
-        lv_obj_set_y(lv_label_4, 77);
-        lv_obj_add_style(lv_label_4, &me106_text_18_white, 0);
-        lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_current_angle_b_value = lv_label_create(page_content);
+        lv_obj_set_name(phase_current_angle_b_value, "phase_current_angle_b_value");
+        lv_label_set_text(phase_current_angle_b_value, "0.00");
+        lv_obj_set_x(phase_current_angle_b_value, 123);
+        lv_obj_set_y(phase_current_angle_b_value, 77);
+        lv_obj_add_style(phase_current_angle_b_value, &me106_text_18_white, 0);
+        lv_obj_bind_style(phase_current_angle_b_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_current_angle_b_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * phase_b_current_angle_issue = lv_image_create(page_content);
         lv_obj_set_name(phase_b_current_angle_issue, "phase_b_current_angle_issue");
@@ -131,21 +136,23 @@ lv_obj_t * screen_phase_frequency_create(void)
         lv_obj_set_y(phase_b_current_angle_issue, 58);
         lv_obj_bind_flag_if_not_eq(phase_b_current_angle_issue, &meter_phase_b_current_angle_issue, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_5 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_5, "C相电流°");
-        lv_obj_set_x(lv_label_5, 221);
-        lv_obj_set_y(lv_label_5, 55);
-        lv_obj_add_style(lv_label_5, &me106_text_16_red, 0);
-        lv_obj_bind_style(lv_label_5, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_5, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_frequency_phase_ccurrentdegree_label = lv_label_create(page_content);
+        lv_label_set_text(phase_frequency_phase_ccurrentdegree_label, "C相电流°");
+        lv_obj_set_x(phase_frequency_phase_ccurrentdegree_label, 221);
+        lv_obj_set_y(phase_frequency_phase_ccurrentdegree_label, 55);
+        lv_obj_set_name(phase_frequency_phase_ccurrentdegree_label, "phase_frequency_phase_ccurrentdegree_label");
+        lv_obj_add_style(phase_frequency_phase_ccurrentdegree_label, &me106_text_16_red, 0);
+        lv_obj_bind_style(phase_frequency_phase_ccurrentdegree_label, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_frequency_phase_ccurrentdegree_label, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_6 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_6, "0.00");
-        lv_obj_set_x(lv_label_6, 221);
-        lv_obj_set_y(lv_label_6, 77);
-        lv_obj_add_style(lv_label_6, &me106_text_18_white, 0);
-        lv_obj_bind_style(lv_label_6, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_6, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_current_angle_c_value = lv_label_create(page_content);
+        lv_obj_set_name(phase_current_angle_c_value, "phase_current_angle_c_value");
+        lv_label_set_text(phase_current_angle_c_value, "0.00");
+        lv_obj_set_x(phase_current_angle_c_value, 221);
+        lv_obj_set_y(phase_current_angle_c_value, 77);
+        lv_obj_add_style(phase_current_angle_c_value, &me106_text_18_white, 0);
+        lv_obj_bind_style(phase_current_angle_c_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_current_angle_c_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * phase_c_current_angle_issue = lv_image_create(page_content);
         lv_obj_set_name(phase_c_current_angle_issue, "phase_c_current_angle_issue");
@@ -154,21 +161,23 @@ lv_obj_t * screen_phase_frequency_create(void)
         lv_obj_set_y(phase_c_current_angle_issue, 58);
         lv_obj_bind_flag_if_not_eq(phase_c_current_angle_issue, &meter_phase_c_current_angle_issue, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_7 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_7, "频率(Hz)");
-        lv_obj_set_x(lv_label_7, 23);
-        lv_obj_set_y(lv_label_7, 120);
-        lv_obj_add_style(lv_label_7, &me106_text_16_gray_ba, 0);
-        lv_obj_bind_style(lv_label_7, &me106_theme_light_muted, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_7, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_frequency_hz_label = lv_label_create(page_content);
+        lv_label_set_text(phase_frequency_hz_label, "频率(Hz)");
+        lv_obj_set_x(phase_frequency_hz_label, 23);
+        lv_obj_set_y(phase_frequency_hz_label, 120);
+        lv_obj_set_name(phase_frequency_hz_label, "phase_frequency_hz_label");
+        lv_obj_add_style(phase_frequency_hz_label, &me106_text_16_gray_ba, 0);
+        lv_obj_bind_style(phase_frequency_hz_label, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_frequency_hz_label, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_8 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_8, "0.00");
-        lv_obj_set_x(lv_label_8, 23);
-        lv_obj_set_y(lv_label_8, 142);
-        lv_obj_add_style(lv_label_8, &me106_text_18_white, 0);
-        lv_obj_bind_style(lv_label_8, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_8, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_frequency_value = lv_label_create(page_content);
+        lv_obj_set_name(phase_frequency_value, "phase_frequency_value");
+        lv_label_set_text(phase_frequency_value, "0.00");
+        lv_obj_set_x(phase_frequency_value, 23);
+        lv_obj_set_y(phase_frequency_value, 142);
+        lv_obj_add_style(phase_frequency_value, &me106_text_18_white, 0);
+        lv_obj_bind_style(phase_frequency_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_frequency_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * phase_frequency_issue = lv_image_create(page_content);
         lv_obj_set_name(phase_frequency_issue, "phase_frequency_issue");
@@ -177,21 +186,23 @@ lv_obj_t * screen_phase_frequency_create(void)
         lv_obj_set_y(phase_frequency_issue, 123);
         lv_obj_bind_flag_if_not_eq(phase_frequency_issue, &meter_phase_frequency_issue, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_9 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_9, "B相电压°");
-        lv_obj_set_x(lv_label_9, 123);
-        lv_obj_set_y(lv_label_9, 120);
-        lv_obj_add_style(lv_label_9, &me106_text_16_green, 0);
-        lv_obj_bind_style(lv_label_9, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_9, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_frequency_phase_bvoltagedegree_label = lv_label_create(page_content);
+        lv_label_set_text(phase_frequency_phase_bvoltagedegree_label, "B相电压°");
+        lv_obj_set_x(phase_frequency_phase_bvoltagedegree_label, 123);
+        lv_obj_set_y(phase_frequency_phase_bvoltagedegree_label, 120);
+        lv_obj_set_name(phase_frequency_phase_bvoltagedegree_label, "phase_frequency_phase_bvoltagedegree_label");
+        lv_obj_add_style(phase_frequency_phase_bvoltagedegree_label, &me106_text_16_green, 0);
+        lv_obj_bind_style(phase_frequency_phase_bvoltagedegree_label, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_frequency_phase_bvoltagedegree_label, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_10 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_10, "0.00");
-        lv_obj_set_x(lv_label_10, 123);
-        lv_obj_set_y(lv_label_10, 142);
-        lv_obj_add_style(lv_label_10, &me106_text_18_white, 0);
-        lv_obj_bind_style(lv_label_10, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_10, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_voltage_angle_b_value = lv_label_create(page_content);
+        lv_obj_set_name(phase_voltage_angle_b_value, "phase_voltage_angle_b_value");
+        lv_label_set_text(phase_voltage_angle_b_value, "0.00");
+        lv_obj_set_x(phase_voltage_angle_b_value, 123);
+        lv_obj_set_y(phase_voltage_angle_b_value, 142);
+        lv_obj_add_style(phase_voltage_angle_b_value, &me106_text_18_white, 0);
+        lv_obj_bind_style(phase_voltage_angle_b_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_voltage_angle_b_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * phase_b_voltage_angle_issue = lv_image_create(page_content);
         lv_obj_set_name(phase_b_voltage_angle_issue, "phase_b_voltage_angle_issue");
@@ -200,21 +211,23 @@ lv_obj_t * screen_phase_frequency_create(void)
         lv_obj_set_y(phase_b_voltage_angle_issue, 123);
         lv_obj_bind_flag_if_not_eq(phase_b_voltage_angle_issue, &meter_phase_b_voltage_angle_issue, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_11 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_11, "C相电压°");
-        lv_obj_set_x(lv_label_11, 221);
-        lv_obj_set_y(lv_label_11, 120);
-        lv_obj_add_style(lv_label_11, &me106_text_16_red, 0);
-        lv_obj_bind_style(lv_label_11, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_11, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_frequency_phase_cvoltagedegree_label = lv_label_create(page_content);
+        lv_label_set_text(phase_frequency_phase_cvoltagedegree_label, "C相电压°");
+        lv_obj_set_x(phase_frequency_phase_cvoltagedegree_label, 221);
+        lv_obj_set_y(phase_frequency_phase_cvoltagedegree_label, 120);
+        lv_obj_set_name(phase_frequency_phase_cvoltagedegree_label, "phase_frequency_phase_cvoltagedegree_label");
+        lv_obj_add_style(phase_frequency_phase_cvoltagedegree_label, &me106_text_16_red, 0);
+        lv_obj_bind_style(phase_frequency_phase_cvoltagedegree_label, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_frequency_phase_cvoltagedegree_label, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_12 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_12, "0.00");
-        lv_obj_set_x(lv_label_12, 221);
-        lv_obj_set_y(lv_label_12, 142);
-        lv_obj_add_style(lv_label_12, &me106_text_18_white, 0);
-        lv_obj_bind_style(lv_label_12, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_12, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * phase_voltage_angle_c_value = lv_label_create(page_content);
+        lv_obj_set_name(phase_voltage_angle_c_value, "phase_voltage_angle_c_value");
+        lv_label_set_text(phase_voltage_angle_c_value, "0.00");
+        lv_obj_set_x(phase_voltage_angle_c_value, 221);
+        lv_obj_set_y(phase_voltage_angle_c_value, 142);
+        lv_obj_add_style(phase_voltage_angle_c_value, &me106_text_18_white, 0);
+        lv_obj_bind_style(phase_voltage_angle_c_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(phase_voltage_angle_c_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * phase_c_voltage_angle_issue = lv_image_create(page_content);
         lv_obj_set_name(phase_c_voltage_angle_issue, "phase_c_voltage_angle_issue");
@@ -258,7 +271,7 @@ lv_obj_t * screen_phase_frequency_create(void)
         lv_obj_set_style_transform_scale_x(lv_image_0, 110, 0);
         lv_obj_set_style_transform_scale_y(lv_image_0, 110, 0);
 
-        lv_obj_add_screen_create_event(phase_btn_settings, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_FADE_IN, 125, 0);
+        lv_obj_add_screen_create_event(phase_btn_settings, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
 
         lv_obj_t * phase_btn_reserved = lv_button_create(lv_obj_0);
         lv_obj_set_name(phase_btn_reserved, "phase_btn_reserved");
@@ -282,7 +295,7 @@ lv_obj_t * screen_phase_frequency_create(void)
         lv_obj_set_style_transform_scale_x(lv_image_1, 150, 0);
         lv_obj_set_style_transform_scale_y(lv_image_1, 150, 0);
 
-        lv_obj_add_screen_create_event(phase_btn_reserved, LV_EVENT_CLICKED, screen_function_menu_create, LV_SCREEN_LOAD_ANIM_FADE_IN, 125, 0);
+        lv_obj_add_screen_create_event(phase_btn_reserved, LV_EVENT_CLICKED, screen_function_menu_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
 
         lv_obj_t * phase_btn_prev = lv_button_create(lv_obj_0);
         lv_obj_set_name(phase_btn_prev, "phase_btn_prev");

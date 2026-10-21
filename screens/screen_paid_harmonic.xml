@@ -5,32 +5,34 @@
         <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
         <!-- 付费提示页只表达谐波功能开通状态，不接入谐波数据逻辑。 -->
         <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
-            <lv_label text="&#x8C10;&#x6CE2;&#x529F;&#x80FD;" x="170" y="17" width="126">
+            <lv_label text="&#x8C10;&#x6CE2;&#x529F;&#x80FD;" x="170" y="17" width="126" name="paid_harmonic_content_label">
                 <style name="me106_text_16_white_right"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
 
-            <lv_obj name="paid_harmonic_icon_halo" x="130" y="48" width="60" height="60" style_pad_all="0" style_border_width="0" scrollable="false">
+            <lv_obj name="paid_harmonic_icon_halo" x="130" y="48" width="60" height="60" style_pad_all="0" scrollable="false">
                 <style name="me106_panel_gray24_r8"/>
                 <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
                 <lv_image src="meter_icon_harmonic" align="center" style_transform_pivot_x="16" style_transform_pivot_y="16" style_transform_scale_x="150" style_transform_scale_y="150">
                     <style name="me106_icon_cyan"/>
+                    <bind_style name="me106_theme_light_info_icon" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_info_icon" subject="meter_theme_index" ref_value="2"/>
                 </lv_image>
             </lv_obj>
 
-            <lv_label text="&#x4ED8;&#x8D39;&#x529F;&#x80FD;" x="80" y="119" width="160">
+            <lv_label text="&#x4ED8;&#x8D39;&#x529F;&#x80FD;" x="80" y="119" width="160" name="paid_harmonic_content_label_2">
                 <style name="me106_text_18_white_center"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
-            <lv_label text="&#x9700;&#x8981;&#x4ED8;&#x8D39;&#x5347;&#x7EA7;&#x540E;&#x4F7F;&#x7528;" x="50" y="148" width="220">
+            <lv_label text="&#x9700;&#x8981;&#x4ED8;&#x8D39;&#x5347;&#x7EA7;&#x540E;&#x4F7F;&#x7528;" x="50" y="148" width="220" name="paid_harmonic_content_label_3">
                 <style name="me106_text_16_gray_ba_center"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
-            <lv_label text="&#x738B;&#x5DE5;&#xFF1A;13328775236" x="70" y="174" width="180">
+            <lv_label text="&#x738B;&#x5DE5;&#xFF1A;13328775236" x="70" y="174" width="180" name="paid_harmonic_tick_13328775236_label">
                 <style name="me106_text_14_gray_ba_center"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>

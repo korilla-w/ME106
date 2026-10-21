@@ -44,7 +44,7 @@ lv_obj_t * screen_settings_screen_timeout_create(void)
         lv_obj_set_width(lv_obj_0, 320);
         lv_obj_set_height(lv_obj_0, 240);
 
-        lv_obj_add_style(lv_obj_0, &me106_fill_gray1f, 0);
+        lv_obj_add_style(lv_obj_0, &me106_fill_black, 0);
         lv_obj_bind_style(lv_obj_0, &me106_theme_light_screen_bg, 0, &meter_theme_index, 1);
         lv_obj_bind_style(lv_obj_0, &me106_theme_alarm_screen_bg, 0, &meter_theme_index, 2);
         lv_obj_t * screen_timeout_content = lv_obj_create(lv_obj_0);
@@ -57,23 +57,25 @@ lv_obj_t * screen_settings_screen_timeout_create(void)
         lv_obj_set_style_border_width(screen_timeout_content, 0, 0);
         lv_obj_set_style_pad_all(screen_timeout_content, 0, 0);
         lv_obj_set_flag(screen_timeout_content, LV_OBJ_FLAG_SCROLLABLE, false);
-        lv_obj_t * lv_label_0 = lv_label_create(screen_timeout_content);
-        lv_label_set_text(lv_label_0, "息屏时间");
-        lv_obj_set_x(lv_label_0, 152);
-        lv_obj_set_y(lv_label_0, 17);
-        lv_obj_set_width(lv_label_0, 144);
-        lv_obj_add_style(lv_label_0, &me106_text_16_white_right, 0);
-        lv_obj_bind_style(lv_label_0, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * settings_screen_timeout_timeout_label = lv_label_create(screen_timeout_content);
+        lv_label_set_text(settings_screen_timeout_timeout_label, "息屏时间");
+        lv_obj_set_x(settings_screen_timeout_timeout_label, 152);
+        lv_obj_set_y(settings_screen_timeout_timeout_label, 17);
+        lv_obj_set_width(settings_screen_timeout_timeout_label, 144);
+        lv_obj_set_name(settings_screen_timeout_timeout_label, "settings_screen_timeout_timeout_label");
+        lv_obj_add_style(settings_screen_timeout_timeout_label, &me106_text_16_white_right, 0);
+        lv_obj_bind_style(settings_screen_timeout_timeout_label, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_screen_timeout_timeout_label, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_1 = lv_label_create(screen_timeout_content);
-        lv_label_set_text(lv_label_1, "无操作后");
-        lv_obj_set_x(lv_label_1, 24);
-        lv_obj_set_y(lv_label_1, 24);
-        lv_obj_set_width(lv_label_1, 112);
-        lv_obj_add_style(lv_label_1, &me106_text_14_gray_ba, 0);
-        lv_obj_bind_style(lv_label_1, &me106_theme_light_muted, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_1, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_t * settings_screen_timeout_timeout_label_2 = lv_label_create(screen_timeout_content);
+        lv_label_set_text(settings_screen_timeout_timeout_label_2, "无操作后");
+        lv_obj_set_x(settings_screen_timeout_timeout_label_2, 24);
+        lv_obj_set_y(settings_screen_timeout_timeout_label_2, 24);
+        lv_obj_set_width(settings_screen_timeout_timeout_label_2, 112);
+        lv_obj_set_name(settings_screen_timeout_timeout_label_2, "settings_screen_timeout_timeout_label_2");
+        lv_obj_add_style(settings_screen_timeout_timeout_label_2, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(settings_screen_timeout_timeout_label_2, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_screen_timeout_timeout_label_2, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
 
         lv_obj_t * screen_timeout_list = lv_obj_create(screen_timeout_content);
         lv_obj_set_name(screen_timeout_list, "screen_timeout_list");
@@ -110,14 +112,15 @@ lv_obj_t * screen_settings_screen_timeout_create(void)
         lv_obj_bind_style(screen_timeout_item_5m_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(screen_timeout_item_5m_selected_bg, &meter_screen_timeout_index, LV_OBJ_FLAG_HIDDEN, 0);
 
-        lv_obj_t * lv_label_2 = lv_label_create(screen_timeout_item_5m);
-        lv_label_set_text(lv_label_2, "5 分钟");
-        lv_obj_set_align(lv_label_2, LV_ALIGN_CENTER);
-        lv_obj_set_width(lv_label_2, 248);
-        lv_obj_add_style(lv_label_2, &me106_text_16_gray_ba_center, 0);
-        lv_obj_bind_style(lv_label_2, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_2, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(lv_label_2, &me106_text_16_white_center, 0, &meter_screen_timeout_index, 0);
+        lv_obj_t * settings_screen_timeout_item_5m_tick_5_label = lv_label_create(screen_timeout_item_5m);
+        lv_label_set_text(settings_screen_timeout_item_5m_tick_5_label, "5 分钟");
+        lv_obj_set_align(settings_screen_timeout_item_5m_tick_5_label, LV_ALIGN_CENTER);
+        lv_obj_set_width(settings_screen_timeout_item_5m_tick_5_label, 248);
+        lv_obj_set_name(settings_screen_timeout_item_5m_tick_5_label, "settings_screen_timeout_item_5m_tick_5_label");
+        lv_obj_add_style(settings_screen_timeout_item_5m_tick_5_label, &me106_text_16_gray_ba_center, 0);
+        lv_obj_bind_style(settings_screen_timeout_item_5m_tick_5_label, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_screen_timeout_item_5m_tick_5_label, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_screen_timeout_item_5m_tick_5_label, &me106_text_16_white_center, 0, &meter_screen_timeout_index, 0);
 
         lv_obj_add_subject_set_int_event(screen_timeout_item_5m, &meter_screen_timeout_index, LV_EVENT_CLICKED, 0);
 
@@ -145,14 +148,15 @@ lv_obj_t * screen_settings_screen_timeout_create(void)
         lv_obj_bind_style(screen_timeout_item_15m_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(screen_timeout_item_15m_selected_bg, &meter_screen_timeout_index, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_3 = lv_label_create(screen_timeout_item_15m);
-        lv_label_set_text(lv_label_3, "15 分钟");
-        lv_obj_set_align(lv_label_3, LV_ALIGN_CENTER);
-        lv_obj_set_width(lv_label_3, 248);
-        lv_obj_add_style(lv_label_3, &me106_text_16_gray_ba_center, 0);
-        lv_obj_bind_style(lv_label_3, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_3, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(lv_label_3, &me106_text_16_white_center, 0, &meter_screen_timeout_index, 1);
+        lv_obj_t * settings_screen_timeout_item_15m_tick_15_label = lv_label_create(screen_timeout_item_15m);
+        lv_label_set_text(settings_screen_timeout_item_15m_tick_15_label, "15 分钟");
+        lv_obj_set_align(settings_screen_timeout_item_15m_tick_15_label, LV_ALIGN_CENTER);
+        lv_obj_set_width(settings_screen_timeout_item_15m_tick_15_label, 248);
+        lv_obj_set_name(settings_screen_timeout_item_15m_tick_15_label, "settings_screen_timeout_item_15m_tick_15_label");
+        lv_obj_add_style(settings_screen_timeout_item_15m_tick_15_label, &me106_text_16_gray_ba_center, 0);
+        lv_obj_bind_style(settings_screen_timeout_item_15m_tick_15_label, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_screen_timeout_item_15m_tick_15_label, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_screen_timeout_item_15m_tick_15_label, &me106_text_16_white_center, 0, &meter_screen_timeout_index, 1);
 
         lv_obj_add_subject_set_int_event(screen_timeout_item_15m, &meter_screen_timeout_index, LV_EVENT_CLICKED, 1);
 
@@ -180,14 +184,15 @@ lv_obj_t * screen_settings_screen_timeout_create(void)
         lv_obj_bind_style(screen_timeout_item_30m_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(screen_timeout_item_30m_selected_bg, &meter_screen_timeout_index, LV_OBJ_FLAG_HIDDEN, 2);
 
-        lv_obj_t * lv_label_4 = lv_label_create(screen_timeout_item_30m);
-        lv_label_set_text(lv_label_4, "30 分钟");
-        lv_obj_set_align(lv_label_4, LV_ALIGN_CENTER);
-        lv_obj_set_width(lv_label_4, 248);
-        lv_obj_add_style(lv_label_4, &me106_text_16_gray_ba_center, 0);
-        lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(lv_label_4, &me106_text_16_white_center, 0, &meter_screen_timeout_index, 2);
+        lv_obj_t * settings_screen_timeout_item_30m_tick_30_label = lv_label_create(screen_timeout_item_30m);
+        lv_label_set_text(settings_screen_timeout_item_30m_tick_30_label, "30 分钟");
+        lv_obj_set_align(settings_screen_timeout_item_30m_tick_30_label, LV_ALIGN_CENTER);
+        lv_obj_set_width(settings_screen_timeout_item_30m_tick_30_label, 248);
+        lv_obj_set_name(settings_screen_timeout_item_30m_tick_30_label, "settings_screen_timeout_item_30m_tick_30_label");
+        lv_obj_add_style(settings_screen_timeout_item_30m_tick_30_label, &me106_text_16_gray_ba_center, 0);
+        lv_obj_bind_style(settings_screen_timeout_item_30m_tick_30_label, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_screen_timeout_item_30m_tick_30_label, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_screen_timeout_item_30m_tick_30_label, &me106_text_16_white_center, 0, &meter_screen_timeout_index, 2);
 
         lv_obj_add_subject_set_int_event(screen_timeout_item_30m, &meter_screen_timeout_index, LV_EVENT_CLICKED, 2);
 
@@ -215,14 +220,15 @@ lv_obj_t * screen_settings_screen_timeout_create(void)
         lv_obj_bind_style(screen_timeout_item_1h_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(screen_timeout_item_1h_selected_bg, &meter_screen_timeout_index, LV_OBJ_FLAG_HIDDEN, 3);
 
-        lv_obj_t * lv_label_5 = lv_label_create(screen_timeout_item_1h);
-        lv_label_set_text(lv_label_5, "1 小时");
-        lv_obj_set_align(lv_label_5, LV_ALIGN_CENTER);
-        lv_obj_set_width(lv_label_5, 248);
-        lv_obj_add_style(lv_label_5, &me106_text_16_gray_ba_center, 0);
-        lv_obj_bind_style(lv_label_5, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_5, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(lv_label_5, &me106_text_16_white_center, 0, &meter_screen_timeout_index, 3);
+        lv_obj_t * settings_screen_timeout_item_1h_tick_1_label = lv_label_create(screen_timeout_item_1h);
+        lv_label_set_text(settings_screen_timeout_item_1h_tick_1_label, "1 小时");
+        lv_obj_set_align(settings_screen_timeout_item_1h_tick_1_label, LV_ALIGN_CENTER);
+        lv_obj_set_width(settings_screen_timeout_item_1h_tick_1_label, 248);
+        lv_obj_set_name(settings_screen_timeout_item_1h_tick_1_label, "settings_screen_timeout_item_1h_tick_1_label");
+        lv_obj_add_style(settings_screen_timeout_item_1h_tick_1_label, &me106_text_16_gray_ba_center, 0);
+        lv_obj_bind_style(settings_screen_timeout_item_1h_tick_1_label, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_screen_timeout_item_1h_tick_1_label, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_screen_timeout_item_1h_tick_1_label, &me106_text_16_white_center, 0, &meter_screen_timeout_index, 3);
 
         lv_obj_add_subject_set_int_event(screen_timeout_item_1h, &meter_screen_timeout_index, LV_EVENT_CLICKED, 3);
 
@@ -250,14 +256,15 @@ lv_obj_t * screen_settings_screen_timeout_create(void)
         lv_obj_bind_style(screen_timeout_item_never_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(screen_timeout_item_never_selected_bg, &meter_screen_timeout_index, LV_OBJ_FLAG_HIDDEN, 4);
 
-        lv_obj_t * lv_label_6 = lv_label_create(screen_timeout_item_never);
-        lv_label_set_text(lv_label_6, "永不");
-        lv_obj_set_align(lv_label_6, LV_ALIGN_CENTER);
-        lv_obj_set_width(lv_label_6, 248);
-        lv_obj_add_style(lv_label_6, &me106_text_16_gray_ba_center, 0);
-        lv_obj_bind_style(lv_label_6, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_6, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(lv_label_6, &me106_text_16_white_center, 0, &meter_screen_timeout_index, 4);
+        lv_obj_t * settings_screen_timeout_item_never_timeout_item_never_label = lv_label_create(screen_timeout_item_never);
+        lv_label_set_text(settings_screen_timeout_item_never_timeout_item_never_label, "永不");
+        lv_obj_set_align(settings_screen_timeout_item_never_timeout_item_never_label, LV_ALIGN_CENTER);
+        lv_obj_set_width(settings_screen_timeout_item_never_timeout_item_never_label, 248);
+        lv_obj_set_name(settings_screen_timeout_item_never_timeout_item_never_label, "settings_screen_timeout_item_never_timeout_item_never_label");
+        lv_obj_add_style(settings_screen_timeout_item_never_timeout_item_never_label, &me106_text_16_gray_ba_center, 0);
+        lv_obj_bind_style(settings_screen_timeout_item_never_timeout_item_never_label, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_screen_timeout_item_never_timeout_item_never_label, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_screen_timeout_item_never_timeout_item_never_label, &me106_text_16_white_center, 0, &meter_screen_timeout_index, 4);
 
         lv_obj_add_subject_set_int_event(screen_timeout_item_never, &meter_screen_timeout_index, LV_EVENT_CLICKED, 4);
 

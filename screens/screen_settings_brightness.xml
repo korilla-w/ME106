@@ -5,24 +5,24 @@
         <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
         <!-- UI 只更新亮度 subject；背光硬件应用由逻辑层转交执行层处理。 -->
         <lv_obj name="brightness_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
-            <lv_label text="&#x5C4F;&#x5E55;&#x4EAE;&#x5EA6;" x="152" y="17" width="144">
+            <lv_label text="&#x5C4F;&#x5E55;&#x4EAE;&#x5EA6;" x="152" y="17" width="144" name="settings_brightness_brightness_screen_brightness_label">
                 <style name="me106_text_16_white_right"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
 
-            <lv_label text="&#x80CC;&#x5149;&#x4EAE;&#x5EA6;" x="42" y="58" width="104">
+            <lv_label text="&#x80CC;&#x5149;&#x4EAE;&#x5EA6;" x="42" y="58" width="104" name="settings_brightness_brightness_label">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
-            <lv_label bind_text="meter_screen_brightness" bind_text-fmt="%d%%" x="196" y="50" width="72">
+            <lv_label bind_text="meter_screen_brightness" bind_text-fmt="%d%%" x="196" y="50" width="72" name="settings_brightness_brightness_screen_brightness_value">
                 <style name="me106_text_18_white_center"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
 
-            <lv_label text="&#x2039;" x="40" y="105" width="16">
+            <lv_label text="&#x2039;" x="40" y="105" width="16" name="settings_brightness_brightness_label_2">
                 <style name="me106_text_18_white_center"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -33,21 +33,23 @@
                 <bind_style name="me106_theme_alarm_line" subject="meter_theme_index" ref_value="2"/>
                 <style name="me106_slider_indicator" selector="indicator"/>
                 <style name="me106_slider_knob" selector="knob"/>
-
-
+                <bind_style name="me106_theme_light_slider_indicator" subject="meter_theme_index" ref_value="1" selector="indicator"/>
+                <bind_style name="me106_theme_alarm_slider_indicator" subject="meter_theme_index" ref_value="2" selector="indicator"/>
+                <bind_style name="me106_theme_light_slider_knob" subject="meter_theme_index" ref_value="1" selector="knob"/>
+                <bind_style name="me106_theme_alarm_slider_knob" subject="meter_theme_index" ref_value="2" selector="knob"/>
             </lv_slider>
-            <lv_label text="&#x203A;" x="264" y="105" width="16">
-                <style name="me106_text_18_white_center"/>
-                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
-            </lv_label>
+            <lv_image src="meter_arrow_right" x="264" y="105" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="120" style_transform_scale_y="120">
+                <style name="me106_icon_white"/>
+                <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+            </lv_image>
 
-            <lv_label text="LOW" x="68" y="142" width="42">
+            <lv_label text="LOW" x="68" y="142" width="42" name="settings_brightness_brightness_low_label">
                 <style name="me106_text_14_gray_8f"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             </lv_label>
-            <lv_label text="HIGH" x="210" y="142" width="42">
+            <lv_label text="HIGH" x="210" y="142" width="42" name="settings_brightness_brightness_high_label">
                 <style name="me106_text_14_gray_8f"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>

@@ -13,44 +13,44 @@
                 <bind_style name="me106_brand_text_light" subject="meter_theme_index" ref_value="1"/>
             </lv_label>
         </lv_obj>
-        <lv_label text="&#x9996;&#x9875;" x="156" y="17" width="140">
+        <lv_label text="&#x9996;&#x9875;" x="156" y="17" width="140" name="home_home_label">
             <style name="me106_text_16_white_right"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         </lv_obj>
-        <lv_label text="&#x41;&#x76F8;" x="20" y="62">
+        <lv_label text="&#x41;&#x76F8;" x="20" y="62" name="home_phase_a_label">
             <style name="me106_text_18_yellow"/>
             <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="&#x7535;&#x538B;&#x28;&#x56;&#x29;" x="73" y="56">
+        <lv_label text="&#x7535;&#x538B;&#x28;&#x56;&#x29;" x="73" y="56" name="home_voltage_label">
             <style name="me106_text_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="&#x7535;&#x6D41;&#x28;&#x41;&#x29;" x="156" y="56">
+        <lv_label text="&#x7535;&#x6D41;&#x28;&#x41;&#x29;" x="156" y="56" name="home_current_label">
             <style name="me106_text_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="&#x529F;&#x7387;&#x56E0;&#x6570;" x="239" y="56">
+        <lv_label text="&#x529F;&#x7387;&#x56E0;&#x6570;" x="239" y="56" name="home_power_factor_label">
             <style name="me106_text_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         <!-- UI告警点：首页每个电参只保留一个独立图标位，异常聚合交给逻辑层。 -->
-        <lv_label text="0.000" x="73" y="75">
+        <lv_label name="home_voltage_a_value" text="0.000" x="73" y="75">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.0000" x="156" y="75">
+        <lv_label name="home_current_a_value" text="0.0000" x="156" y="75">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.000" x="239" y="75">
+        <lv_label name="home_power_factor_a_value" text="0.000" x="239" y="75">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -59,37 +59,37 @@
         <lv_image name="home_a_current_issue" src="meter_icon_warning" x="211" y="59"><bind_flag_if_not_eq subject="meter_home_a_current_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_image name="home_a_pf_issue" src="meter_icon_warning" x="301" y="59"><bind_flag_if_not_eq subject="meter_home_a_pf_issue" flag="hidden" ref_value="1"/></lv_image>
 
-        <lv_label text="&#x42;&#x76F8;" x="20" y="112">
+        <lv_label text="&#x42;&#x76F8;" x="20" y="112" name="home_phase_b_label">
             <style name="me106_text_18_green"/>
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="&#x7535;&#x538B;&#x28;&#x56;&#x29;" x="73" y="106">
+        <lv_label text="&#x7535;&#x538B;&#x28;&#x56;&#x29;" x="73" y="106" name="home_voltage_label_2">
             <style name="me106_text_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="&#x7535;&#x6D41;&#x28;&#x41;&#x29;" x="156" y="106">
+        <lv_label text="&#x7535;&#x6D41;&#x28;&#x41;&#x29;" x="156" y="106" name="home_current_label_2">
             <style name="me106_text_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="&#x529F;&#x7387;&#x56E0;&#x6570;" x="239" y="106">
+        <lv_label text="&#x529F;&#x7387;&#x56E0;&#x6570;" x="239" y="106" name="home_power_factor_label_2">
             <style name="me106_text_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.000" x="73" y="125">
+        <lv_label name="home_voltage_b_value" text="0.000" x="73" y="125">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.0000" x="156" y="125">
+        <lv_label name="home_current_b_value" text="0.0000" x="156" y="125">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.000" x="239" y="125">
+        <lv_label name="home_power_factor_b_value" text="0.000" x="239" y="125">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -98,37 +98,37 @@
         <lv_image name="home_b_current_issue" src="meter_icon_warning" x="211" y="109"><bind_flag_if_not_eq subject="meter_home_b_current_issue" flag="hidden" ref_value="1"/></lv_image>
         <lv_image name="home_b_pf_issue" src="meter_icon_warning" x="301" y="109"><bind_flag_if_not_eq subject="meter_home_b_pf_issue" flag="hidden" ref_value="1"/></lv_image>
 
-        <lv_label text="&#x43;&#x76F8;" x="20" y="162">
+        <lv_label text="&#x43;&#x76F8;" x="20" y="162" name="home_phase_c_label">
             <style name="me106_text_18_red"/>
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="&#x7535;&#x538B;&#x28;&#x56;&#x29;" x="73" y="156">
+        <lv_label text="&#x7535;&#x538B;&#x28;&#x56;&#x29;" x="73" y="156" name="home_voltage_label_3">
             <style name="me106_text_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="&#x7535;&#x6D41;&#x28;&#x41;&#x29;" x="156" y="156">
+        <lv_label text="&#x7535;&#x6D41;&#x28;&#x41;&#x29;" x="156" y="156" name="home_current_label_3">
             <style name="me106_text_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="&#x529F;&#x7387;&#x56E0;&#x6570;" x="239" y="156">
+        <lv_label text="&#x529F;&#x7387;&#x56E0;&#x6570;" x="239" y="156" name="home_power_factor_label_3">
             <style name="me106_text_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.000" x="73" y="175">
+        <lv_label name="home_voltage_c_value" text="0.000" x="73" y="175">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.0000" x="156" y="175">
+        <lv_label name="home_current_c_value" text="0.0000" x="156" y="175">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.000" x="239" y="175">
+        <lv_label name="home_power_factor_c_value" text="0.000" x="239" y="175">
             <style name="me106_text_16_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -153,7 +153,7 @@
             <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_setting" align="center" x="0" y="0" style_transform_pivot_x="16" style_transform_pivot_y="16" style_transform_scale_x="110" style_transform_scale_y="110"/>
-            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_in" duration="125"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
         </lv_button>
 
         <lv_button name="home_btn_reserved" x="80" y="207" width="79" height="32">
@@ -164,7 +164,7 @@
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_menu" align="center" x="0" y="0" style_transform_pivot_x="12" style_transform_pivot_y="12" style_transform_scale_x="150" style_transform_scale_y="150"/>
-            <lv_obj-screen_create_event screen="screen_function_menu" trigger="clicked" anim_type="fade_in" duration="125"/>
+            <lv_obj-screen_create_event screen="screen_function_menu" trigger="clicked" anim_type="none"/>
         </lv_button>
 
         <lv_button name="home_btn_prev" x="160" y="207" width="79" height="32">

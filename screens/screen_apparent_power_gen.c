@@ -76,30 +76,33 @@ lv_obj_t * screen_apparent_power_create(void)
         lv_obj_set_x(apparent_brand_logo, 20);
         lv_obj_set_y(apparent_brand_logo, 17);
 
-        lv_obj_t * lv_label_0 = lv_label_create(apparent_header);
-        lv_label_set_text(lv_label_0, "视在功率(kVA)");
-        lv_obj_set_x(lv_label_0, 156);
-        lv_obj_set_y(lv_label_0, 17);
-        lv_obj_set_width(lv_label_0, 140);
-        lv_obj_add_style(lv_label_0, &me106_text_16_white_right, 0);
-        lv_obj_bind_style(lv_label_0, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * apparent_power_title_label = lv_label_create(apparent_header);
+        lv_label_set_text(apparent_power_title_label, "视在功率(kVA)");
+        lv_obj_set_x(apparent_power_title_label, 156);
+        lv_obj_set_y(apparent_power_title_label, 17);
+        lv_obj_set_width(apparent_power_title_label, 140);
+        lv_obj_set_name(apparent_power_title_label, "apparent_power_title_label");
+        lv_obj_add_style(apparent_power_title_label, &me106_text_16_white_right, 0);
+        lv_obj_bind_style(apparent_power_title_label, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(apparent_power_title_label, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_1 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_1, "A相");
-        lv_obj_set_x(lv_label_1, 32);
-        lv_obj_set_y(lv_label_1, 55);
-        lv_obj_add_style(lv_label_1, &me106_text_18_yellow, 0);
-        lv_obj_bind_style(lv_label_1, &me106_theme_light_phase_a, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_1, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
+        lv_obj_t * apparent_power_phase_a_label = lv_label_create(page_content);
+        lv_label_set_text(apparent_power_phase_a_label, "A相");
+        lv_obj_set_x(apparent_power_phase_a_label, 32);
+        lv_obj_set_y(apparent_power_phase_a_label, 55);
+        lv_obj_set_name(apparent_power_phase_a_label, "apparent_power_phase_a_label");
+        lv_obj_add_style(apparent_power_phase_a_label, &me106_text_18_yellow, 0);
+        lv_obj_bind_style(apparent_power_phase_a_label, &me106_theme_light_phase_a, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(apparent_power_phase_a_label, &me106_theme_alarm_phase_a, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_2 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_2, "0.000");
-        lv_obj_set_x(lv_label_2, 32);
-        lv_obj_set_y(lv_label_2, 77);
-        lv_obj_add_style(lv_label_2, &me106_text_18_white, 0);
-        lv_obj_bind_style(lv_label_2, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_2, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * apparent_power_a_value = lv_label_create(page_content);
+        lv_obj_set_name(apparent_power_a_value, "apparent_power_a_value");
+        lv_label_set_text(apparent_power_a_value, "0.000");
+        lv_obj_set_x(apparent_power_a_value, 32);
+        lv_obj_set_y(apparent_power_a_value, 77);
+        lv_obj_add_style(apparent_power_a_value, &me106_text_18_white, 0);
+        lv_obj_bind_style(apparent_power_a_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(apparent_power_a_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * apparent_a_power_issue = lv_image_create(page_content);
         lv_obj_set_name(apparent_a_power_issue, "apparent_a_power_issue");
@@ -108,21 +111,23 @@ lv_obj_t * screen_apparent_power_create(void)
         lv_obj_set_y(apparent_a_power_issue, 55);
         lv_obj_bind_flag_if_not_eq(apparent_a_power_issue, &meter_apparent_a_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_3 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_3, "B相");
-        lv_obj_set_x(lv_label_3, 195);
-        lv_obj_set_y(lv_label_3, 55);
-        lv_obj_add_style(lv_label_3, &me106_text_18_green, 0);
-        lv_obj_bind_style(lv_label_3, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_3, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
+        lv_obj_t * apparent_power_phase_b_label = lv_label_create(page_content);
+        lv_label_set_text(apparent_power_phase_b_label, "B相");
+        lv_obj_set_x(apparent_power_phase_b_label, 195);
+        lv_obj_set_y(apparent_power_phase_b_label, 55);
+        lv_obj_set_name(apparent_power_phase_b_label, "apparent_power_phase_b_label");
+        lv_obj_add_style(apparent_power_phase_b_label, &me106_text_18_green, 0);
+        lv_obj_bind_style(apparent_power_phase_b_label, &me106_theme_light_phase_b, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(apparent_power_phase_b_label, &me106_theme_alarm_phase_b, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_4 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_4, "0.000");
-        lv_obj_set_x(lv_label_4, 195);
-        lv_obj_set_y(lv_label_4, 77);
-        lv_obj_add_style(lv_label_4, &me106_text_18_white, 0);
-        lv_obj_bind_style(lv_label_4, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_4, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * apparent_power_b_value = lv_label_create(page_content);
+        lv_obj_set_name(apparent_power_b_value, "apparent_power_b_value");
+        lv_label_set_text(apparent_power_b_value, "0.000");
+        lv_obj_set_x(apparent_power_b_value, 195);
+        lv_obj_set_y(apparent_power_b_value, 77);
+        lv_obj_add_style(apparent_power_b_value, &me106_text_18_white, 0);
+        lv_obj_bind_style(apparent_power_b_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(apparent_power_b_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * apparent_b_power_issue = lv_image_create(page_content);
         lv_obj_set_name(apparent_b_power_issue, "apparent_b_power_issue");
@@ -131,21 +136,23 @@ lv_obj_t * screen_apparent_power_create(void)
         lv_obj_set_y(apparent_b_power_issue, 55);
         lv_obj_bind_flag_if_not_eq(apparent_b_power_issue, &meter_apparent_b_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_5 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_5, "C相");
-        lv_obj_set_x(lv_label_5, 32);
-        lv_obj_set_y(lv_label_5, 122);
-        lv_obj_add_style(lv_label_5, &me106_text_18_red, 0);
-        lv_obj_bind_style(lv_label_5, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_5, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
+        lv_obj_t * apparent_power_phase_c_label = lv_label_create(page_content);
+        lv_label_set_text(apparent_power_phase_c_label, "C相");
+        lv_obj_set_x(apparent_power_phase_c_label, 32);
+        lv_obj_set_y(apparent_power_phase_c_label, 122);
+        lv_obj_set_name(apparent_power_phase_c_label, "apparent_power_phase_c_label");
+        lv_obj_add_style(apparent_power_phase_c_label, &me106_text_18_red, 0);
+        lv_obj_bind_style(apparent_power_phase_c_label, &me106_theme_light_phase_c, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(apparent_power_phase_c_label, &me106_theme_alarm_phase_c, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_6 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_6, "0.000");
-        lv_obj_set_x(lv_label_6, 32);
-        lv_obj_set_y(lv_label_6, 144);
-        lv_obj_add_style(lv_label_6, &me106_text_18_white, 0);
-        lv_obj_bind_style(lv_label_6, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_6, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * apparent_power_c_value = lv_label_create(page_content);
+        lv_obj_set_name(apparent_power_c_value, "apparent_power_c_value");
+        lv_label_set_text(apparent_power_c_value, "0.000");
+        lv_obj_set_x(apparent_power_c_value, 32);
+        lv_obj_set_y(apparent_power_c_value, 144);
+        lv_obj_add_style(apparent_power_c_value, &me106_text_18_white, 0);
+        lv_obj_bind_style(apparent_power_c_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(apparent_power_c_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * apparent_c_power_issue = lv_image_create(page_content);
         lv_obj_set_name(apparent_c_power_issue, "apparent_c_power_issue");
@@ -154,21 +161,23 @@ lv_obj_t * screen_apparent_power_create(void)
         lv_obj_set_y(apparent_c_power_issue, 122);
         lv_obj_bind_flag_if_not_eq(apparent_c_power_issue, &meter_apparent_c_power_issue, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_7 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_7, "合相");
-        lv_obj_set_x(lv_label_7, 195);
-        lv_obj_set_y(lv_label_7, 122);
-        lv_obj_add_style(lv_label_7, &me106_text_18_gray_ba, 0);
-        lv_obj_bind_style(lv_label_7, &me106_theme_light_muted, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_7, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_t * apparent_power_total_label = lv_label_create(page_content);
+        lv_label_set_text(apparent_power_total_label, "合相");
+        lv_obj_set_x(apparent_power_total_label, 195);
+        lv_obj_set_y(apparent_power_total_label, 122);
+        lv_obj_set_name(apparent_power_total_label, "apparent_power_total_label");
+        lv_obj_add_style(apparent_power_total_label, &me106_text_18_gray_ba, 0);
+        lv_obj_bind_style(apparent_power_total_label, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(apparent_power_total_label, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_8 = lv_label_create(page_content);
-        lv_label_set_text(lv_label_8, "0.000");
-        lv_obj_set_x(lv_label_8, 195);
-        lv_obj_set_y(lv_label_8, 144);
-        lv_obj_add_style(lv_label_8, &me106_text_18_white, 0);
-        lv_obj_bind_style(lv_label_8, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_8, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * apparent_power_total_value = lv_label_create(page_content);
+        lv_obj_set_name(apparent_power_total_value, "apparent_power_total_value");
+        lv_label_set_text(apparent_power_total_value, "0.000");
+        lv_obj_set_x(apparent_power_total_value, 195);
+        lv_obj_set_y(apparent_power_total_value, 144);
+        lv_obj_add_style(apparent_power_total_value, &me106_text_18_white, 0);
+        lv_obj_bind_style(apparent_power_total_value, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(apparent_power_total_value, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
         lv_obj_t * apparent_total_power_issue = lv_image_create(page_content);
         lv_obj_set_name(apparent_total_power_issue, "apparent_total_power_issue");
@@ -212,7 +221,7 @@ lv_obj_t * screen_apparent_power_create(void)
         lv_obj_set_style_transform_scale_x(lv_image_0, 110, 0);
         lv_obj_set_style_transform_scale_y(lv_image_0, 110, 0);
 
-        lv_obj_add_screen_create_event(apparent_btn_settings, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_FADE_IN, 125, 0);
+        lv_obj_add_screen_create_event(apparent_btn_settings, LV_EVENT_CLICKED, screen_settings_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
 
         lv_obj_t * apparent_btn_reserved = lv_button_create(lv_obj_0);
         lv_obj_set_name(apparent_btn_reserved, "apparent_btn_reserved");
@@ -236,7 +245,7 @@ lv_obj_t * screen_apparent_power_create(void)
         lv_obj_set_style_transform_scale_x(lv_image_1, 150, 0);
         lv_obj_set_style_transform_scale_y(lv_image_1, 150, 0);
 
-        lv_obj_add_screen_create_event(apparent_btn_reserved, LV_EVENT_CLICKED, screen_function_menu_create, LV_SCREEN_LOAD_ANIM_FADE_IN, 125, 0);
+        lv_obj_add_screen_create_event(apparent_btn_reserved, LV_EVENT_CLICKED, screen_function_menu_create, LV_SCREEN_LOAD_ANIM_NONE, 0, 0);
 
         lv_obj_t * apparent_btn_prev = lv_button_create(lv_obj_0);
         lv_obj_set_name(apparent_btn_prev, "apparent_btn_prev");

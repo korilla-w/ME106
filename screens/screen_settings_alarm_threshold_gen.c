@@ -58,23 +58,25 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_style_border_width(alarm_threshold_content, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_content, 0, 0);
         lv_obj_set_flag(alarm_threshold_content, LV_OBJ_FLAG_SCROLLABLE, false);
-        lv_obj_t * lv_label_0 = lv_label_create(alarm_threshold_content);
-        lv_label_set_text(lv_label_0, "告警阈值");
-        lv_obj_set_x(lv_label_0, 152);
-        lv_obj_set_y(lv_label_0, 17);
-        lv_obj_set_width(lv_label_0, 144);
-        lv_obj_add_style(lv_label_0, &me106_text_16_white_right, 0);
-        lv_obj_bind_style(lv_label_0, &me106_theme_light_text, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_0, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_threshold_label = lv_label_create(alarm_threshold_content);
+        lv_label_set_text(settings_alarm_threshold_alarm_threshold_threshold_label, "告警阈值");
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_threshold_label, 152);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_threshold_label, 17);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_threshold_label, 144);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_threshold_label, "settings_alarm_threshold_alarm_threshold_threshold_label");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_threshold_label, &me106_text_16_white_right, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_threshold_label, &me106_theme_light_text, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_threshold_label, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
 
-        lv_obj_t * lv_label_1 = lv_label_create(alarm_threshold_content);
-        lv_label_set_text(lv_label_1, "仅查看");
-        lv_obj_set_x(lv_label_1, 24);
-        lv_obj_set_y(lv_label_1, 27);
-        lv_obj_set_width(lv_label_1, 70);
-        lv_obj_add_style(lv_label_1, &me106_text_14_gray_ba, 0);
-        lv_obj_bind_style(lv_label_1, &me106_theme_light_muted, 0, &meter_theme_index, 1);
-        lv_obj_bind_style(lv_label_1, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_threshold_label_2 = lv_label_create(alarm_threshold_content);
+        lv_label_set_text(settings_alarm_threshold_alarm_threshold_threshold_label_2, "仅查看");
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_threshold_label_2, 24);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_threshold_label_2, 27);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_threshold_label_2, 70);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_threshold_label_2, "settings_alarm_threshold_alarm_threshold_threshold_label_2");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_threshold_label_2, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_threshold_label_2, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_threshold_label_2, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
 
         lv_obj_t * alarm_threshold_list = lv_obj_create(alarm_threshold_content);
         lv_obj_set_name(alarm_threshold_list, "alarm_threshold_list");
@@ -125,22 +127,28 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_bind_style(alarm_threshold_item_u_step_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(alarm_threshold_item_u_step_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 0);
 
-        lv_obj_t * lv_label_2 = lv_label_create(alarm_threshold_item_u_step);
-        lv_label_set_text(lv_label_2, "电压突变");
-        lv_obj_set_x(lv_label_2, 14);
-        lv_obj_set_y(lv_label_2, 5);
-        lv_obj_set_width(lv_label_2, 84);
-        lv_obj_add_style(lv_label_2, &me106_text_14_gray_ba, 0);
-        lv_obj_bind_style(lv_label_2, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 0);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_u_step_voltage_label = lv_label_create(alarm_threshold_item_u_step);
+        lv_label_set_text(settings_alarm_threshold_alarm_threshold_item_u_step_voltage_label, "电压突变");
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_u_step_voltage_label, 14);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_u_step_voltage_label, 5);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_u_step_voltage_label, 84);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_u_step_voltage_label, "settings_alarm_threshold_alarm_threshold_item_u_step_voltage_label");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_u_step_voltage_label, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_u_step_voltage_label, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_u_step_voltage_label, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_u_step_voltage_label, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 0);
 
-        lv_obj_t * lv_label_3 = lv_label_create(alarm_threshold_item_u_step);
-        lv_label_bind_text(lv_label_3, &meter_alarm_threshold_u_step_value, "%d V");
-        lv_obj_set_align(lv_label_3, LV_ALIGN_RIGHT_MID);
-        lv_obj_set_x(lv_label_3, -40);
-        lv_obj_set_y(lv_label_3, -6);
-        lv_obj_set_width(lv_label_3, 76);
-        lv_obj_add_style(lv_label_3, &me106_text_14_gray_ba_right, 0);
-        lv_obj_bind_style(lv_label_3, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 0);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value = lv_label_create(alarm_threshold_item_u_step);
+        lv_label_bind_text(settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value, &meter_alarm_threshold_u_step_value, "%d V");
+        lv_obj_set_align(settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value, LV_ALIGN_RIGHT_MID);
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value, -40);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value, -6);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value, 76);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value, "settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_u_step_alarm_threshold_u_step_value, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 0);
 
         lv_obj_t * alarm_threshold_u_step_track = lv_obj_create(alarm_threshold_item_u_step);
         lv_obj_set_name(alarm_threshold_u_step_track, "alarm_threshold_u_step_track");
@@ -149,11 +157,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_u_step_track, 126);
         lv_obj_set_height(alarm_threshold_u_step_track, 5);
         lv_obj_set_style_radius(alarm_threshold_u_step_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_u_step_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_u_step_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_u_step_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_u_step_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_u_step_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_u_step_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_u_step_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_u_step_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_u_step_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_u_step_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_u_step_fill = lv_obj_create(alarm_threshold_u_step_track);
@@ -163,10 +172,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_u_step_fill, 25);
         lv_obj_set_height(alarm_threshold_u_step_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_u_step_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_u_step_fill, lv_color_hex(0xA78BFA), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_u_step_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_u_step_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_u_step_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_u_step_fill, &me106_theme_dark_secondary, 0);
+        lv_obj_bind_style(alarm_threshold_u_step_fill, &me106_theme_light_secondary, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_u_step_fill, &me106_theme_alarm_secondary, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_u_step, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 0);
 
@@ -194,22 +204,28 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_bind_style(alarm_threshold_item_i_step_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(alarm_threshold_item_i_step_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 1);
 
-        lv_obj_t * lv_label_4 = lv_label_create(alarm_threshold_item_i_step);
-        lv_label_set_text(lv_label_4, "电流突变");
-        lv_obj_set_x(lv_label_4, 14);
-        lv_obj_set_y(lv_label_4, 5);
-        lv_obj_set_width(lv_label_4, 84);
-        lv_obj_add_style(lv_label_4, &me106_text_14_gray_ba, 0);
-        lv_obj_bind_style(lv_label_4, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 1);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_i_step_current_label = lv_label_create(alarm_threshold_item_i_step);
+        lv_label_set_text(settings_alarm_threshold_alarm_threshold_item_i_step_current_label, "电流突变");
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_i_step_current_label, 14);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_i_step_current_label, 5);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_i_step_current_label, 84);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_i_step_current_label, "settings_alarm_threshold_alarm_threshold_item_i_step_current_label");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_i_step_current_label, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_i_step_current_label, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_i_step_current_label, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_i_step_current_label, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 1);
 
-        lv_obj_t * lv_label_5 = lv_label_create(alarm_threshold_item_i_step);
-        lv_label_bind_text(lv_label_5, &meter_alarm_threshold_i_step_value, "%d A");
-        lv_obj_set_align(lv_label_5, LV_ALIGN_RIGHT_MID);
-        lv_obj_set_x(lv_label_5, -40);
-        lv_obj_set_y(lv_label_5, -6);
-        lv_obj_set_width(lv_label_5, 76);
-        lv_obj_add_style(lv_label_5, &me106_text_14_gray_ba_right, 0);
-        lv_obj_bind_style(lv_label_5, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 1);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value = lv_label_create(alarm_threshold_item_i_step);
+        lv_label_bind_text(settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value, &meter_alarm_threshold_i_step_value, "%d A");
+        lv_obj_set_align(settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value, LV_ALIGN_RIGHT_MID);
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value, -40);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value, -6);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value, 76);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value, "settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_i_step_alarm_threshold_i_step_value, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 1);
 
         lv_obj_t * alarm_threshold_i_step_track = lv_obj_create(alarm_threshold_item_i_step);
         lv_obj_set_name(alarm_threshold_i_step_track, "alarm_threshold_i_step_track");
@@ -218,11 +234,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_i_step_track, 126);
         lv_obj_set_height(alarm_threshold_i_step_track, 5);
         lv_obj_set_style_radius(alarm_threshold_i_step_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_i_step_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_i_step_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_i_step_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_i_step_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_i_step_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_i_step_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_i_step_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_i_step_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_i_step_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_i_step_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_i_step_fill = lv_obj_create(alarm_threshold_i_step_track);
@@ -232,10 +249,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_i_step_fill, 25);
         lv_obj_set_height(alarm_threshold_i_step_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_i_step_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_i_step_fill, lv_color_hex(0x20D3D5), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_i_step_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_i_step_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_i_step_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_i_step_fill, &me106_theme_dark_info, 0);
+        lv_obj_bind_style(alarm_threshold_i_step_fill, &me106_theme_light_info, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_i_step_fill, &me106_theme_alarm_info, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_i_step, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 1);
 
@@ -263,22 +281,28 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_bind_style(alarm_threshold_item_p_step_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(alarm_threshold_item_p_step_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 2);
 
-        lv_obj_t * lv_label_6 = lv_label_create(alarm_threshold_item_p_step);
-        lv_label_set_text(lv_label_6, "功率突变");
-        lv_obj_set_x(lv_label_6, 14);
-        lv_obj_set_y(lv_label_6, 5);
-        lv_obj_set_width(lv_label_6, 84);
-        lv_obj_add_style(lv_label_6, &me106_text_14_gray_ba, 0);
-        lv_obj_bind_style(lv_label_6, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 2);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_p_step_power_label = lv_label_create(alarm_threshold_item_p_step);
+        lv_label_set_text(settings_alarm_threshold_alarm_threshold_item_p_step_power_label, "功率突变");
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_p_step_power_label, 14);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_p_step_power_label, 5);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_p_step_power_label, 84);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_p_step_power_label, "settings_alarm_threshold_alarm_threshold_item_p_step_power_label");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_p_step_power_label, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_p_step_power_label, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_p_step_power_label, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_p_step_power_label, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 2);
 
-        lv_obj_t * lv_label_7 = lv_label_create(alarm_threshold_item_p_step);
-        lv_label_bind_text(lv_label_7, &meter_alarm_threshold_p_step_value, "%d W");
-        lv_obj_set_align(lv_label_7, LV_ALIGN_RIGHT_MID);
-        lv_obj_set_x(lv_label_7, -40);
-        lv_obj_set_y(lv_label_7, -6);
-        lv_obj_set_width(lv_label_7, 76);
-        lv_obj_add_style(lv_label_7, &me106_text_14_gray_ba_right, 0);
-        lv_obj_bind_style(lv_label_7, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 2);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value = lv_label_create(alarm_threshold_item_p_step);
+        lv_label_bind_text(settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value, &meter_alarm_threshold_p_step_value, "%d W");
+        lv_obj_set_align(settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value, LV_ALIGN_RIGHT_MID);
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value, -40);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value, -6);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value, 76);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value, "settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_p_step_alarm_threshold_p_step_value, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 2);
 
         lv_obj_t * alarm_threshold_p_step_track = lv_obj_create(alarm_threshold_item_p_step);
         lv_obj_set_name(alarm_threshold_p_step_track, "alarm_threshold_p_step_track");
@@ -287,11 +311,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_p_step_track, 126);
         lv_obj_set_height(alarm_threshold_p_step_track, 5);
         lv_obj_set_style_radius(alarm_threshold_p_step_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_p_step_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_p_step_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_p_step_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_p_step_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_p_step_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_p_step_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_p_step_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_p_step_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_p_step_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_p_step_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_p_step_fill = lv_obj_create(alarm_threshold_p_step_track);
@@ -301,10 +326,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_p_step_fill, 25);
         lv_obj_set_height(alarm_threshold_p_step_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_p_step_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_p_step_fill, lv_color_hex(0xF59E0B), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_p_step_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_p_step_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_p_step_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_p_step_fill, &me106_theme_dark_warning, 0);
+        lv_obj_bind_style(alarm_threshold_p_step_fill, &me106_theme_light_warning, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_p_step_fill, &me106_theme_alarm_warning, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_p_step, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 2);
 
@@ -332,22 +358,28 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_bind_style(alarm_threshold_item_e_inc_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(alarm_threshold_item_e_inc_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 3);
 
-        lv_obj_t * lv_label_8 = lv_label_create(alarm_threshold_item_e_inc);
-        lv_label_set_text(lv_label_8, "电能增量");
-        lv_obj_set_x(lv_label_8, 14);
-        lv_obj_set_y(lv_label_8, 5);
-        lv_obj_set_width(lv_label_8, 84);
-        lv_obj_add_style(lv_label_8, &me106_text_14_gray_ba, 0);
-        lv_obj_bind_style(lv_label_8, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 3);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_e_inc_energy_label = lv_label_create(alarm_threshold_item_e_inc);
+        lv_label_set_text(settings_alarm_threshold_alarm_threshold_item_e_inc_energy_label, "电能增量");
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_e_inc_energy_label, 14);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_e_inc_energy_label, 5);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_e_inc_energy_label, 84);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_e_inc_energy_label, "settings_alarm_threshold_alarm_threshold_item_e_inc_energy_label");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_e_inc_energy_label, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_e_inc_energy_label, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_e_inc_energy_label, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_e_inc_energy_label, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 3);
 
-        lv_obj_t * lv_label_9 = lv_label_create(alarm_threshold_item_e_inc);
-        lv_label_bind_text(lv_label_9, &meter_alarm_threshold_e_inc_value, "%d kWh");
-        lv_obj_set_align(lv_label_9, LV_ALIGN_RIGHT_MID);
-        lv_obj_set_x(lv_label_9, -40);
-        lv_obj_set_y(lv_label_9, -6);
-        lv_obj_set_width(lv_label_9, 92);
-        lv_obj_add_style(lv_label_9, &me106_text_14_gray_ba_right, 0);
-        lv_obj_bind_style(lv_label_9, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 3);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value = lv_label_create(alarm_threshold_item_e_inc);
+        lv_label_bind_text(settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value, &meter_alarm_threshold_e_inc_value, "%d kWh");
+        lv_obj_set_align(settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value, LV_ALIGN_RIGHT_MID);
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value, -40);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value, -6);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value, 92);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value, "settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_e_inc_alarm_threshold_e_inc_value, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 3);
 
         lv_obj_t * alarm_threshold_e_inc_track = lv_obj_create(alarm_threshold_item_e_inc);
         lv_obj_set_name(alarm_threshold_e_inc_track, "alarm_threshold_e_inc_track");
@@ -356,11 +388,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_e_inc_track, 126);
         lv_obj_set_height(alarm_threshold_e_inc_track, 5);
         lv_obj_set_style_radius(alarm_threshold_e_inc_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_e_inc_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_e_inc_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_e_inc_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_e_inc_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_e_inc_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_e_inc_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_e_inc_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_e_inc_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_e_inc_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_e_inc_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_e_inc_fill = lv_obj_create(alarm_threshold_e_inc_track);
@@ -370,10 +403,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_e_inc_fill, 25);
         lv_obj_set_height(alarm_threshold_e_inc_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_e_inc_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_e_inc_fill, lv_color_hex(0x32E67A), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_e_inc_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_e_inc_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_e_inc_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_e_inc_fill, &me106_theme_dark_success, 0);
+        lv_obj_bind_style(alarm_threshold_e_inc_fill, &me106_theme_light_success, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_e_inc_fill, &me106_theme_alarm_success, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_e_inc, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 3);
 
@@ -401,22 +435,28 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_bind_style(alarm_threshold_item_lost_volt_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(alarm_threshold_item_lost_volt_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 4);
 
-        lv_obj_t * lv_label_10 = lv_label_create(alarm_threshold_item_lost_volt);
-        lv_label_set_text(lv_label_10, "失压时间");
-        lv_obj_set_x(lv_label_10, 14);
-        lv_obj_set_y(lv_label_10, 5);
-        lv_obj_set_width(lv_label_10, 84);
-        lv_obj_add_style(lv_label_10, &me106_text_14_gray_ba, 0);
-        lv_obj_bind_style(lv_label_10, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 4);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_lost_volt_voltage_loss_label = lv_label_create(alarm_threshold_item_lost_volt);
+        lv_label_set_text(settings_alarm_threshold_alarm_threshold_item_lost_volt_voltage_loss_label, "失压时间");
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_lost_volt_voltage_loss_label, 14);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_lost_volt_voltage_loss_label, 5);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_lost_volt_voltage_loss_label, 84);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_lost_volt_voltage_loss_label, "settings_alarm_threshold_alarm_threshold_item_lost_volt_voltage_loss_label");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_lost_volt_voltage_loss_label, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_lost_volt_voltage_loss_label, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_lost_volt_voltage_loss_label, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_lost_volt_voltage_loss_label, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 4);
 
-        lv_obj_t * lv_label_11 = lv_label_create(alarm_threshold_item_lost_volt);
-        lv_label_bind_text(lv_label_11, &meter_alarm_threshold_lost_volt_value, "%d ms");
-        lv_obj_set_align(lv_label_11, LV_ALIGN_RIGHT_MID);
-        lv_obj_set_x(lv_label_11, -40);
-        lv_obj_set_y(lv_label_11, -6);
-        lv_obj_set_width(lv_label_11, 92);
-        lv_obj_add_style(lv_label_11, &me106_text_14_gray_ba_right, 0);
-        lv_obj_bind_style(lv_label_11, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 4);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value = lv_label_create(alarm_threshold_item_lost_volt);
+        lv_label_bind_text(settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value, &meter_alarm_threshold_lost_volt_value, "%d ms");
+        lv_obj_set_align(settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value, LV_ALIGN_RIGHT_MID);
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value, -40);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value, -6);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value, 92);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value, "settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_lost_volt_alarm_threshold_lost_volt_value, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 4);
 
         lv_obj_t * alarm_threshold_lost_volt_track = lv_obj_create(alarm_threshold_item_lost_volt);
         lv_obj_set_name(alarm_threshold_lost_volt_track, "alarm_threshold_lost_volt_track");
@@ -425,11 +465,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_lost_volt_track, 126);
         lv_obj_set_height(alarm_threshold_lost_volt_track, 5);
         lv_obj_set_style_radius(alarm_threshold_lost_volt_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_lost_volt_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_lost_volt_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_lost_volt_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_lost_volt_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_lost_volt_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_lost_volt_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_lost_volt_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_lost_volt_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_lost_volt_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_lost_volt_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_lost_volt_fill = lv_obj_create(alarm_threshold_lost_volt_track);
@@ -439,10 +480,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_lost_volt_fill, 9);
         lv_obj_set_height(alarm_threshold_lost_volt_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_lost_volt_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_lost_volt_fill, lv_color_hex(0x8D5CFF), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_lost_volt_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_lost_volt_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_lost_volt_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_lost_volt_fill, &me106_theme_dark_secondary, 0);
+        lv_obj_bind_style(alarm_threshold_lost_volt_fill, &me106_theme_light_secondary, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_lost_volt_fill, &me106_theme_alarm_secondary, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_lost_volt, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 4);
 
@@ -470,22 +512,28 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_bind_style(alarm_threshold_item_sagcfg_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(alarm_threshold_item_sagcfg_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 5);
 
-        lv_obj_t * lv_label_12 = lv_label_create(alarm_threshold_item_sagcfg);
-        lv_label_set_text(lv_label_12, "欠压");
-        lv_obj_set_x(lv_label_12, 14);
-        lv_obj_set_y(lv_label_12, 5);
-        lv_obj_set_width(lv_label_12, 84);
-        lv_obj_add_style(lv_label_12, &me106_text_14_gray_ba, 0);
-        lv_obj_bind_style(lv_label_12, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 5);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_sagcfg_threshold_item_sagcfg_label = lv_label_create(alarm_threshold_item_sagcfg);
+        lv_label_set_text(settings_alarm_threshold_alarm_threshold_item_sagcfg_threshold_item_sagcfg_label, "欠压");
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_sagcfg_threshold_item_sagcfg_label, 14);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_sagcfg_threshold_item_sagcfg_label, 5);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_sagcfg_threshold_item_sagcfg_label, 84);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_sagcfg_threshold_item_sagcfg_label, "settings_alarm_threshold_alarm_threshold_item_sagcfg_threshold_item_sagcfg_label");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_sagcfg_threshold_item_sagcfg_label, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_sagcfg_threshold_item_sagcfg_label, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_sagcfg_threshold_item_sagcfg_label, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_sagcfg_threshold_item_sagcfg_label, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 5);
 
-        lv_obj_t * lv_label_13 = lv_label_create(alarm_threshold_item_sagcfg);
-        lv_label_bind_text(lv_label_13, &meter_alarm_threshold_sagcfg_value, "%d V");
-        lv_obj_set_align(lv_label_13, LV_ALIGN_RIGHT_MID);
-        lv_obj_set_x(lv_label_13, -40);
-        lv_obj_set_y(lv_label_13, -6);
-        lv_obj_set_width(lv_label_13, 84);
-        lv_obj_add_style(lv_label_13, &me106_text_14_gray_ba_right, 0);
-        lv_obj_bind_style(lv_label_13, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 5);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value = lv_label_create(alarm_threshold_item_sagcfg);
+        lv_label_bind_text(settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value, &meter_alarm_threshold_sagcfg_value, "%d V");
+        lv_obj_set_align(settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value, LV_ALIGN_RIGHT_MID);
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value, -40);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value, -6);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value, 84);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value, "settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_sagcfg_alarm_threshold_sagcfg_value, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 5);
 
         lv_obj_t * alarm_threshold_sagcfg_track = lv_obj_create(alarm_threshold_item_sagcfg);
         lv_obj_set_name(alarm_threshold_sagcfg_track, "alarm_threshold_sagcfg_track");
@@ -494,11 +542,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_sagcfg_track, 126);
         lv_obj_set_height(alarm_threshold_sagcfg_track, 5);
         lv_obj_set_style_radius(alarm_threshold_sagcfg_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_sagcfg_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_sagcfg_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_sagcfg_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_sagcfg_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_sagcfg_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_sagcfg_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_sagcfg_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_sagcfg_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_sagcfg_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_sagcfg_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_sagcfg_fill = lv_obj_create(alarm_threshold_sagcfg_track);
@@ -508,10 +557,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_sagcfg_fill, 45);
         lv_obj_set_height(alarm_threshold_sagcfg_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_sagcfg_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_sagcfg_fill, lv_color_hex(0x6366F1), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_sagcfg_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_sagcfg_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_sagcfg_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_sagcfg_fill, &me106_theme_dark_secondary, 0);
+        lv_obj_bind_style(alarm_threshold_sagcfg_fill, &me106_theme_light_secondary, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_sagcfg_fill, &me106_theme_alarm_secondary, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_sagcfg, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 5);
 
@@ -539,22 +589,28 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_bind_style(alarm_threshold_item_ovlvl_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(alarm_threshold_item_ovlvl_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 6);
 
-        lv_obj_t * lv_label_14 = lv_label_create(alarm_threshold_item_ovlvl);
-        lv_label_set_text(lv_label_14, "过压");
-        lv_obj_set_x(lv_label_14, 14);
-        lv_obj_set_y(lv_label_14, 5);
-        lv_obj_set_width(lv_label_14, 84);
-        lv_obj_add_style(lv_label_14, &me106_text_14_gray_ba, 0);
-        lv_obj_bind_style(lv_label_14, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 6);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_ovlvl_over_voltage_label = lv_label_create(alarm_threshold_item_ovlvl);
+        lv_label_set_text(settings_alarm_threshold_alarm_threshold_item_ovlvl_over_voltage_label, "过压");
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_ovlvl_over_voltage_label, 14);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_ovlvl_over_voltage_label, 5);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_ovlvl_over_voltage_label, 84);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_ovlvl_over_voltage_label, "settings_alarm_threshold_alarm_threshold_item_ovlvl_over_voltage_label");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_ovlvl_over_voltage_label, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_ovlvl_over_voltage_label, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_ovlvl_over_voltage_label, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_ovlvl_over_voltage_label, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 6);
 
-        lv_obj_t * lv_label_15 = lv_label_create(alarm_threshold_item_ovlvl);
-        lv_label_bind_text(lv_label_15, &meter_alarm_threshold_ovlvl_value, "%d V");
-        lv_obj_set_align(lv_label_15, LV_ALIGN_RIGHT_MID);
-        lv_obj_set_x(lv_label_15, -40);
-        lv_obj_set_y(lv_label_15, -6);
-        lv_obj_set_width(lv_label_15, 84);
-        lv_obj_add_style(lv_label_15, &me106_text_14_gray_ba_right, 0);
-        lv_obj_bind_style(lv_label_15, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 6);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value = lv_label_create(alarm_threshold_item_ovlvl);
+        lv_label_bind_text(settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value, &meter_alarm_threshold_ovlvl_value, "%d V");
+        lv_obj_set_align(settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value, LV_ALIGN_RIGHT_MID);
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value, -40);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value, -6);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value, 84);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value, "settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_ovlvl_alarm_threshold_ovlvl_value, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 6);
 
         lv_obj_t * alarm_threshold_ovlvl_track = lv_obj_create(alarm_threshold_item_ovlvl);
         lv_obj_set_name(alarm_threshold_ovlvl_track, "alarm_threshold_ovlvl_track");
@@ -563,11 +619,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_ovlvl_track, 126);
         lv_obj_set_height(alarm_threshold_ovlvl_track, 5);
         lv_obj_set_style_radius(alarm_threshold_ovlvl_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_ovlvl_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_ovlvl_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_ovlvl_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_ovlvl_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_ovlvl_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_ovlvl_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_ovlvl_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_ovlvl_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_ovlvl_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_ovlvl_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_ovlvl_fill = lv_obj_create(alarm_threshold_ovlvl_track);
@@ -577,10 +634,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_ovlvl_fill, 65);
         lv_obj_set_height(alarm_threshold_ovlvl_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_ovlvl_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_ovlvl_fill, lv_color_hex(0xE33C64), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_ovlvl_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_ovlvl_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_ovlvl_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_ovlvl_fill, &me106_theme_dark_danger, 0);
+        lv_obj_bind_style(alarm_threshold_ovlvl_fill, &me106_theme_light_danger, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_ovlvl_fill, &me106_theme_alarm_danger, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_ovlvl, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 6);
 
@@ -608,22 +666,28 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_bind_style(alarm_threshold_item_oilvl_selected_bg, &me106_theme_alarm_accent, 0, &meter_theme_index, 2);
         lv_obj_bind_flag_if_not_eq(alarm_threshold_item_oilvl_selected_bg, &meter_alarm_threshold_selected_index, LV_OBJ_FLAG_HIDDEN, 7);
 
-        lv_obj_t * lv_label_16 = lv_label_create(alarm_threshold_item_oilvl);
-        lv_label_set_text(lv_label_16, "过流");
-        lv_obj_set_x(lv_label_16, 14);
-        lv_obj_set_y(lv_label_16, 5);
-        lv_obj_set_width(lv_label_16, 84);
-        lv_obj_add_style(lv_label_16, &me106_text_14_gray_ba, 0);
-        lv_obj_bind_style(lv_label_16, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 7);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_oilvl_over_current_label = lv_label_create(alarm_threshold_item_oilvl);
+        lv_label_set_text(settings_alarm_threshold_alarm_threshold_item_oilvl_over_current_label, "过流");
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_oilvl_over_current_label, 14);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_oilvl_over_current_label, 5);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_oilvl_over_current_label, 84);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_oilvl_over_current_label, "settings_alarm_threshold_alarm_threshold_item_oilvl_over_current_label");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_oilvl_over_current_label, &me106_text_14_gray_ba, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_oilvl_over_current_label, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_oilvl_over_current_label, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_oilvl_over_current_label, &me106_text_14_white, 0, &meter_alarm_threshold_selected_index, 7);
 
-        lv_obj_t * lv_label_17 = lv_label_create(alarm_threshold_item_oilvl);
-        lv_label_bind_text(lv_label_17, &meter_alarm_threshold_oilvl_value, "%d A");
-        lv_obj_set_align(lv_label_17, LV_ALIGN_RIGHT_MID);
-        lv_obj_set_x(lv_label_17, -40);
-        lv_obj_set_y(lv_label_17, -6);
-        lv_obj_set_width(lv_label_17, 84);
-        lv_obj_add_style(lv_label_17, &me106_text_14_gray_ba_right, 0);
-        lv_obj_bind_style(lv_label_17, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 7);
+        lv_obj_t * settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value = lv_label_create(alarm_threshold_item_oilvl);
+        lv_label_bind_text(settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value, &meter_alarm_threshold_oilvl_value, "%d A");
+        lv_obj_set_align(settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value, LV_ALIGN_RIGHT_MID);
+        lv_obj_set_x(settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value, -40);
+        lv_obj_set_y(settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value, -6);
+        lv_obj_set_width(settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value, 84);
+        lv_obj_set_name(settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value, "settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value");
+        lv_obj_add_style(settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value, &me106_text_14_gray_ba_right, 0);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value, &me106_theme_light_muted, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value, &me106_theme_alarm_muted, 0, &meter_theme_index, 2);
+        lv_obj_bind_style(settings_alarm_threshold_alarm_threshold_item_oilvl_alarm_threshold_oilvl_value, &me106_text_14_white_right, 0, &meter_alarm_threshold_selected_index, 7);
 
         lv_obj_t * alarm_threshold_oilvl_track = lv_obj_create(alarm_threshold_item_oilvl);
         lv_obj_set_name(alarm_threshold_oilvl_track, "alarm_threshold_oilvl_track");
@@ -632,11 +696,12 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_oilvl_track, 126);
         lv_obj_set_height(alarm_threshold_oilvl_track, 5);
         lv_obj_set_style_radius(alarm_threshold_oilvl_track, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_oilvl_track, lv_color_hex(0x303030), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_oilvl_track, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_oilvl_track, 0, 0);
         lv_obj_set_style_pad_all(alarm_threshold_oilvl_track, 0, 0);
         lv_obj_set_flag(alarm_threshold_oilvl_track, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_oilvl_track, &me106_theme_dark_control_track, 0);
+        lv_obj_bind_style(alarm_threshold_oilvl_track, &me106_theme_light_control_track, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_oilvl_track, &me106_theme_alarm_control_track, 0, &meter_theme_index, 2);
         lv_obj_bind_style(alarm_threshold_oilvl_track, &me106_theme_light_line, 0, &meter_theme_index, 1);
         lv_obj_bind_style(alarm_threshold_oilvl_track, &me106_theme_alarm_line, 0, &meter_theme_index, 2);
         lv_obj_t * alarm_threshold_oilvl_fill = lv_obj_create(alarm_threshold_oilvl_track);
@@ -646,10 +711,11 @@ lv_obj_t * screen_settings_alarm_threshold_create(void)
         lv_obj_set_width(alarm_threshold_oilvl_fill, 1);
         lv_obj_set_height(alarm_threshold_oilvl_fill, 5);
         lv_obj_set_style_radius(alarm_threshold_oilvl_fill, 3, 0);
-        lv_obj_set_style_bg_color(alarm_threshold_oilvl_fill, lv_color_hex(0xE33C64), 0);
-        lv_obj_set_style_bg_opa(alarm_threshold_oilvl_fill, 255, 0);
         lv_obj_set_style_border_width(alarm_threshold_oilvl_fill, 0, 0);
         lv_obj_set_flag(alarm_threshold_oilvl_fill, LV_OBJ_FLAG_SCROLLABLE, false);
+        lv_obj_add_style(alarm_threshold_oilvl_fill, &me106_theme_dark_danger, 0);
+        lv_obj_bind_style(alarm_threshold_oilvl_fill, &me106_theme_light_danger, 0, &meter_theme_index, 1);
+        lv_obj_bind_style(alarm_threshold_oilvl_fill, &me106_theme_alarm_danger, 0, &meter_theme_index, 2);
 
         lv_obj_add_subject_set_int_event(alarm_threshold_item_oilvl, &meter_alarm_threshold_selected_index, LV_EVENT_CLICKED, 7);
 

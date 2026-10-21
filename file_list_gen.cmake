@@ -28,6 +28,7 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_harmonic_spectrum_table_voltage_7_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_harmonic_waveform_current_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_harmonic_waveform_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/screen_harmonic_waveform_phase_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_harmonic_waveform_voltage_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_home_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_line_voltage_demand_gen.c
@@ -40,6 +41,7 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_brightness_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_factory_reset_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_imei_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_ratio_ct_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_ratio_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_ratio_pt_gen.c

@@ -13,20 +13,20 @@
         <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
         <lv_obj name="phase_header" x="0" y="0" width="320" height="44" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
         <lv_image name="phase_brand_logo" src="meter_brand_logo" x="20" y="17"/>
-        <lv_label text="&#x76F8;&#x89D2;&#x548C;&#x9891;&#x7387;" x="156" y="17" width="140">
+        <lv_label text="&#x76F8;&#x89D2;&#x548C;&#x9891;&#x7387;" x="156" y="17" width="140" name="phase_frequency_phase_label">
             <style name="me106_text_16_white_right"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         </lv_obj>
 
-        <lv_label text="&#x41;&#x76F8;&#x7535;&#x6D41;&#xB0;" x="24" y="55">
+        <lv_label text="&#x41;&#x76F8;&#x7535;&#x6D41;&#xB0;" x="24" y="55" name="phase_frequency_phase_acurrentdegree_label">
             <style name="me106_text_16_yellow"/>
             <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
         <!-- UI告警点：相角/频率异常由逻辑层置位，XML 只显示角标。 -->
-        <lv_label text="0.00" x="24" y="77">
+        <lv_label name="phase_current_angle_a_value" text="0.00" x="24" y="77">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -35,12 +35,12 @@
             <bind_flag_if_not_eq subject="meter_phase_a_current_angle_issue" flag="hidden" ref_value="1"/>
         </lv_image>
 
-        <lv_label text="&#x42;&#x76F8;&#x7535;&#x6D41;&#xB0;" x="123" y="55">
+        <lv_label text="&#x42;&#x76F8;&#x7535;&#x6D41;&#xB0;" x="123" y="55" name="phase_frequency_phase_bcurrentdegree_label">
             <style name="me106_text_16_green"/>
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.00" x="123" y="77">
+        <lv_label name="phase_current_angle_b_value" text="0.00" x="123" y="77">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -49,12 +49,12 @@
             <bind_flag_if_not_eq subject="meter_phase_b_current_angle_issue" flag="hidden" ref_value="1"/>
         </lv_image>
 
-        <lv_label text="&#x43;&#x76F8;&#x7535;&#x6D41;&#xB0;" x="221" y="55">
+        <lv_label text="&#x43;&#x76F8;&#x7535;&#x6D41;&#xB0;" x="221" y="55" name="phase_frequency_phase_ccurrentdegree_label">
             <style name="me106_text_16_red"/>
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.00" x="221" y="77">
+        <lv_label name="phase_current_angle_c_value" text="0.00" x="221" y="77">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -63,12 +63,12 @@
             <bind_flag_if_not_eq subject="meter_phase_c_current_angle_issue" flag="hidden" ref_value="1"/>
         </lv_image>
 
-        <lv_label text="&#x9891;&#x7387;(Hz)" x="23" y="120">
+        <lv_label text="&#x9891;&#x7387;(Hz)" x="23" y="120" name="phase_frequency_hz_label">
             <style name="me106_text_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.00" x="23" y="142">
+        <lv_label name="phase_frequency_value" text="0.00" x="23" y="142">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -77,12 +77,12 @@
             <bind_flag_if_not_eq subject="meter_phase_frequency_issue" flag="hidden" ref_value="1"/>
         </lv_image>
 
-        <lv_label text="&#x42;&#x76F8;&#x7535;&#x538B;&#xB0;" x="123" y="120">
+        <lv_label text="&#x42;&#x76F8;&#x7535;&#x538B;&#xB0;" x="123" y="120" name="phase_frequency_phase_bvoltagedegree_label">
             <style name="me106_text_16_green"/>
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.00" x="123" y="142">
+        <lv_label name="phase_voltage_angle_b_value" text="0.00" x="123" y="142">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -91,12 +91,12 @@
             <bind_flag_if_not_eq subject="meter_phase_b_voltage_angle_issue" flag="hidden" ref_value="1"/>
         </lv_image>
 
-        <lv_label text="&#x43;&#x76F8;&#x7535;&#x538B;&#xB0;" x="221" y="120">
+        <lv_label text="&#x43;&#x76F8;&#x7535;&#x538B;&#xB0;" x="221" y="120" name="phase_frequency_phase_cvoltagedegree_label">
             <style name="me106_text_16_red"/>
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_label text="0.00" x="221" y="142">
+        <lv_label name="phase_voltage_angle_c_value" text="0.00" x="221" y="142">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -121,7 +121,7 @@
             <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_setting" align="center" x="0" y="0" style_transform_pivot_x="16" style_transform_pivot_y="16" style_transform_scale_x="110" style_transform_scale_y="110"/>
-            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_in" duration="125"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
         </lv_button>
 
         <lv_button name="phase_btn_reserved" x="80" y="207" width="79" height="32">
@@ -132,7 +132,7 @@
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_menu" align="center" x="0" y="0" style_transform_pivot_x="12" style_transform_pivot_y="12" style_transform_scale_x="150" style_transform_scale_y="150"/>
-            <lv_obj-screen_create_event screen="screen_function_menu" trigger="clicked" anim_type="fade_in" duration="125"/>
+            <lv_obj-screen_create_event screen="screen_function_menu" trigger="clicked" anim_type="none"/>
         </lv_button>
 
         <lv_button name="phase_btn_prev" x="160" y="207" width="79" height="32">

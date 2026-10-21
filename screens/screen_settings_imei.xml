@@ -1,0 +1,98 @@
+<screen>
+    <styles>
+        <!-- 标识卡集中承载号码与来源，文字统一复用现有 14/16/18 px 字体和样式。 -->
+        <style name="imei_card" bg_color="#meter_theme_dark_color_surface_alt" bg_opa="255" radius="10" border_width="0" shadow_width="0"/>
+        <style name="imei_header_tag" bg_color="#meter_theme_dark_color_accent" bg_opa="32" radius="6" border_width="0" shadow_width="0"/>
+    </styles>
+    <view width="320" height="240" style_pad_all="0" style_border_width="0" scrollable="false">
+        <style name="me106_fill_black"/>
+        <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+        <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+
+        <!-- 页面只展示已确认的记录；获取中保留原号码，后台状态由非生成适配层更新。 -->
+        <lv_obj name="imei_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+            <!-- 与电表地址等设置子页使用相同的右上角标题坐标、字号和对齐方式。 -->
+            <lv_label name="settings_imei_title" text="IMEI 信息" x="152" y="17" width="144" long_mode="clip">
+                <style name="me106_text_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+            <!-- 4G 与 IMEI 同处卡片首行，号码居中、来源靠底，避免单独标签切碎纵向空间。 -->
+            <lv_obj name="imei_record_card" x="20" y="56" width="280" height="122" style_pad_all="0" scrollable="false" clickable="false">
+                <style name="imei_card"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                <lv_obj name="imei_transport_tag" x="218" y="10" width="46" height="22" style_pad_all="0" scrollable="false" clickable="false">
+                    <style name="imei_header_tag"/>
+                    <bind_style name="me106_theme_light_accent_soft" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent_soft" subject="meter_theme_index" ref_value="2"/>
+                    <lv_label name="settings_imei_transport_label" text="4G" align="center">
+                        <style name="me106_text_14_blue"/>
+                        <bind_style name="me106_theme_light_accent_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_accent_text" subject="meter_theme_index" ref_value="2"/>
+                    </lv_label>
+                </lv_obj>
+                <lv_label name="settings_imei_number_label" text="IMEI" x="16" y="12" width="100" long_mode="clip">
+                    <style name="me106_text_14_gray_ba"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <!-- 完整号码与占位文字均复用现有 18 px 字体，不增加独立字号资源。 -->
+                <lv_label name="settings_imei_number_value" bind_text="meter_imei_text" x="16" y="48" width="248" height="28" long_mode="clip">
+                    <style name="me106_text_18_white_center"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_eq subject="meter_imei_has_value" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label name="settings_imei_empty_value" text="尚未配置" x="16" y="48" width="248" height="28" long_mode="clip" style_text_align="center">
+                    <style name="me106_text_18_gray_ba"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_imei_has_value" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label name="settings_imei_source_label" text="来源" x="16" y="94" width="48" long_mode="clip">
+                    <style name="me106_text_14_gray_ba"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+                <lv_label name="settings_imei_source_value" bind_text="meter_imei_source_text" x="72" y="94" width="192" long_mode="clip" style_text_align="right">
+                    <style name="me106_text_14_gray_ba"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                </lv_label>
+            </lv_obj>
+            <lv_label name="settings_imei_status_value" bind_text="meter_imei_status_text" x="20" y="183" width="280" height="21" long_mode="clip">
+                <!-- 空闲不显示说明文字；仅在获取过程或结果有内容时显示状态。 -->
+                <style name="me106_text_14_gray_ba_center"/>
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            </lv_label>
+        </lv_obj>
+
+        <!-- 固定四键底栏：中间两格仅有背景，没有按钮和透明热点。返回不取消后台清理。 -->
+        <lv_obj name="screen_settings_imei_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
+            <style name="me106_btn_flat_gray1f"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+        <lv_button name="imei_btn_return" x="0" y="207" width="79" height="32" style_pad_all="0">
+            <style name="me106_btn_flat_gray1f"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="none"/>
+        </lv_button>
+        <lv_button name="imei_btn_fetch" x="240" y="207" width="80" height="32" style_pad_all="0" style_opa-disabled="140">
+            <style name="me106_btn_flat_blue"/>
+            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <bind_state_if_eq subject="meter_imei_fetch_enabled" state="disabled" ref_value="0"/>
+            <!-- 仅提交请求意图；消费者受理后先禁用按键、再清零请求，禁止 XML 模拟获取成功。 -->
+            <subject_set_int_event subject="meter_imei_request" value="1" trigger="clicked"/>
+            <lv_label name="settings_imei_action_label" bind_text="meter_imei_action_text" align="center" width="72" long_mode="clip">
+                <style name="me106_text_14_white_center"/>
+                <style name="me106_text_on_accent"/>
+            </lv_label>
+        </lv_button>
+    </view>
+</screen>

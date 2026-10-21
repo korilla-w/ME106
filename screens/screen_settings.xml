@@ -7,7 +7,7 @@
         <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
         <lv_obj name="settings_brand" x="123" y="16" width="74" height="20" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0" scrollable="false">
             <lv_image name="settings_brand_logo" src="meter_brand_logo" x="0" y="1"/>
-            <lv_label name="settings_page_title" text="&#x8BBE;&#x7F6E;&#x83DC;&#x5355;" x="18" y="1" width="56">
+            <lv_label name="settings_title" text="&#x8BBE;&#x7F6E;&#x83DC;&#x5355;" x="18" y="1" width="56">
                 <style name="me106_text_14_white"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
@@ -39,14 +39,15 @@
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="0"/>
                 </lv_image>
-                <lv_label text="WiFi&#x914D;&#x7F6E;" align="left_mid" x="40" y="0" width="180">
+                <lv_label text="WiFi&#x914D;&#x7F6E;" align="left_mid" x="40" y="0" width="180" name="settings_settings_item_wifi_wifi_config_label">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="0"/>
                 </lv_label>
-                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"><style name="me106_icon_white"/><bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="0"/></lv_image>
             </lv_button>
 
             <lv_button name="settings_item_uart" x="0" y="46" width="270" height="40" style_pad_all="0">
@@ -63,14 +64,15 @@
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="1"/>
                 </lv_image>
-                <lv_label text="&#x4E32;&#x53E3;&#x8BBE;&#x7F6E;" align="left_mid" x="40" y="0" width="180">
+                <lv_label text="&#x4E32;&#x53E3;&#x8BBE;&#x7F6E;" align="left_mid" x="40" y="0" width="180" name="settings_settings_item_uart_title_label">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="1"/>
                 </lv_label>
-                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"><style name="me106_icon_white"/><bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="1"/></lv_image>
             </lv_button>
 
             <lv_button name="settings_item_ratio" x="0" y="92" width="270" height="40" style_pad_all="0">
@@ -87,14 +89,15 @@
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="2"/>
                 </lv_image>
-                <lv_label text="&#x53D8;&#x6BD4;&#x8BBE;&#x7F6E;" align="left_mid" x="40" y="0" width="180">
+                <lv_label text="&#x53D8;&#x6BD4;&#x8BBE;&#x7F6E;" align="left_mid" x="40" y="0" width="180" name="settings_settings_item_ratio_ratio_settings_label">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="2"/>
                 </lv_label>
-                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"><style name="me106_icon_white"/><bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="2"/></lv_image>
             </lv_button>
 
             <lv_button name="settings_item_meter_addr" x="0" y="138" width="270" height="40" style_pad_all="0">
@@ -111,14 +114,23 @@
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="3"/>
                 </lv_image>
-                <lv_label text="&#x7535;&#x8868;&#x5730;&#x5740;" align="left_mid" x="40" y="0" width="180">
+                <lv_label text="&#x7535;&#x8868;&#x5730;&#x5740;" align="left_mid" x="40" y="0" width="180" name="settings_settings_item_meter_addr_meter_address_label">
+                    <bind_flag_if_eq subject="meter_settings_comm_mode" flag="hidden" ref_value="1"/>
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="3"/>
                 </lv_label>
-                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <lv_label text="IMEI" align="left_mid" x="40" y="0" width="180" name="settings_settings_item_meter_addr_imei_label">
+                    <style name="me106_text_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="3"/>
+                    <bind_flag_if_not_eq subject="meter_settings_comm_mode" flag="hidden" ref_value="1"/>
+                </lv_label>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"><style name="me106_icon_white"/><bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="3"/></lv_image>
             </lv_button>
 
             <lv_button name="settings_item_theme" x="0" y="184" width="270" height="40" style_pad_all="0">
@@ -135,29 +147,31 @@
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="4"/>
                 </lv_image>
-                <lv_label text="&#x4E3B;&#x9898;&#x8BBE;&#x7F6E;" align="left_mid" x="40" y="0" width="120">
+                <lv_label text="&#x4E3B;&#x9898;&#x8BBE;&#x7F6E;" align="left_mid" x="40" y="0" width="120" name="settings_settings_item_theme_item_theme_label">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="4"/>
                 </lv_label>
                 <lv_obj name="settings_theme_value" align="right_mid" x="-34" y="0" width="52" height="18" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
-                    <lv_label text="&#x6DF1;&#x8272;" align="right_mid" width="52">
+                    <lv_label text="&#x6DF1;&#x8272;" align="right_mid" width="52" name="settings_settings_theme_value_theme_value_label">
                         <style name="me106_text_14_gray_ba_right"/>
                         <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_14_white_right" subject="meter_settings_selected_index" ref_value="4"/>
                         <bind_flag_if_not_eq subject="meter_theme_index" flag="hidden" ref_value="0"/>
                     </lv_label>
-                    <lv_label text="&#x6D45;&#x8272;" align="right_mid" width="52">
+                    <lv_label text="&#x6D45;&#x8272;" align="right_mid" width="52" name="settings_settings_theme_value_theme_value_label_2">
                         <style name="me106_text_14_gray_ba_right"/>
                         <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_14_white_right" subject="meter_settings_selected_index" ref_value="4"/>
                         <bind_flag_if_not_eq subject="meter_theme_index" flag="hidden" ref_value="1"/>
                     </lv_label>
-                    <lv_label text="&#x544A;&#x8B66;" align="right_mid" width="52">
+                    <!-- 第三主题的外层摘要与主题选择页保持一致；告警业务项仍使用独立文案。 -->
+                    <lv_label text="&#x8D5B;&#x535A;" align="right_mid" width="52" name="settings_settings_theme_value_theme_value_label_3">
                         <style name="me106_text_14_gray_ba_right"/>
                         <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
@@ -165,7 +179,7 @@
                         <bind_flag_if_not_eq subject="meter_theme_index" flag="hidden" ref_value="2"/>
                     </lv_label>
                 </lv_obj>
-                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"><style name="me106_icon_white"/><bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="4"/></lv_image>
             </lv_button>
 
             <lv_button name="settings_item_alarm" x="0" y="230" width="270" height="40" style_pad_all="0">
@@ -182,14 +196,15 @@
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="5"/>
                 </lv_image>
-                <lv_label text="&#x544A;&#x8B66;&#x9608;&#x503C;" align="left_mid" x="40" y="0" width="180">
+                <lv_label text="&#x544A;&#x8B66;&#x9608;&#x503C;" align="left_mid" x="40" y="0" width="180" name="settings_settings_item_alarm_alarm_threshold_label">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="5"/>
                 </lv_label>
-                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"><style name="me106_icon_white"/><bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="5"/></lv_image>
             </lv_button>
 
             <lv_button name="settings_item_brightness" x="0" y="276" width="270" height="40" style_pad_all="0">
@@ -206,14 +221,15 @@
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="6"/>
                 </lv_image>
-                <lv_label text="&#x5C4F;&#x5E55;&#x4EAE;&#x5EA6;" align="left_mid" x="40" y="0" width="180">
+                <lv_label text="&#x5C4F;&#x5E55;&#x4EAE;&#x5EA6;" align="left_mid" x="40" y="0" width="180" name="settings_settings_item_brightness_screen_brightness_label">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="6"/>
                 </lv_label>
-                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"><style name="me106_icon_white"/><bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="6"/></lv_image>
             </lv_button>
 
             <lv_button name="settings_item_screen_timeout" x="0" y="322" width="270" height="40" style_pad_all="0">
@@ -230,14 +246,15 @@
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="7"/>
                 </lv_image>
-                <lv_label text="&#x606F;&#x5C4F;&#x65F6;&#x95F4;" align="left_mid" x="40" y="0" width="180">
+                <lv_label text="&#x606F;&#x5C4F;&#x65F6;&#x95F4;" align="left_mid" x="40" y="0" width="180" name="settings_settings_item_screen_timeout_timeout_label">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="7"/>
                 </lv_label>
-                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"><style name="me106_icon_white"/><bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="7"/></lv_image>
             </lv_button>
 
             <lv_button name="settings_item_factory" x="0" y="368" width="270" height="40" style_pad_all="0">
@@ -254,14 +271,15 @@
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="8"/>
                 </lv_image>
-                <lv_label text="&#x6062;&#x590D;&#x51FA;&#x5382;" align="left_mid" x="40" y="0" width="180">
+                <lv_label text="&#x6062;&#x590D;&#x51FA;&#x5382;" align="left_mid" x="40" y="0" width="180" name="settings_settings_item_factory_item_factory_label">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="8"/>
                 </lv_label>
-                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"><style name="me106_icon_white"/><bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="8"/></lv_image>
             </lv_button>
 
             <lv_button name="settings_item_upgrade" x="0" y="414" width="270" height="40" style_pad_all="0">
@@ -278,14 +296,15 @@
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="9"/>
                 </lv_image>
-                <lv_label text="&#x56FA;&#x4EF6;&#x5347;&#x7EA7;" align="left_mid" x="40" y="0" width="180">
+                <lv_label text="&#x56FA;&#x4EF6;&#x5347;&#x7EA7;" align="left_mid" x="40" y="0" width="180" name="settings_settings_item_upgrade_title_label">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="9"/>
                 </lv_label>
-                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"><style name="me106_icon_white"/><bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="9"/></lv_image>
             </lv_button>
 
             <lv_button name="settings_item_system" x="0" y="460" width="270" height="40" style_pad_all="0">
@@ -302,14 +321,15 @@
                     <style name="me106_icon_white"/>
                     <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="10"/>
                 </lv_image>
-                <lv_label text="&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;" align="left_mid" x="40" y="0" width="180">
+                <lv_label text="&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;" align="left_mid" x="40" y="0" width="180" name="settings_settings_item_system_system_info_label">
                     <style name="me106_text_16_gray_d8"/>
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_settings_selected_index" ref_value="10"/>
                 </lv_label>
-                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"/>
+                <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90"><style name="me106_icon_white"/><bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_icon_white" subject="meter_settings_selected_index" ref_value="10"/></lv_image>
             </lv_button>
             </lv_obj>
         </lv_obj>
@@ -327,7 +347,7 @@
             <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
             <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
-            <lv_obj-screen_create_event screen="screen_home" trigger="clicked" anim_type="fade_in" duration="125"/>
+            <lv_obj-screen_create_event screen="screen_home" trigger="clicked" anim_type="none"/>
         </lv_button>
 
         <lv_button name="settings_btn_down" x="80" y="207" width="79" height="32">
@@ -369,10 +389,18 @@
             <lv_obj-screen_create_event screen="screen_settings_ratio" trigger="clicked" anim_type="fade_in" duration="125"/>
         </lv_button>
 
-        <lv_button name="settings_btn_yes_meter_addr" x="240" y="207" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+        <!-- 选中索引与通信模式分别控制父子可见性，避免两个绑定竞争同一 hidden 标志。 -->
+        <lv_obj name="settings_comm_navigation" x="240" y="207" width="80" height="32" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false" clickable="false">
             <bind_flag_if_not_eq subject="meter_settings_selected_index" flag="hidden" ref_value="3"/>
-            <lv_obj-screen_create_event screen="screen_settings_address" trigger="clicked" anim_type="fade_in" duration="125"/>
-        </lv_button>
+            <lv_button name="settings_btn_yes_meter_addr" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+                <bind_flag_if_eq subject="meter_settings_comm_mode" flag="hidden" ref_value="1"/>
+                <lv_obj-screen_create_event screen="screen_settings_address" trigger="clicked" anim_type="fade_in" duration="125"/>
+            </lv_button>
+            <lv_button name="settings_btn_yes_imei" x="0" y="0" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
+                <bind_flag_if_not_eq subject="meter_settings_comm_mode" flag="hidden" ref_value="1"/>
+                <lv_obj-screen_create_event screen="screen_settings_imei" trigger="clicked" anim_type="fade_in" duration="125"/>
+            </lv_button>
+        </lv_obj>
 
         <lv_button name="settings_btn_yes_theme" x="240" y="207" width="80" height="32" style_bg_opa="0" style_border_width="0" style_shadow_width="0">
             <bind_flag_if_not_eq subject="meter_settings_selected_index" flag="hidden" ref_value="4"/>

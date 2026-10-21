@@ -208,6 +208,20 @@
 4. 如果阈值值源来自参数表、NVS 或测量配置，建议进入页面时统一刷新，避免显示旧值。
 5. `meter_alarm_threshold_popup_visible`、`meter_alarm_threshold_edit_index` 当前流程未使用，可暂时不接入。
 
+## IMEI 页与通信模式要求
+
+页面：screens/screen_settings_imei.xml；设置菜单原地址位置索引仍为 3。
+
+1. meter_settings_comm_mode：0=RS485，保持原“电表地址”菜单和地址页；1=4G，同一位置显示“IMEI”并进入“IMEI 信息”页。当前 XML 默认值为 0，固件接入时根据产品裁剪初始化；Editor 中可改 subject 值预览 4G。
+2. meter_imei_text：仅显示已确认保存的十五位 IMEI；meter_imei_has_value=1 显示完整号码，=0 使用次级颜色的“尚未配置”占位文字，均复用现有 18 px 字体。进入和退出页面不重置号码或有效标志，也不自动查询 DTU。
+3. meter_imei_source_text：只填写来源值，例如“—”“上位机配置”“DTU 获取”；“来源”标签由 XML 固定显示，来源值在标识卡底部右对齐。号码、来源和有效标志应由同一快照刷新。
+4. meter_imei_status_text：空闲时为空字符串，不显示解释性说明；操作时由固件更新，例如“正在获取…”“正在恢复通信…”“获取成功，已保存”“DTU 通信恢复待确认”。
+5. meter_imei_action_text：空闲为“获取”，操作中可改为“获取中”。meter_imei_fetch_enabled=0 禁用第四键，=1 允许操作。
+6. 点击 imei_btn_fetch 仅将 meter_imei_request 置 1。消费者受理后先禁用获取、再清零请求，随后由后台执行通信与保存；XML 不模拟成功。实体键接入时必须同样检查门控并复用该请求路径。
+7. 第一键返回菜单，中间两键无操作。返回不取消后台事务，后台不能持有已删除页面对象；结果通过 subject 显示。
+8. 标题沿用其他设置子页的右上角规范：x=152、y=17、宽 144、16 px 右对齐。标识卡 x=20、y=56、280×122；4G 收进卡片右上角，与左侧 IMEI 标签同行；号码居中、来源靠底，使用现有 18 px 字体，不增加独立字号。
+9. 2026-10-20 固件已接入 ui_imei_page_logic：按裁剪初始化通信模式，菜单与实体键共用路由，IMEI 返回复用缓存设置菜单。获取请求调用统一应用服务，UART1 依次切入 AT、发送 AT+CGSN=1、恢复透传；成功保存后通过快照回显。UI 主循环刷新号码、来源、忙状态与结果，后台不操作 LVGL。生成页面与全局 subject 继续保持 Generate 边界；真实串口仍待验收。
+
 ## 升级、恢复出厂和受限功能要求
 
 1. `meter_upgrade_request=1` 表示用户请求升级；单片机侧负责 OTA 检测、下载、写 Flash 和重启。
