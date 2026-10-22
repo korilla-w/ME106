@@ -378,10 +378,12 @@
         <style name="me106_move_y_n346" translate_y="-346"/>
         <style name="me106_move_y_n392" translate_y="-392"/>
         <style name="me106_move_y_n416" translate_y="-416"/>
+        <style name="me106_move_y_n438" translate_y="-438"/>
     </styles>
 
     <subjects>
-        <int name="meter_settings_selected_index" value="0" min_value="0" max_value="10"/>
+        <int name="meter_settings_selected_index" value="0" min_value="0" max_value="11"/>
+        <int name="meter_language_index" value="0" min_value="0" max_value="1"/>
         <int name="meter_function_menu_selected_index" value="0" min_value="0" max_value="2"/>
         <!-- 功能可用状态由固件逻辑层写入；XML 只据此显示锁定态并拦截默认跳转。 -->
         <int name="meter_feature_harmonics_locked" value="0" min_value="0" max_value="1"/>

@@ -1,0 +1,109 @@
+<screen>
+
+    <view width="320" height="240">
+        <style name="me106_fill_black"/>
+        <bind_style name="me106_theme_light_screen_bg" subject="meter_theme_index" ref_value="1"/>
+        <bind_style name="me106_theme_alarm_screen_bg" subject="meter_theme_index" ref_value="2"/>
+
+        <!-- UI分组：页面内容区。这里只放视觉控件，设置生效留给逻辑/执行层处理。 -->
+        <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+        <lv_label text="&#x8BED;&#x8A00;&#x8BBE;&#x7F6E;" x="152" y="17" width="144" name="settings_language_content_label">
+            <style name="me106_text_16_white_right"/>
+            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+        </lv_label>
+
+        <!-- 语言选择列表：0 简体中文，1 English；持久化由单片机配置层处理。 -->
+        <lv_obj name="language_list" x="22" y="52" width="276" height="142" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+            <lv_button name="language_item_zh" x="0" y="0" width="276" height="42" style_pad_all="0">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                <lv_obj name="language_item_zh_selected_bg" x="0" y="0" width="276" height="42" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_obj>
+                <lv_label text="1 &#x7B80;&#x4F53;&#x4E2D;&#x6587;" align="left_mid" x="20" y="0" width="140" name="settings_language_item_zh_label">
+                    <style name="me106_text_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_16_white" subject="meter_language_index" ref_value="0"/>
+                </lv_label>
+                <lv_label text="&#x9ED8;&#x8BA4;" align="right_mid" x="-14" y="0" width="72" name="settings_language_item_zh_tag_label">
+                    <style name="me106_text_14_gray_ba_right"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_14_white_right" subject="meter_language_index" ref_value="0"/>
+                </lv_label>
+                <subject_set_int_event subject="meter_language_index" value="0" trigger="clicked"/>
+            </lv_button>
+
+            <lv_button name="language_item_en" x="0" y="50" width="276" height="42" style_pad_all="0">
+                <style name="me106_panel_gray24_r8"/>
+                <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
+                <lv_obj name="language_item_en_selected_bg" x="0" y="0" width="276" height="42" style_pad_all="0" style_border_width="0" scrollable="false">
+                    <style name="me106_panel_blue_r8"/>
+                    <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                </lv_obj>
+                <lv_label text="2 English" align="left_mid" x="20" y="0" width="140" name="settings_language_item_en_label">
+                    <style name="me106_text_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_16_white" subject="meter_language_index" ref_value="1"/>
+                </lv_label>
+                <lv_label text="EN" align="right_mid" x="-14" y="0" width="72" name="settings_language_item_en_tag_label">
+                    <style name="me106_text_14_gray_ba_right"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_14_white_right" subject="meter_language_index" ref_value="1"/>
+                </lv_label>
+                <subject_set_int_event subject="meter_language_index" value="1" trigger="clicked"/>
+            </lv_button>
+        </lv_obj>
+
+        </lv_obj>
+
+        <!-- UI分组：底部硬按键区。按钮只发出导航/选择意图，不直接处理硬件。 -->
+        <lv_obj name="screen_settings_language_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+        </lv_obj>
+        <lv_button name="language_btn_return" x="0" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_icon_return" align="center" style_transform_pivot_x="8" style_transform_pivot_y="7" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
+        </lv_button>
+
+        <lv_button name="language_btn_down" x="80" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_arrow_down" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <subject_increment_event subject="meter_language_index" step="1" min_value="0" max_value="1" rollover="true" trigger="clicked"/>
+        </lv_button>
+
+        <lv_button name="language_btn_up" x="160" y="207" width="79" height="32">
+            <style name="me106_btn_flat_gray47"/>
+            <bind_style name="me106_theme_light_nav" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_arrow_up" align="center" style_transform_pivot_x="7" style_transform_pivot_y="5" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <subject_increment_event subject="meter_language_index" step="-1" min_value="0" max_value="1" rollover="true" trigger="clicked"/>
+        </lv_button>
+
+        <lv_button name="language_btn_yes" x="240" y="207" width="80" height="32">
+            <style name="me106_btn_flat_blue"/>
+            <bind_style name="me106_theme_light_accent" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2"/>
+            <lv_image src="meter_yes" align="center" style_transform_pivot_x="9" style_transform_pivot_y="6" style_transform_scale_x="230" style_transform_scale_y="230"/>
+            <lv_obj-screen_create_event screen="screen_settings" trigger="clicked" anim_type="fade_out" duration="105"/>
+        </lv_button>
+    </view>
+</screen>
