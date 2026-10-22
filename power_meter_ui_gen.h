@@ -405,6 +405,7 @@ extern lv_style_t me106_move_y_n300;
 extern lv_style_t me106_move_y_n346;
 extern lv_style_t me106_move_y_n392;
 extern lv_style_t me106_move_y_n416;
+extern lv_style_t me106_move_y_n438;
 
 /*----------------
  * Fonts
@@ -462,6 +463,7 @@ extern const void * meter_boot_logo_name_en;
  *----------------*/
 
 extern lv_subject_t meter_settings_selected_index;
+extern lv_subject_t meter_language_index;
 extern lv_subject_t meter_function_menu_selected_index;
 extern lv_subject_t meter_feature_harmonics_locked;
 extern lv_subject_t meter_function_menu_special_action;
@@ -677,6 +679,7 @@ void power_meter_ui_init_gen(const char * asset_path);
 #include "screens/screen_settings_factory_reset_gen.h"
 #include "screens/screen_settings_gen.h"
 #include "screens/screen_settings_imei_gen.h"
+#include "screens/screen_settings_language_gen.h"
 #include "screens/screen_settings_ratio_ct_gen.h"
 #include "screens/screen_settings_ratio_gen.h"
 #include "screens/screen_settings_ratio_pt_gen.h"

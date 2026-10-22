@@ -350,12 +350,14 @@ lv_style_t me106_move_y_n300;
 lv_style_t me106_move_y_n346;
 lv_style_t me106_move_y_n392;
 lv_style_t me106_move_y_n416;
+lv_style_t me106_move_y_n438;
 
 /*----------------
  * Subjects
  *----------------*/
 
 lv_subject_t meter_settings_selected_index;
+lv_subject_t meter_language_index;
 lv_subject_t meter_function_menu_selected_index;
 lv_subject_t meter_feature_harmonics_locked;
 lv_subject_t meter_function_menu_special_action;
@@ -1826,6 +1828,9 @@ void power_meter_ui_init_gen(const char * asset_path)
             lv_style_init(&me106_move_y_n416);
             lv_style_set_translate_y(&me106_move_y_n416, -416);
 
+            lv_style_init(&me106_move_y_n438);
+            lv_style_set_translate_y(&me106_move_y_n438, -438);
+
         }
         #endif
         style_inited = true;
@@ -1836,7 +1841,10 @@ void power_meter_ui_init_gen(const char * asset_path)
      *----------------*/
     lv_subject_init_int(&meter_settings_selected_index, 0);
     lv_subject_set_min_value_int(&meter_settings_selected_index, 0);
-    lv_subject_set_max_value_int(&meter_settings_selected_index, 10);
+    lv_subject_set_max_value_int(&meter_settings_selected_index, 11);
+    lv_subject_init_int(&meter_language_index, 0);
+    lv_subject_set_min_value_int(&meter_language_index, 0);
+    lv_subject_set_max_value_int(&meter_language_index, 1);
     lv_subject_init_int(&meter_function_menu_selected_index, 0);
     lv_subject_set_min_value_int(&meter_function_menu_selected_index, 0);
     lv_subject_set_max_value_int(&meter_function_menu_selected_index, 2);
@@ -2501,6 +2509,7 @@ void power_meter_ui_init_gen(const char * asset_path)
 
     /* Register subjects */
     lv_xml_register_subject(NULL, "meter_settings_selected_index", &meter_settings_selected_index);
+    lv_xml_register_subject(NULL, "meter_language_index", &meter_language_index);
     lv_xml_register_subject(NULL, "meter_function_menu_selected_index", &meter_function_menu_selected_index);
     lv_xml_register_subject(NULL, "meter_feature_harmonics_locked", &meter_feature_harmonics_locked);
     lv_xml_register_subject(NULL, "meter_function_menu_special_action", &meter_function_menu_special_action);

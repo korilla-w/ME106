@@ -17,8 +17,8 @@ extern "C" {
     #include "lvgl.h"
     #include "lvgl_private.h"
 #else
-    #include "lvgl.h"
-    #include "lvgl_private.h"
+    #include "lvgl/lvgl.h"
+    #include "lvgl/lvgl_private.h"
 #endif
 
 #ifdef LV_USE_XML
@@ -36,6 +36,8 @@ extern "C" {
 /**********************
  * GLOBAL PROTOTYPES
  **********************/
+
+
 
 lv_obj_t * screen_harmonic_waveform_phase_create(void);
 

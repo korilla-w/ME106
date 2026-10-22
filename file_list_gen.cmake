@@ -42,6 +42,7 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_factory_reset_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_imei_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_language_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_ratio_ct_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_ratio_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/screen_settings_ratio_pt_gen.c
