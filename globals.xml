@@ -277,6 +277,7 @@
         <style name="me106_text_16_indigo" text_color="#meter_indigo" text_font="meter_Harmony_Sans_SC_Medium_16"/>
         <style name="me106_text_16_orange" text_color="#meter_orange" text_font="meter_Harmony_Sans_SC_Medium_16"/>
 
+        <style name="me106_text_18_gray_d8" text_color="#meter_gray_d8" text_font="meter_Harmony_Sans_SC_Medium_18"/>
         <style name="me106_text_18_white" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_18"/>
         <style name="me106_text_18_white_center" text_color="#meter_white" text_font="meter_Harmony_Sans_SC_Medium_18" text_align="center"/>
         <style name="me106_text_18_gray_ba" text_color="#meter_gray_ba" text_font="meter_Harmony_Sans_SC_Medium_18"/>
