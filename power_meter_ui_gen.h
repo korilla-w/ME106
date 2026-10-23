@@ -2,8 +2,8 @@
  * @file power_meter_ui_gen.h
  */
 
-#ifndef POWER_METER_UI_GEN_H
-#define POWER_METER_UI_GEN_H
+#ifndef LVGL_PRO_POWER_METER_UI_GEN_H
+#define LVGL_PRO_POWER_METER_UI_GEN_H
 
 #ifndef UI_SUBJECT_STRING_LENGTH
 #define UI_SUBJECT_STRING_LENGTH 256
@@ -25,7 +25,7 @@ extern "C" {
     #include "lvgl/lvgl_private.h"
 #endif
 
-#ifdef LV_USE_XML
+#if defined(LV_USE_XML) && LV_USE_XML
     #include "lv_xml/lv_xml.h"
 #endif
 
@@ -316,6 +316,15 @@ extern lv_style_t me106_text_16_cyan;
 extern lv_style_t me106_text_16_teal;
 extern lv_style_t me106_text_16_indigo;
 extern lv_style_t me106_text_16_orange;
+extern lv_style_t me106_text_18_gray_d8;
+extern lv_style_t me106_text_roboto_16_gray;
+extern lv_style_t me106_text_roboto_16_white;
+extern lv_style_t me106_text_roboto_18_gray;
+extern lv_style_t me106_text_roboto_18_white;
+extern lv_style_t me106_text_din_16_gray;
+extern lv_style_t me106_text_din_16_white;
+extern lv_style_t me106_text_din_18_gray;
+extern lv_style_t me106_text_din_18_white;
 extern lv_style_t me106_text_18_white;
 extern lv_style_t me106_text_18_white_center;
 extern lv_style_t me106_text_18_gray_ba;
@@ -416,6 +425,10 @@ extern lv_font_t * meter_Harmony_Sans_SC_Medium_14;
 extern lv_font_t * meter_Harmony_Sans_SC_Medium_16;
 extern lv_font_t * meter_Harmony_Sans_SC_Medium_18;
 extern lv_font_t * meter_Harmony_Sans_SC_Medium_36;
+extern lv_font_t * meter_Roboto_Medium_16;
+extern lv_font_t * meter_Roboto_Medium_18;
+extern lv_font_t * meter_DIN_Medium_16;
+extern lv_font_t * meter_DIN_Medium_18;
 
 
 /*----------------
@@ -696,4 +709,4 @@ void power_meter_ui_init_gen(const char * asset_path);
 } /*extern "C"*/
 #endif
 
-#endif /*POWER_METER_UI_GEN_H*/
+#endif /*LVGL_PRO_POWER_METER_UI_GEN_H*/

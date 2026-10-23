@@ -2,8 +2,8 @@
  * @file screen_apparent_power_gen.h
  */
 
-#ifndef SCREEN_APPARENT_POWER_H
-#define SCREEN_APPARENT_POWER_H
+#ifndef LVGL_PRO_SCREEN_APPARENT_POWER_GEN_H
+#define LVGL_PRO_SCREEN_APPARENT_POWER_GEN_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -21,7 +21,7 @@ extern "C" {
     #include "lvgl/lvgl_private.h"
 #endif
 
-#ifdef LV_USE_XML
+#if defined(LV_USE_XML) && LV_USE_XML
     #include "lv_xml/lv_xml.h"
 #endif
 
@@ -62,4 +62,4 @@ lv_anim_timeline_t * screen_apparent_power_get_timeline(lv_obj_t * obj, screen_a
 } /*extern "C"*/
 #endif
 
-#endif /*SCREEN_APPARENT_POWER_H*/
+#endif /*LVGL_PRO_SCREEN_APPARENT_POWER_GEN_H*/

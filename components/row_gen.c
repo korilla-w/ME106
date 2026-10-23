@@ -39,14 +39,12 @@ lv_obj_t * row_create(lv_obj_t * parent)
     static bool style_inited = false;
 
     if (!style_inited) {
-        #if POWER_METER_UI_CHECK_COMPILE_TARGET(POWER_METER_UI_TARGET_ALL)
-        if (power_meter_ui_check_target(POWER_METER_UI_TARGET_ALL)) {
-            lv_style_init(&style_base);
-            lv_style_set_layout(&style_base, LV_LAYOUT_FLEX);
-            lv_style_set_flex_flow(&style_base, LV_FLEX_FLOW_ROW);
+        /*Init all styles*/
+        lv_style_init(&style_base);
 
-        }
-        #endif
+        lv_style_set_layout(&style_base, LV_LAYOUT_FLEX);
+        lv_style_set_flex_flow(&style_base, LV_FLEX_FLOW_ROW);
+
         style_inited = true;
     }
 

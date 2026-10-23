@@ -40,24 +40,21 @@ lv_obj_t * screen_settings_imei_create(void)
     static bool style_inited = false;
 
     if (!style_inited) {
-        #if POWER_METER_UI_CHECK_COMPILE_TARGET(POWER_METER_UI_TARGET_ALL)
-        if (power_meter_ui_check_target(POWER_METER_UI_TARGET_ALL)) {
-            lv_style_init(&imei_card);
-            lv_style_set_bg_color(&imei_card, METER_THEME_DARK_COLOR_SURFACE_ALT);
-            lv_style_set_bg_opa(&imei_card, 255);
-            lv_style_set_radius(&imei_card, 10);
-            lv_style_set_border_width(&imei_card, 0);
-            lv_style_set_shadow_width(&imei_card, 0);
+        /*Init all styles*/
+        lv_style_init(&imei_card);
+        lv_style_init(&imei_header_tag);
 
-            lv_style_init(&imei_header_tag);
-            lv_style_set_bg_color(&imei_header_tag, METER_THEME_DARK_COLOR_ACCENT);
-            lv_style_set_bg_opa(&imei_header_tag, 32);
-            lv_style_set_radius(&imei_header_tag, 6);
-            lv_style_set_border_width(&imei_header_tag, 0);
-            lv_style_set_shadow_width(&imei_header_tag, 0);
+        lv_style_set_bg_color(&imei_card, METER_THEME_DARK_COLOR_SURFACE_ALT);
+        lv_style_set_bg_opa(&imei_card, 255);
+        lv_style_set_radius(&imei_card, 10);
+        lv_style_set_border_width(&imei_card, 0);
+        lv_style_set_shadow_width(&imei_card, 0);
+        lv_style_set_bg_color(&imei_header_tag, METER_THEME_DARK_COLOR_ACCENT);
+        lv_style_set_bg_opa(&imei_header_tag, 32);
+        lv_style_set_radius(&imei_header_tag, 6);
+        lv_style_set_border_width(&imei_header_tag, 0);
+        lv_style_set_shadow_width(&imei_header_tag, 0);
 
-        }
-        #endif
         style_inited = true;
     }
 

@@ -41,24 +41,20 @@ lv_obj_t * screen_settings_upgrade_create(void)
     static bool style_inited = false;
 
     if (!style_inited) {
-        #if POWER_METER_UI_CHECK_COMPILE_TARGET(POWER_METER_UI_TARGET_ALL)
-        if (power_meter_ui_check_target(POWER_METER_UI_TARGET_ALL)) {
-            lv_style_init(&upgrade_title);
-            lv_style_set_text_color(&upgrade_title, METER_WHITE);
-            lv_style_set_text_font(&upgrade_title, meter_Harmony_Sans_SC_Medium_18);
+        /*Init all styles*/
+        lv_style_init(&upgrade_title);
+        lv_style_init(&upgrade_separator);
+        lv_style_init(&upgrade_hint);
 
-            lv_style_init(&upgrade_separator);
-            lv_style_set_bg_color(&upgrade_separator, METER_GRAY_30);
-            lv_style_set_bg_opa(&upgrade_separator, 255);
-            lv_style_set_border_width(&upgrade_separator, 0);
+        lv_style_set_text_color(&upgrade_title, METER_WHITE);
+        lv_style_set_text_font(&upgrade_title, meter_Harmony_Sans_SC_Medium_18);
+        lv_style_set_bg_color(&upgrade_separator, METER_GRAY_30);
+        lv_style_set_bg_opa(&upgrade_separator, 255);
+        lv_style_set_border_width(&upgrade_separator, 0);
+        lv_style_set_text_color(&upgrade_hint, METER_GRAY_BA);
+        lv_style_set_text_font(&upgrade_hint, meter_Harmony_Sans_SC_Medium_14);
+        lv_style_set_text_line_space(&upgrade_hint, 8);
 
-            lv_style_init(&upgrade_hint);
-            lv_style_set_text_color(&upgrade_hint, METER_GRAY_BA);
-            lv_style_set_text_font(&upgrade_hint, meter_Harmony_Sans_SC_Medium_14);
-            lv_style_set_text_line_space(&upgrade_hint, 8);
-
-        }
-        #endif
         style_inited = true;
     }
 

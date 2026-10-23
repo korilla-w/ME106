@@ -1,8 +1,4 @@
 {
-  "font:meter_Harmony_Sans_SC_Medium_14": "868042e87cb84d69-37e4d28273576126",
-  "font:meter_Harmony_Sans_SC_Medium_16": "868042e87cb84d69-5e78015a891c56f4",
-  "font:meter_Harmony_Sans_SC_Medium_18": "868042e87cb84d69-b33d8b8bffa7689a",
-  "font:meter_Harmony_Sans_SC_Medium_36": "868042e87cb84d69-ce0db81f6d3f1e2e",
   "image:meter_setting": "7c988371c53daa9d-804c2bb04658d224",
   "image:meter_menu": "b166951ddccf69b1-8d46c806d5c1f841",
   "image:meter_arrow_left": "28a59b066360b775-ef7b27589dcd5a04",
@@ -36,5 +32,13 @@
   "image:meter_boot_logo_flame_2": "b0ac8c1a7e64587c-169bc9db3fd3a4b4",
   "image:meter_boot_logo_flame_3": "bb6319f8b814955c-ac12f4926f0d8188",
   "image:meter_boot_logo_name_zh": "fb0613e28f1cb722-f0ed44ef520da95c",
-  "image:meter_boot_logo_name_en": "a9d6da1677786ea4-7ef7f917907e5010"
+  "image:meter_boot_logo_name_en": "a9d6da1677786ea4-7ef7f917907e5010",
+  "font:meter_Harmony_Sans_SC_Medium_14": "868042e87cb84d69-37e4d28273576126",
+  "font:meter_Harmony_Sans_SC_Medium_16": "868042e87cb84d69-5e78015a891c56f4",
+  "font:meter_Harmony_Sans_SC_Medium_18": "868042e87cb84d69-b33d8b8bffa7689a",
+  "font:meter_Harmony_Sans_SC_Medium_36": "868042e87cb84d69-ce0db81f6d3f1e2e",
+  "font:meter_Roboto_Medium_16": "c46445f2efc8a5d2-84c2f76b72d792ce",
+  "font:meter_Roboto_Medium_18": "c46445f2efc8a5d2-9cc23a2e8b6b9654",
+  "font:meter_DIN_Medium_16": "2abe48636283e9c6-b3fc9a74bf428e23",
+  "font:meter_DIN_Medium_18": "2abe48636283e9c6-b379a8bd4471f80d"
 }
