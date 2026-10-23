@@ -212,21 +212,21 @@
                             <style name="me106_text_14_gray_ba_right"/>
                             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
-                            <bind_style name="me106_text_roboto_14_white_right" subject="meter_settings_selected_index" ref_value="4"/>
+                            <bind_style name="me106_text_14_white_right" subject="meter_settings_selected_index" ref_value="4"/>
                             <bind_flag_if_not_eq subject="meter_theme_index" flag="hidden" ref_value="0"/>
                         </lv_label>
                         <lv_label text="&#x6D45;&#x8272;" align="right_mid" width="56" name="settings_settings_theme_value_theme_value_label_2">
                             <style name="me106_text_14_gray_ba_right"/>
                             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
-                            <bind_style name="me106_text_roboto_14_white_right" subject="meter_settings_selected_index" ref_value="4"/>
+                            <bind_style name="me106_text_14_white_right" subject="meter_settings_selected_index" ref_value="4"/>
                             <bind_flag_if_not_eq subject="meter_theme_index" flag="hidden" ref_value="1"/>
                         </lv_label>
                         <lv_label text="&#x8D5B;&#x535A;" align="right_mid" width="56" name="settings_settings_theme_value_theme_value_label_3">
                             <style name="me106_text_14_gray_ba_right"/>
                             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
-                            <bind_style name="me106_text_roboto_14_white_right" subject="meter_settings_selected_index" ref_value="4"/>
+                            <bind_style name="me106_text_14_white_right" subject="meter_settings_selected_index" ref_value="4"/>
                             <bind_flag_if_not_eq subject="meter_theme_index" flag="hidden" ref_value="2"/>
                         </lv_label>
                     </lv_obj>
