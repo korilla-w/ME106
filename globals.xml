@@ -96,6 +96,7 @@
         <tiny_ttf name="meter_Harmony_Sans_SC_Medium_18" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="18" as_file="true"/>
         <tiny_ttf name="meter_Harmony_Sans_SC_Medium_36" src_path="fonts/HarmonyOS_Sans_SC_Medium.ttf" size="36" as_file="true"/>
         <!-- 专业西文字体：Roboto（现代科技）与 DIN/Bahnschrift（德国工业电表） -->
+        <tiny_ttf name="meter_Roboto_Medium_14" src_path="fonts/Roboto-Medium.ttf" size="14" as_file="true"/>
         <tiny_ttf name="meter_Roboto_Medium_16" src_path="fonts/Roboto-Medium.ttf" size="16" as_file="true"/>
         <tiny_ttf name="meter_Roboto_Medium_18" src_path="fonts/Roboto-Medium.ttf" size="18" as_file="true"/>
         <tiny_ttf name="meter_DIN_Medium_16" src_path="fonts/Bahnschrift.ttf" size="16" as_file="true"/>
@@ -323,6 +324,9 @@
 
         <style name="me106_text_18_gray_d8" text_color="#meter_gray_d8" text_font="meter_Harmony_Sans_SC_Medium_18"/>
         <!-- 英文专属对比样式：Roboto 组 -->
+        <style name="me106_text_roboto_14_white" text_color="#meter_white" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_text_roboto_14_gray_ba_right" text_color="#meter_gray_ba" text_font="meter_Roboto_Medium_14" text_align="right"/>
+        <style name="me106_text_roboto_14_white_right" text_color="#meter_white" text_font="meter_Roboto_Medium_14" text_align="right"/>
         <style name="me106_text_roboto_16_gray" text_color="#meter_gray_d8" text_font="meter_Roboto_Medium_16"/>
         <style name="me106_text_roboto_16_white" text_color="#meter_white" text_font="meter_Roboto_Medium_16"/>
         <style name="me106_text_roboto_18_gray" text_color="#meter_gray_d8" text_font="meter_Roboto_Medium_18"/>

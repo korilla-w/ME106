@@ -181,10 +181,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_wifi_wifi_config_label_en, 0);
         lv_obj_set_width(settings_settings_item_wifi_wifi_config_label_en, 180);
         lv_obj_set_name(settings_settings_item_wifi_wifi_config_label_en, "settings_settings_item_wifi_wifi_config_label_en");
-        lv_obj_add_style(settings_settings_item_wifi_wifi_config_label_en, &me106_text_roboto_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_wifi_wifi_config_label_en, &me106_text_roboto_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_wifi_wifi_config_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_wifi_wifi_config_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_wifi_wifi_config_label_en, &me106_text_roboto_18_white, 0, &meter_settings_selected_index, 0);
+        lv_obj_bind_style(settings_settings_item_wifi_wifi_config_label_en, &me106_text_roboto_16_white, 0, &meter_settings_selected_index, 0);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_wifi_wifi_config_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * lv_image_1 = lv_image_create(settings_item_wifi);
@@ -255,10 +255,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_uart_title_label_en, 0);
         lv_obj_set_width(settings_settings_item_uart_title_label_en, 180);
         lv_obj_set_name(settings_settings_item_uart_title_label_en, "settings_settings_item_uart_title_label_en");
-        lv_obj_add_style(settings_settings_item_uart_title_label_en, &me106_text_roboto_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_uart_title_label_en, &me106_text_roboto_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_uart_title_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_uart_title_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_uart_title_label_en, &me106_text_roboto_18_white, 0, &meter_settings_selected_index, 1);
+        lv_obj_bind_style(settings_settings_item_uart_title_label_en, &me106_text_roboto_16_white, 0, &meter_settings_selected_index, 1);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_uart_title_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * lv_image_3 = lv_image_create(settings_item_uart);
@@ -329,10 +329,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_ratio_ratio_settings_label_en, 0);
         lv_obj_set_width(settings_settings_item_ratio_ratio_settings_label_en, 180);
         lv_obj_set_name(settings_settings_item_ratio_ratio_settings_label_en, "settings_settings_item_ratio_ratio_settings_label_en");
-        lv_obj_add_style(settings_settings_item_ratio_ratio_settings_label_en, &me106_text_roboto_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_ratio_ratio_settings_label_en, &me106_text_roboto_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_ratio_ratio_settings_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_ratio_ratio_settings_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_ratio_ratio_settings_label_en, &me106_text_roboto_18_white, 0, &meter_settings_selected_index, 2);
+        lv_obj_bind_style(settings_settings_item_ratio_ratio_settings_label_en, &me106_text_roboto_16_white, 0, &meter_settings_selected_index, 2);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_ratio_ratio_settings_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * lv_image_5 = lv_image_create(settings_item_ratio);
@@ -415,10 +415,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_meter_addr_meter_address_label_en, 0);
         lv_obj_set_width(settings_settings_item_meter_addr_meter_address_label_en, 180);
         lv_obj_set_name(settings_settings_item_meter_addr_meter_address_label_en, "settings_settings_item_meter_addr_meter_address_label_en");
-        lv_obj_add_style(settings_settings_item_meter_addr_meter_address_label_en, &me106_text_roboto_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_meter_addr_meter_address_label_en, &me106_text_roboto_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_meter_addr_meter_address_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_meter_addr_meter_address_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_meter_addr_meter_address_label_en, &me106_text_roboto_18_white, 0, &meter_settings_selected_index, 3);
+        lv_obj_bind_style(settings_settings_item_meter_addr_meter_address_label_en, &me106_text_roboto_16_white, 0, &meter_settings_selected_index, 3);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_meter_addr_meter_address_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * settings_settings_item_meter_addr_imei_label = lv_label_create(settings_item_meter_addr);
@@ -502,10 +502,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_theme_item_theme_label_en, 0);
         lv_obj_set_width(settings_settings_item_theme_item_theme_label_en, 120);
         lv_obj_set_name(settings_settings_item_theme_item_theme_label_en, "settings_settings_item_theme_item_theme_label_en");
-        lv_obj_add_style(settings_settings_item_theme_item_theme_label_en, &me106_text_roboto_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_theme_item_theme_label_en, &me106_text_roboto_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_theme_item_theme_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_theme_item_theme_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_theme_item_theme_label_en, &me106_text_roboto_18_white, 0, &meter_settings_selected_index, 4);
+        lv_obj_bind_style(settings_settings_item_theme_item_theme_label_en, &me106_text_roboto_16_white, 0, &meter_settings_selected_index, 4);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_theme_item_theme_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * settings_theme_value = lv_obj_create(settings_item_theme);
@@ -677,10 +677,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_alarm_alarm_threshold_label_en, 0);
         lv_obj_set_width(settings_settings_item_alarm_alarm_threshold_label_en, 180);
         lv_obj_set_name(settings_settings_item_alarm_alarm_threshold_label_en, "settings_settings_item_alarm_alarm_threshold_label_en");
-        lv_obj_add_style(settings_settings_item_alarm_alarm_threshold_label_en, &me106_text_roboto_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_alarm_alarm_threshold_label_en, &me106_text_roboto_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_alarm_alarm_threshold_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_alarm_alarm_threshold_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_alarm_alarm_threshold_label_en, &me106_text_roboto_18_white, 0, &meter_settings_selected_index, 5);
+        lv_obj_bind_style(settings_settings_item_alarm_alarm_threshold_label_en, &me106_text_roboto_16_white, 0, &meter_settings_selected_index, 5);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_alarm_alarm_threshold_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * lv_image_11 = lv_image_create(settings_item_alarm);
@@ -751,10 +751,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_brightness_screen_brightness_label_en, 0);
         lv_obj_set_width(settings_settings_item_brightness_screen_brightness_label_en, 180);
         lv_obj_set_name(settings_settings_item_brightness_screen_brightness_label_en, "settings_settings_item_brightness_screen_brightness_label_en");
-        lv_obj_add_style(settings_settings_item_brightness_screen_brightness_label_en, &me106_text_din_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_brightness_screen_brightness_label_en, &me106_text_din_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_brightness_screen_brightness_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_brightness_screen_brightness_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_brightness_screen_brightness_label_en, &me106_text_din_18_white, 0, &meter_settings_selected_index, 6);
+        lv_obj_bind_style(settings_settings_item_brightness_screen_brightness_label_en, &me106_text_din_16_white, 0, &meter_settings_selected_index, 6);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_brightness_screen_brightness_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * lv_image_13 = lv_image_create(settings_item_brightness);
@@ -825,10 +825,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_screen_timeout_timeout_label_en, 0);
         lv_obj_set_width(settings_settings_item_screen_timeout_timeout_label_en, 180);
         lv_obj_set_name(settings_settings_item_screen_timeout_timeout_label_en, "settings_settings_item_screen_timeout_timeout_label_en");
-        lv_obj_add_style(settings_settings_item_screen_timeout_timeout_label_en, &me106_text_din_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_screen_timeout_timeout_label_en, &me106_text_din_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_screen_timeout_timeout_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_screen_timeout_timeout_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_screen_timeout_timeout_label_en, &me106_text_din_18_white, 0, &meter_settings_selected_index, 7);
+        lv_obj_bind_style(settings_settings_item_screen_timeout_timeout_label_en, &me106_text_din_16_white, 0, &meter_settings_selected_index, 7);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_screen_timeout_timeout_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * lv_image_15 = lv_image_create(settings_item_screen_timeout);
@@ -899,10 +899,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_factory_item_factory_label_en, 0);
         lv_obj_set_width(settings_settings_item_factory_item_factory_label_en, 180);
         lv_obj_set_name(settings_settings_item_factory_item_factory_label_en, "settings_settings_item_factory_item_factory_label_en");
-        lv_obj_add_style(settings_settings_item_factory_item_factory_label_en, &me106_text_din_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_factory_item_factory_label_en, &me106_text_din_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_factory_item_factory_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_factory_item_factory_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_factory_item_factory_label_en, &me106_text_din_18_white, 0, &meter_settings_selected_index, 8);
+        lv_obj_bind_style(settings_settings_item_factory_item_factory_label_en, &me106_text_din_16_white, 0, &meter_settings_selected_index, 8);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_factory_item_factory_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * lv_image_17 = lv_image_create(settings_item_factory);
@@ -973,10 +973,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_upgrade_title_label_en, 0);
         lv_obj_set_width(settings_settings_item_upgrade_title_label_en, 180);
         lv_obj_set_name(settings_settings_item_upgrade_title_label_en, "settings_settings_item_upgrade_title_label_en");
-        lv_obj_add_style(settings_settings_item_upgrade_title_label_en, &me106_text_din_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_upgrade_title_label_en, &me106_text_din_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_upgrade_title_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_upgrade_title_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_upgrade_title_label_en, &me106_text_din_18_white, 0, &meter_settings_selected_index, 9);
+        lv_obj_bind_style(settings_settings_item_upgrade_title_label_en, &me106_text_din_16_white, 0, &meter_settings_selected_index, 9);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_upgrade_title_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * lv_image_19 = lv_image_create(settings_item_upgrade);
@@ -1047,10 +1047,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_system_system_info_label_en, 0);
         lv_obj_set_width(settings_settings_item_system_system_info_label_en, 180);
         lv_obj_set_name(settings_settings_item_system_system_info_label_en, "settings_settings_item_system_system_info_label_en");
-        lv_obj_add_style(settings_settings_item_system_system_info_label_en, &me106_text_din_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_system_system_info_label_en, &me106_text_din_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_system_system_info_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_system_system_info_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_system_system_info_label_en, &me106_text_din_18_white, 0, &meter_settings_selected_index, 10);
+        lv_obj_bind_style(settings_settings_item_system_system_info_label_en, &me106_text_din_16_white, 0, &meter_settings_selected_index, 10);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_system_system_info_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * lv_image_21 = lv_image_create(settings_item_system);
@@ -1121,10 +1121,10 @@ lv_obj_t * screen_settings_create(void)
         lv_obj_set_y(settings_settings_item_language_title_label_en, 0);
         lv_obj_set_width(settings_settings_item_language_title_label_en, 120);
         lv_obj_set_name(settings_settings_item_language_title_label_en, "settings_settings_item_language_title_label_en");
-        lv_obj_add_style(settings_settings_item_language_title_label_en, &me106_text_din_18_gray, 0);
+        lv_obj_add_style(settings_settings_item_language_title_label_en, &me106_text_din_16_gray, 0);
         lv_obj_bind_style(settings_settings_item_language_title_label_en, &me106_theme_light_text, 0, &meter_theme_index, 1);
         lv_obj_bind_style(settings_settings_item_language_title_label_en, &me106_theme_alarm_text, 0, &meter_theme_index, 2);
-        lv_obj_bind_style(settings_settings_item_language_title_label_en, &me106_text_din_18_white, 0, &meter_settings_selected_index, 11);
+        lv_obj_bind_style(settings_settings_item_language_title_label_en, &me106_text_din_16_white, 0, &meter_settings_selected_index, 11);
         lv_obj_bind_flag_if_not_eq(settings_settings_item_language_title_label_en, &meter_language_index, LV_OBJ_FLAG_HIDDEN, 1);
 
         lv_obj_t * settings_language_value = lv_obj_create(settings_item_language);
