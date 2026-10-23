@@ -9,6 +9,13 @@
                 <style name="me106_text_16_white_right"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label text="System Info" x="152" y="17" width="144" name="settings_system_system_info_label_en">
+                <style name="me106_text_roboto_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
 
             <lv_obj name="system_icon_halo" x="24" y="44" width="46" height="46" style_radius="12" style_border_width="0" style_pad_all="0" scrollable="false">
@@ -112,6 +119,13 @@
                     <style name="me106_text_14_gray_8f"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="Uptime" align="left_mid" x="0" y="0" width="82" name="settings_system_system_runtime_runtime_label_en">
+                    <style name="me106_text_roboto_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_label bind_text="meter_system_runtime_text" align="right_mid" x="0" y="0" width="224" name="settings_system_system_runtime_runtime_value">
                     <style name="me106_text_16_white_right"/>

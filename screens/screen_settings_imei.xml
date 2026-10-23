@@ -16,6 +16,13 @@
                 <style name="me106_text_16_white_right"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="settings_imei_title_en" text="IMEI Info" x="152" y="17" width="144" long_mode="clip">
+                <style name="me106_text_roboto_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <!-- 4G 与 IMEI 同处卡片首行，号码居中、来源靠底，避免单独标签切碎纵向空间。 -->
             <lv_obj name="imei_record_card" x="20" y="56" width="280" height="122" style_pad_all="0" scrollable="false" clickable="false">
@@ -44,16 +51,32 @@
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_flag_if_eq subject="meter_imei_has_value" flag="hidden" ref_value="0"/>
                 </lv_label>
-                <lv_label name="settings_imei_empty_value" text="尚未配置" x="16" y="48" width="248" height="28" long_mode="clip" style_text_align="center">
-                    <style name="me106_text_18_gray_ba"/>
-                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
-                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <lv_obj name="settings_imei_empty_container" x="16" y="48" width="248" height="28" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                     <bind_flag_if_not_eq subject="meter_imei_has_value" flag="hidden" ref_value="0"/>
-                </lv_label>
+                    <lv_label name="settings_imei_empty_value" text="尚未配置" align="center" width="248" height="28" long_mode="clip" style_text_align="center">
+                        <style name="me106_text_18_gray_ba"/>
+                        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label name="settings_imei_empty_value_en" text="Not Configured" align="center" width="248" height="28" long_mode="clip" style_text_align="center">
+                        <style name="me106_text_roboto_18_gray_ba"/>
+                        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                    </lv_label>
+                </lv_obj>
                 <lv_label name="settings_imei_source_label" text="来源" x="16" y="94" width="48" long_mode="clip">
                     <style name="me106_text_14_gray_ba"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label name="settings_imei_source_label_en" text="Source" x="16" y="94" width="56" long_mode="clip">
+                    <style name="me106_text_roboto_14_gray_ba"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_label name="settings_imei_source_value" bind_text="meter_imei_source_text" x="72" y="94" width="192" long_mode="clip" style_text_align="right">
                     <style name="me106_text_14_gray_ba"/>

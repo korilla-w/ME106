@@ -9,12 +9,26 @@
                 <style name="me106_text_16_white_right"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label text="Screen Timeout" x="152" y="17" width="144" name="settings_screen_timeout_timeout_label_en">
+                <style name="me106_text_roboto_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
 
             <lv_label text="&#x65E0;&#x64CD;&#x4F5C;&#x540E;" x="24" y="24" width="112" name="settings_screen_timeout_timeout_label_2">
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label text="Idle Time" x="24" y="24" width="112" name="settings_screen_timeout_timeout_label_2_en">
+                <style name="me106_text_roboto_14_gray_ba"/>
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
 
             <lv_obj name="screen_timeout_list" x="36" y="52" width="248" height="146" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollbar_mode="off" scrollable="false">
@@ -33,6 +47,14 @@
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_16_white_center" subject="meter_screen_timeout_index" ref_value="0"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="5 Min" align="center" width="248" name="settings_screen_timeout_item_5m_tick_5_label_en">
+                        <style name="me106_text_roboto_16_gray_ba_center"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_text_roboto_16_white_center" subject="meter_screen_timeout_index" ref_value="0"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <subject_set_int_event subject="meter_screen_timeout_index" value="0" trigger="clicked"/>
                 </lv_button>
@@ -52,6 +74,14 @@
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_16_white_center" subject="meter_screen_timeout_index" ref_value="1"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="15 Min" align="center" width="248" name="settings_screen_timeout_item_15m_tick_15_label_en">
+                        <style name="me106_text_roboto_16_gray_ba_center"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_text_roboto_16_white_center" subject="meter_screen_timeout_index" ref_value="1"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <subject_set_int_event subject="meter_screen_timeout_index" value="1" trigger="clicked"/>
                 </lv_button>
@@ -71,6 +101,14 @@
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_16_white_center" subject="meter_screen_timeout_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="30 Min" align="center" width="248" name="settings_screen_timeout_item_30m_tick_30_label_en">
+                        <style name="me106_text_roboto_16_gray_ba_center"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_text_roboto_16_white_center" subject="meter_screen_timeout_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <subject_set_int_event subject="meter_screen_timeout_index" value="2" trigger="clicked"/>
                 </lv_button>
@@ -90,6 +128,14 @@
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_16_white_center" subject="meter_screen_timeout_index" ref_value="3"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="1 Hour" align="center" width="248" name="settings_screen_timeout_item_1h_tick_1_label_en">
+                        <style name="me106_text_roboto_16_gray_ba_center"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_text_roboto_16_white_center" subject="meter_screen_timeout_index" ref_value="3"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <subject_set_int_event subject="meter_screen_timeout_index" value="3" trigger="clicked"/>
                 </lv_button>
@@ -109,6 +155,14 @@
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_16_white_center" subject="meter_screen_timeout_index" ref_value="4"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="Never" align="center" width="248" name="settings_screen_timeout_item_never_timeout_item_never_label_en">
+                        <style name="me106_text_roboto_16_gray_ba_center"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_text_roboto_16_white_center" subject="meter_screen_timeout_index" ref_value="4"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <subject_set_int_event subject="meter_screen_timeout_index" value="4" trigger="clicked"/>
                 </lv_button>

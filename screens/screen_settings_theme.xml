@@ -11,6 +11,13 @@
             <style name="me106_text_16_white_right"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+        </lv_label>
+        <lv_label text="Theme" x="152" y="17" width="144" name="settings_theme_content_label_en">
+            <style name="me106_text_roboto_16_white_right"/>
+            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
 
         <!-- 主题选择只更新 UI 外观；持久化仍交给逻辑/配置层。 -->
@@ -32,12 +39,28 @@
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_theme_index" ref_value="0"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="1 Dark" align="left_mid" x="64" y="0" width="104" name="settings_theme_theme_item_dark_tick_1_label_en">
+                    <style name="me106_text_roboto_16_gray"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_16_white" subject="meter_theme_index" ref_value="0"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_label text="&#x9ED8;&#x8BA4;" align="right_mid" x="-14" y="0" width="72" name="settings_theme_theme_item_dark_item_dark_label">
                     <style name="me106_text_14_gray_ba_right"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_14_white_right" subject="meter_theme_index" ref_value="0"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="Default" align="right_mid" x="-14" y="0" width="72" name="settings_theme_theme_item_dark_item_dark_label_en">
+                    <style name="me106_text_roboto_14_gray_ba_right"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_14_white_right" subject="meter_theme_index" ref_value="0"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_theme_index" value="0" trigger="clicked"/>
             </lv_button>
@@ -59,12 +82,28 @@
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_theme_index" ref_value="1"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="2 Light" align="left_mid" x="64" y="0" width="104" name="settings_theme_theme_item_light_tick_2_label_en">
+                    <style name="me106_text_roboto_16_gray"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_16_white" subject="meter_theme_index" ref_value="1"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_label text="&#x4E2D;&#x6027;&#x7070;" align="right_mid" x="-14" y="0" width="72" name="settings_theme_theme_item_light_item_light_label">
                     <style name="me106_text_14_gray_ba_right"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_14_white_right" subject="meter_theme_index" ref_value="1"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="Neutral Gray" align="right_mid" x="-14" y="0" width="90" name="settings_theme_theme_item_light_item_light_label_en">
+                    <style name="me106_text_roboto_14_gray_ba_right"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_14_white_right" subject="meter_theme_index" ref_value="1"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_theme_index" value="1" trigger="clicked"/>
             </lv_button>
@@ -88,12 +127,28 @@
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="3 Cyber Meter" align="left_mid" x="64" y="0" width="122" name="settings_theme_theme_item_alarm_tick_3_label_en">
+                    <style name="me106_text_roboto_16_gray"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_16_white" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_label text="&#x9713;&#x8679;&#x53CC;&#x5F69;" align="right_mid" x="-14" y="0" width="72" name="settings_theme_theme_item_alarm_item_alarm_label">
                     <style name="me106_text_14_gray_ba_right"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_14_white_right" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="Neon Dual" align="right_mid" x="-14" y="0" width="72" name="settings_theme_theme_item_alarm_item_alarm_label_en">
+                    <style name="me106_text_roboto_14_gray_ba_right"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_14_white_right" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_theme_index" value="2" trigger="clicked"/>
             </lv_button>
