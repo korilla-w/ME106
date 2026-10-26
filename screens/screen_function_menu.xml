@@ -13,6 +13,12 @@
                 <style name="me106_text_14_white"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="function_title_en" text="Function Menu" x="18" y="1" width="56">                <style name="me106_text_roboto_14_white"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
         </lv_obj>
 
@@ -61,6 +67,13 @@
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_16_white" subject="meter_function_menu_selected_index" ref_value="0"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="Harmonic Spectrum" align="left_mid" x="40" y="0" width="160" name="function_harmonic_harmonic_label_en">                        <style name="me106_text_roboto_16_gray_d8"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_text_roboto_16_white" subject="meter_function_menu_selected_index" ref_value="0"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90">
                         <style name="me106_icon_white"/>
@@ -103,6 +116,13 @@
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_16_white" subject="meter_function_menu_selected_index" ref_value="1"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="Waveform" align="left_mid" x="40" y="0" width="160" name="function_waveform_label_en">                        <style name="me106_text_roboto_16_gray_d8"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_text_roboto_16_white" subject="meter_function_menu_selected_index" ref_value="1"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90">
                         <style name="me106_icon_white"/>
@@ -145,6 +165,13 @@
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                         <bind_style name="me106_text_16_white" subject="meter_function_menu_selected_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="PQ Analysis" align="left_mid" x="40" y="0" width="180" name="function_quality_power_quality_analysis_label_en">                        <style name="me106_text_roboto_16_gray_d8"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_style name="me106_text_roboto_16_white" subject="meter_function_menu_selected_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <lv_image src="meter_arrow_right" align="right_mid" x="-14" y="0" style_transform_pivot_x="10" style_transform_pivot_y="14" style_transform_scale_x="90" style_transform_scale_y="90">
                         <style name="me106_icon_white"/>

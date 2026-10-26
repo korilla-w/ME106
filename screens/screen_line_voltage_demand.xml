@@ -17,6 +17,12 @@
             <style name="me106_text_16_white_right"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+        </lv_label>
+        <lv_label text="Line Volt &amp; Demand" x="156" y="17" width="140" name="line_voltage_demand_line_demand_voltage_label_en">            <style name="me106_text_roboto_16_white_right"/>
+            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
         </lv_obj>
 
@@ -24,6 +30,12 @@
             <style name="me106_text_18_yellow"/>
             <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+        </lv_label>
+        <lv_label text="Line AB" x="24" y="55" name="line_voltage_demand_ab_label_en">            <style name="me106_text_roboto_18_yellow"/>
+            <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
         <!-- UI告警点：线电压和需量各自对应一个独立告警位，避免同坐标叠图标。 -->
         <lv_label name="line_voltage_ab_value" text="0.00" x="24" y="77">
@@ -37,6 +49,12 @@
             <style name="me106_text_18_green"/>
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+        </lv_label>
+        <lv_label text="Line BC" x="123" y="55" name="line_voltage_demand_bc_label_en">            <style name="me106_text_roboto_18_green"/>
+            <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
         <lv_label name="line_voltage_bc_value" text="0.00" x="123" y="77">
             <style name="me106_text_18_white"/>
@@ -49,6 +67,12 @@
             <style name="me106_text_18_red"/>
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+        </lv_label>
+        <lv_label text="Line CA" x="222" y="55" name="line_voltage_demand_ca_label_en">            <style name="me106_text_roboto_18_red"/>
+            <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
         <lv_label name="line_voltage_ca_value" text="0.00" x="222" y="77">
             <style name="me106_text_18_white"/>
@@ -61,6 +85,12 @@
             <style name="me106_text_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+        </lv_label>
+        <lv_label name="line_current_demand_title_en" text="Current Demand (kW)" x="23" y="120">            <style name="me106_text_roboto_16_gray_ba"/>
+            <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
         <lv_label name="line_current_demand_value" text="0.0" x="23" y="142">
             <style name="me106_text_18_white"/>
@@ -73,6 +103,12 @@
             <style name="me106_text_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+        </lv_label>
+        <lv_label name="line_max_demand_title_en" text="Max Demand (kW)" x="157" y="120">            <style name="me106_text_roboto_16_gray_ba"/>
+            <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
         <lv_label name="line_max_demand_value" text="0.00" x="157" y="142">
             <style name="me106_text_18_white"/>
@@ -85,6 +121,12 @@
             <style name="me106_text_18_yellow"/>
             <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+        </lv_label>
+        <lv_label name="line_demand_paid_hint_en" text="Feature locked, contact vendor" x="24" y="144" width="280">            <style name="me106_text_roboto_18_yellow"/>
+            <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
+            <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
+            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
 
         </lv_obj>

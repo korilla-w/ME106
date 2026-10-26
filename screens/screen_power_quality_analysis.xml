@@ -16,11 +16,23 @@
                         <style name="me106_text_16_white_right"/>
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="PQ Analysis" x="124" y="15" width="172" name="power_quality_analysis_summary_title_label_en">                        <style name="me106_text_roboto_16_white_right"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <lv_label text="&#x8D28;&#x91CF;&#x603B;&#x89C8;" x="24" y="20" width="140" name="power_quality_analysis_summary_quality_summary_label">
                         <style name="me106_text_14_gray_ba"/>
                         <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="Overview" x="24" y="20" width="140" name="power_quality_analysis_summary_quality_summary_label_en">                        <style name="me106_text_roboto_14_gray_ba"/>
+                        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
 
                     <lv_obj name="power_quality_score_panel" x="22" y="48" width="276" height="72" style_pad_all="0" scrollable="false">
@@ -32,28 +44,57 @@
                             <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
                         </lv_image>
-                        <lv_label text="&#x6B63;&#x5E38;" x="52" y="13" width="96" name="power_quality_analysis_score_normal_label">
-                            <style name="me106_text_36_white_center"/>
-                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
-
-
+                        <lv_obj name="power_quality_analysis_score_normal_label_box" x="52" y="13" width="96" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                             <bind_flag_if_not_eq subject="meter_power_quality_issue_count" flag="hidden" ref_value="0"/>
-                        </lv_label>
-                        <lv_label text="&#x8D8A;&#x9650;" x="52" y="13" width="96" name="power_quality_analysis_score_over_limit_label">
-                            <style name="me106_text_36_white_center"/>
-                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
-                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
-
-
+                            <lv_label text="&#x6B63;&#x5E38;" x="0" y="0" width="96" name="power_quality_analysis_score_normal_label">
+                                <style name="me106_text_36_white_center"/>
+                                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="Normal" x="0" y="0" width="96" name="power_quality_analysis_score_normal_label_en">
+                                <style name="me106_text_roboto_36_white_center"/>
+                                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
+                        <lv_obj name="power_quality_analysis_score_over_limit_label_box" x="52" y="13" width="96" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                             <bind_flag_if_eq subject="meter_power_quality_issue_count" flag="hidden" ref_value="0"/>
-                        </lv_label>
-                        <lv_label text="&#x6B63;&#x5E38;&#x65F6;&#x65E0;&#x8D8A;&#x9650;&#x8BB0;&#x5F55;" x="158" y="15" width="102" long_mode="wrap" name="power_quality_analysis_score_no_limit_record_label">
-                            <style name="me106_text_14_gray_ba"/>
-                            <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
-                            <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                            <lv_label text="&#x8D8A;&#x9650;" x="0" y="0" width="96" name="power_quality_analysis_score_over_limit_label">
+                                <style name="me106_text_36_white_center"/>
+                                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="Alarm" x="0" y="0" width="96" name="power_quality_analysis_score_over_limit_label_en">
+                                <style name="me106_text_roboto_36_white_center"/>
+                                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
+                        <lv_obj name="power_quality_analysis_score_no_limit_record_label_box" x="158" y="15" width="102" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                             <bind_flag_if_not_eq subject="meter_power_quality_issue_count" flag="hidden" ref_value="0"/>
-                        </lv_label>
+                            <lv_label text="&#x6B63;&#x5E38;&#x65F6;&#x65E0;&#x8D8A;&#x9650;&#x8BB0;&#x5F55;" x="0" y="0" width="102" long_mode="wrap" name="power_quality_analysis_score_no_limit_record_label">
+                                <style name="me106_text_14_gray_ba"/>
+                                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="No violation recorded" x="0" y="0" width="102" long_mode="wrap" name="power_quality_analysis_score_no_limit_record_label_en">
+                                <style name="me106_text_roboto_14_gray_ba"/>
+                                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
                         <lv_label bind_text="meter_power_quality_issue_count" bind_text-fmt="%d" x="164" y="7" width="40" name="power_quality_analysis_score_power_quality_issue_count_value">
                             <style name="me106_text_36_white_center"/>
                             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
@@ -62,19 +103,35 @@
 
                             <bind_flag_if_eq subject="meter_power_quality_issue_count" flag="hidden" ref_value="0"/>
                         </lv_label>
-                        <lv_label text="&#x9879;&#x9700;&#x590D;&#x6838;" x="207" y="24" width="62" name="power_quality_analysis_score_quality_score_label">
-                            <style name="me106_text_14_gray_ba"/>
-                            <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
-                            <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                        <lv_obj name="power_quality_analysis_score_quality_score_label_box" x="207" y="24" width="62" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                             <bind_flag_if_eq subject="meter_power_quality_issue_count" flag="hidden" ref_value="0"/>
-                        </lv_label>
+                            <lv_label text="&#x9879;&#x9700;&#x590D;&#x6838;" x="0" y="0" width="62" name="power_quality_analysis_score_quality_score_label">
+                                <style name="me106_text_14_gray_ba"/>
+                                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="Items to check" x="0" y="0" width="62" name="power_quality_analysis_score_quality_score_label_en">
+                                <style name="me106_text_roboto_14_gray_ba"/>
+                                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
                     </lv_obj>
 
                     <lv_obj name="power_quality_trend_panel" x="22" y="130" width="276" height="62" style_pad_all="0" scrollable="false">
                         <style name="me106_panel_gray1f_r8"/>
                         <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
-                        <lv_label text="&#x7535;&#x538B;" x="16" y="10" width="34" name="power_quality_analysis_trend_voltage_label"><style name="me106_text_16_yellow"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
+                        <lv_label text="&#x7535;&#x538B;" x="16" y="10" width="34" name="power_quality_analysis_trend_voltage_label"><style name="me106_text_16_yellow"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Voltage" x="16" y="10" width="34" name="power_quality_analysis_trend_voltage_label_en"><style name="me106_text_roboto_16_yellow"/><bind_style name="me106_text_roboto_16_yellow" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_yellow" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
                         <lv_obj name="power_quality_u_bar_track" x="56" y="17" width="80" height="8" style_radius="4" style_border_width="0" style_pad_all="0" scrollable="false">
                             <style name="me106_theme_dark_control_track"/>
                             <bind_style name="me106_theme_light_control_track" subject="meter_theme_index" ref_value="1"/>
@@ -82,7 +139,12 @@
 
                             <lv_obj name="power_quality_u_bar_fill" x="0" y="0" width="60" height="8" style_radius="4" style_border_width="0" scrollable="false"><style name="me106_theme_dark_secondary"/><bind_style name="me106_theme_light_secondary" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_secondary" subject="meter_theme_index" ref_value="2"/></lv_obj>
                         </lv_obj>
-                        <lv_label text="&#x7535;&#x6D41;" x="150" y="10" width="34" name="power_quality_analysis_trend_current_label"><style name="me106_text_16_cyan"/><bind_style name="me106_theme_light_info_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2"/></lv_label>
+                        <lv_label text="&#x7535;&#x6D41;" x="150" y="10" width="34" name="power_quality_analysis_trend_current_label"><style name="me106_text_16_cyan"/><bind_style name="me106_theme_light_info_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Current" x="150" y="10" width="34" name="power_quality_analysis_trend_current_label_en"><style name="me106_text_roboto_16_cyan"/><bind_style name="me106_text_roboto_16_cyan" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_cyan" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
                         <lv_obj name="power_quality_i_bar_track" x="190" y="17" width="64" height="8" style_radius="4" style_border_width="0" style_pad_all="0" scrollable="false">
                             <style name="me106_theme_dark_control_track"/>
                             <bind_style name="me106_theme_light_control_track" subject="meter_theme_index" ref_value="1"/>
@@ -90,7 +152,12 @@
 
                             <lv_obj name="power_quality_i_bar_fill" x="0" y="0" width="42" height="8" style_radius="4" style_border_width="0" scrollable="false"><style name="me106_theme_dark_info"/><bind_style name="me106_theme_light_info" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_info" subject="meter_theme_index" ref_value="2"/></lv_obj>
                         </lv_obj>
-                        <lv_label text="&#x529F;&#x7387;" x="16" y="36" width="34" name="power_quality_analysis_trend_power_label"><style name="me106_text_16_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/></lv_label>
+                        <lv_label text="&#x529F;&#x7387;" x="16" y="36" width="34" name="power_quality_analysis_trend_power_label"><style name="me106_text_16_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Power" x="16" y="36" width="34" name="power_quality_analysis_trend_power_label_en"><style name="me106_text_roboto_16_orange"/><bind_style name="me106_text_roboto_16_orange" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_orange" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
                         <lv_obj name="power_quality_p_bar_track" x="56" y="43" width="80" height="8" style_radius="4" style_border_width="0" style_pad_all="0" scrollable="false">
                             <style name="me106_theme_dark_control_track"/>
                             <bind_style name="me106_theme_light_control_track" subject="meter_theme_index" ref_value="1"/>
@@ -98,7 +165,12 @@
 
                             <lv_obj name="power_quality_p_bar_fill" x="0" y="0" width="52" height="8" style_radius="4" style_border_width="0" scrollable="false"><style name="me106_theme_dark_warning"/><bind_style name="me106_theme_light_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_warning" subject="meter_theme_index" ref_value="2"/></lv_obj>
                         </lv_obj>
-                        <lv_label text="&#x7535;&#x80FD;" x="150" y="36" width="34" name="power_quality_analysis_trend_energy_label"><style name="me106_text_16_green"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/></lv_label>
+                        <lv_label text="&#x7535;&#x80FD;" x="150" y="36" width="34" name="power_quality_analysis_trend_energy_label"><style name="me106_text_16_green"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Energy" x="150" y="36" width="34" name="power_quality_analysis_trend_energy_label_en"><style name="me106_text_roboto_16_green"/><bind_style name="me106_text_roboto_16_green" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_green" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
                         <lv_obj name="power_quality_e_bar_track" x="190" y="43" width="64" height="8" style_radius="4" style_border_width="0" style_pad_all="0" scrollable="false">
                             <style name="me106_theme_dark_control_track"/>
                             <bind_style name="me106_theme_light_control_track" subject="meter_theme_index" ref_value="1"/>
@@ -114,11 +186,23 @@
                         <style name="me106_text_16_white_right"/>
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="Status Tag" x="156" y="15" width="140" name="power_quality_analysis_status_status_tag_label_en">                        <style name="me106_text_roboto_16_white_right"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <lv_label text="&#x72B6;&#x6001;&#x6807;&#x8BB0;" x="24" y="20" width="120" name="power_quality_analysis_status_status_tag_label_2">
                         <style name="me106_text_14_gray_ba"/>
                         <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="Status Tag" x="24" y="20" width="120" name="power_quality_analysis_status_status_tag_label_2_en">                        <style name="me106_text_roboto_14_gray_ba"/>
+                        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
 
                     <lv_obj name="quality_tag_u_step" x="22" y="48" width="132" height="34" style_pad_all="0" scrollable="false">
@@ -126,36 +210,152 @@
                         <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
                         <lv_obj x="9" y="8" width="18" height="18" style_radius="9" style_border_width="0" scrollable="false"><style name="me106_theme_dark_secondary"/><bind_style name="me106_theme_light_secondary" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_secondary" subject="meter_theme_index" ref_value="2"/></lv_obj>
-                        <lv_label text="&#x7535;&#x538B;" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_u_step_voltage_label"><style name="me106_text_14_white"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/></lv_label>
-                        <lv_label text="&#x6B63;&#x5E38;" align="left_mid" x="78" y="0" width="42" name="power_quality_analysis_quality_tag_u_step_normal_label"><style name="me106_text_14_gray_8f"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_power_quality_u_step_issue" flag="hidden" ref_value="0"/></lv_label>
-                        <lv_label text="&#x8D8A;&#x9650;" align="left_mid" x="78" y="0" width="46" name="power_quality_analysis_quality_tag_u_step_over_limit_label"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_power_quality_u_step_issue" flag="hidden" ref_value="1"/></lv_label>
+                        <lv_label text="&#x7535;&#x538B;" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_u_step_voltage_label"><style name="me106_text_14_white"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Voltage" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_u_step_voltage_label_en"><style name="me106_text_roboto_14_white"/><bind_style name="me106_text_roboto_14_white" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_white" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
+                        <lv_obj name="power_quality_analysis_quality_tag_u_step_normal_label_box" align="left_mid" x="78" y="0" width="42" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                            <bind_flag_if_not_eq subject="meter_power_quality_u_step_issue" flag="hidden" ref_value="0"/>
+                            <lv_label text="&#x6B63;&#x5E38;"  x="0" y="0" width="42" name="power_quality_analysis_quality_tag_u_step_normal_label">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="Normal"  x="0" y="0" width="42" name="power_quality_analysis_quality_tag_u_step_normal_label_en">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
+                        <lv_obj name="power_quality_analysis_quality_tag_u_step_over_limit_label_box" align="left_mid" x="78" y="0" width="46" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                            <bind_flag_if_not_eq subject="meter_power_quality_u_step_issue" flag="hidden" ref_value="1"/>
+                            <lv_label text="&#x8D8A;&#x9650;"  x="0" y="0" width="46" name="power_quality_analysis_quality_tag_u_step_over_limit_label">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="Alarm"  x="0" y="0" width="46" name="power_quality_analysis_quality_tag_u_step_over_limit_label_en">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
                     </lv_obj>
                     <lv_obj name="quality_tag_i_step" x="166" y="48" width="132" height="34" style_pad_all="0" scrollable="false">
                         <style name="me106_panel_gray24_r8"/>
                         <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
                         <lv_obj x="9" y="8" width="18" height="18" style_radius="9" style_border_width="0" scrollable="false"><style name="me106_theme_dark_info"/><bind_style name="me106_theme_light_info" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_info" subject="meter_theme_index" ref_value="2"/></lv_obj>
-                        <lv_label text="&#x7535;&#x6D41;" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_i_step_current_label"><style name="me106_text_14_white"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/></lv_label>
-                        <lv_label text="&#x6B63;&#x5E38;" align="left_mid" x="78" y="0" width="42" name="power_quality_analysis_quality_tag_i_step_normal_label"><style name="me106_text_14_gray_8f"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_power_quality_i_step_issue" flag="hidden" ref_value="0"/></lv_label>
-                        <lv_label text="&#x8D8A;&#x9650;" align="left_mid" x="78" y="0" width="46" name="power_quality_analysis_quality_tag_i_step_over_limit_label"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_power_quality_i_step_issue" flag="hidden" ref_value="1"/></lv_label>
+                        <lv_label text="&#x7535;&#x6D41;" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_i_step_current_label"><style name="me106_text_14_white"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Current" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_i_step_current_label_en"><style name="me106_text_roboto_14_white"/><bind_style name="me106_text_roboto_14_white" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_white" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
+                        <lv_obj name="power_quality_analysis_quality_tag_i_step_normal_label_box" align="left_mid" x="78" y="0" width="42" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                            <bind_flag_if_not_eq subject="meter_power_quality_i_step_issue" flag="hidden" ref_value="0"/>
+                            <lv_label text="&#x6B63;&#x5E38;"  x="0" y="0" width="42" name="power_quality_analysis_quality_tag_i_step_normal_label">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="Normal"  x="0" y="0" width="42" name="power_quality_analysis_quality_tag_i_step_normal_label_en">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
+                        <lv_obj name="power_quality_analysis_quality_tag_i_step_over_limit_label_box" align="left_mid" x="78" y="0" width="46" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                            <bind_flag_if_not_eq subject="meter_power_quality_i_step_issue" flag="hidden" ref_value="1"/>
+                            <lv_label text="&#x8D8A;&#x9650;"  x="0" y="0" width="46" name="power_quality_analysis_quality_tag_i_step_over_limit_label">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="Alarm"  x="0" y="0" width="46" name="power_quality_analysis_quality_tag_i_step_over_limit_label_en">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
                     </lv_obj>
                     <lv_obj name="quality_tag_p_step" x="22" y="90" width="132" height="34" style_pad_all="0" scrollable="false">
                         <style name="me106_panel_gray24_r8"/>
                         <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
                         <lv_obj x="9" y="8" width="18" height="18" style_radius="9" style_border_width="0" scrollable="false"><style name="me106_theme_dark_warning"/><bind_style name="me106_theme_light_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_warning" subject="meter_theme_index" ref_value="2"/></lv_obj>
-                        <lv_label text="&#x529F;&#x7387;" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_p_step_power_label"><style name="me106_text_14_white"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/></lv_label>
-                        <lv_label text="&#x6B63;&#x5E38;" align="left_mid" x="78" y="0" width="42" name="power_quality_analysis_quality_tag_p_step_normal_label"><style name="me106_text_14_gray_8f"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_power_quality_p_step_issue" flag="hidden" ref_value="0"/></lv_label>
-                        <lv_label text="&#x8D8A;&#x9650;" align="left_mid" x="78" y="0" width="46" name="power_quality_analysis_quality_tag_p_step_over_limit_label"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_power_quality_p_step_issue" flag="hidden" ref_value="1"/></lv_label>
+                        <lv_label text="&#x529F;&#x7387;" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_p_step_power_label"><style name="me106_text_14_white"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Power" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_p_step_power_label_en"><style name="me106_text_roboto_14_white"/><bind_style name="me106_text_roboto_14_white" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_white" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
+                        <lv_obj name="power_quality_analysis_quality_tag_p_step_normal_label_box" align="left_mid" x="78" y="0" width="42" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                            <bind_flag_if_not_eq subject="meter_power_quality_p_step_issue" flag="hidden" ref_value="0"/>
+                            <lv_label text="&#x6B63;&#x5E38;"  x="0" y="0" width="42" name="power_quality_analysis_quality_tag_p_step_normal_label">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="Normal"  x="0" y="0" width="42" name="power_quality_analysis_quality_tag_p_step_normal_label_en">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
+                        <lv_obj name="power_quality_analysis_quality_tag_p_step_over_limit_label_box" align="left_mid" x="78" y="0" width="46" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                            <bind_flag_if_not_eq subject="meter_power_quality_p_step_issue" flag="hidden" ref_value="1"/>
+                            <lv_label text="&#x8D8A;&#x9650;"  x="0" y="0" width="46" name="power_quality_analysis_quality_tag_p_step_over_limit_label">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="Alarm"  x="0" y="0" width="46" name="power_quality_analysis_quality_tag_p_step_over_limit_label_en">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
                     </lv_obj>
                     <lv_obj name="quality_tag_e_inc" x="166" y="90" width="132" height="34" style_pad_all="0" scrollable="false">
                         <style name="me106_panel_gray24_r8"/>
                         <bind_style name="me106_theme_light_panel" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_panel" subject="meter_theme_index" ref_value="2"/>
                         <lv_obj x="9" y="8" width="18" height="18" style_radius="9" style_border_width="0" scrollable="false"><style name="me106_theme_dark_success"/><bind_style name="me106_theme_light_success" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_success" subject="meter_theme_index" ref_value="2"/></lv_obj>
-                        <lv_label text="&#x7535;&#x80FD;" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_e_inc_energy_label"><style name="me106_text_14_white"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/></lv_label>
-                        <lv_label text="&#x6B63;&#x5E38;" align="left_mid" x="78" y="0" width="42" name="power_quality_analysis_quality_tag_e_inc_normal_label"><style name="me106_text_14_gray_8f"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_power_quality_e_inc_issue" flag="hidden" ref_value="0"/></lv_label>
-                        <lv_label text="&#x8D8A;&#x9650;" align="left_mid" x="78" y="0" width="46" name="power_quality_analysis_quality_tag_e_inc_over_limit_label"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_power_quality_e_inc_issue" flag="hidden" ref_value="1"/></lv_label>
+                        <lv_label text="&#x7535;&#x80FD;" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_e_inc_energy_label"><style name="me106_text_14_white"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Energy" align="left_mid" x="34" y="0" width="42" name="power_quality_analysis_quality_tag_e_inc_energy_label_en"><style name="me106_text_roboto_14_white"/><bind_style name="me106_text_roboto_14_white" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_white" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
+                        <lv_obj name="power_quality_analysis_quality_tag_e_inc_normal_label_box" align="left_mid" x="78" y="0" width="42" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                            <bind_flag_if_not_eq subject="meter_power_quality_e_inc_issue" flag="hidden" ref_value="0"/>
+                            <lv_label text="&#x6B63;&#x5E38;"  x="0" y="0" width="42" name="power_quality_analysis_quality_tag_e_inc_normal_label">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="Normal"  x="0" y="0" width="42" name="power_quality_analysis_quality_tag_e_inc_normal_label_en">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
+                        <lv_obj name="power_quality_analysis_quality_tag_e_inc_over_limit_label_box" align="left_mid" x="78" y="0" width="46" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+                            <bind_flag_if_not_eq subject="meter_power_quality_e_inc_issue" flag="hidden" ref_value="1"/>
+                            <lv_label text="&#x8D8A;&#x9650;"  x="0" y="0" width="46" name="power_quality_analysis_quality_tag_e_inc_over_limit_label">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                            
+                            </lv_label>
+                            <lv_label text="Alarm"  x="0" y="0" width="46" name="power_quality_analysis_quality_tag_e_inc_over_limit_label_en">
+                                
+                                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                            
+                            </lv_label>
+                        </lv_obj>
                     </lv_obj>
 
                     <lv_obj name="quality_alarm_strip" x="22" y="139" width="276" height="44" style_pad_all="0" scrollable="false">
@@ -167,10 +367,30 @@
                             <bind_style name="me106_theme_light_icon" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_icon" subject="meter_theme_index" ref_value="2"/>
                         </lv_image>
-                        <lv_label text="&#x5931;&#x538B;" align="left_mid" x="46" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_voltage_loss_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
-                        <lv_label text="&#x8DCC;&#x843D;" align="left_mid" x="100" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_voltage_sag_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
-                        <lv_label text="&#x8FC7;&#x538B;" align="left_mid" x="154" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_over_voltage_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
-                        <lv_label text="&#x8FC7;&#x6D41;" align="left_mid" x="208" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_over_current_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+                        <lv_label text="&#x5931;&#x538B;" align="left_mid" x="46" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_voltage_loss_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Loss" align="left_mid" x="46" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_voltage_loss_label_en"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
+                        <lv_label text="&#x8DCC;&#x843D;" align="left_mid" x="100" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_voltage_sag_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Sag" align="left_mid" x="100" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_voltage_sag_label_en"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
+                        <lv_label text="&#x8FC7;&#x538B;" align="left_mid" x="154" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_over_voltage_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Overvoltage" align="left_mid" x="154" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_over_voltage_label_en"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
+                        <lv_label text="&#x8FC7;&#x6D41;" align="left_mid" x="208" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_over_current_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Overcurrent" align="left_mid" x="208" y="0" width="48" name="power_quality_analysis_quality_alarm_strip_over_current_label_en"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+                        </lv_label>
                     </lv_obj>
                 </lv_obj>
 
@@ -179,11 +399,23 @@
                         <style name="me106_text_16_white_right"/>
                         <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="Smart Diagnostics" x="122" y="15" width="174" name="power_quality_analysis_qr_quality_qr_label_en">                        <style name="me106_text_roboto_16_white_right"/>
+                        <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <lv_label text="&#x8BCA;&#x65AD;&#x4E91;" x="24" y="20" width="130" name="power_quality_analysis_qr_quality_qr_label_2">
                         <style name="me106_text_14_gray_ba"/>
                         <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                         <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label text="Diagnostic Cloud" x="24" y="20" width="130" name="power_quality_analysis_qr_quality_qr_label_2_en">                        <style name="me106_text_roboto_14_gray_ba"/>
+                        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
 
                     <lv_obj name="power_quality_diagnose_panel" x="22" y="46" width="276" height="132" style_pad_all="0" scrollable="false">
@@ -199,6 +431,12 @@
                             <style name="me106_text_14_white"/>
                             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Cloud URL" x="48" y="13" width="150" name="power_quality_analysis_diagnose_quality_diagnose_label_en">                            <style name="me106_text_roboto_14_white"/>
+                            <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                         </lv_label>
                         <!-- 网址仅使用主题信息文字色，不绑定实心强调色，避免标签区域被渲染成长条色块。 -->
                         <lv_label text="diagno.qinggrid.com" x="48" y="40" width="168" name="power_quality_analysis_diagnose_diagno_qinggrid_com_label">
@@ -210,6 +448,12 @@
                             <style name="me106_text_14_gray_ba"/>
                             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                        </lv_label>
+                        <lv_label text="Visit URL above in browser to view full power quality diagnostic reports and fault waveforms." x="16" y="74" width="244" long_mode="wrap" name="power_quality_analysis_diagnose_over_limit_waveform_label_en">                            <style name="me106_text_roboto_14_gray_ba"/>
+                            <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                            <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                            <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                         </lv_label>
                     </lv_obj>
                 </lv_obj>

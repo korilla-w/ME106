@@ -22,6 +22,12 @@
                 <style name="upgrade_title" />
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1" />
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="settings_upgrade_title_label_en" x="48" y="11" width="248" height="26" long_mode="clip" text="Firmware Upgrade">                <style name="me106_text_roboto_18_white" />
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1" />
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_obj name="upgrade_header_separator" x="16" y="44" width="288" height="1" style_border_width="0" style_pad_all="0" scrollable="false">
                 <style name="upgrade_separator" />
@@ -52,6 +58,12 @@
                     <style name="me106_text_14_gray_ba" />
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label name="upgrade_hint_current_label_en" x="24" y="174" width="76" height="22" text="Current Ver">                    <style name="me106_text_roboto_14_gray_ba" />
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_label name="upgrade_hint_current_value" x="108" y="174" width="188" height="22" long_mode="dots" bind_text="meter_upgrade_current_version">
                     <style name="me106_text_16_white_right" />
@@ -71,6 +83,12 @@
                         <style name="me106_text_14_gray_8f" />
                         <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
                         <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label name="settings_upgrade_current_version_label_en" x="8" y="4" width="76" height="22" text="Current Ver">                        <style name="me106_text_roboto_14_gray_8f" />
+                        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
+                        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <lv_label name="upgrade_current_version_value" x="92" y="4" width="188" height="22" long_mode="dots" style_text_align="right" bind_text="meter_upgrade_current_version">
                         <style name="me106_text_16_white_right" />
@@ -81,6 +99,12 @@
                         <style name="me106_text_14_gray_8f" />
                         <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
                         <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                    </lv_label>
+                    <lv_label name="settings_upgrade_target_version_label_en" x="8" y="28" width="76" height="22" text="Target Ver">                        <style name="me106_text_roboto_14_gray_8f" />
+                        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
+                        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                     </lv_label>
                     <lv_label name="upgrade_new_version_value" x="92" y="28" width="188" height="22" long_mode="dots" style_text_align="right" bind_text="meter_upgrade_new_version">
                         <style name="me106_text_16_cyan" />
@@ -92,6 +116,12 @@
                     <style name="me106_text_14_gray_ba" />
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label name="settings_upgrade_firmware_size_label_en" x="24" y="145" width="100" height="20" text="Firmware Size">                    <style name="me106_text_roboto_14_gray_ba" />
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_label name="upgrade_file_size_value" x="160" y="145" width="136" height="20" long_mode="dots" bind_text="meter_upgrade_file_size_text">
                     <style name="me106_text_14_gray_ba_right" />
@@ -144,6 +174,10 @@
             <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2" />
             <lv_label name="upgrade_recheck_label" align="center" y="1" width="63" height="content" long_mode="clip" text="重新检查">
                 <style name="me106_text_14_white_center" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="upgrade_recheck_label_en" align="center" y="1" width="63" height="content" long_mode="clip" text="Recheck">                <style name="me106_text_roboto_14_white_center" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <bind_flag_if_not_eq subject="meter_upgrade_can_recheck" flag="hidden" ref_value="1" />
             <bind_state_if_eq subject="meter_upgrade_busy" state="disabled" ref_value="1" />
@@ -177,6 +211,10 @@
             <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2" />
             <lv_label name="upgrade_go_wifi_label" align="center" y="1" width="64" height="content" long_mode="clip" text="去联网">
                 <style name="me106_text_14_white_center" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="upgrade_go_wifi_label_en" align="center" y="1" width="64" height="content" long_mode="clip" text="Go to Wi-Fi">                <style name="me106_text_roboto_14_white_center" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <bind_flag_if_not_eq subject="meter_upgrade_primary_mode" flag="hidden" ref_value="2" />
             <bind_state_if_eq subject="meter_upgrade_busy" state="disabled" ref_value="1" />
@@ -189,6 +227,10 @@
             <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2" />
             <lv_label name="upgrade_start_label" align="center" y="1" width="64" height="content" long_mode="clip" text="升级">
                 <style name="me106_text_14_white_center" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="upgrade_start_label_en" align="center" y="1" width="64" height="content" long_mode="clip" text="Update">                <style name="me106_text_roboto_14_white_center" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <bind_flag_if_not_eq subject="meter_upgrade_primary_mode" flag="hidden" ref_value="3" />
             <bind_state_if_eq subject="meter_upgrade_busy" state="disabled" ref_value="1" />
@@ -203,6 +245,12 @@
                 <style name="me106_text_14_gray_ba_center" />
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label text="Updating, keep power on" align="center" y="1" width="320" height="content" name="screen_settings_upgrade_updating__keep_power_on_label_en">                <style name="me106_text_roboto_14_gray_ba_center" />
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
         </lv_obj>
         <!-- 确认层保留页头，覆盖内容和底栏；取消只关闭弹层，确认只提交刷写意图。 -->
@@ -215,11 +263,23 @@
                 <style name="me106_text_18_cyan" />
                 <bind_style name="me106_theme_light_info_text" subject="meter_theme_index" ref_value="1" />
                 <bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="upgrade_confirm_title_en" x="24" y="12" width="272" height="26" text="Update firmware?">                <style name="me106_text_roboto_18_cyan" />
+                <bind_style name="me106_theme_light_info_text" subject="meter_theme_index" ref_value="1" />
+                <bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label name="upgrade_confirm_current_label" x="24" y="50" width="54" height="22" text="当前：">
                 <style name="me106_text_14_gray_ba" />
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="upgrade_confirm_current_label_en" x="24" y="50" width="54" height="22" text="Current: ">                <style name="me106_text_roboto_14_gray_ba" />
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label name="upgrade_confirm_current_value" x="82" y="49" width="214" height="22" long_mode="dots" bind_text="meter_upgrade_current_version">
                 <style name="me106_text_16_white" />
@@ -230,6 +290,12 @@
                 <style name="me106_text_14_gray_ba" />
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="upgrade_confirm_target_label_en" x="24" y="80" width="54" height="22" text="Target: ">                <style name="me106_text_roboto_14_gray_ba" />
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label name="upgrade_confirm_target_value" x="82" y="79" width="214" height="42" long_mode="wrap" bind_text="meter_upgrade_new_version">
                 <style name="me106_text_16_white" />
@@ -240,6 +306,12 @@
                 <style name="me106_text_14_gray_ba" />
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="upgrade_confirm_power_hint_en" x="24" y="126" width="272" height="22" long_mode="wrap" text="Auto reboot after update. Keep power on.">                <style name="me106_text_roboto_14_gray_ba" />
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1" />
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2" />
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_button name="upgrade_confirm_cancel" x="0" y="162" width="159" height="32" style_pad_all="0" style_border_width="0">
                 <style name="me106_btn_flat_gray47" />
@@ -247,6 +319,10 @@
                 <bind_style name="me106_theme_alarm_nav" subject="meter_theme_index" ref_value="2" />
                 <lv_label align="center" y="1" width="159" height="content" text="取消">
                     <style name="me106_text_14_white_center" />
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label align="center" y="1" width="159" height="content" text="Cancel" name="screen_settings_upgrade_cancel_label_en">                    <style name="me106_text_roboto_14_white_center" />
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_upgrade_confirm_popup" value="0" trigger="clicked" />
             </lv_button>
@@ -256,6 +332,10 @@
                 <bind_style name="me106_theme_alarm_accent" subject="meter_theme_index" ref_value="2" />
                 <lv_label align="center" y="1" width="160" height="content" text="确认升级">
                     <style name="me106_text_14_white_center" />
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label align="center" y="1" width="160" height="content" text="Confirm" name="screen_settings_upgrade_confirm_label_en">                    <style name="me106_text_roboto_14_white_center" />
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <subject_set_int_event subject="meter_upgrade_confirm_popup" value="0" trigger="clicked" />
                 <subject_set_int_event subject="meter_upgrade_request" value="2" trigger="clicked" />

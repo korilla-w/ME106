@@ -19,16 +19,34 @@
 				<style name="me106_text_16_white"/>
 				<bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
 				<bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+			</lv_label>
+			<lv_label text="Total Volt" x="24" y="17" width="60" name="harmonic_waveform_voltage_content_label_en">				<style name="me106_text_roboto_16_white"/>
+				<bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
 			</lv_label>
 			<lv_label text="&#x6CE2;&#x5F62;&#x66F2;&#x7EBF;" x="170" y="17" width="126" name="harmonic_waveform_voltage_waveform_label">
 				<style name="me106_text_16_white_right"/>
 				<bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
 				<bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+			</lv_label>
+			<lv_label text="Waveform" x="170" y="17" width="126" name="harmonic_waveform_voltage_waveform_label_en">				<style name="me106_text_roboto_16_white_right"/>
+				<bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
 			</lv_label>
 			<lv_label text="&#x5E45;&#x503C;(V/A)" x="24" y="58" width="90" name="harmonic_waveform_voltage_amplitude_label">
 				<style name="me106_text_14_gray_ba"/>
 				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
 				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+			</lv_label>
+			<lv_label text="Amp (V/A)" x="24" y="58" width="90" name="harmonic_waveform_voltage_amplitude_label_en">				<style name="me106_text_roboto_14_gray_ba"/>
+				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
 			</lv_label>
 			<lv_label text="&#x25CF;" x="113" y="43" width="12" name="harmonic_waveform_voltage_content_label_2">
 				<style name="me106_text_14_yellow"/>
@@ -39,6 +57,12 @@
 				<style name="me106_text_14_yellow"/>
 				<bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
 				<bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+			</lv_label>
+			<lv_label text="Ua" x="126" y="43" width="38" name="harmonic_waveform_voltage_phase_a_voltage_label_en">				<style name="me106_text_roboto_14_yellow"/>
+				<bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
 			</lv_label>
 			<lv_label text="&#x25CF;" x="163" y="43" width="12" name="harmonic_waveform_voltage_content_label_3">
 				<style name="me106_text_14_green"/>
@@ -49,6 +73,12 @@
 				<style name="me106_text_14_green"/>
 				<bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
 				<bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+			</lv_label>
+			<lv_label text="Ub" x="176" y="43" width="38" name="harmonic_waveform_voltage_phase_b_voltage_label_en">				<style name="me106_text_roboto_14_green"/>
+				<bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
 			</lv_label>
 			<lv_label text="&#x25CF;" x="213" y="43" width="12" name="harmonic_waveform_voltage_content_label_4">
 				<style name="me106_text_14_red"/>
@@ -59,6 +89,12 @@
 				<style name="me106_text_14_red"/>
 				<bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
 				<bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+			</lv_label>
+			<lv_label text="Uc" x="226" y="43" width="38" name="harmonic_waveform_voltage_phase_c_voltage_label_en">				<style name="me106_text_roboto_14_red"/>
+				<bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
+				<bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
 			</lv_label>
 			<lv_label text="V" x="18" y="70" width="18" name="harmonic_waveform_voltage_v_label">
 				<style name="me106_text_14_gray_ba"/>
@@ -142,25 +178,64 @@
 				<style name="me106_text_14_gray_8f"/>
 				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
 				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
 			</lv_label>
-			<lv_label text="&#x52A0;&#x8F7D;&#x4E2D;" x="70" y="121" width="180" name="harmonic_waveform_voltage_loading_label">
-				<style name="me106_text_16_gray_ba_center"/>
+			<lv_label text="256 Pts" x="257" y="188" width="48" name="harmonic_waveform_voltage_tick_256_label_en">				<style name="me106_text_roboto_14_gray_8f"/>
 				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
 				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
-				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="0" />
+				<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
 			</lv_label>
-			<lv_label text="&#x6682;&#x65E0;&#x8C10;&#x6CE2;&#x6570;&#x636E;" x="70" y="121" width="180" name="harmonic_waveform_voltage_no_harmonic_data_label">
-				<style name="me106_text_16_gray_ba_center"/>
-				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
-				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
-				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="2" />
-			</lv_label>
-			<lv_label text="&#x6570;&#x636E;&#x5F02;&#x5E38;" x="70" y="121" width="180" name="harmonic_waveform_voltage_data_error_label">
-				<style name="me106_text_16_gray_ba_center"/>
-				<bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
-				<bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
-				<bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="3" />
-			</lv_label>
+			<lv_obj name="harmonic_waveform_voltage_loading_label_box" x="70" y="121" width="180" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+			    <bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="0" />
+			    <lv_label text="&#x52A0;&#x8F7D;&#x4E2D;" x="0" y="0" width="180" name="harmonic_waveform_voltage_loading_label">
+			        <style name="me106_text_16_gray_ba_center"/>
+			        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+			        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+			    
+			    </lv_label>
+			    <lv_label text="Loading..." x="0" y="0" width="180" name="harmonic_waveform_voltage_loading_label_en">
+			        <style name="me106_text_roboto_16_gray_ba_center"/>
+			        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+			        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+			    
+			    </lv_label>
+			</lv_obj>
+			<lv_obj name="harmonic_waveform_voltage_no_harmonic_data_label_box" x="70" y="121" width="180" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+			    <bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="2" />
+			    <lv_label text="&#x6682;&#x65E0;&#x8C10;&#x6CE2;&#x6570;&#x636E;" x="0" y="0" width="180" name="harmonic_waveform_voltage_no_harmonic_data_label">
+			        <style name="me106_text_16_gray_ba_center"/>
+			        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+			        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+			    
+			    </lv_label>
+			    <lv_label text="No Harmonic Data" x="0" y="0" width="180" name="harmonic_waveform_voltage_no_harmonic_data_label_en">
+			        <style name="me106_text_roboto_16_gray_ba_center"/>
+			        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+			        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+			    
+			    </lv_label>
+			</lv_obj>
+			<lv_obj name="harmonic_waveform_voltage_data_error_label_box" x="70" y="121" width="180" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
+			    <bind_flag_if_not_eq subject="meter_harmonic_data_state" flag="hidden" ref_value="3" />
+			    <lv_label text="&#x6570;&#x636E;&#x5F02;&#x5E38;" x="0" y="0" width="180" name="harmonic_waveform_voltage_data_error_label">
+			        <style name="me106_text_16_gray_ba_center"/>
+			        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+			        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+			    
+			    </lv_label>
+			    <lv_label text="Data Error" x="0" y="0" width="180" name="harmonic_waveform_voltage_data_error_label_en">
+			        <style name="me106_text_roboto_16_gray_ba_center"/>
+			        <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+			        <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+			        <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+			    
+			    </lv_label>
+			</lv_obj>
 		</lv_obj>
         <!-- UI分组：底部硬按键区。按钮只发出导航/选择意图，不直接处理硬件。 -->
         <lv_obj name="screen_harmonic_waveform_voltage_bottom_bar" x="0" y="207" width="320" height="33" style_border_width="0" style_pad_all="0" scrollable="false">

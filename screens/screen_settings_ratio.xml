@@ -11,6 +11,12 @@
                 <style name="me106_text_16_white_right"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label text="Ratio Settings" x="152" y="17" width="144" name="settings_ratio_ratio_settings_label_en">                <style name="me106_text_roboto_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
 
             <lv_button name="ratio_item_ct" x="40" y="74" width="240" height="44" style_pad_all="0">
@@ -28,6 +34,13 @@
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_ratio_selected_kind" ref_value="0"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="CT Ratio" align="left_mid" x="18" y="0" width="100" name="settings_ratio_ratio_item_ct_ct_ratio_label_en">                    <style name="me106_text_roboto_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_16_white" subject="meter_ratio_selected_kind" ref_value="0"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_obj name="ratio_ct_value" align="right_mid" x="-14" y="0" width="90" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                     <lv_obj name="ratio_ct_digit_0_slot" x="0" y="0" width="20" height="24" style_radius="4" style_pad_all="0" scrollable="false">
@@ -81,6 +94,13 @@
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_ratio_selected_kind" ref_value="1"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="PT Ratio" align="left_mid" x="18" y="0" width="100" name="settings_ratio_ratio_item_pt_pt_ratio_label_en">                    <style name="me106_text_roboto_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_16_white" subject="meter_ratio_selected_kind" ref_value="1"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_obj name="ratio_pt_value" align="right_mid" x="-14" y="0" width="90" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                     <lv_obj name="ratio_pt_digit_0_slot" x="0" y="0" width="20" height="24" style_radius="4" style_pad_all="0" scrollable="false">

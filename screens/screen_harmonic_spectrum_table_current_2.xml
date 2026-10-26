@@ -11,8 +11,19 @@
                 <style name="me106_text_16_white_right"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label text="I  2-63&#x6B21;  %" x="12" y="17" width="120" name="harmonic_table_current_2_i_2_63_percent_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="Harmonic Table" x="172" y="16" width="124" name="harmonic_table_current_2_title_label_en">                <style name="me106_text_roboto_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+            </lv_label>
+            <lv_label text="I  2-63&#x6B21;  %" x="12" y="17" width="120" name="harmonic_table_current_2_i_2_63_percent_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label text="I  2-63rd  %" x="12" y="17" width="120" name="harmonic_table_current_2_i_2_63_percent_label_en"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+            </lv_label>
             <lv_label text="3/8" x="132" y="17" width="42" name="harmonic_table_current_2_tick_3_per_8_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
 
             <lv_obj name="spectrum_table_shell" x="8" y="40" width="304" height="154" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
@@ -20,40 +31,85 @@
                 <bind_style name="me106_theme_light_chart" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_chart" subject="meter_theme_index" ref_value="2"/>
             </lv_obj>
-            <lv_label text="次数" x="16" y="45" width="44" name="harmonic_table_current_2_order_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label text="次数" x="16" y="45" width="44" name="harmonic_table_current_2_order_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label text="Order" x="16" y="45" width="44" name="harmonic_table_current_2_order_label_en"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+            </lv_label>
             <lv_label text="A" x="94" y="45" width="24" name="harmonic_table_current_2_a_label"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label text="B" x="172" y="45" width="24" name="harmonic_table_current_2_b_label"><style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label text="C" x="250" y="45" width="24" name="harmonic_table_current_2_c_label"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_obj name="table_header_line" x="12" y="63" width="296" height="1" style_border_width="0" style_pad_all="0" scrollable="false"><style name="me106_line_gray30"/><bind_style name="me106_theme_light_line" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_line" subject="meter_theme_index" ref_value="2"/></lv_obj>
-            <lv_label name="harmonic_current_order_18_label" text="18&#x6B21;" x="16" y="68" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label name="harmonic_current_order_18_label" text="18&#x6B21;" x="16" y="68" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="harmonic_current_order_18_label_en" text="18th" x="16" y="68" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+            </lv_label>
             <lv_label name="harmonic_current_phase_a_order_18_value" text="0.06" x="82" y="68" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_b_order_18_value" text="0.20" x="160" y="68" width="58"><style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_c_order_18_value" text="0.53" x="238" y="68" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/></lv_label>
-            <lv_label name="harmonic_current_order_19_label" text="19&#x6B21;" x="16" y="83" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label name="harmonic_current_order_19_label" text="19&#x6B21;" x="16" y="83" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="harmonic_current_order_19_label_en" text="19th" x="16" y="83" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+            </lv_label>
             <lv_label name="harmonic_current_phase_a_order_19_value" text="0.36" x="82" y="83" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_b_order_19_value" text="0.37" x="160" y="83" width="58"><style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_c_order_19_value" text="1.47" x="238" y="83" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/></lv_label>
-            <lv_label name="harmonic_current_order_20_label" text="20&#x6B21;" x="16" y="98" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label name="harmonic_current_order_20_label" text="20&#x6B21;" x="16" y="98" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="harmonic_current_order_20_label_en" text="20th" x="16" y="98" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+            </lv_label>
             <lv_label name="harmonic_current_phase_a_order_20_value" text="0.07" x="82" y="98" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_b_order_20_value" text="0.10" x="160" y="98" width="58"><style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_c_order_20_value" text="0.31" x="238" y="98" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/></lv_label>
-            <lv_label name="harmonic_current_order_21_label" text="21&#x6B21;" x="16" y="113" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label name="harmonic_current_order_21_label" text="21&#x6B21;" x="16" y="113" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="harmonic_current_order_21_label_en" text="21st" x="16" y="113" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+            </lv_label>
             <lv_label name="harmonic_current_phase_a_order_21_value" text="0.06" x="82" y="113" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_b_order_21_value" text="0.28" x="160" y="113" width="58"><style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_c_order_21_value" text="1.74" x="238" y="113" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/></lv_label>
-            <lv_label name="harmonic_current_order_22_label" text="22&#x6B21;" x="16" y="128" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label name="harmonic_current_order_22_label" text="22&#x6B21;" x="16" y="128" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="harmonic_current_order_22_label_en" text="22nd" x="16" y="128" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+            </lv_label>
             <lv_label name="harmonic_current_phase_a_order_22_value" text="0.05" x="82" y="128" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_b_order_22_value" text="0.01" x="160" y="128" width="58"><style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_c_order_22_value" text="0.14" x="238" y="128" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/></lv_label>
-            <lv_label name="harmonic_current_order_23_label" text="23&#x6B21;" x="16" y="143" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label name="harmonic_current_order_23_label" text="23&#x6B21;" x="16" y="143" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="harmonic_current_order_23_label_en" text="23rd" x="16" y="143" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+            </lv_label>
             <lv_label name="harmonic_current_phase_a_order_23_value" text="0.20" x="82" y="143" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_b_order_23_value" text="0.08" x="160" y="143" width="58"><style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_c_order_23_value" text="1.49" x="238" y="143" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/></lv_label>
-            <lv_label name="harmonic_current_order_24_label" text="24&#x6B21;" x="16" y="158" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label name="harmonic_current_order_24_label" text="24&#x6B21;" x="16" y="158" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="harmonic_current_order_24_label_en" text="24th" x="16" y="158" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+            </lv_label>
             <lv_label name="harmonic_current_phase_a_order_24_value" text="0.03" x="82" y="158" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_b_order_24_value" text="0.02" x="160" y="158" width="58"><style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_c_order_24_value" text="0.09" x="238" y="158" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/></lv_label>
-            <lv_label name="harmonic_current_order_25_label" text="25&#x6B21;" x="16" y="173" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
+            <lv_label name="harmonic_current_order_25_label" text="25&#x6B21;" x="16" y="173" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label name="harmonic_current_order_25_label_en" text="25th" x="16" y="173" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
+            </lv_label>
             <lv_label name="harmonic_current_phase_a_order_25_value" text="0.15" x="82" y="173" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_b_order_25_value" text="0.10" x="160" y="173" width="58"><style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/></lv_label>
             <lv_label name="harmonic_current_phase_c_order_25_value" text="0.78" x="238" y="173" width="58"><style name="me106_text_14_orange"/><bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/></lv_label>

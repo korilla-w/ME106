@@ -99,6 +99,7 @@
         <tiny_ttf name="meter_Roboto_Medium_14" src_path="fonts/Roboto-Medium.ttf" size="14" as_file="true"/>
         <tiny_ttf name="meter_Roboto_Medium_16" src_path="fonts/Roboto-Medium.ttf" size="16" as_file="true"/>
         <tiny_ttf name="meter_Roboto_Medium_18" src_path="fonts/Roboto-Medium.ttf" size="18" as_file="true"/>
+        <tiny_ttf name="meter_Roboto_Medium_36" src_path="fonts/Roboto-Medium.ttf" size="36" as_file="true"/>
         <tiny_ttf name="meter_DIN_Medium_16" src_path="fonts/Bahnschrift.ttf" size="16" as_file="true"/>
         <tiny_ttf name="meter_DIN_Medium_18" src_path="fonts/Bahnschrift.ttf" size="18" as_file="true"/>
     </fonts>
@@ -342,6 +343,45 @@
         <style name="me106_text_roboto_14_gray_8f" text_color="#meter_gray_8f" text_font="meter_Roboto_Medium_14"/>
         <style name="me106_text_roboto_18_gray_ba" text_color="#meter_gray_ba" text_font="meter_Roboto_Medium_18"/>
         <style name="me106_text_roboto_18_gray_ba_center" text_color="#meter_gray_ba" text_font="meter_Roboto_Medium_18" text_align="center"/>
+        <!-- 36px 西文字体大字状态样式 -->
+        <style name="me106_text_roboto_36_white_center" text_color="#meter_white" text_font="meter_Roboto_Medium_36" text_align="center"/>
+
+        <!-- 品牌西文样式 -->
+        <style name="me106_brand_text_roboto_dark" text_color="#meter_white" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_brand_text_roboto_light" text_color="#meter_black" text_font="meter_Roboto_Medium_14"/>
+
+        <!-- 18px 彩色 Roboto 样式 -->
+        <style name="me106_text_roboto_18_yellow" text_color="#meter_yellow" text_font="meter_Roboto_Medium_18"/>
+        <style name="me106_text_roboto_18_green" text_color="#meter_green" text_font="meter_Roboto_Medium_18"/>
+        <style name="me106_text_roboto_18_red" text_color="#meter_red" text_font="meter_Roboto_Medium_18"/>
+        <style name="me106_text_roboto_18_cyan" text_color="#meter_cyan" text_font="meter_Roboto_Medium_18"/>
+        <style name="me106_text_roboto_18_indigo" text_color="#meter_indigo" text_font="meter_Roboto_Medium_18"/>
+
+        <!-- 16px 彩色/灰色 Roboto 样式 -->
+        <style name="me106_text_roboto_16_yellow" text_color="#meter_yellow" text_font="meter_Roboto_Medium_16"/>
+        <style name="me106_text_roboto_16_green" text_color="#meter_green" text_font="meter_Roboto_Medium_16"/>
+        <style name="me106_text_roboto_16_red" text_color="#meter_red" text_font="meter_Roboto_Medium_16"/>
+        <style name="me106_text_roboto_16_cyan" text_color="#meter_cyan" text_font="meter_Roboto_Medium_16"/>
+        <style name="me106_text_roboto_16_orange" text_color="#meter_orange" text_font="meter_Roboto_Medium_16"/>
+        <style name="me106_text_roboto_16_indigo" text_color="#meter_indigo" text_font="meter_Roboto_Medium_16"/>
+        <style name="me106_text_roboto_16_teal" text_color="#meter_teal" text_font="meter_Roboto_Medium_16"/>
+        <style name="me106_text_roboto_16_purple" text_color="#meter_purple" text_font="meter_Roboto_Medium_16"/>
+        <style name="me106_text_roboto_16_gray_d8" text_color="#meter_gray_d8" text_font="meter_Roboto_Medium_16"/>
+        <style name="me106_text_roboto_16_gray_ba_right" text_color="#meter_gray_ba" text_font="meter_Roboto_Medium_16" text_align="right"/>
+
+        <!-- 14px 彩色/扩展 Roboto 样式 -->
+        <style name="me106_text_roboto_14_blue" text_color="#meter_blue" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_text_roboto_14_blue_ea" text_color="#meter_blue_ea" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_text_roboto_14_orange" text_color="#meter_orange" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_text_roboto_14_cyan" text_color="#meter_cyan" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_text_roboto_14_cyan_center" text_color="#meter_cyan" text_font="meter_Roboto_Medium_14" text_align="center"/>
+        <style name="me106_text_roboto_14_yellow" text_color="#meter_yellow" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_text_roboto_14_green" text_color="#meter_green" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_text_roboto_14_red" text_color="#meter_red" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_text_roboto_14_purple" text_color="#meter_purple" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_text_roboto_14_indigo" text_color="#meter_indigo" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_text_roboto_14_teal" text_color="#meter_teal" text_font="meter_Roboto_Medium_14"/>
+        <style name="me106_text_roboto_14_gray_7f" text_color="#meter_gray_7f" text_font="meter_Roboto_Medium_14"/>
         <!-- 英文专属对比样式：DIN (Bahnschrift) 组 -->
         <style name="me106_text_din_16_gray" text_color="#meter_gray_d8" text_font="meter_DIN_Medium_16"/>
         <style name="me106_text_din_16_white" text_color="#meter_white" text_font="meter_DIN_Medium_16"/>

@@ -11,6 +11,12 @@
                 <style name="me106_text_16_white_right"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label text="Wi-Fi Info" x="152" y="17" width="144" name="settings_wifi_manage_title_label_en">                <style name="me106_text_roboto_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
 
             <lv_obj name="wifi_manage_icon_halo" x="24" y="42" width="42" height="42" style_radius="12" style_border_width="0" style_pad_all="0" scrollable="false">
@@ -27,6 +33,12 @@
                 <style name="me106_text_18_cyan"/>
                 <bind_style name="me106_theme_light_info_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label text="Network Info" x="82" y="46" width="92" name="settings_wifi_manage_content_label_en">                <style name="me106_text_roboto_18_cyan"/>
+                <bind_style name="me106_theme_light_info_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label bind_text="meter_wifi_manage_status_text" x="82" y="71" width="170" name="settings_wifi_manage_manage_status_value">
                 <style name="me106_text_14_gray_ba"/>
@@ -50,6 +62,12 @@
                     <style name="me106_text_14_gray_8f"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="Hotspot" align="left_mid" x="0" y="0" width="82" name="settings_wifi_manage_manage_source_hotspot_label_en">                    <style name="me106_text_roboto_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_label bind_text="meter_wifi_manage_hotspot_state_text" align="right_mid" x="0" y="0" width="224" name="settings_wifi_manage_manage_source_wifi_manage_hotspot_state_value">
                     <style name="me106_text_16_white_right"/>
@@ -68,6 +86,12 @@
                     <style name="me106_text_14_gray_8f"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="Password" align="left_mid" x="0" y="0" width="82" name="settings_wifi_manage_manage_ssid_password_label_en">                    <style name="me106_text_roboto_14_gray_8f"/>
+                    <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_label bind_text="meter_wifi_manage_password_state_text" align="right_mid" x="0" y="0" width="224" name="settings_wifi_manage_manage_ssid_wifi_manage_password_state_value">
                     <style name="me106_text_16_white_right"/>
@@ -98,6 +122,12 @@
                 <style name="me106_text_14_gray_ba"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label text="Configure via Host PC" x="24" y="184" width="272" name="settings_wifi_manage_content_label_2_en">                <style name="me106_text_roboto_14_gray_ba"/>
+                <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
         </lv_obj>
 

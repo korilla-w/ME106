@@ -12,6 +12,12 @@
                 <style name="me106_text_16_white_right"/>
                 <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+            </lv_label>
+            <lv_label text="Serial Port" x="152" y="17" width="144" name="settings_uart_title_label_en">                <style name="me106_text_roboto_16_white_right"/>
+                <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
 
             <!-- 只有四个选项时使用更高行距，提高小屏可读性。 -->
@@ -30,6 +36,13 @@
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_uart_selected_index" ref_value="0"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="Baud Rate" align="left_mid" x="16" y="0" width="88" name="settings_uart_row_baud_row_baud_label_en">                    <style name="me106_text_roboto_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_16_white" subject="meter_uart_selected_index" ref_value="0"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_obj name="uart_value_baud" align="right_mid" x="-34" y="0" width="118" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                     <lv_label text="4800" align="right_mid" width="118" name="settings_uart_value_baud_tick_4800_label"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="0"/><bind_flag_if_not_eq subject="meter_uart_baud_index" flag="hidden" ref_value="0"/></lv_label>
@@ -60,6 +73,13 @@
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_uart_selected_index" ref_value="1"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="Data Bits" align="left_mid" x="16" y="0" width="88" name="settings_uart_row_data_bits_row_data_bits_label_en">                    <style name="me106_text_roboto_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_16_white" subject="meter_uart_selected_index" ref_value="1"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_obj name="uart_value_data_bits" align="right_mid" x="-34" y="0" width="118" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                     <lv_label text="5" align="right_mid" width="118" name="settings_uart_value_data_bits_tick_5_label"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="1"/><bind_flag_if_not_eq subject="meter_uart_data_bits_index" flag="hidden" ref_value="0"/></lv_label>
@@ -86,6 +106,13 @@
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_uart_selected_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="Parity" align="left_mid" x="16" y="0" width="88" name="settings_uart_row_parity_row_parity_label_en">                    <style name="me106_text_roboto_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_16_white" subject="meter_uart_selected_index" ref_value="2"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_obj name="uart_value_parity" align="right_mid" x="-34" y="0" width="118" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                     <lv_label text="None" align="right_mid" width="118" name="settings_uart_value_parity_none_label"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="2"/><bind_flag_if_not_eq subject="meter_uart_parity_index" flag="hidden" ref_value="0"/></lv_label>
@@ -111,6 +138,13 @@
                     <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
                     <bind_style name="me106_text_16_white" subject="meter_uart_selected_index" ref_value="3"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
+                </lv_label>
+                <lv_label text="Stop Bits" align="left_mid" x="16" y="0" width="88" name="settings_uart_row_stop_bits_row_stop_bits_label_en">                    <style name="me106_text_roboto_16_gray_d8"/>
+                    <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
+                    <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
+                    <bind_style name="me106_text_roboto_16_white" subject="meter_uart_selected_index" ref_value="3"/>
+                    <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                 </lv_label>
                 <lv_obj name="uart_value_stop_bits" align="right_mid" x="-34" y="0" width="118" height="24" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
                     <lv_label text="1" align="right_mid" width="118" name="settings_uart_value_stop_bits_tick_1_label"><style name="me106_text_16_gray_ba_right"/><bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/><bind_style name="me106_text_16_white_right" subject="meter_uart_selected_index" ref_value="3"/><bind_flag_if_not_eq subject="meter_uart_stop_bits_index" flag="hidden" ref_value="0"/></lv_label>
