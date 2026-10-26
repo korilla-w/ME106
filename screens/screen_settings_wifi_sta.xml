@@ -35,7 +35,7 @@
                 <bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label text="Hotspot Config" x="82" y="46" width="92" name="settings_wifi_sta_hotspot_label_en">                <style name="me106_text_roboto_18_cyan"/>
+            <lv_label text="Hotspot Config" x="82" y="46" width="180" name="settings_wifi_sta_hotspot_label_en">                <style name="me106_text_roboto_18_cyan"/>
                 <bind_style name="me106_theme_light_info_text" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>

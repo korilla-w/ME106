@@ -52,7 +52,7 @@
         </lv_label>
         <lv_label name="boot_tagline_en"
                   text="Smart Energy · Moisturing Future"
-                  x="40" y="156" width="240" style_text_align="center">            <style name="me106_text_roboto_16_gray_d8"/>
+                  x="20" y="156" width="280" style_text_align="center">            <style name="me106_text_roboto_16_gray_d8"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
     </view>

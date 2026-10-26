@@ -28,7 +28,7 @@
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                     <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
                 </lv_label>
-                <lv_label text="Current Address" x="0" y="5" width="78" name="settings_address_address_badge_badge_label_en">                    <style name="me106_text_roboto_14_gray_ba"/>
+                <lv_label text="Current:" x="0" y="5" width="78" name="settings_address_address_badge_badge_label_en">                    <style name="me106_text_roboto_14_gray_ba"/>
                     <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                     <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                     <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -325,7 +325,7 @@
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label text="Select Address: 001-247" x="28" y="52" width="176" name="settings_address_address_invalid_popup_001_247_label_en">                <style name="me106_text_roboto_14_gray_ba_center"/>
+            <lv_label text="Select Address: 001-247" x="11" y="52" width="210" name="settings_address_address_invalid_popup_001_247_label_en">                <style name="me106_text_roboto_14_gray_ba_center"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -336,7 +336,7 @@
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label text="Press Back or OK to close" x="24" y="72" width="184" name="settings_address_address_invalid_popup_back_confirm_label_en">                <style name="me106_text_roboto_14_gray_ba_center"/>
+            <lv_label text="Press Back or OK to close" x="11" y="72" width="210" name="settings_address_address_invalid_popup_back_confirm_label_en">                <style name="me106_text_roboto_14_gray_ba_center"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>

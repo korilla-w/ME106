@@ -20,7 +20,7 @@
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Active Power (kW)" x="156" y="17" width="140" name="active_power_title_label_en">            <style name="me106_text_roboto_16_white_right"/>
+        <lv_label text="Active Power (kW)" x="116" y="17" width="180" name="active_power_title_label_en">            <style name="me106_text_roboto_16_white_right"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>

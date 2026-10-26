@@ -37,7 +37,7 @@
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label text="Restore initial settings only" x="22" y="48" width="216" name="settings_factory_reset_factory_label_2_en">
+            <lv_label text="Restore initial settings only" x="22" y="48" width="240" name="settings_factory_reset_factory_label_2_en">
                 <style name="me106_text_roboto_14_gray_ba_center"/>
                 <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
                 <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
