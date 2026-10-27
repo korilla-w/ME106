@@ -21,7 +21,7 @@
             <lv_label text="U  2-63&#x6B21;  %" x="12" y="17" width="120" name="harmonic_table_voltage_5_u_2_63_percent_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label text="U  2-63rd  %" x="12" y="17" width="120" name="harmonic_table_voltage_5_u_2_63_percent_label_en"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+            <lv_label text="U  2-63rd  %" x="12" y="17" width="120" name="harmonic_table_voltage_5_u_2_63_percent_label_en"><style name="me106_text_roboto_14_gray_ba"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label text="6/8" x="132" y="17" width="42" name="harmonic_table_voltage_5_tick_6_per_8_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/></lv_label>
@@ -34,7 +34,7 @@
             <lv_label text="次数" x="16" y="45" width="44" name="harmonic_table_voltage_5_order_label"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label text="Order" x="16" y="45" width="44" name="harmonic_table_voltage_5_order_label_en"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+            <lv_label text="Order" x="16" y="45" width="44" name="harmonic_table_voltage_5_order_label_en"><style name="me106_text_roboto_14_gray_ba"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label text="A" x="94" y="45" width="24" name="harmonic_table_voltage_5_a_label"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
@@ -44,7 +44,7 @@
             <lv_label name="harmonic_voltage_order_42_label" text="42&#x6B21;" x="16" y="68" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label name="harmonic_voltage_order_42_label_en" text="42nd" x="16" y="68" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+            <lv_label name="harmonic_voltage_order_42_label_en" text="42nd" x="16" y="68" width="48"><style name="me106_text_roboto_14_gray_ba"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label name="harmonic_voltage_phase_a_order_42_value" text="0.00" x="82" y="68" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
@@ -53,7 +53,7 @@
             <lv_label name="harmonic_voltage_order_43_label" text="43&#x6B21;" x="16" y="83" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label name="harmonic_voltage_order_43_label_en" text="43rd" x="16" y="83" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+            <lv_label name="harmonic_voltage_order_43_label_en" text="43rd" x="16" y="83" width="48"><style name="me106_text_roboto_14_gray_ba"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label name="harmonic_voltage_phase_a_order_43_value" text="0.01" x="82" y="83" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
@@ -62,7 +62,7 @@
             <lv_label name="harmonic_voltage_order_44_label" text="44&#x6B21;" x="16" y="98" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label name="harmonic_voltage_order_44_label_en" text="44th" x="16" y="98" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+            <lv_label name="harmonic_voltage_order_44_label_en" text="44th" x="16" y="98" width="48"><style name="me106_text_roboto_14_gray_ba"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label name="harmonic_voltage_phase_a_order_44_value" text="0.00" x="82" y="98" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
@@ -71,7 +71,7 @@
             <lv_label name="harmonic_voltage_order_45_label" text="45&#x6B21;" x="16" y="113" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label name="harmonic_voltage_order_45_label_en" text="45th" x="16" y="113" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+            <lv_label name="harmonic_voltage_order_45_label_en" text="45th" x="16" y="113" width="48"><style name="me106_text_roboto_14_gray_ba"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label name="harmonic_voltage_phase_a_order_45_value" text="0.01" x="82" y="113" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
@@ -80,7 +80,7 @@
             <lv_label name="harmonic_voltage_order_46_label" text="46&#x6B21;" x="16" y="128" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label name="harmonic_voltage_order_46_label_en" text="46th" x="16" y="128" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+            <lv_label name="harmonic_voltage_order_46_label_en" text="46th" x="16" y="128" width="48"><style name="me106_text_roboto_14_gray_ba"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label name="harmonic_voltage_phase_a_order_46_value" text="0.00" x="82" y="128" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
@@ -89,7 +89,7 @@
             <lv_label name="harmonic_voltage_order_47_label" text="47&#x6B21;" x="16" y="143" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label name="harmonic_voltage_order_47_label_en" text="47th" x="16" y="143" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+            <lv_label name="harmonic_voltage_order_47_label_en" text="47th" x="16" y="143" width="48"><style name="me106_text_roboto_14_gray_ba"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label name="harmonic_voltage_phase_a_order_47_value" text="0.00" x="82" y="143" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
@@ -98,7 +98,7 @@
             <lv_label name="harmonic_voltage_order_48_label" text="48&#x6B21;" x="16" y="158" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label name="harmonic_voltage_order_48_label_en" text="48th" x="16" y="158" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+            <lv_label name="harmonic_voltage_order_48_label_en" text="48th" x="16" y="158" width="48"><style name="me106_text_roboto_14_gray_ba"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label name="harmonic_voltage_phase_a_order_48_value" text="0.00" x="82" y="158" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>
@@ -107,7 +107,7 @@
             <lv_label name="harmonic_voltage_order_49_label" text="49&#x6B21;" x="16" y="173" width="48"><style name="me106_text_14_gray_ba"/><bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label name="harmonic_voltage_order_49_label_en" text="49th" x="16" y="173" width="48"><style name="me106_text_roboto_14_gray_ba"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_gray_ba" subject="meter_theme_index" ref_value="2"/>
+            <lv_label name="harmonic_voltage_order_49_label_en" text="49th" x="16" y="173" width="48"><style name="me106_text_roboto_14_gray_ba"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
             <lv_label name="harmonic_voltage_phase_a_order_49_value" text="0.00" x="82" y="173" width="58"><style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/></lv_label>

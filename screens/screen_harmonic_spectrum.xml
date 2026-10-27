@@ -94,14 +94,14 @@
 					<style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
 				</lv_label>
-				<lv_label text="Phase A" x="0" y="0" width="54" name="harmonic_harmonic_voltage_phase_a_label_en">					<style name="me106_text_roboto_14_blue"/><bind_style name="me106_text_roboto_14_blue" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_blue" subject="meter_theme_index" ref_value="2"/>
+				<lv_label text="A" x="0" y="0" width="38" name="harmonic_harmonic_voltage_phase_a_label_en">					<style name="me106_text_roboto_14_blue"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
 				</lv_label>
 				<lv_label text="B&#x76F8;" x="47" y="0" width="38" name="harmonic_harmonic_voltage_phase_b_label">
 					<style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
 				</lv_label>
-				<lv_label text="Phase B" x="47" y="0" width="54" name="harmonic_harmonic_voltage_phase_b_label_en">					<style name="me106_text_roboto_14_cyan"/><bind_style name="me106_text_roboto_14_cyan" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_cyan" subject="meter_theme_index" ref_value="2"/>
+				<lv_label text="B" x="47" y="0" width="38" name="harmonic_harmonic_voltage_phase_b_label_en">					<style name="me106_text_roboto_14_cyan"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
 				</lv_label>
 				<lv_label text="C&#x76F8;" x="94" y="0" width="38" name="harmonic_harmonic_voltage_phase_c_label">
@@ -110,7 +110,7 @@
 					<bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
 				</lv_label>
-				<lv_label text="Phase C" x="94" y="0" width="54" name="harmonic_harmonic_voltage_phase_c_label_en">					<style name="me106_text_roboto_14_orange"/>
+				<lv_label text="C" x="94" y="0" width="38" name="harmonic_harmonic_voltage_phase_c_label_en">					<style name="me106_text_roboto_14_orange"/>
 					<bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
 					<bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -133,14 +133,14 @@
 					<style name="me106_text_14_blue"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
 				</lv_label>
-				<lv_label text="Phase A" x="0" y="0" width="54" name="harmonic_harmonic_current_phase_a_label_en">					<style name="me106_text_roboto_14_blue"/><bind_style name="me106_text_roboto_14_blue" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_blue" subject="meter_theme_index" ref_value="2"/>
+				<lv_label text="A" x="0" y="0" width="38" name="harmonic_harmonic_current_phase_a_label_en">					<style name="me106_text_roboto_14_blue"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
 				</lv_label>
 				<lv_label text="B&#x76F8;" x="47" y="0" width="38" name="harmonic_harmonic_current_phase_b_label">
 					<style name="me106_text_14_cyan"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
 				</lv_label>
-				<lv_label text="Phase B" x="47" y="0" width="54" name="harmonic_harmonic_current_phase_b_label_en">					<style name="me106_text_roboto_14_cyan"/><bind_style name="me106_text_roboto_14_cyan" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_14_cyan" subject="meter_theme_index" ref_value="2"/>
+				<lv_label text="B" x="47" y="0" width="38" name="harmonic_harmonic_current_phase_b_label_en">					<style name="me106_text_roboto_14_cyan"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
 				</lv_label>
 				<lv_label text="C&#x76F8;" x="94" y="0" width="38" name="harmonic_harmonic_current_phase_c_label">
@@ -149,7 +149,7 @@
 					<bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
 				</lv_label>
-				<lv_label text="Phase C" x="94" y="0" width="54" name="harmonic_harmonic_current_phase_c_label_en">					<style name="me106_text_roboto_14_orange"/>
+				<lv_label text="C" x="94" y="0" width="38" name="harmonic_harmonic_current_phase_c_label_en">					<style name="me106_text_roboto_14_orange"/>
 					<bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
 					<bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
 					<bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>

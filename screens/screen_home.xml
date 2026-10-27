@@ -13,7 +13,7 @@
                 <bind_style name="me106_brand_text_light" subject="meter_theme_index" ref_value="1"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
             </lv_label>
-            <lv_label name="home_brand_name_en" text="QingRun Grid" x="17" y="1" width="110">                <style name="me106_brand_text_roboto_dark"/>
+            <lv_label name="home_brand_name_en" text="Tsingrun Micogrid" x="17" y="1" width="140">                <style name="me106_brand_text_roboto_dark"/>
                 <bind_style name="me106_brand_text_light" subject="meter_theme_index" ref_value="1"/>
                 <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
             </lv_label>
@@ -36,7 +36,7 @@
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="A" x="20" y="62" name="home_phase_a_label_en">            <style name="me106_text_roboto_18_yellow"/>
+        <lv_label text="Ph.A" x="20" y="62" name="home_phase_a_label_en">            <style name="me106_text_roboto_18_yellow"/>
             <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -100,7 +100,7 @@
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="B" x="20" y="112" name="home_phase_b_label_en">            <style name="me106_text_roboto_18_green"/>
+        <lv_label text="Ph.B" x="20" y="112" name="home_phase_b_label_en">            <style name="me106_text_roboto_18_green"/>
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -163,7 +163,7 @@
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="C" x="20" y="162" name="home_phase_c_label_en">            <style name="me106_text_roboto_18_red"/>
+        <lv_label text="Ph.C" x="20" y="162" name="home_phase_c_label_en">            <style name="me106_text_roboto_18_red"/>
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
