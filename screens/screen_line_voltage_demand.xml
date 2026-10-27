@@ -105,7 +105,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label name="line_max_demand_title_en" text="MD (kW)" x="157" y="120">            <style name="me106_text_roboto_16_gray_ba"/>
+        <lv_label name="line_max_demand_title_en" text="Max Dem (kW)" x="157" y="120">            <style name="me106_text_roboto_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>

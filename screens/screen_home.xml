@@ -6,7 +6,7 @@
         <!-- UI分组：页面内容区。视觉布局与底部固定硬按键导航分离。 -->
         <lv_obj name="page_content" x="0" y="0" width="320" height="207" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
         <lv_obj name="home_header" x="0" y="0" width="320" height="44" style_bg_opa="0" style_border_width="0" style_pad_all="0" scrollable="false">
-        <lv_obj name="home_brand" x="20" y="16" width="104" height="20" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0" scrollable="false">
+        <lv_obj name="home_brand" x="20" y="16" width="150" height="20" style_bg_opa="0" style_border_width="0" style_shadow_width="0" style_pad_all="0" scrollable="false">
             <lv_image name="home_brand_logo" src="meter_brand_logo" x="0" y="1"/>
             <lv_label name="home_brand_name" text="&#x6E05;&#x6DA6;&#x5FAE;&#x7F51;" x="17" y="1" width="86">
                 <style name="me106_brand_text_dark"/>
@@ -69,7 +69,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="PF" x="239" y="56" name="home_power_factor_label_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="P.Factor" x="239" y="56" name="home_power_factor_label_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -133,7 +133,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="PF" x="239" y="106" name="home_power_factor_label_2_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="P.Factor" x="239" y="106" name="home_power_factor_label_2_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -196,7 +196,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="PF" x="239" y="156" name="home_power_factor_label_3_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="P.Factor" x="239" y="156" name="home_power_factor_label_3_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
