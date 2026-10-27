@@ -32,7 +32,7 @@
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Line AB" x="24" y="55" name="line_voltage_demand_ab_label_en">            <style name="me106_text_roboto_18_yellow"/>
+        <lv_label text="Uab" x="24" y="55" name="line_voltage_demand_ab_label_en">            <style name="me106_text_roboto_18_yellow"/>
             <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -51,7 +51,7 @@
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Line BC" x="123" y="55" name="line_voltage_demand_bc_label_en">            <style name="me106_text_roboto_18_green"/>
+        <lv_label text="Ubc" x="123" y="55" name="line_voltage_demand_bc_label_en">            <style name="me106_text_roboto_18_green"/>
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -69,7 +69,7 @@
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Line CA" x="222" y="55" name="line_voltage_demand_ca_label_en">            <style name="me106_text_roboto_18_red"/>
+        <lv_label text="Uca" x="222" y="55" name="line_voltage_demand_ca_label_en">            <style name="me106_text_roboto_18_red"/>
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -87,7 +87,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label name="line_current_demand_title_en" text="Current Demand (kW)" x="23" y="120">            <style name="me106_text_roboto_16_gray_ba"/>
+        <lv_label name="line_current_demand_title_en" text="Demand (kW)" x="23" y="120">            <style name="me106_text_roboto_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -105,7 +105,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label name="line_max_demand_title_en" text="Max Demand (kW)" x="157" y="120">            <style name="me106_text_roboto_16_gray_ba"/>
+        <lv_label name="line_max_demand_title_en" text="MD (kW)" x="157" y="120">            <style name="me106_text_roboto_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>

@@ -36,7 +36,7 @@
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Phase A" x="20" y="62" name="home_phase_a_label_en">            <style name="me106_text_roboto_18_yellow"/>
+        <lv_label text="A" x="20" y="62" name="home_phase_a_label_en">            <style name="me106_text_roboto_18_yellow"/>
             <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -47,7 +47,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Voltage (V)" x="73" y="56" name="home_voltage_label_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="Volt (V)" x="73" y="56" name="home_voltage_label_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -58,7 +58,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Current (A)" x="156" y="56" name="home_current_label_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="Curr (A)" x="156" y="56" name="home_current_label_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -69,7 +69,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Power Factor" x="239" y="56" name="home_power_factor_label_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="PF" x="239" y="56" name="home_power_factor_label_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -100,7 +100,7 @@
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Phase B" x="20" y="112" name="home_phase_b_label_en">            <style name="me106_text_roboto_18_green"/>
+        <lv_label text="B" x="20" y="112" name="home_phase_b_label_en">            <style name="me106_text_roboto_18_green"/>
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -111,7 +111,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Voltage (V)" x="73" y="106" name="home_voltage_label_2_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="Volt (V)" x="73" y="106" name="home_voltage_label_2_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -122,7 +122,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Current (A)" x="156" y="106" name="home_current_label_2_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="Curr (A)" x="156" y="106" name="home_current_label_2_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -133,7 +133,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Power Factor" x="239" y="106" name="home_power_factor_label_2_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="PF" x="239" y="106" name="home_power_factor_label_2_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -163,7 +163,7 @@
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Phase C" x="20" y="162" name="home_phase_c_label_en">            <style name="me106_text_roboto_18_red"/>
+        <lv_label text="C" x="20" y="162" name="home_phase_c_label_en">            <style name="me106_text_roboto_18_red"/>
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -174,7 +174,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Voltage (V)" x="73" y="156" name="home_voltage_label_3_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="Volt (V)" x="73" y="156" name="home_voltage_label_3_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -185,7 +185,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Current (A)" x="156" y="156" name="home_current_label_3_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="Curr (A)" x="156" y="156" name="home_current_label_3_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -196,7 +196,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Power Factor" x="239" y="156" name="home_power_factor_label_3_en">            <style name="me106_text_roboto_14_gray_ba"/>
+        <lv_label text="PF" x="239" y="156" name="home_power_factor_label_3_en">            <style name="me106_text_roboto_14_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>

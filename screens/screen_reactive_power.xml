@@ -32,18 +32,18 @@
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Phase A" x="16" y="53" name="reactive_power_phase_a_label_en">            <style name="me106_text_roboto_18_yellow"/>
+        <lv_label text="A" x="16" y="53" name="reactive_power_phase_a_label_en">            <style name="me106_text_roboto_18_yellow"/>
             <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
         <!-- UI告警点：功率越限由逻辑层置位，页面只显示红点提示。 -->
-        <lv_label name="reactive_power_a_value" text="0.000" x="56" y="53">
+        <lv_label name="reactive_power_a_value" text="0.000" x="60" y="53">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="reactive_a_power_issue" src="meter_icon_warning" x="108" y="53"><bind_flag_if_not_eq subject="meter_reactive_a_power_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="reactive_a_power_issue" src="meter_icon_warning" x="110" y="53"><bind_flag_if_not_eq subject="meter_reactive_a_power_issue" flag="hidden" ref_value="1"/></lv_image>
 
         <lv_label text="&#x42;&#x76F8;" x="16" y="91" name="reactive_power_phase_b_label">
             <style name="me106_text_18_green"/>
@@ -51,17 +51,17 @@
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Phase B" x="16" y="91" name="reactive_power_phase_b_label_en">            <style name="me106_text_roboto_18_green"/>
+        <lv_label text="B" x="16" y="91" name="reactive_power_phase_b_label_en">            <style name="me106_text_roboto_18_green"/>
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
-        <lv_label name="reactive_power_b_value" text="0.000" x="56" y="91">
+        <lv_label name="reactive_power_b_value" text="0.000" x="60" y="91">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="reactive_b_power_issue" src="meter_icon_warning" x="108" y="91"><bind_flag_if_not_eq subject="meter_reactive_b_power_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="reactive_b_power_issue" src="meter_icon_warning" x="110" y="91"><bind_flag_if_not_eq subject="meter_reactive_b_power_issue" flag="hidden" ref_value="1"/></lv_image>
 
         <lv_label text="&#x43;&#x76F8;" x="16" y="129" name="reactive_power_phase_c_label">
             <style name="me106_text_18_red"/>
@@ -69,17 +69,17 @@
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Phase C" x="16" y="129" name="reactive_power_phase_c_label_en">            <style name="me106_text_roboto_18_red"/>
+        <lv_label text="C" x="16" y="129" name="reactive_power_phase_c_label_en">            <style name="me106_text_roboto_18_red"/>
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
-        <lv_label name="reactive_power_c_value" text="0.000" x="56" y="129">
+        <lv_label name="reactive_power_c_value" text="0.000" x="60" y="129">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="reactive_c_power_issue" src="meter_icon_warning" x="108" y="129"><bind_flag_if_not_eq subject="meter_reactive_c_power_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="reactive_c_power_issue" src="meter_icon_warning" x="110" y="129"><bind_flag_if_not_eq subject="meter_reactive_c_power_issue" flag="hidden" ref_value="1"/></lv_image>
 
         <lv_label text="&#x5408;&#x76F8;" x="16" y="167" name="reactive_power_total_label">
             <style name="me106_text_18_gray_ba"/>
@@ -92,12 +92,12 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
         </lv_label>
-        <lv_label name="reactive_power_total_value" text="0.000" x="56" y="167">
+        <lv_label name="reactive_power_total_value" text="0.000" x="60" y="167">
             <style name="me106_text_18_white"/>
             <bind_style name="me106_theme_light_text" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_text" subject="meter_theme_index" ref_value="2"/>
         </lv_label>
-        <lv_image name="reactive_total_power_issue" src="meter_icon_warning" x="108" y="167"><bind_flag_if_not_eq subject="meter_reactive_total_power_issue" flag="hidden" ref_value="1"/></lv_image>
+        <lv_image name="reactive_total_power_issue" src="meter_icon_warning" x="110" y="167"><bind_flag_if_not_eq subject="meter_reactive_total_power_issue" flag="hidden" ref_value="1"/></lv_image>
 
         <!-- 标准 P-Q 四象限方向图；默认收回原点，真实向量由运行时适配层同步更新。 -->
         <lv_obj name="reactive_power_quadrant_panel" x="128" y="47" width="178" height="151" style_bg_opa="0" style_border_width="1" style_pad_all="0" scrollable="false">

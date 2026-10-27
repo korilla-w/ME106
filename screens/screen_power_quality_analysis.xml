@@ -129,7 +129,7 @@
                         <lv_label text="&#x7535;&#x538B;" x="16" y="10" width="34" name="power_quality_analysis_trend_voltage_label"><style name="me106_text_16_yellow"/><bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
                             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
                         </lv_label>
-                        <lv_label text="Voltage" x="16" y="10" width="34" name="power_quality_analysis_trend_voltage_label_en"><style name="me106_text_roboto_16_yellow"/><bind_style name="me106_text_roboto_16_yellow" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_yellow" subject="meter_theme_index" ref_value="2"/>
+                        <lv_label text="Volt" x="16" y="10" width="34" name="power_quality_analysis_trend_voltage_label_en"><style name="me106_text_roboto_16_yellow"/><bind_style name="me106_text_roboto_16_yellow" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_yellow" subject="meter_theme_index" ref_value="2"/>
                             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                         </lv_label>
                         <lv_obj name="power_quality_u_bar_track" x="56" y="17" width="80" height="8" style_radius="4" style_border_width="0" style_pad_all="0" scrollable="false">
@@ -142,7 +142,7 @@
                         <lv_label text="&#x7535;&#x6D41;" x="150" y="10" width="34" name="power_quality_analysis_trend_current_label"><style name="me106_text_16_cyan"/><bind_style name="me106_theme_light_info_text" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_info_text" subject="meter_theme_index" ref_value="2"/>
                             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
                         </lv_label>
-                        <lv_label text="Current" x="150" y="10" width="34" name="power_quality_analysis_trend_current_label_en"><style name="me106_text_roboto_16_cyan"/><bind_style name="me106_text_roboto_16_cyan" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_cyan" subject="meter_theme_index" ref_value="2"/>
+                        <lv_label text="Curr" x="150" y="10" width="34" name="power_quality_analysis_trend_current_label_en"><style name="me106_text_roboto_16_cyan"/><bind_style name="me106_text_roboto_16_cyan" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_cyan" subject="meter_theme_index" ref_value="2"/>
                             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                         </lv_label>
                         <lv_obj name="power_quality_i_bar_track" x="190" y="17" width="64" height="8" style_radius="4" style_border_width="0" style_pad_all="0" scrollable="false">
@@ -155,7 +155,7 @@
                         <lv_label text="&#x529F;&#x7387;" x="16" y="36" width="34" name="power_quality_analysis_trend_power_label"><style name="me106_text_16_orange"/><bind_style name="me106_theme_light_status_warning" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_status_warning" subject="meter_theme_index" ref_value="2"/>
                             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
                         </lv_label>
-                        <lv_label text="Power" x="16" y="36" width="34" name="power_quality_analysis_trend_power_label_en"><style name="me106_text_roboto_16_orange"/><bind_style name="me106_text_roboto_16_orange" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_orange" subject="meter_theme_index" ref_value="2"/>
+                        <lv_label text="Pwr" x="16" y="36" width="34" name="power_quality_analysis_trend_power_label_en"><style name="me106_text_roboto_16_orange"/><bind_style name="me106_text_roboto_16_orange" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_orange" subject="meter_theme_index" ref_value="2"/>
                             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                         </lv_label>
                         <lv_obj name="power_quality_p_bar_track" x="56" y="43" width="80" height="8" style_radius="4" style_border_width="0" style_pad_all="0" scrollable="false">
@@ -168,7 +168,7 @@
                         <lv_label text="&#x7535;&#x80FD;" x="150" y="36" width="34" name="power_quality_analysis_trend_energy_label"><style name="me106_text_16_green"/><bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
                             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
                         </lv_label>
-                        <lv_label text="Energy" x="150" y="36" width="34" name="power_quality_analysis_trend_energy_label_en"><style name="me106_text_roboto_16_green"/><bind_style name="me106_text_roboto_16_green" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_green" subject="meter_theme_index" ref_value="2"/>
+                        <lv_label text="Eng" x="150" y="36" width="34" name="power_quality_analysis_trend_energy_label_en"><style name="me106_text_roboto_16_green"/><bind_style name="me106_text_roboto_16_green" subject="meter_theme_index" ref_value="1"/><bind_style name="me106_text_roboto_16_green" subject="meter_theme_index" ref_value="2"/>
                             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
                         </lv_label>
                         <lv_obj name="power_quality_e_bar_track" x="190" y="43" width="64" height="8" style_radius="4" style_border_width="0" style_pad_all="0" scrollable="false">

@@ -32,7 +32,7 @@
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Ia Phase Angle °" x="24" y="55" name="phase_frequency_phase_acurrentdegree_label_en">            <style name="me106_text_roboto_16_yellow"/>
+        <lv_label text="Ia (°)" x="24" y="55" name="phase_frequency_phase_acurrentdegree_label_en">            <style name="me106_text_roboto_16_yellow"/>
             <bind_style name="me106_theme_light_phase_a" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_a" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -53,7 +53,7 @@
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Ib Phase Angle °" x="123" y="55" name="phase_frequency_phase_bcurrentdegree_label_en">            <style name="me106_text_roboto_16_green"/>
+        <lv_label text="Ib (°)" x="123" y="55" name="phase_frequency_phase_bcurrentdegree_label_en">            <style name="me106_text_roboto_16_green"/>
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -73,7 +73,7 @@
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Ic Phase Angle °" x="221" y="55" name="phase_frequency_phase_ccurrentdegree_label_en">            <style name="me106_text_roboto_16_red"/>
+        <lv_label text="Ic (°)" x="221" y="55" name="phase_frequency_phase_ccurrentdegree_label_en">            <style name="me106_text_roboto_16_red"/>
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -93,7 +93,7 @@
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Frequency (Hz)" x="23" y="120" name="phase_frequency_hz_label_en">            <style name="me106_text_roboto_16_gray_ba"/>
+        <lv_label text="Freq (Hz)" x="23" y="120" name="phase_frequency_hz_label_en">            <style name="me106_text_roboto_16_gray_ba"/>
             <bind_style name="me106_theme_light_muted" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_muted" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -113,7 +113,7 @@
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Ub Phase Angle °" x="123" y="120" name="phase_frequency_phase_bvoltagedegree_label_en">            <style name="me106_text_roboto_16_green"/>
+        <lv_label text="Ub (°)" x="123" y="120" name="phase_frequency_phase_bvoltagedegree_label_en">            <style name="me106_text_roboto_16_green"/>
             <bind_style name="me106_theme_light_phase_b" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_b" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
@@ -133,7 +133,7 @@
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="0"/>
         </lv_label>
-        <lv_label text="Uc Phase Angle °" x="221" y="120" name="phase_frequency_phase_cvoltagedegree_label_en">            <style name="me106_text_roboto_16_red"/>
+        <lv_label text="Uc (°)" x="221" y="120" name="phase_frequency_phase_cvoltagedegree_label_en">            <style name="me106_text_roboto_16_red"/>
             <bind_style name="me106_theme_light_phase_c" subject="meter_theme_index" ref_value="1"/>
             <bind_style name="me106_theme_alarm_phase_c" subject="meter_theme_index" ref_value="2"/>
             <bind_flag_if_not_eq subject="meter_language_index" flag="hidden" ref_value="1"/>
